@@ -1,0 +1,1021 @@
+{
+    "_cId": "2a8cb5808d34dbe1f884309357fc12b0",
+    "title": "Assign SR#0DIH-E7R5 to Case Worker",
+    "mobileEnabled": "true",
+    "empty": "false",
+    "formType": "TASK_FORM",
+    "taskId": "2108532",
+    "links": [
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/task/latest/ioBHmqWXn-YADHst7ZW45JNExTCm1c6yfjFesgFo4d7Dgfjj1lNnc_3MyQ/form",
+            "rel": "update",
+            "title": "Update",
+            "type": "application/vnd.appian.tv.ui+json; c=2; t=TASK_FORM",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/task/latest/ioBHmqWXn-YADHst7ZW45JNExTCm1c6yfjFesgFo4d7Dgfjj1lNnc_3MyQ/form",
+            "rel": "self",
+            "title": "Assign SR#0DIH-E7R5 to Case Worker",
+            "type": "application/vnd.appian.tv.ui+json; c=2; t=TASK_FORM",
+            "method": "GET",
+            "data-taskId": "ioBHmqWXn-YADHst7ZW45JNExTCm1c6yfjFesgFo4d7Dgfjj1lNnc_3MyQ"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/task/latest/ioBHmqWXn-YADHst7ZW45JNExTCm1c6yfjFesgFo4d7Dgfjj1lNnc_3MyQ/form",
+            "rel": "self",
+            "title": "Update",
+            "type": "application/vnd.appian.tv.ui+json; c=2; t=TASK_FORM",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/api/tempo/file",
+            "rel": "upload",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/tempo/file-web/",
+            "rel": "upload-web",
+            "title": "",
+            "method": "POST"
+        }
+    ],
+    "actions": [
+        {
+            "_cId": "8333cdbab40a98c14806ddac91e84583",
+            "_actionName": "sail:record-action-trigger",
+            "label": "",
+            "saveInto": [
+                "<<jA0EAwMCWwkpjz8F4HMB0n0BRgs5VLvcpYk99mMIfjjviK6opINlXunJcl0qD+i99wGbPHYxdlp5\r\nJQXBLy0tmAfDYHIDJGazTU8G1yndJd6BaUM9MXhs2eajYc7s/iytLuuKyCpWiyiNzePxgJ0W7UBh\r\nXGsgrtkwt0XG1nAqnmyr68ifQg+g2uxETna8+w==\r\n>>"
+            ],
+            "tooltip": "",
+            "href": "",
+            "#t": "DynamicLink"
+        }
+    ],
+    "triggers": [],
+    "ui": {
+        "_cId": "10f984f43840ceec8618a7bb879aec72",
+        "focusFieldId": "b15a8e87a750949dc1c4b4139f46acfe",
+        "_dirty": "false",
+        "contents": [
+            {
+                "_cId": "1220abb89f9f9642272ab452630dd986",
+                "collapseLabel": "",
+                "contents": [
+                    {
+                        "_cId": "e5b409d950c69bbb2db6ecd8684d4d0d",
+                        "contents": [
+                            {
+                                "_cId": "ea2d6a6abc4ec3d41adae108069e928c",
+                                "contents": {
+                                    "_cId": "a1e1748999705242abf3ad60d489a843",
+                                    "label": "",
+                                    "labelPosition": "",
+                                    "instructions": "",
+                                    "helpTooltip": "",
+                                    "validations": [],
+                                    "items": [
+                                        {
+                                            "_cId": "1875e541de9422bb21087c0770304505",
+                                            "item": {
+                                                "_cId": "f0a203e3fee293f5faecb77bfbc8e42d",
+                                                "label": "",
+                                                "labelPosition": "COLLAPSED",
+                                                "instructions": "",
+                                                "value": {
+                                                    "_cId": "fa77bd592704b90d3fb334b0acdcf4cf",
+                                                    "values": [
+                                                        {
+                                                            "#v": "You must accept this task before completing it",
+                                                            "#t": "string"
+                                                        }
+                                                    ],
+                                                    "#t": "FormattedText"
+                                                },
+                                                "valueAlignment": "",
+                                                "helpTooltip": "",
+                                                "accessibilityText": "",
+                                                "#t": "RichTextDisplayField"
+                                            },
+                                            "width": ""
+                                        },
+                                        {
+                                            "_cId": "2b702eb6081452f97287557f22a44d7d",
+                                            "item": {
+                                                "_cId": "5c2f55112e878ab60f3ee8826e58f704",
+                                                "contents": [
+                                                    {
+                                                        "_cId": "c978a861c2dadb7185fb12e6c3399737",
+                                                        "isFlat": "true",
+                                                        "action": "ACCEPT",
+                                                        "tooltip": "Accept this task to begin working on it",
+                                                        "label": "Accept",
+                                                        "style": "",
+                                                        "confirmHeader": "",
+                                                        "confirmMessage": "",
+                                                        "confirmButtonLabel": "",
+                                                        "confirmButtonStyle": "PRIMARY",
+                                                        "cancelButtonLabel": "",
+                                                        "value": {
+                                                            "#v": "",
+                                                            "#t": "string"
+                                                        },
+                                                        "saveInto": [
+                                                            "<<jA0EAwMCWwkpjz8F4HMB0o0BRgs5VLvcpYk99mMIfjjviK6opINlXunKJAdOmmx1IZWXjp4g7Eeq\r\n0PSYKutTh+jWnsREgZBkdHCJn34PYhC83ntvDYWD1WVFaHyXi981tF66U3SRaPdB8Oc/+3GPTWZR\r\nt5ggCZUIl+k5rWwuxWTspMIWD9Ifck7aYyu3wgoPxq047Xiub1gn9uAlXos=\r\n>>"
+                                                        ],
+                                                        "size": "SMALL",
+                                                        "icon": "DOWNLOAD",
+                                                        "buttonStyle": "PRIMARY",
+                                                        "ariaLabel": "",
+                                                        "skinName": "",
+                                                        "tooltipStyle": "",
+                                                        "tooltipVerticalPosition": "",
+                                                        "tooltipWidth": "",
+                                                        "accessibilityText": "",
+                                                        "shape": "",
+                                                        "#t": "ButtonWidget"
+                                                    },
+                                                    {
+                                                        "_cId": "dc43de50c2cb41a52f270420f0c5bd59",
+                                                        "isFlat": "true",
+                                                        "action": "GO_BACK",
+                                                        "label": "Go Back",
+                                                        "style": "",
+                                                        "confirmHeader": "",
+                                                        "confirmMessage": "",
+                                                        "confirmButtonLabel": "",
+                                                        "confirmButtonStyle": "PRIMARY",
+                                                        "cancelButtonLabel": "",
+                                                        "value": {
+                                                            "#v": "",
+                                                            "#t": "string"
+                                                        },
+                                                        "saveInto": [
+                                                            "<<jA0EAwMCWwkpjz8F4HMB0o0BRgs5VLvcpYk99mMIfjjviK6opINlXunLUX+reWlpfpf/ObptBNhQ\r\nymDwm3KW5GFVJ9M8oGXYzmt64UTxAA6RR8DbRQqb1GEuyWqORnXhsuY7fhkYjy9xIrZ92FkDjzh/\r\nmuZtgCXcEakR5rGUxnXYRSvLjqchoxMjfV7YlZI+RxbFwr+kja1qdu3NEME=\r\n>>"
+                                                        ],
+                                                        "size": "SMALL",
+                                                        "icon": "ARROW-CIRCLE-LEFT",
+                                                        "buttonStyle": "LINK",
+                                                        "ariaLabel": "",
+                                                        "skinName": "",
+                                                        "tooltipStyle": "",
+                                                        "tooltipVerticalPosition": "",
+                                                        "tooltipWidth": "",
+                                                        "accessibilityText": "",
+                                                        "shape": "",
+                                                        "#t": "ButtonWidget"
+                                                    },
+                                                    {
+                                                        "_cId": "64f3b210ac67d5dcec89cb44763e21ea",
+                                                        "isFlat": "true",
+                                                        "action": "REASSIGN",
+                                                        "tooltip": "Reassign this task to others",
+                                                        "label": "Reassign",
+                                                        "style": "",
+                                                        "confirmHeader": "",
+                                                        "confirmMessage": "",
+                                                        "confirmButtonLabel": "",
+                                                        "confirmButtonStyle": "PRIMARY",
+                                                        "cancelButtonLabel": "",
+                                                        "value": {
+                                                            "#v": "",
+                                                            "#t": "string"
+                                                        },
+                                                        "saveInto": [
+                                                            "<<jA0EAwMCWwkpjz8F4HMB0o0BRgs5VLvcpYk99mMIfjjviK6opINlXunKTwhPvGx1IZX72fJPN+ki\r\nZK6Gl//7dFRckmqWR2jj30gp8QXoPbvsj925fS//dC32aGXQF78VcaT4pQdo1SeGOXwwWhO+xO7c\r\niALDcmRZvLIi0zAdGFVXCrmU7Nf5Alg7tE/MbAHdynrTTTCumQaXNoohjLs=\r\n>>"
+                                                        ],
+                                                        "size": "SMALL",
+                                                        "icon": "SHARE",
+                                                        "buttonStyle": "LINK",
+                                                        "ariaLabel": "",
+                                                        "skinName": "",
+                                                        "tooltipStyle": "",
+                                                        "tooltipVerticalPosition": "",
+                                                        "tooltipWidth": "",
+                                                        "accessibilityText": "",
+                                                        "shape": "",
+                                                        "#t": "ButtonWidget"
+                                                    }
+                                                ],
+                                                "align": "END",
+                                                "allowWrap": false,
+                                                "marginBelow": "NONE",
+                                                "accessibilityText": "",
+                                                "#t": "ButtonLayout2"
+                                            },
+                                            "width": "MINIMIZE"
+                                        }
+                                    ],
+                                    "spacing": "",
+                                    "alignVertical": "MIDDLE",
+                                    "#t": "SideBySideGroup"
+                                },
+                                "label": "",
+                                "labelPosition": "COLLAPSED",
+                                "instructions": "",
+                                "instructionsPosition": "",
+                                "helpTooltip": "",
+                                "requiredStyle": "",
+                                "skinName": "",
+                                "marginBelow": "",
+                                "accessibilityText": "",
+                                "#t": "FieldLayout"
+                            }
+                        ],
+                        "style": "INFO",
+                        "layout": "",
+                        "#t": "MessageLayout"
+                    }
+                ],
+                "divider": "",
+                "errorLabel": "",
+                "expandLabel": "",
+                "label": "",
+                "labelStyle": "",
+                "skinName": "",
+                "marginBelow": "",
+                "accessibilityText": "",
+                "#t": "SectionLayout2"
+            },
+            {
+                "_cId": "bc24a6f854bef618c44c523364bbabcc",
+                "focusFieldId": "b15a8e87a750949dc1c4b4139f46acfe",
+                "label": "Assign Customer Service Request to Case Worker",
+                "instructions": "Please select a Case Worker for this Request",
+                "buttons": {
+                    "_cId": "2fddd6f520afd76e62d4acaff475532b",
+                    "primaryButtons": [
+                        {
+                            "_cId": "eba0d3d01c9d284cf223a0804217d21d",
+                            "isFlat": "false",
+                            "action": "SUBMIT",
+                            "validate": "true",
+                            "label": "Submit",
+                            "style": "",
+                            "confirmHeader": "",
+                            "confirmMessage": "",
+                            "confirmButtonLabel": "",
+                            "confirmButtonStyle": "PRIMARY",
+                            "cancelButtonLabel": "",
+                            "disabled": true,
+                            "value": {
+                                "#v": "",
+                                "#t": "string"
+                            },
+                            "saveInto": [
+                                "<<jA0EAwMCWwkpjz8F4HMB0o0BRgs5VLvcpYk99mMIfjjviK6opINlXunJGVZ/Kp698xERaXqdE+iN\r\nRP23+QHI++3Q0WKCmKVj+YtqIwRTpdTPl2Z385lmvtFNTlGyvrjeABXbd01B7k92RNprqewiPlGY\r\nhwLu55R5FOi0+0p9QbNox5I7gaIkx6JQtuuJLaMttGkWjDiMkSRrBP3EXyc=\r\n>>"
+                            ],
+                            "size": "",
+                            "icon": "",
+                            "buttonStyle": "PRIMARY",
+                            "ariaLabel": "",
+                            "skinName": "",
+                            "tooltipStyle": "",
+                            "tooltipVerticalPosition": "",
+                            "tooltipWidth": "",
+                            "accessibilityText": "",
+                            "shape": ""
+                        }
+                    ],
+                    "secondaryButtons": [],
+                    "marginBelow": "",
+                    "align": "",
+                    "accessibilityText": ""
+                },
+                "validations": [],
+                "contents": [
+                    {
+                        "_cId": "92ac0ded30d0351083104b113c757089",
+                        "isOldColumnArrayLayout": "true",
+                        "columns": [
+                            {
+                                "_cId": "3d142057141c29bf0ece222d409ec8f6",
+                                "contents": [
+                                    {
+                                        "_cId": "9b9eac364ea0870822c2cc79065a715f",
+                                        "label": "",
+                                        "instructions": "",
+                                        "steps": [
+                                            "Case Created",
+                                            "Pending Assignment",
+                                            "Researching",
+                                            "Pending Requester",
+                                            "Solution",
+                                            "Closed"
+                                        ],
+                                        "active": 2,
+                                        "labelPosition": "ABOVE",
+                                        "helpTooltip": "",
+                                        "currentStepLabel": "Current Step",
+                                        "completedStepLabel": "Completed Step",
+                                        "futureStepLabel": "Future Step",
+                                        "instructionsPosition": "ABOVE",
+                                        "style": "",
+                                        "orientation": "",
+                                        "accessibilityText": "",
+                                        "color": "",
+                                        "#t": "MilestoneField"
+                                    },
+                                    {
+                                        "isCollapsible": "true",
+                                        "isInitiallyCollapsed": "false",
+                                        "_cId": "79b85a29bd5369a012a8909744a93373",
+                                        "collapseLabel": "Hide section contents",
+                                        "contents": [
+                                            {
+                                                "_cId": "82afca95047373643bcf0c2191ef5179",
+                                                "isOldColumnArrayLayout": "true",
+                                                "columns": [
+                                                    {
+                                                        "_cId": "7ccd27f6db52c7c593d1a68c4d3b5df3",
+                                                        "contents": [
+                                                            {
+                                                                "_cId": "3bdfe639fbf4f88079a43184003ecafb",
+                                                                "label": "Service Request Number",
+                                                                "instructions": "",
+                                                                "readOnly": true,
+                                                                "disabled": true,
+                                                                "placeholder": "",
+                                                                "value": "0DIH-E7R5",
+                                                                "saveInto": [
+                                                                    "<<jA0EAwMCWwkpjz8F4HMB0o0BRgs5VLvcpYk99mMIfjjviK6opINlXunKTwRAmmx1JZUEIievyHLM\r\n7EsjL3eBfVzDrJmT5aFj8/HRad8d8+Jb7hPDZ6Y7uzJIdZJ6Od/eIKsm+MRlb8VoijphtkoDiXHe\r\ntDz7TXzZctoPZ25skPiWxuEmadjIeN6uYYTE1ZpY1QzNBFeUWCfQ+oXEnD4=\r\n>>"
+                                                                ],
+                                                                "refreshAfter": "UNFOCUS",
+                                                                "keyboard": "STANDARD",
+                                                                "labelPosition": "ADJACENT",
+                                                                "align": "DEFAULT",
+                                                                "helpTooltip": "",
+                                                                "accessibilityText": "",
+                                                                "#t": "TextField"
+                                                            },
+                                                            {
+                                                                "_cId": "2c4d9de81a8e5766a2e3e0e9ffd51b15",
+                                                                "label": "Request Type",
+                                                                "instructions": "",
+                                                                "readOnly": true,
+                                                                "disabled": true,
+                                                                "placeholder": "",
+                                                                "value": "I need help with an Order",
+                                                                "saveInto": [
+                                                                    "<<jA0EAwMCWwkpjz8F4HMB0o0BRgs5VLvcpYk99mMIfjjviK6opINlXunKTwZAmmx1JZXf9cz/Xijz\r\ngVYZxSz7boGkE8NYOKwADo1dvE8fNWPscHpXrfzHLVAAMpRTdqMyX1c1v0dm6YkVV5kBIgtfIgHA\r\nYRjqwOptS1qBPvtlkT31u33NJOMMW5UPqypKi984T9elrc8XLObINRlD9wE=\r\n>>"
+                                                                ],
+                                                                "refreshAfter": "UNFOCUS",
+                                                                "keyboard": "STANDARD",
+                                                                "labelPosition": "ADJACENT",
+                                                                "align": "DEFAULT",
+                                                                "helpTooltip": "",
+                                                                "accessibilityText": "",
+                                                                "#t": "TextField"
+                                                            },
+                                                            {
+                                                                "_cId": "3d752e92d3a348829b46f9e593625c29",
+                                                                "label": "Request Date & Time",
+                                                                "instructions": "",
+                                                                "readOnly": true,
+                                                                "disabled": true,
+                                                                "placeholder": "",
+                                                                "value": "Mar 24, 2020, 11:05 AM",
+                                                                "saveInto": [
+                                                                    "<<jA0EAwMCWwkpjz8F4HMB0o0BRgs5VLvcpYk99mMIfjjviK6opINlXunKTwZOmmx1IZWLaDHHy+Dn\r\nz5OmguAwAd4EeWKMU2GdGscc7eqCqgtocM/1ZJ6WATVNdcUGHy7kgOMMxvrEarezDD89djDl77nc\r\nZNSjJ7V5DX5uzffEGhhNwpaICE6kO/35Va2nYvR2WGLyfyA0FHw6Xf9yYog=\r\n>>"
+                                                                ],
+                                                                "refreshAfter": "UNFOCUS",
+                                                                "keyboard": "STANDARD",
+                                                                "labelPosition": "ADJACENT",
+                                                                "align": "DEFAULT",
+                                                                "helpTooltip": "",
+                                                                "accessibilityText": "",
+                                                                "#t": "TextField"
+                                                            },
+                                                            {
+                                                                "_cId": "e3067e19c49d1d02647a3235a1f6d45b",
+                                                                "label": "Requester Name",
+                                                                "instructions": "",
+                                                                "readOnly": true,
+                                                                "disabled": true,
+                                                                "placeholder": "",
+                                                                "value": "Laura Phillips",
+                                                                "saveInto": [
+                                                                    "<<jA0EAwMCWwkpjz8F4HMB0o0BRgs5VLvcpYk99mMIfjjviK6opINlXunKTwZOmmx1IZWLaDHHy+Dn\r\nz5OmguAwAd4EeWKMU2GdGscc7eqCqgtocM/1ZJ6WATVNdcUGHy7kgOMMxvrEarezDD89djDl77nc\r\nZNSjJaJOPwGvpJ3cf2VHVqJ/rP2QYtoagCYSKDkJ4j3o149sAp5N8B5td6A=\r\n>>"
+                                                                ],
+                                                                "refreshAfter": "UNFOCUS",
+                                                                "keyboard": "STANDARD",
+                                                                "labelPosition": "ADJACENT",
+                                                                "align": "DEFAULT",
+                                                                "helpTooltip": "",
+                                                                "accessibilityText": "",
+                                                                "#t": "TextField"
+                                                            },
+                                                            {
+                                                                "_cId": "0d2165cc2168ca89c7f299a85676183e",
+                                                                "label": "Status",
+                                                                "labelPosition": "ADJACENT",
+                                                                "instructions": "",
+                                                                "value": {
+                                                                    "_cId": "3c72aac2160b6820e6168c04c25a4f4d",
+                                                                    "values": [
+                                                                        {
+                                                                            "_cId": "d499383b8d4038c86cce3321c39de898",
+                                                                            "inRichTextImage": "true",
+                                                                            "image": {
+                                                                                "_opaqueId": "iYBHmqWXn-YADHst_BM6IxM-FGRtGg5Ct8kjHuHbVsR_Z4i-3nSxQ",
+                                                                                "_cId": "149e966685b8a3bd486fd86f2a8f02c5",
+                                                                                "document": {
+                                                                                    "id": 279,
+                                                                                    "#t": "CollaborationDocument"
+                                                                                },
+                                                                                "caption": "",
+                                                                                "altText": "",
+                                                                                "backgroundColor": "",
+                                                                                "#t": "DocumentImage"
+                                                                            },
+                                                                            "#t": "ImageWrapper"
+                                                                        },
+                                                                        {
+                                                                            "_cId": "e636fcc5b384fab262af0dbfc75e593f",
+                                                                            "values": [
+                                                                                {
+                                                                                    "#v": " - ",
+                                                                                    "#t": "string"
+                                                                                }
+                                                                            ],
+                                                                            "#t": "FormattedText"
+                                                                        },
+                                                                        {
+                                                                            "_cId": "fc6c964bf546ca2525f9c683f43c8d6b",
+                                                                            "values": [
+                                                                                {
+                                                                                    "#v": "Pending Assignment",
+                                                                                    "#t": "string"
+                                                                                }
+                                                                            ],
+                                                                            "#t": "FormattedText"
+                                                                        }
+                                                                    ],
+                                                                    "#t": "FormattedText"
+                                                                },
+                                                                "valueAlignment": "",
+                                                                "helpTooltip": "",
+                                                                "accessibilityText": "",
+                                                                "#t": "RichTextDisplayField"
+                                                            },
+                                                            {
+                                                                "_cId": "b66dd40ca35b55fc8496d7bf38c16ca6",
+                                                                "label": "Priority",
+                                                                "labelPosition": "ADJACENT",
+                                                                "instructions": "",
+                                                                "value": {
+                                                                    "_cId": "211996676c011af13a4df02294717bc0",
+                                                                    "values": [
+                                                                        {
+                                                                            "_cId": "f3c22bd7c279e04b5014f21a541c3e2a",
+                                                                            "inRichTextImage": "true",
+                                                                            "image": {
+                                                                                "_opaqueId": "iYBHmqWXn-YADHst_FI4oxM-LwoQlL1cI69YWmN47m3TkRtktaZZg",
+                                                                                "_cId": "00a27a5667ba81660506ea5090f608cf",
+                                                                                "document": {
+                                                                                    "id": 333,
+                                                                                    "#t": "CollaborationDocument"
+                                                                                },
+                                                                                "caption": "",
+                                                                                "altText": "",
+                                                                                "backgroundColor": "",
+                                                                                "#t": "DocumentImage"
+                                                                            },
+                                                                            "#t": "ImageWrapper"
+                                                                        },
+                                                                        {
+                                                                            "_cId": "026ecd9983e652239cf03aa0eede937e",
+                                                                            "values": [
+                                                                                {
+                                                                                    "#v": " - ",
+                                                                                    "#t": "string"
+                                                                                }
+                                                                            ],
+                                                                            "#t": "FormattedText"
+                                                                        },
+                                                                        {
+                                                                            "_cId": "463266d29f10030a030163698a20421c",
+                                                                            "values": [
+                                                                                {
+                                                                                    "#v": "4 - Low",
+                                                                                    "#t": "string"
+                                                                                }
+                                                                            ],
+                                                                            "#t": "FormattedText"
+                                                                        }
+                                                                    ],
+                                                                    "#t": "FormattedText"
+                                                                },
+                                                                "valueAlignment": "",
+                                                                "helpTooltip": "",
+                                                                "accessibilityText": "",
+                                                                "#t": "RichTextDisplayField"
+                                                            }
+                                                        ],
+                                                        "align": "",
+                                                        "width": ""
+                                                    },
+                                                    {
+                                                        "_cId": "dc127a91218be865901fa767a388fe2b",
+                                                        "contents": [
+                                                            {
+                                                                "version": "1",
+                                                                "gridOverrideSize": "SMALL",
+                                                                "gridOverrideThumbnailing": "false",
+                                                                "_cId": "58958a0167cb209986690931ee33e98b",
+                                                                "label": "Related Customer",
+                                                                "instructions": "",
+                                                                "images": [
+                                                                    {
+                                                                        "_opaqueId": "icBHmqWXn-YADHst_BP4ZVSGlxWTnzYh9Gn_ZheG6dkZ8WmF8o9p8Q",
+                                                                        "_cId": "b27df10272c39937a1195609752b9316",
+                                                                        "document": {
+                                                                            "id": 2406,
+                                                                            "#t": "CollaborationDocument"
+                                                                        },
+                                                                        "caption": "Salvor Remanufacturing Inc",
+                                                                        "altText": "Salvor Remanufacturing Inc",
+                                                                        "link": {
+                                                                            "_cId": "f473a15338f0b40ff76c931f4754d012",
+                                                                            "uuid": "7db9a56b-b303-46e1-81c9-c11dfffab8d8",
+                                                                            "siteUrlStub": "D6JMim",
+                                                                            "pageUrlStub": "tasks",
+                                                                            "recordIdentifier": "45",
+                                                                            "_recordRef": "lIBHmqWXn-YADHst_dYqssJX6V0no6jPUEeOPLz0ZOrzPUqCGPZbpu_tjBqhz4Qc5mSwWaVSZQok__VC39b-gXpS1I9r-wFKAzTtL3JVUeMESYW",
+                                                                            "recordRef": {
+                                                                                "id": "5#{http://an-appian-instance.host.net/ae/types/2009}Integer#45",
+                                                                                "#t": "RecordReference"
+                                                                            },
+                                                                            "dashboard": "",
+                                                                            "label": "",
+                                                                            "tooltip": "",
+                                                                            "#t": "RecordLink"
+                                                                        },
+                                                                        "backgroundColor": "",
+                                                                        "#t": "DocumentImage"
+                                                                    }
+                                                                ],
+                                                                "size": "SMALL",
+                                                                "labelPosition": "ADJACENT",
+                                                                "helpTooltip": "",
+                                                                "align": "",
+                                                                "isThumbnail": false,
+                                                                "style": "STANDARD",
+                                                                "accessibilityText": "",
+                                                                "#t": "ImageGalleryField"
+                                                            },
+                                                            {
+                                                                "_cId": "2da9f028d65613caa639470a6e95c37c",
+                                                                "label": "Related Order",
+                                                                "instructions": "",
+                                                                "links": [
+                                                                    {
+                                                                        "_cId": "ea92f4ffa4ffc73ad0fb525d1c6858a2",
+                                                                        "uuid": "b3b9659c-890b-45b1-89e9-97158d2482dd",
+                                                                        "siteUrlStub": "D6JMim",
+                                                                        "pageUrlStub": "tasks",
+                                                                        "recordIdentifier": "8",
+                                                                        "_recordRef": "lEBHmqWXn-YADHst_ZYqssJX8o7sQYc759Ns7NS040YyG1cVgTn3nmEyW4UqPdTvtU7hb2Wao67tTkqbOUflwSOEUQFbuu33jIaID5IKnUPhGw",
+                                                                        "recordRef": {
+                                                                            "id": "4#{http://an-appian-instance.host.net/ae/types/2009}Integer#8",
+                                                                            "#t": "RecordReference"
+                                                                        },
+                                                                        "dashboard": "",
+                                                                        "label": "Y37Y-L7HO",
+                                                                        "tooltip": "",
+                                                                        "#t": "RecordLink"
+                                                                    }
+                                                                ],
+                                                                "labelPosition": "ADJACENT",
+                                                                "align": "DEFAULT",
+                                                                "helpTooltip": "",
+                                                                "accessibilityText": "",
+                                                                "#t": "AnyLinkField"
+                                                            },
+                                                            {
+                                                                "_cId": "e8cd6d2f7aecc99e8715532c369cafdf",
+                                                                "hasNoValue": "true",
+                                                                "requiredMessage": "At least one item must be selected",
+                                                                "label": "Related Product",
+                                                                "instructions": "",
+                                                                "columns": [
+                                                                    {
+                                                                        "_cId": "10cd109ca566166f9fb6904098690aa9",
+                                                                        "label": "Product Name",
+                                                                        "helpTooltip": "",
+                                                                        "field": "",
+                                                                        "data": [
+                                                                            "Royal - 100X Medium Duty Shredder - Cross Cut..."
+                                                                        ],
+                                                                        "alignment": "DEFAULT",
+                                                                        "links": [
+                                                                            {
+                                                                                "_cId": "263b8c9eaea541a768fcaffdf7109bcf",
+                                                                                "uuid": "d1ea2edd-4da3-4f0f-a2db-236913478100",
+                                                                                "siteUrlStub": "D6JMim",
+                                                                                "pageUrlStub": "tasks",
+                                                                                "recordIdentifier": "74",
+                                                                                "_recordRef": "lIBHmqWXn-YADHst_FYqssJX6XALCG-AMWAO3M0raasbghXe4gYcGtp7sMI9TjnqHQhoVcX-Btcdu_t-xH5-8XUKG8iLaaWBdiA5LHSAZJmp_pU",
+                                                                                "recordRef": {
+                                                                                    "id": "3#{http://an-appian-instance.host.net/ae/types/2009}Integer#74",
+                                                                                    "#t": "RecordReference"
+                                                                                },
+                                                                                "dashboard": "",
+                                                                                "label": "",
+                                                                                "tooltip": "",
+                                                                                "#t": "RecordLink"
+                                                                            }
+                                                                        ],
+                                                                        "truncateText": false,
+                                                                        "contextMenu": {
+                                                                            "disabled": true
+                                                                        },
+                                                                        "#t": "GridTextColumn"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "8e40d04d28307983d576b6518926bbeb",
+                                                                        "label": "Quantity",
+                                                                        "helpTooltip": "",
+                                                                        "field": "",
+                                                                        "data": [
+                                                                            "1"
+                                                                        ],
+                                                                        "alignment": "DEFAULT",
+                                                                        "truncateText": false,
+                                                                        "contextMenu": {
+                                                                            "disabled": true
+                                                                        },
+                                                                        "#t": "GridTextColumn"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "427e1bb3ba952dd4dbb5554bce2e848e",
+                                                                        "label": "Unit Price",
+                                                                        "helpTooltip": "",
+                                                                        "field": "",
+                                                                        "data": [
+                                                                            "$51.99"
+                                                                        ],
+                                                                        "alignment": "DEFAULT",
+                                                                        "truncateText": false,
+                                                                        "contextMenu": {
+                                                                            "disabled": true
+                                                                        },
+                                                                        "#t": "GridTextColumn"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "984ae4297607afcbcfb79f255d763b92",
+                                                                        "label": "Total",
+                                                                        "helpTooltip": "",
+                                                                        "field": "",
+                                                                        "data": [
+                                                                            "$51.99"
+                                                                        ],
+                                                                        "alignment": "DEFAULT",
+                                                                        "truncateText": false,
+                                                                        "contextMenu": {
+                                                                            "disabled": true
+                                                                        },
+                                                                        "#t": "GridTextColumn"
+                                                                    }
+                                                                ],
+                                                                "saveInto": [
+                                                                    "<<jA0EAwMCWwkpjz8F4HMB0pkBRgs5VLvcpYk99mMIfjjviK6opINlXunKTgQFsxd1JZXUjXF7O7AQ\r\nQF4lKqvfGZcoa1XcwOsyNaCDV0sg/cTOhKacaQXq3v4Hmfz+jnaThZEX+kiGzO1KAdUb93TR3VWj\r\nKHLOHDRDO0qRZyhSl3d2jwW0+BKMNNnd2K+Yst1gSIdRX4IpPhwIZhVRTVdDWfNSEjl6putUdoU=\r\n>>"
+                                                                ],
+                                                                "value": {
+                                                                    "startIndex": 1,
+                                                                    "batchSize": 1,
+                                                                    "#t": "PagingInfo"
+                                                                },
+                                                                "totalCount": 1,
+                                                                "disabled": true,
+                                                                "readOnly": true,
+                                                                "labelPosition": "ADJACENT",
+                                                                "helpTooltip": "",
+                                                                "emptyGridMessage": "No items available",
+                                                                "instructionsPosition": "ABOVE",
+                                                                "numRowsToDisplay": 1,
+                                                                "pagingText": "",
+                                                                "firstPageLabel": "First page",
+                                                                "prevPageLabel": "Previous page",
+                                                                "nextPageLabel": "Next page",
+                                                                "lastPageLabel": "Last page",
+                                                                "spacing": "STANDARD",
+                                                                "borderStyle": "STANDARD",
+                                                                "rowStyle": "ZEBRA",
+                                                                "selectionStyle": "CHECKBOX",
+                                                                "height": "",
+                                                                "showJumpControls": false,
+                                                                "accessibilityText": "",
+                                                                "#t": "GridField"
+                                                            },
+                                                            {
+                                                                "_cId": "ffa5719d83dae6265776c5345a450d2c",
+                                                                "label": "Request Comment",
+                                                                "instructions": "",
+                                                                "readOnly": true,
+                                                                "disabled": true,
+                                                                "placeholder": "",
+                                                                "value": "Incorrect order was shipped to customer.  They will return and expect a refund.",
+                                                                "saveInto": [
+                                                                    "<<jA0EAwMCWwkpjz8F4HMB0o0BRgs5VLvcpYk99mMIfjjviK6opINlXunKJAYFvGx1IZXeO7QVG9Ry\r\nMoPHD4d5W7Alq2E1/iTVBhRHeHIqph9T4AHhjsM36UaOqWgFePtJPpF/7bHUPwP/95W6t9mPCoZw\r\nKpR7hOc6m6SUodmBHdZ2yJWJrwkHgN2kQF+tV3J+xQ2m0bwPIbEB4jR6WKM=\r\n>>"
+                                                                ],
+                                                                "refreshAfter": "UNFOCUS",
+                                                                "keyboard": "STANDARD",
+                                                                "labelPosition": "ADJACENT",
+                                                                "align": "DEFAULT",
+                                                                "helpTooltip": "",
+                                                                "accessibilityText": "",
+                                                                "#t": "TextField"
+                                                            }
+                                                        ],
+                                                        "align": "",
+                                                        "width": ""
+                                                    }
+                                                ],
+                                                "alignVertical": "",
+                                                "layout": "",
+                                                "minHeight": "",
+                                                "#t": "ColumnArrayLayout"
+                                            }
+                                        ],
+                                        "divider": "",
+                                        "errorLabel": "This section contains errors",
+                                        "expandLabel": "Show section contents",
+                                        "label": "Service Request Details",
+                                        "validations": [],
+                                        "actions": [
+                                            {
+                                                "_cId": "dd0e5b4314b6463e4943d326e9078d85",
+                                                "customStyle": "COLLAPSIBLE",
+                                                "label": "Collapsible",
+                                                "value": {
+                                                    "#v": "",
+                                                    "#t": "string"
+                                                },
+                                                "saveInto": [
+                                                    "<<jA0EAwMCWwkpjz8F4HMB0pUBRgs5VLvcpYk99mMIfjjviK6opINlXunKJAYFmm91JYV+Y12pmHZj\r\nupGyppkkYmvz3pJKfHT7tr3j0IuOYt6nDGFUxcQjkfe9p09FGmTwdXtjqQoN6cMYrklxns4WCXsF\r\n8+rXoKeQN/Gpyg/V2tDGgE3IgSvChpf09XPLsZQqpObwxdx8fPrMhsYub2NewW2qUEdeMw==\r\n>>"
+                                                ],
+                                                "tooltip": "",
+                                                "href": "",
+                                                "#t": "DynamicLink"
+                                            }
+                                        ],
+                                        "labelStyle": "",
+                                        "skinName": "",
+                                        "marginBelow": "",
+                                        "accessibilityText": "",
+                                        "#t": "SectionLayout2"
+                                    },
+                                    {
+                                        "isCollapsible": "false",
+                                        "isInitiallyCollapsed": "false",
+                                        "_cId": "79c455ac49b3218a95dd50cf09985296",
+                                        "collapseLabel": "Hide section contents",
+                                        "contents": [
+                                            {
+                                                "_cId": "4a5701a7eb8ed2268994c7b816e401c0",
+                                                "isOldColumnArrayLayout": "true",
+                                                "columns": [
+                                                    {
+                                                        "_cId": "94d63dffffe46faf2245f32eee3f2be0",
+                                                        "contents": [
+                                                            {
+                                                                "_cId": "b15a8e87a750949dc1c4b4139f46acfe",
+                                                                "hasNoValue": "false",
+                                                                "hasPlaceholderLabel": "true",
+                                                                "label": "Available Case Workers",
+                                                                "instructions": "User with less workload automatically selected. You may override selection.",
+                                                                "required": true,
+                                                                "disabled": true,
+                                                                "choices": [
+                                                                    "---Select a Case Worker---",
+                                                                    "test user1 Quick",
+                                                                    "test user1 Designer",
+                                                                    "test user1 System",
+                                                                    "test user2 Quick",
+                                                                    "test user2 Designer",
+                                                                    "test user2 System",
+                                                                    "test user3 Quick",
+                                                                    "test user3 Designer",
+                                                                    "test user3 System",
+                                                                    "test user4 Quick",
+                                                                    "test user4 Designer",
+                                                                    "test user4 System",
+                                                                    "test user5 Quick",
+                                                                    "test user5 Designer",
+                                                                    "test user5 System",
+                                                                    "test user6 Quick",
+                                                                    "test user6 Designer",
+                                                                    "test user6 System",
+                                                                    "test user7 Quick",
+                                                                    "test user7 Designer",
+                                                                    "test user7 System",
+                                                                    "test user8 Quick",
+                                                                    "test user8 Designer",
+                                                                    "test user8 System",
+                                                                    "test user9 Quick",
+                                                                    "test user9 Designer",
+                                                                    "test user9 System",
+                                                                    "test user10 Quick",
+                                                                    "test user10 Designer",
+                                                                    "test user10 System",
+                                                                    "Basic User",
+                                                                    "Deny User"
+                                                                ],
+                                                                "value": 3,
+                                                                "saveInto": [
+                                                                    "<<jA0EAwMCWwkpjz8F4HMB0pUBRgs5VLvcpYk99mMIfjjviK6opINlXunMVsJ9NxY67vxwrmdBCNm0\r\nZaIy1QgqmuyBeSuKPOnkgFQMRR3t8cjO+D5Z6vXua+n8rY8epxfOp0UfZaxVS+XizOcNlBddZbmn\r\np1jbI4DqrFTCprnvI0Qn+NQDx3KnSqFjEW0NFb4p57TQTLOXzGRLC0bUZMZsnKY6q7vrxw==\r\n>>"
+                                                                ],
+                                                                "labelPosition": "ABOVE",
+                                                                "align": "DEFAULT",
+                                                                "helpTooltip": "",
+                                                                "width": "",
+                                                                "clearIconLabel": "Clear value for Available Case Workers",
+                                                                "skinName": "",
+                                                                "accessibilityText": "",
+                                                                "#t": "DropdownField"
+                                                            },
+                                                            {
+                                                                "_cId": "7f3c0952a2fea1688bd6cefb6530d0ff",
+                                                                "hasNoValue": "false",
+                                                                "hasPlaceholderLabel": "true",
+                                                                "label": "Assign Case Priority",
+                                                                "instructions": "CRITICAL: Revenue-impacting enterprise issues that affect the entire company. HIGH: issues that may potentially become revenue impacting but do not affect the entire company. MEDIUM: issues affecting a single user or for enhancement requests that need to be completed to avoid impending revenue loss. LOW: issues that have known workarounds, issues that do not affect revenue, or enhancement suggestions.",
+                                                                "required": true,
+                                                                "disabled": true,
+                                                                "choices": [
+                                                                    "---Select a Priority---",
+                                                                    "4 - Low",
+                                                                    "3 - Medium",
+                                                                    "2 - High",
+                                                                    "1 - Critical"
+                                                                ],
+                                                                "value": 2,
+                                                                "saveInto": [
+                                                                    "<<jA0EAwMCWwkpjz8F4HMB0pkBRgs5VLvcpYk99mMIfjjviK6opINlXunMVsN9Nxc67vyvm8B5hbYY\r\n5dcql1LL5ZI6oA1VQ/JWwiLi1JNyW6LeUCQFAn5Cp8ale27+jHFDYdVPRZ0h5ThlKWpPgU8abk/a\r\nD++WEUhX+Nx3UpojlEVPwUrvgTPTj1rEkQKSDVHHgI74xeJqRjff8Q27v1Qpq0Q5U6a/fFXrnac=\r\n>>"
+                                                                ],
+                                                                "labelPosition": "ABOVE",
+                                                                "align": "DEFAULT",
+                                                                "helpTooltip": "",
+                                                                "width": "",
+                                                                "clearIconLabel": "Clear value for Assign Case Priority",
+                                                                "skinName": "",
+                                                                "accessibilityText": "",
+                                                                "#t": "DropdownField"
+                                                            }
+                                                        ],
+                                                        "align": "",
+                                                        "width": ""
+                                                    },
+                                                    {
+                                                        "_cId": "7e6aa4b13b2c6576cfa8248c096312f9",
+                                                        "contents": [
+                                                            {
+                                                                "_cId": "471283aadcf0bcb9cf7faf9fe1d2a712",
+                                                                "hasNoValue": "true",
+                                                                "requiredMessage": "At least one item must be selected",
+                                                                "label": "Workload per Case Worker",
+                                                                "instructions": "",
+                                                                "columns": [
+                                                                    {
+                                                                        "_cId": "abd50f53e8bd8bd7d90563bcf66891a7",
+                                                                        "label": "Case Worker",
+                                                                        "helpTooltip": "",
+                                                                        "field": "userDisplay",
+                                                                        "data": [
+                                                                            "test user2 Designer",
+                                                                            "test user3 Quick",
+                                                                            "test user4 System",
+                                                                            "test user1 Quick",
+                                                                            "test user5 System"
+                                                                        ],
+                                                                        "alignment": "DEFAULT",
+                                                                        "truncateText": false,
+                                                                        "contextMenu": {
+                                                                            "disabled": true
+                                                                        },
+                                                                        "#t": "GridTextColumn"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "f3ca613160181928572821947a017328",
+                                                                        "label": "Task Workload",
+                                                                        "helpTooltip": "",
+                                                                        "field": "workload",
+                                                                        "data": [
+                                                                            "0",
+                                                                            "0",
+                                                                            "0",
+                                                                            "0",
+                                                                            "0"
+                                                                        ],
+                                                                        "alignment": "DEFAULT",
+                                                                        "truncateText": false,
+                                                                        "contextMenu": {
+                                                                            "disabled": true
+                                                                        },
+                                                                        "#t": "GridTextColumn"
+                                                                    }
+                                                                ],
+                                                                "saveInto": [
+                                                                    "<<jA0EAwMCWwkpjz8F4HMB0pEBRgs5VLvcpYk99mMIfjjviK6opINlXunKJAdOmRd1IZVrSDsjQ1O6\r\nwsJXmTgCAANNmwjle4kvWNyct2NbupEnxIPU+ydxSQcoVuCqxBS5ZnUr6RRwi7tzCyZ/OsqVBPqR\r\nUHAruVvzzMxCBvGdswqznv/7s9GGKpP9AniaK2+XDfrvBDFT/AbkeXCeKRpqn5z4\r\n>>"
+                                                                ],
+                                                                "value": {
+                                                                    "startIndex": 1,
+                                                                    "batchSize": 5,
+                                                                    "sort": [
+                                                                        {
+                                                                            "field": "workload",
+                                                                            "ascending": true
+                                                                        }
+                                                                    ],
+                                                                    "#t": "PagingInfo"
+                                                                },
+                                                                "totalCount": 844,
+                                                                "disabled": true,
+                                                                "readOnly": true,
+                                                                "labelPosition": "ABOVE",
+                                                                "helpTooltip": "",
+                                                                "emptyGridMessage": "No items available",
+                                                                "instructionsPosition": "ABOVE",
+                                                                "numRowsToDisplay": 5,
+                                                                "pagingText": "**1 - 5** of 844",
+                                                                "firstPageLabel": "First page",
+                                                                "prevPageLabel": "Previous page",
+                                                                "nextPageLabel": "Next page",
+                                                                "lastPageLabel": "Last page",
+                                                                "spacing": "STANDARD",
+                                                                "borderStyle": "STANDARD",
+                                                                "rowStyle": "ZEBRA",
+                                                                "selectionStyle": "CHECKBOX",
+                                                                "height": "",
+                                                                "showJumpControls": true,
+                                                                "accessibilityText": "",
+                                                                "#t": "GridField"
+                                                            }
+                                                        ],
+                                                        "align": "",
+                                                        "width": ""
+                                                    }
+                                                ],
+                                                "alignVertical": "",
+                                                "layout": "",
+                                                "minHeight": "",
+                                                "#t": "ColumnArrayLayout"
+                                            }
+                                        ],
+                                        "divider": "",
+                                        "errorLabel": "This section contains errors",
+                                        "expandLabel": "Show section contents",
+                                        "label": "Assign Case Worker & Priority",
+                                        "validations": [],
+                                        "labelStyle": "",
+                                        "skinName": "",
+                                        "marginBelow": "",
+                                        "accessibilityText": "",
+                                        "#t": "SectionLayout2"
+                                    }
+                                ],
+                                "align": "",
+                                "width": ""
+                            }
+                        ],
+                        "alignVertical": "",
+                        "layout": "",
+                        "minHeight": "",
+                        "isTopLevelComponent": true,
+                        "#t": "ColumnArrayLayout"
+                    }
+                ],
+                "layout": "",
+                "width": "",
+                "#t": "FormLayout"
+            }
+        ],
+        "padding": "",
+        "#t": "ContentLayout"
+    },
+    "context": {
+        "#v": "jA0EAwMCWwkpjz8F4HMB0sABAU6AFSynItnsmFHX96JInHZRDxOaclFK0nKv4NCgeDvxFObNeVav\r\niWElh6eZbcUYUdawnVqkL41bJr6mbuIlVYT+6B0l6M8xsxT9ompoYPtXBSZthnhsmjY6mTTCxkWP\r\n+2K0DY9Ks0fQoTL2/XmCTxGAszKSjbfpBUtA0W0qkw9FDI3IIoQaQpxZFoMMBqh4sGA6fc4yqiZP\r\nOlmo88Z1khsTGkD/Tc/yWTFHSVAoxqkIhaMnfMLz80Yr2CJ/0iJcpA==\r\n",
+        "#t": "string"
+    },
+    "uuid": "6062ef39-4499-423c-9a08-84d7bc8288d0",
+    "i18nInfo": {
+        "locale": "en-US",
+        "timezoneId": "GMT",
+        "calendarId": "gregorian",
+        "decimalSeparator": ".",
+        "groupingSeparator": ","
+    },
+    "timers": {
+        "#t": "Dictionary"
+    },
+    "#t": "UiConfig",
+    "#s": {
+        "#v": [],
+        "#t": "DataType?list"
+    },
+    "shortcuts": [],
+    "#u": "<https://an-appian-instance.host.net/suite/tempo/records/type/{recordTypeName}/item/{opaqueId}/view/{dashboard}>; rel=\"x-web-bookmark\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/components/ping.do>; rel=\"x-resume-session\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/thumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-icon\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://an-appian-instance.host.net/suite/tempo/records/item/{_recordRef}/view/{dashboard}>; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/all>; rel=\"x-sites-all\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/tasks/task/{id}>; rel=\"x-site-task\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/usercard/{%40attributes.%40anyAttribute.recordIdentifier}>; rel=\"x-data-request-usercard\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/page/{pageUrlStub}/task/{id}>; rel=\"x-site-task-page\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/custom/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-custom\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://an-appian-instance.host.net/suite/sites{/siteUrlStub}/page/{pageUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-web-bookmark-sites\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/page{/pageUrlStub}/nav>; rel=\"x-site-page-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/o>; rel=\"x-attachment-temp\"; type=\"application/vnd.appian.tv+json\"; dt=\"CollaborationDocument\",<https://an-appian-instance.host.net/suite/rest/a/user/latest/user/{%40attributes.%40anyAttribute.user}/about>; rel=\"x-data-request-userinfo\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-leftnav\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/page/{pageUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest/{recordTypeUrlStub}/{recordId}/dashboards/{dashboardUrlStub}/transparentid>; rel=\"x-record-ui\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest{/recordTypeUrlStub}{/recordId}/dashboards{/dashboardUrlStub}/headerFeed>; rel=\"x-record-dashboard-feed-header\"; type=\"application/atom+json\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/task/latest/{taskId}/attributes>; rel=\"x-task-attributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}/views>; rel=\"x-data-request-site-mobile-record-views\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/internal/webapi/releaselock/{objectUuid}/{uiSourceUuid}>; rel=\"x-data-release-object-lock\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/tempo/records/type/{recordTypeName}/item/{opaqueId}/actions>; rel=\"x-web-bookmark-actions\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/>; rel=\"x-sasa-app\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/siteUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-web-bookmark-sites-nopage\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest{/recordTypeUrlStub}{/recordId}/dashboards{/dashboardUrlStub}>; rel=\"x-record-dashboard-feed\"; type=\"application/atom+json\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/api/feed/tempo?t=e,x,b,f&m=menu-records&s=mt{&_recordRef,dashboard,c}>; rel=\"x-record-news\"; type=\"application/atom+xml\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/app{/appName}{/path*}{?params*}>; rel=\"x-sail-application\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/user/latest/{%40attributes.%40anyAttribute.user}/about>; rel=\"x-user-cover-photo\"; dt=\"DocumentImage\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-nopage\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/tempo/records/item/{_recordRef}/view/{dashboard}>; rel=\"x-web-bookmark-records\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest/{recordTypeUrlStub}/{recordId}/feed/dashboards/{dashboardUrlStub}/transparentid>; rel=\"x-record-feed\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/o>; rel=\"x-document-image\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://an-appian-instance.host.net/suite/api/feed/tempo?t=e,x,b,f&m=menu-records&s=mt{&_recordRef,dashboard,c}>; rel=\"x-data-request-record-news\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/o>; rel=\"x-attachment-temp\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/recordType/{recordTypeUrlStub}/record/{opaqueRecordId}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-by-id-nopage\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/thumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-thumbnail\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/viewportThumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-viewport\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://an-appian-instance.host.net/suite/rest/a/record/latest{/_recordRef}/dashboards{/dashboard}/headerFeed>; rel=\"x-record-dashboard-header\"; type=\"application/atom+xml\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest{/_recordRef}/dashboards{/dashboard}>; rel=\"x-record-dashboard\"; type=\"application/atom+xml\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/cors>; rel=\"x-cors\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/thumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-thumbnail\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/evaluateComponentTemplate{/templateId}>; rel=\"x-ifcdesigner-evaluatecomponenttemplate\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/pages/{pageUrlStub}/report>; rel=\"x-sites-report\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/nav>; rel=\"x-site-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/thumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-thumbnail\"; dt=\"DocumentImage\",<https://an-appian-instance.host.net/suite/sites>; rel=\"x-site-main\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/page/{pageUrlStub}/recordType/{recordTypeUrlStub}/record/{opaqueRecordId}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-by-id\"; dt=\"RecordLink\""
+}

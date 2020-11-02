@@ -1,0 +1,307 @@
+{
+    "_cId": "90ffd5dbf3939faf902f0657f24a6c2b",
+    "isSystemUi": "true",
+    "_dirty": "false",
+    "sail-navigation-bookmark-url": "/design",
+    "sail-navigation-endpoint-url": "/rest/a/applications/latest/app/design",
+    "links": [
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/applications/latest/app/design",
+            "rel": "update",
+            "title": "Update",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/applications/latest/app/design",
+            "rel": "self",
+            "title": "",
+            "method": "GET"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/applications/latest/app/design",
+            "rel": "self",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/api/tempo/file",
+            "rel": "upload",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/tempo/file-web/",
+            "rel": "upload-web",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/tempo/file-web-encrypt/",
+            "rel": "upload-web-encrypt",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/doc",
+            "rel": "x-docinfo",
+            "title": "",
+            "method": "POST",
+            "saveInto": "<<jA0EAwMCb24pCQUucNUB0mcB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcDgswXVrYp/IxK6CvO81TL\r\nxdahRwdtzSlvSlIbxR6sKIJuNFG5UBARntAL/m6K05146rwfaXjvsdldGU+r+W68Og3UV0lneCS2\r\nHut0Jy3Z\r\n>>"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/autosuggest",
+            "rel": "x-autosuggest",
+            "title": "",
+            "method": "POST"
+        }
+    ],
+    "triggers": [],
+    "ui": {
+        "_cId": "6371089562ccc50c6ab64c7af4adfe8a",
+        "contents": [
+            {
+                "_cId": "a57e7e17392ebf5406db410e17972790",
+                "testLabel": "Import Complete!",
+                "header": {
+                    "_cId": "056e105f970af97a332d99e1d87f6a68",
+                    "contents": [
+                        {
+                            "_cId": "14cbcef467b8cbc70584d2c3f63e1d38",
+                            "testLabel": "modalHeaderTitleText",
+                            "label": "",
+                            "labelPosition": "COLLAPSED",
+                            "instructions": "",
+                            "value": {
+                                "_cId": "e4b99d9b7485b6d4dc149b01c088c1af",
+                                "values": [
+                                    {
+                                        "values": [
+                                            {
+                                                "#v": "Import Complete!",
+                                                "#t": "string"
+                                            }
+                                        ],
+                                        "#t": "TitleText"
+                                    }
+                                ],
+                                "#t": "FormattedText"
+                            },
+                            "valueAlignment": "",
+                            "helpTooltip": "",
+                            "accessibilityText": "",
+                            "#t": "RichTextDisplayField"
+                        }
+                    ],
+                    "padding": "STANDARD",
+                    "#t": "ContentLayout"
+                },
+                "content": {
+                    "_cId": "f6502f482ef682da33ac78d35c672072",
+                    "contents": [
+                        {
+                            "_cId": "828645c508ee0be6c4f863e44e865408",
+                            "testLabel": "packageName",
+                            "label": "Package",
+                            "instructions": "",
+                            "readOnly": true,
+                            "placeholder": "",
+                            "value": "SOAP Test App.zip",
+                            "saveInto": [
+                                "<<jA0EAwMCb24pCQUucNUB0rUB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcF2nKZy4BaIr/ujp+NelGs\r\npMUgZkg/RopiTtYSLTcRwaw49xETVRbP8iRLd0sJbtWHLIZmfucGT9InAI3CZr0phT/Z7qS61e52\r\nrUhYhzbArE3Nbsk+RhSf7sKrsl6UsyJp5U4c171T4M1U72FhecWZFat+GALp8OKGjkRnT3TlmnFb\r\nHFaJm5sP1k3p4bpvf7uwPw13ujiQwdMKzyHc\r\n>>"
+                            ],
+                            "refreshAfter": "UNFOCUS",
+                            "keyboard": "STANDARD",
+                            "labelPosition": "ABOVE",
+                            "align": "DEFAULT",
+                            "helpTooltip": "",
+                            "accessibilityText": "",
+                            "#t": "TextField"
+                        },
+                        {
+                            "isCollapsible": "false",
+                            "isInitiallyCollapsed": "false",
+                            "_cId": "dd78861b774d647573748fe5990ca8cc",
+                            "collapseLabel": "Hide section contents",
+                            "contents": [
+                                {
+                                    "_cId": "a317fa600d78bd6a4e1ecb64f960a7af",
+                                    "isOldColumnArrayLayout": "true",
+                                    "columns": [
+                                        {
+                                            "_cId": "b4b1382bc68a2aedfc9be44cc36702af",
+                                            "contents": [
+                                                {
+                                                    "_cId": "696ddbb827fd10a6df0611cd0c44faeb",
+                                                    "contents": [
+                                                        {
+                                                            "_cId": "878a8b65b91bd6c5f5ec9c9829e511e9",
+                                                            "testLabel": "importResultsText",
+                                                            "label": "",
+                                                            "labelPosition": "COLLAPSED",
+                                                            "instructions": "",
+                                                            "value": {
+                                                                "_cId": "da0ad2a335ba2b00cb4fffaa85fdb0fe",
+                                                                "values": [
+                                                                    {
+                                                                        "#v": "Import complete with no problems or warnings.",
+                                                                        "#t": "string"
+                                                                    }
+                                                                ],
+                                                                "#t": "FormattedText"
+                                                            },
+                                                            "valueAlignment": "",
+                                                            "helpTooltip": "",
+                                                            "accessibilityText": "",
+                                                            "#t": "RichTextDisplayField"
+                                                        },
+                                                        {
+                                                            "_cId": "1f0cc2f1319e742469fea5e6132bacb7",
+                                                            "testLabel": "importResultsSuccessCount",
+                                                            "label": "",
+                                                            "labelPosition": "COLLAPSED",
+                                                            "instructions": "",
+                                                            "value": {
+                                                                "_cId": "430cc8a853c7491bc4455f7c91956725",
+                                                                "values": [
+                                                                    {
+                                                                        "#v": "25 of 25 items were successfully imported or skipped.",
+                                                                        "#t": "string"
+                                                                    },
+                                                                    {
+                                                                        "#v": " ",
+                                                                        "#t": "string"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "f630128040bc03b3832b9c58c6b5d126",
+                                                                        "values": {
+                                                                            "_cId": "022926f083fff6d4739647950234eb36",
+                                                                            "values": [
+                                                                                {
+                                                                                    "#v": "View import log",
+                                                                                    "#t": "string"
+                                                                                }
+                                                                            ],
+                                                                            "#t": "FormattedText"
+                                                                        },
+                                                                        "link": {
+                                                                            "_documentDownloadLink": "igBHer_bdD8Emw8hL_WBrnb_QRdDqU_c7jSwkbZvF94lcecTsrX0oSi",
+                                                                            "_cId": "2ce1d0b72d1e5fd890f49dfdb6f58122",
+                                                                            "document": {
+                                                                                "id": 9109,
+                                                                                "#t": "CollaborationDocument"
+                                                                            },
+                                                                            "label": "",
+                                                                            "version": -1,
+                                                                            "#t": "DocumentDownloadLink"
+                                                                        },
+                                                                        "linkStyle": "",
+                                                                        "#t": "LinkedItem"
+                                                                    }
+                                                                ],
+                                                                "#t": "FormattedText"
+                                                            },
+                                                            "valueAlignment": "",
+                                                            "helpTooltip": "",
+                                                            "accessibilityText": "",
+                                                            "#t": "RichTextDisplayField"
+                                                        }
+                                                    ],
+                                                    "style": "INFO",
+                                                    "layout": "",
+                                                    "#t": "MessageLayout"
+                                                }
+                                            ],
+                                            "align": "",
+                                            "width": ""
+                                        }
+                                    ],
+                                    "alignVertical": "",
+                                    "layout": "",
+                                    "minHeight": "",
+                                    "#t": "ColumnArrayLayout"
+                                }
+                            ],
+                            "divider": "",
+                            "errorLabel": "This section contains errors",
+                            "expandLabel": "Show section contents",
+                            "label": "",
+                            "validations": [],
+                            "labelStyle": "",
+                            "skinName": "",
+                            "marginBelow": "",
+                            "accessibilityText": "",
+                            "#t": "SectionLayout2"
+                        }
+                    ],
+                    "padding": "STANDARD",
+                    "#t": "ContentLayout"
+                },
+                "footer": {
+                    "_cId": "f7ff160bcda82bebce844f5b3e6824b5",
+                    "contents": [
+                        {
+                            "_cId": "0abee67b7033ccb25ba5d1cf04d7bc45",
+                            "primaryButtons": [
+                                {
+                                    "_cId": "5c12514f63529396f65f405fe29a518d",
+                                    "isFlat": "false",
+                                    "label": "Close",
+                                    "style": "",
+                                    "confirmHeader": "",
+                                    "confirmMessage": "",
+                                    "confirmButtonLabel": "",
+                                    "confirmButtonStyle": "PRIMARY",
+                                    "cancelButtonLabel": "",
+                                    "value": {
+                                        "#v": "",
+                                        "#t": "string"
+                                    },
+                                    "saveInto": [
+                                        "<<jA0EAwMCb24pCQUucNUB0rkB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcF2nOZ7YBeIr8N0GEzvxTI\r\nQ9MXBMaeN/HGG9VeA4NkdRshOF0Mbf1a7qXLCIfqPoTbrlHzJD99T8adUzjkNHsThDZ7AR9MSI/2\r\n/BlBANOHwlAeKYQ6lVlRS5DT58My8yK05Jwh34uNg3Tw4G8DkUo2KDIpvk8rgshU/65wzgN5LNIN\r\nV27uzCLr/UVvR4jKhWgTKOy9BBxyEWnS8jSxEnm4ZQ==\r\n>>"
+                                    ],
+                                    "size": "",
+                                    "icon": "",
+                                    "buttonStyle": "",
+                                    "ariaLabel": "",
+                                    "skinName": "",
+                                    "tooltipStyle": "",
+                                    "tooltipVerticalPosition": "",
+                                    "tooltipWidth": "",
+                                    "accessibilityText": ""
+                                }
+                            ],
+                            "marginBelow": "NONE",
+                            "align": "",
+                            "accessibilityText": "",
+                            "#t": "ButtonLayout"
+                        }
+                    ],
+                    "padding": "STANDARD",
+                    "#t": "ContentLayout"
+                },
+                "#t": "HeaderContentFooterLayout"
+            }
+        ],
+        "height": "MEDIUM",
+        "width": "MEDIUM",
+        "#t": "ModalDialogLayout"
+    },
+    "context": {
+        "#v": "jA0EAwMCb24pCQUucNUB0sBAAQSph6tro1jRCsVRy17TzLX6bSaWR9tc0aKOVI8lnLpLghLDdIlB\r\n1Boq/6x/b2I0M9xLAOA8m9gAiEi9UWDqRyii3bpcgz5Nnx68BmeejkRz/Aa4jVGakiBpgdORvbJ0\r\n1b25Ep/5KDtrsOa2jUPQBy9kdxMux93SHAbyWNErxrmyT58EZKkezggdR3F3PCOgbxds2a950KOu\r\ncyUTuobez8EZmc6XNP8LQzetIoS6pHEZNWc9RIh4vhLgCLo6fC8JmtBfAcgroFCHc+N7u+MsU0Lm\r\nW5wxpthFzibQKHVQToLclOV/8ielIx0CdzzDvknDVXDWk6m+vyBIqjj/lxu6kw==\r\n",
+        "#t": "string"
+    },
+    "uuid": "e034e580-b8a6-4a73-a8f9-d0963c165d1c",
+    "i18nInfo": {
+        "locale": "en-US",
+        "timezoneId": "GMT",
+        "calendarId": "gregorian",
+        "decimalSeparator": ".",
+        "groupingSeparator": ","
+    },
+    "timers": {
+        "#t": "Dictionary"
+    },
+    "#t": "UiConfig",
+    "shortcuts": [],
+    "#u": "<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/>; rel=\"x-sasa-app\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/components/ping.do>; rel=\"x-resume-session\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/app{/appName}{/path*}{?params*}>; rel=\"x-sail-application\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/all>; rel=\"x-sites-all\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/tasks/task/{id}>; rel=\"x-site-task\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/page/{pageUrlStub}/task/{id}>; rel=\"x-site-task-page\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/o>; dt=\"DocumentDownloadLink\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/page{/pageUrlStub}/nav>; rel=\"x-site-page-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/cors>; rel=\"x-cors\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/evaluateComponentTemplate{/templateId}>; rel=\"x-ifcdesigner-evaluatecomponenttemplate\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/o>; rel=\"x-attachment-temp\"; type=\"application/vnd.appian.tv+json\"; dt=\"CollaborationDocument\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/pages/{pageUrlStub}/report>; rel=\"x-sites-report\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/nav>; rel=\"x-site-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites>; rel=\"x-site-main\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/task/latest/{taskId}/attributes>; rel=\"x-task-attributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/internal/webapi/releaselock/{objectUuid}/{uiSourceUuid}>; rel=\"x-data-release-object-lock\"; dt=\"UiConfig\""
+}

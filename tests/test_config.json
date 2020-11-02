@@ -1,0 +1,19 @@
+{
+    "cluster_name": "test",
+    "cluster_size": 1,
+    "tests": "all",
+    "run_time_in_secs": 300,
+    "num_concur_users": 8,
+    "hatch_rate_per_sec": 4,
+    "task_weights": {
+        "exec_java_task": 1,
+        "exec_k_task": 1,
+        "exec_java_k_task": 1,
+        "exec_start_end_task": 1
+    },
+    "skip_machine_setup": false,
+    "auth": [
+        "username",
+        "password"
+    ]
+}

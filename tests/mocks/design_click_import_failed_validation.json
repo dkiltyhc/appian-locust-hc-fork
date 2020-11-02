@@ -1,0 +1,1140 @@
+{
+    "_cId": "9f61a45b530a338f91281ae4079d6b8a",
+    "isSystemUi": "true",
+    "_dirty": "false",
+    "sail-navigation-bookmark-url": "/design",
+    "sail-navigation-endpoint-url": "/rest/a/applications/latest/app/design",
+    "links": [
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/applications/latest/app/design",
+            "rel": "update",
+            "title": "Update",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/applications/latest/app/design",
+            "rel": "self",
+            "title": "",
+            "method": "GET"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/applications/latest/app/design",
+            "rel": "self",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/api/tempo/file",
+            "rel": "upload",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/tempo/file-web/",
+            "rel": "upload-web",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/tempo/file-web-encrypt/",
+            "rel": "upload-web-encrypt",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/doc",
+            "rel": "x-docinfo",
+            "title": "",
+            "method": "POST",
+            "saveInto": "<<jA0EAwMCmXYcYt5WxPIB0mcB/HqguJ0CPia/rDBp04TiXxW0CA+8DqFtYJcWWWDLEHGzgqKXecM5\r\nbIg7Fn3QyXwDXNi3l5cGwjhBaVqdVwviQHvFOZE2HSyFzX/X+XhaARhLZGB2iD54zHSKIrEJn8Bj\r\nohoPNIDl\r\n>>"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/autosuggest",
+            "rel": "x-autosuggest",
+            "title": "",
+            "method": "POST"
+        }
+    ],
+    "triggers": [],
+    "ui": {
+        "#t": "UiComponentsDelta",
+        "modifiedComponents": [
+            {
+                "_cId": "ca4fc2151608d2ad29138f5dc6ae54fc",
+                "testLabel": "upload-Import Customization File (PROPERTIES)",
+                "validations": [
+                    {
+                        "message": "The uploaded file is invalid (APNX-1-4268-003)"
+                    }
+                ],
+                "value": {
+                    "id": 5117,
+                    "#t": "CollaborationDocument"
+                },
+                "name": "Constant Test App",
+                "extension": "properties",
+                "size": "1.38 KB",
+                "documentName": "",
+                "documentDescription": "",
+                "saveInto": [
+                    "<<jA0EAwMCmXYcYt5WxPIB0rkB/HqguJ0CPia/rDBp04TiXxW0CA+8DqFsLZ5vuqsdis6QvRq8zj0d\r\niX7MFEo5Hm2wmbm/WUhK9VUddXTy0XMVf4o9GqlbGW3+ftuhQOCrUKc5PyXll8BIw5KTrz0yGLB1\r\nNL86A0z/Wa6Aw8mSIum4cUWG/NYN4C9dWSCHn4ZH+xv50s5wXzfUjeb2eMMnz8P7W5y64Rwkn78Z\r\n+ogAQ5zFmOynJabB46wA+llYMsk/Wl/CsirCURLvQQ==\r\n>>"
+                ],
+                "uploadLabel": "Upload",
+                "clearFileLabel": "Clear file: Constant Test App",
+                "virusScanningText": "Scanning for virusesâ€¦",
+                "isEncrypted": true,
+                "#t": "FileUploadWidget"
+            }
+        ]
+    },
+    "context": {
+        "#v": "jA0EAwMCmXYcYt5WxPIB0sAoAfycVUnAYxJcQzpsHJO4hP5ryS/YZxmjaeJMBHRy4xbOHIbQTDal\r\nQSvzbY4TlYvDr3Ss4Qrs7dgY+i3rna5Mbeu1bTk/R4YvEOcH5lLHAQHyISQDMsq1LL7TEkNQ3ZQD\r\nr+zU9eklbJFGYORhsrE7UltadSisuH0mJyrOE52QOJKz5V29yOumFiMd9PHZri+IxQN9W+f5ue6s\r\naSq+ImXQsSlX2+mnlueZRCSgw4QvED1Hs6W9Sxg9MyZa7aW9QfWHx0BKsHUXjTW4nujI0Jxc6EiD\r\nR1YgwTX5jno1MijAWxLyr7owOLZ1aA==\r\n",
+        "#t": "string"
+    },
+    "uuid": "14f030b2-cd90-4c45-b428-25130974bb44",
+    "i18nInfo": {
+        "locale": "en-US",
+        "timezoneId": "GMT",
+        "calendarId": "gregorian",
+        "decimalSeparator": ".",
+        "groupingSeparator": ","
+    },
+    "timers": {
+        "#t": "Dictionary"
+    },
+    "#t": "UiConfig",
+    "#s": {
+        "#v": [
+            {
+                "id": 2628,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}UiComponentsDelta",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "UiComponentsDelta",
+                "description": "",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 2628,
+                "list": 2629,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "modifiedComponents",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 197,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Variant?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Variant?list",
+                "description": "List of Variant",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 97,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2629,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}UiComponentsDelta?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "UiComponentsDelta?list",
+                "description": "List of UiComponentsDelta",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2628,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 95,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Record",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Record",
+                "description": "Record is a list of named values.",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 0,
+                "list": 195,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 97,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Variant",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Variant",
+                "description": "Any type and value.",
+                "base": 97,
+                "foundation": 97,
+                "typeof": 97,
+                "list": 197,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "data",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "value": {
+                            "#t": "int"
+                        }
+                    }
+                ],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 195,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Record?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Record?list",
+                "description": "List of Record",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 95,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 101,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Integer?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Integer?list",
+                "description": "List of Number (Integer)",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1480,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}FileUploadWidget",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "FileUploadWidget",
+                "description": "",
+                "base": 650,
+                "foundation": 95,
+                "typeof": 1480,
+                "list": 1481,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 1482
+                        }
+                    },
+                    {
+                        "name": "required",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "disabled",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "validations",
+                        "value": {
+                            "#t": "ValidationMessage?list"
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "value": {
+                            "#t": "CollaborationDocument"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "extension",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "size",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "loadedBytes",
+                        "value": {
+                            "#t": "int"
+                        }
+                    },
+                    {
+                        "name": "totalBytes",
+                        "value": {
+                            "#t": "int"
+                        }
+                    },
+                    {
+                        "name": "documentName",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "documentDescription",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "target",
+                        "value": {
+                            "#t": "CollaborationDocumentOrFolder"
+                        }
+                    },
+                    {
+                        "name": "saveInto",
+                        "value": {
+                            "#t": "Save?list"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "acceptedTypes",
+                        "value": {
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "uploadLabel",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "clearFileLabel",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "virusScanningText",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "isEncrypted",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "validateExtension",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                true,
+                                false,
+                                true,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1482,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 1480 (FileUploadWidget)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1482,
+                "list": 1483,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 713,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ValidationMessage?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ValidationMessage?list",
+                "description": "List of ValidationMessage",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 712,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 13,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}CollaborationDocument",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "CollaborationDocument",
+                "description": "A document is any file that a user has stored on the system.  Typically this value will be provided from a Process Variable.",
+                "base": 52,
+                "foundation": 52,
+                "typeof": 52,
+                "list": 113,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 28,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}CollaborationDocumentOrFolder",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "CollaborationDocumentOrFolder",
+                "description": "Document or Folder.",
+                "base": 96,
+                "foundation": 96,
+                "typeof": 97,
+                "list": 128,
+                "flags": 8,
+                "instanceProperties": [
+                    {
+                        "name": "data",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "value": {
+                            "#t": "int"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "types",
+                        "value": {
+                            "#v": [
+                                13,
+                                12
+                            ],
+                            "#t": "Integer?list"
+                        }
+                    },
+                    {
+                        "name": "keys",
+                        "value": {
+                            "#v": [
+                                "document",
+                                "folder"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 193,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Save?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Save?list",
+                "description": "List of Save",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 192,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 103,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Text?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Text?list",
+                "description": "List of Text String",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 3,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1481,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}FileUploadWidget?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "FileUploadWidget?list",
+                "description": "List of FileUploadWidget",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1480,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 650,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Component",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Component",
+                "description": "",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 650,
+                "list": 651,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 652
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 94,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Dictionary",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Dictionary",
+                "description": "Dictionary is mapping of keys to values.",
+                "base": 94,
+                "foundation": 94,
+                "typeof": 97,
+                "list": 194,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1483,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1482,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 126,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Boolean?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Boolean?list",
+                "description": "List of Boolean",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 26,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 712,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ValidationMessage",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ValidationMessage",
+                "description": "",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 712,
+                "list": 713,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 714
+                        }
+                    },
+                    {
+                        "name": "message",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 113,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}CollaborationDocument?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "CollaborationDocument?list",
+                "description": "List of Document",
+                "base": 152,
+                "foundation": 93,
+                "typeof": 13,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 52,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}IntegerKey",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "IntegerKey",
+                "description": "Key (Integer)",
+                "base": 52,
+                "foundation": 52,
+                "typeof": 52,
+                "list": 152,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 12,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}CollaborationFolder",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "CollaborationFolder",
+                "description": "A folder is an object used to store documents that are on the system.  Typically this value will be provided from a Process Variable.",
+                "base": 52,
+                "foundation": 52,
+                "typeof": 52,
+                "list": 112,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 128,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}CollaborationDocumentOrFolder?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "CollaborationDocumentOrFolder?list",
+                "description": "List of Document or Folder",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 28,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 96,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Union",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Union",
+                "description": "Union is a particular value from a list of valid types.",
+                "base": 96,
+                "foundation": 96,
+                "typeof": 0,
+                "list": 196,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "data",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "value": {
+                            "#t": "int"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "types",
+                        "value": {
+                            "#t": "int"
+                        }
+                    },
+                    {
+                        "name": "keys",
+                        "value": {
+                            "#t": "string"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 192,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Save",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Save",
+                "description": "A Save specifies the variables where end user values are saved. Values may be modified prior to saving by using the << operator. This applies to SAIL components.",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 192,
+                "list": 193,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 652,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 650 (Component)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 652,
+                "list": 653,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 651,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Component?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Component?list",
+                "description": "List of Component",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 650,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 194,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Dictionary?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Dictionary?list",
+                "description": "List of Dictionary",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 94,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 714,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 712 (ValidationMessage)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 714,
+                "list": 715,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 152,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}IntegerKey?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "IntegerKey?list",
+                "description": "List of Key (Integer)",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 52,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 112,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}CollaborationFolder?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "CollaborationFolder?list",
+                "description": "List of Folder",
+                "base": 152,
+                "foundation": 93,
+                "typeof": 12,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 196,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Union?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Union?list",
+                "description": "###TYPE_LIST_OF_UNION_DSCR",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 96,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 653,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 652,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 715,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 714,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            }
+        ],
+        "#t": "DataType?list"
+    },
+    "shortcuts": [
+        {
+            "_cId": "eed9350a40f748815195cbbf3912e94b",
+            "_actionName": "keyboard-shortcuts",
+            "keyboard-shortcuts:keys": "Escape",
+            "keyboard-shortcuts:fire-in-inputs": "true",
+            "testLabel": "shortcut-Cancel",
+            "label": "",
+            "value": {
+                "#v": "",
+                "#t": "string"
+            },
+            "saveInto": [
+                "<<jA0EAwMCmXYcYt5WxPIB0sADAfx6oLidAj4mv6wwadOE4l8VtAgPvA6hbCydb7qqGIrO36zIFXZx\r\n7bVzk408glVlz5pq26OHTjHIDAwIHaZXDSljWIGXP9VXI60HBzg3DZhg0FAsQ1Rm8UpBjaZcsek+\r\nBpgWAY/c2SVljijb9bfDqIlmndY/VtPOlKXPvCjk7hSFi4/bRwL+ZHD1delZ3UVMIoaf3i+QUONC\r\nniSnCJNg6rZX18a8S5+8yeVq/m4lpUANs7sKTZzZfQ0rvVBKGWgTxYYh\r\n>>"
+            ],
+            "tooltip": "",
+            "href": "",
+            "#t": "DynamicLink"
+        }
+    ],
+    "#u": "<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/>; rel=\"x-sasa-app\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/components/ping.do>; rel=\"x-resume-session\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/app{/appName}{/path*}{?params*}>; rel=\"x-sail-application\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/all>; rel=\"x-sites-all\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/tasks/task/{id}>; rel=\"x-site-task\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/page/{pageUrlStub}/task/{id}>; rel=\"x-site-task-page\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/page{/pageUrlStub}/nav>; rel=\"x-site-page-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/cors>; rel=\"x-cors\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/evaluateComponentTemplate{/templateId}>; rel=\"x-ifcdesigner-evaluatecomponenttemplate\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/o>; rel=\"x-attachment-temp\"; type=\"application/vnd.appian.tv+json\"; dt=\"CollaborationDocument\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/pages/{pageUrlStub}/report>; rel=\"x-sites-report\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/nav>; rel=\"x-site-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites>; rel=\"x-site-main\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/task/latest/{taskId}/attributes>; rel=\"x-task-attributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/internal/webapi/releaselock/{objectUuid}/{uiSourceUuid}>; rel=\"x-data-release-object-lock\"; dt=\"UiConfig\""
+}

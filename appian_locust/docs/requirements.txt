@@ -1,0 +1,2 @@
+locust==1.0.2
+sphinx_rtd_theme==0.4.2

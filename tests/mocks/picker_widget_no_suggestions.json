@@ -1,0 +1,70 @@
+{
+  "_cId": "a517fc870104e4c2cdf0b817116c1580",
+  "mobileEnabled": "true",
+  "empty": "false",
+  "formType": "START_FORM",
+  "links": [
+    {
+      "href": "https://an-appian-instance.host.net/suite/rest/a/model/latest/8/form",
+      "rel": "update",
+      "title": "Update",
+      "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
+      "method": "POST"
+    },
+    {
+      "href": "https://an-appian-instance.host.net/suite/rest/a/model/latest/8/form",
+      "rel": "self",
+      "title": "Update",
+      "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
+      "method": "GET"
+    },
+    {
+      "href": "https://an-appian-instance.host.net/suite/rest/a/model/latest/8/form",
+      "rel": "self",
+      "title": "Update",
+      "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
+      "method": "POST"
+    },
+    {
+      "href": "https://an-appian-instance.host.net/suite/api/tempo/file",
+      "rel": "upload",
+      "title": "",
+      "method": "POST"
+    },
+    {
+      "href": "https://an-appian-instance.host.net/suite/tempo/file-web/",
+      "rel": "upload-web",
+      "title": "",
+      "method": "POST"
+    }
+  ],
+  "triggers": [
+
+  ],
+  "ui": {
+    "#t": "UiComponentsDelta",
+    "modifiedComponents": [
+
+    ]
+  },
+  "context": {
+    "#v": "jA0EAwMCb24pCQUucNUB0sAkAQSph6tro1jRCsVRyFKVmNDv28TEvYQp81LGT2PhMhoKkfIc4nwV\r\nxgL04b1PRl85cQnvKaxNkvreR41fP0BIGjCjIe3B2zk5kapLGhEM4JgI+rdYcU2TV2cENdqH4cpy\r\neBQmFcT+lvf0MdYKzari92vPVFPsXHWO58/mQwYXMk/dqsXYg7l1XDaQcIHfARJJT4VAFke3W4w/\r\nzXH7isKnnJoXLOb8MJiclQb7U8zRV2EUbGXYLNyzq/Iy1AbRxUWnCP45XWhldUglpLD0w1tD7rH+\r\nWlx6AGEns0KjTQbIpTq5lHYa\r\n",
+    "#t": "string"
+  },
+  "uuid": "3682fc21-3774-4411-b664-77aa6a1ddeea",
+  "i18nInfo": {
+    "locale": "en-US",
+    "timezoneId": "GMT",
+    "calendarId": "gregorian",
+    "decimalSeparator": ".",
+    "groupingSeparator": ","
+  },
+  "timers": {
+    "#t": "Dictionary"
+  },
+  "#t": "UiConfig",
+  "shortcuts": [
+
+  ],
+  "#u": "<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/>; rel=\"x-sasa-app\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/components/ping.do>; rel=\"x-resume-session\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/app{/appName}{/path*}{?params*}>; rel=\"x-sail-application\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/all>; rel=\"x-sites-all\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/tasks/task/{id}>; rel=\"x-site-task\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/page/{pageUrlStub}/task/{id}>; rel=\"x-site-task-page\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/page{/pageUrlStub}/nav>; rel=\"x-site-page-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/cors>; rel=\"x-cors\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/evaluateComponentTemplate{/templateId}>; rel=\"x-ifcdesigner-evaluatecomponenttemplate\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/pages/{pageUrlStub}/report>; rel=\"x-sites-report\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/nav>; rel=\"x-site-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites>; rel=\"x-site-main\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/task/latest/{taskId}/attributes>; rel=\"x-task-attributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/internal/webapi/releaselock/{objectUuid}/{uiSourceUuid}>; rel=\"x-data-release-object-lock\"; dt=\"UiConfig\""
+}

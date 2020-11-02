@@ -1,0 +1,758 @@
+{
+    "_cId": "befbaf52038b951a8751f14d7b9236dd",
+    "links": [
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/sites/latest/D6JMim/pages/reports/report/nzN62A/reportlink",
+            "rel": "update",
+            "title": "Update"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/sites/latest/D6JMim/pages/reports/report/nzN62A/reportlink",
+            "rel": "self",
+            "title": "",
+            "method": "POST"
+        }
+    ],
+    "triggers": [],
+    "ui": {
+        "_cId": "b9b677f558b29d25d3dd0de351853cf3",
+        "_dirty": "false",
+        "contents": [
+            {
+                "_cId": "a1d41ac0409561ab1d7e007710b4eda4",
+                "label": "",
+                "labelPosition": "COLLAPSED",
+                "instructions": "",
+                "value": {
+                    "_cId": "feeabe89e78062e925195ed95232c067",
+                    "values": [
+                        {
+                            "values": [
+                                {
+                                    "#v": "Customer Service Requests Dashboard",
+                                    "#t": "string"
+                                }
+                            ],
+                            "#t": "TitleText"
+                        }
+                    ],
+                    "#t": "FormattedText"
+                },
+                "valueAlignment": "",
+                "helpTooltip": "",
+                "accessibilityText": "",
+                "#t": "RichTextDisplayField"
+            },
+            {
+                "_cId": "ad589cb603a2fd083ac56ed76a2d7f9f",
+                "isOldColumnArrayLayout": "true",
+                "columns": [
+                    {
+                        "_cId": "c86963686617bfd79cda9b08cfd34c6e",
+                        "contents": [
+                            {
+                                "isCollapsible": "false",
+                                "isInitiallyCollapsed": "false",
+                                "_cId": "da0cf4ce51b9fec68c4a3599da747e99",
+                                "collapseLabel": "Hide section contents",
+                                "contents": [
+                                    {
+                                        "_cId": "95b6869fb709f40b2e719e316304ce39",
+                                        "isOldColumnArrayLayout": "true",
+                                        "columns": [
+                                            {
+                                                "_cId": "0ffe8f948bed4fc7b17e07d18be3fb64",
+                                                "contents": [
+                                                    {
+                                                        "_cId": "61c5b46484f76b7a6b981db012dfd7f0",
+                                                        "label": "By Status",
+                                                        "instructions": "",
+                                                        "categories": [
+                                                            "Case Created",
+                                                            "Closed",
+                                                            "Pending Requester",
+                                                            "Researching",
+                                                            "Solution",
+                                                            "Pending Assignment"
+                                                        ],
+                                                        "series": [
+                                                            {
+                                                                "label": "Case Status",
+                                                                "data": [
+                                                                    304.0,
+                                                                    29.0,
+                                                                    29.0,
+                                                                    22.0,
+                                                                    10.0,
+                                                                    10.0
+                                                                ],
+                                                                "links": [
+                                                                    {
+                                                                        "_cId": "28b76e52a821a2fa0063026c2fb4ea71",
+                                                                        "label": "",
+                                                                        "value": {
+                                                                            "#v": "",
+                                                                            "#t": "string"
+                                                                        },
+                                                                        "saveInto": [
+                                                                            "<<jA0EAwMCb24pCQUucNUB0pUB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcFvneH7vteJr/dFl5HtrL+\r\nOnZ28jjklsa08GD+rc4qE5WZYdEaor3IM3hiI5g+ro5hIJ7cmnUi795seNYCStXhbPTEBMMFDP7a\r\nTQjEewAUgB1vk8Em6wzi9CHrj5DHj5gEmcTsMMes7nFfMyx6ubw16cVh2HCE4nhp6Nof4w==\r\n>>"
+                                                                        ],
+                                                                        "tooltip": "",
+                                                                        "href": "",
+                                                                        "#t": "DynamicLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "1a57dfd07fd7748e06c0e5ffdf65fffb",
+                                                                        "label": "",
+                                                                        "value": {
+                                                                            "#v": "",
+                                                                            "#t": "string"
+                                                                        },
+                                                                        "saveInto": [
+                                                                            "<<jA0EAwMCb24pCQUucNUB0pkB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcFvnSJxPteJr/EXWNVFigZ\r\nUvatUrbXWqUYr5cmaY36EVjLzZNTtoYrrM7QQjiDZdZWc+YZ/U6SwKLX9enzMhoLi4mXKFq0xfIW\r\nhnpQ4jbO+IWQa6Pk2mw0inLVqVT3mz85vRfL5NpgM5JZ3ykvW+J/AjBMLOf1ngPHLq5ohrnUaIk=\r\n>>"
+                                                                        ],
+                                                                        "tooltip": "",
+                                                                        "href": "",
+                                                                        "#t": "DynamicLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "b087dae70049b6499d1b7b1f23e5efe2",
+                                                                        "label": "",
+                                                                        "value": {
+                                                                            "#v": "",
+                                                                            "#t": "string"
+                                                                        },
+                                                                        "saveInto": [
+                                                                            "<<jA0EAwMCb24pCQUucNUB0pkB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcFvnXA7YBeJr8kbx8MkadK\r\nDT8yrgTtP/BaMNUqXg3hxagbeQqURgXUVr+D01crK9kK89MWFjaytBrcoWu8k5sV+aNm9jUb+RIJ\r\nWdX8W55VNAzaVLNz6IBvnssFnDUsaKEkvCqcfEHnDLalxCpYjQKSk8PeSGy63Ys5Bc7n5BvsIHE=\r\n>>"
+                                                                        ],
+                                                                        "tooltip": "",
+                                                                        "href": "",
+                                                                        "#t": "DynamicLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "9e792df633a2c3d18c023e9b64ea784b",
+                                                                        "label": "",
+                                                                        "value": {
+                                                                            "#v": "",
+                                                                            "#t": "string"
+                                                                        },
+                                                                        "saveInto": [
+                                                                            "<<jA0EAwMCb24pCQUucNUB0pkB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcFvnTA7vteJr9dobMkZVzE\r\niPLO4tDXdaA1lYHsDeg4451TX7rCMngnWc0+RdtmoAn85F2MsOvrcmtTyhjaLAhfnHo90Xh0B4C/\r\nldP6e6/kFE+KfVzLNHOuwwu1IRaAMSAhXyWv+buJLb2S0L/iD+0UcRITBL3xB+VOc5UFg7nlF7g=\r\n>>"
+                                                                        ],
+                                                                        "tooltip": "",
+                                                                        "href": "",
+                                                                        "#t": "DynamicLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "1c8ce1cc825ed98d44ab9b9b7517603f",
+                                                                        "label": "",
+                                                                        "value": {
+                                                                            "#v": "",
+                                                                            "#t": "string"
+                                                                        },
+                                                                        "saveInto": [
+                                                                            "<<jA0EAwMCb24pCQUucNUB0pkB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcFvnTCxOteJr/novvKkUQh\r\n+0H28VViWcBE4ikM1L3Hl8VqTu6E4G4guIiiFs+B3gLeMN/IuLxiH519IGacKZ7kcruybq8dapLI\r\nYu/PLrLSc2K3KqYzoGD/0hL+ptWfXn0Q9y58wTqUT0KqdHPVr2wwiivVbdAUa69RKDWQUscs2pE=\r\n>>"
+                                                                        ],
+                                                                        "tooltip": "",
+                                                                        "href": "",
+                                                                        "#t": "DynamicLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "a307f197b1db63c59cd33345dc50f09c",
+                                                                        "label": "",
+                                                                        "value": {
+                                                                            "#v": "",
+                                                                            "#t": "string"
+                                                                        },
+                                                                        "saveInto": [
+                                                                            "<<jA0EAwMCb24pCQUucNUB0pkB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcFvnSJxPteJr/EXWNVFigZ\r\nUvatUrbXWqUYr5cmaY36EVjLzZNTtoYrrM7QQjiDZdZWc+YZ/U6SwKLX9enzMhoLi4mXKFq0xfIW\r\nhnpQ4jbO+IWQa6PkjWw0ij1IC3X3z8mjQ/GLAAhq9eSAyC5k7GsbzyIDmECJk8cOKBdRZ+0Qy5k=\r\n>>"
+                                                                        ],
+                                                                        "tooltip": "",
+                                                                        "href": "",
+                                                                        "#t": "DynamicLink"
+                                                                    }
+                                                                ],
+                                                                "color": ""
+                                                            }
+                                                        ],
+                                                        "xAxisTitle": "",
+                                                        "yAxisTitle": "",
+                                                        "stacking": "",
+                                                        "showLegend": true,
+                                                        "showDataLabels": false,
+                                                        "showTooltips": true,
+                                                        "allowDecimalAxisLabels": false,
+                                                        "labelPosition": "ABOVE",
+                                                        "helpTooltip": "",
+                                                        "instructionsPosition": "ABOVE",
+                                                        "referenceLines": [],
+                                                        "accessibilityText": "",
+                                                        "#t": "ColumnChart"
+                                                    },
+                                                    {
+                                                        "_cId": "d28a0bcf9cc27654bd2437c365dbe249",
+                                                        "label": "Customers with most CSRs",
+                                                        "instructions": "",
+                                                        "xAxisTitle": "",
+                                                        "yAxisTitle": "",
+                                                        "categories": [
+                                                            "Almach",
+                                                            "Rigel Real Estate Brokers",
+                                                            "Penrose Energy",
+                                                            "Gliese and Associates",
+                                                            "Eddington Ergonomics",
+                                                            "Durden Collectibles",
+                                                            "Wezen Construction",
+                                                            "Peacock Pet Care",
+                                                            "Yavin Enterprises",
+                                                            "Dune Office Automation"
+                                                        ],
+                                                        "series": [
+                                                            {
+                                                                "label": "CSR #",
+                                                                "data": [
+                                                                    305.0,
+                                                                    5.0,
+                                                                    4.0,
+                                                                    3.0,
+                                                                    3.0,
+                                                                    3.0,
+                                                                    3.0,
+                                                                    3.0,
+                                                                    3.0,
+                                                                    3.0
+                                                                ],
+                                                                "links": [
+                                                                    {
+                                                                        "_cId": "75896875b3d83bdbc879e6d05c8fdf61",
+                                                                        "label": "",
+                                                                        "value": {
+                                                                            "#v": "",
+                                                                            "#t": "string"
+                                                                        },
+                                                                        "saveInto": [
+                                                                            "<<jA0EAwMCb24pCQUucNUB0pUB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcFv3eH7vteJr8lPcOTyIYs\r\n7MSdedzT+lp/foN1Mga6U33whq7ycH5tXRQobndUe5vjmbiEw7oHrCMgydkwLy8C3V2Bs85lR1TJ\r\nIOnCNwAYYiLS8vY/2Z+Xur6HqLHFKhqflB3dCLG3OVm0YHqjN7AAUM2qTI+hBZC4j6u6jw==\r\n>>"
+                                                                        ],
+                                                                        "tooltip": "",
+                                                                        "href": "",
+                                                                        "#t": "DynamicLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "7e33e2381c1f04fbd53ed330bb0b10b4",
+                                                                        "label": "",
+                                                                        "value": {
+                                                                            "#v": "",
+                                                                            "#t": "string"
+                                                                        },
+                                                                        "saveInto": [
+                                                                            "<<jA0EAwMCb24pCQUucNUB0pUB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcF2neJxPteJr+u2csMYJp1\r\n88FniZYn3etMxBtgtXtg+tbRfSgj0IE2+p3yxZ48KsJXlMrek3CHMurD8msffXFp3DF+Hw7iOaNn\r\n8OJA7l7foLWFzvTJLkhddb1FuAvteEtp+0cXTWF/T+B50VXc0d4Yij56M/q3Bv3wDM0UqA==\r\n>>"
+                                                                        ],
+                                                                        "tooltip": "",
+                                                                        "href": "",
+                                                                        "#t": "DynamicLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "28b94ad89e82018cded9a75619f09b5b",
+                                                                        "label": "",
+                                                                        "value": {
+                                                                            "#v": "",
+                                                                            "#t": "string"
+                                                                        },
+                                                                        "saveInto": [
+                                                                            "<<jA0EAwMCb24pCQUucNUB0pUB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcF2nTA7uteJr8DALnG0S7t\r\nDOC+o6LoPq2t/4MUXYBBdFkmFwqrJQABnEP4gE6TUQwYyGMcf7Z1qLDrvqUtPQKzz8wZfsgErTQJ\r\n2f+zmYTr77BpjfNdW3hYFWi4eW8RFtWXkQH5xFEp8S0s0tAP3K1ZOpwogVMuB8KpI65r4A==\r\n>>"
+                                                                        ],
+                                                                        "tooltip": "",
+                                                                        "href": "",
+                                                                        "#t": "DynamicLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "9a1afaffbe4eb494cef0076039a341d2",
+                                                                        "label": "",
+                                                                        "value": {
+                                                                            "#v": "",
+                                                                            "#t": "string"
+                                                                        },
+                                                                        "saveInto": [
+                                                                            "<<jA0EAwMCb24pCQUucNUB0pUB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcF2neJxPteJr+u2csMYJp1\r\n92o8Oc4lg0B6F/Gho+TTWUEPpyBsGjdSpZBBRMJexhUcGCvjjyRgbxYUPZKz+Gg765c1eFrD3jsO\r\nER5aZjcnfkmrbZR0NB/NiAaq4G4nN+jBMX9aNIuJylf/mE0Lu+MGDBzwXj7DUdd+jk4w0A==\r\n>>"
+                                                                        ],
+                                                                        "tooltip": "",
+                                                                        "href": "",
+                                                                        "#t": "DynamicLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "df364fdefa2c51993e7898e41486667b",
+                                                                        "label": "",
+                                                                        "value": {
+                                                                            "#v": "",
+                                                                            "#t": "string"
+                                                                        },
+                                                                        "saveInto": [
+                                                                            "<<jA0EAwMCb24pCQUucNUB0pUB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcF2neJxPteJr+u2csMYJp1\r\n88FkiZYn3etM2KCqytNHFcNYUSw4be4hjfldXnO8sP9G0HtosthLjb5q6uu+BfJ8C1jsLHzdiklq\r\n4CWnKLAFqtC1gN3CJ6vVuSB9tAQAbbLRy/AbNWaNSE/3cfUqGGVDL6KGOl93kwMSt8u/mw==\r\n>>"
+                                                                        ],
+                                                                        "tooltip": "",
+                                                                        "href": "",
+                                                                        "#t": "DynamicLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "d55f93b8c8404f14397d581dba128622",
+                                                                        "label": "",
+                                                                        "value": {
+                                                                            "#v": "",
+                                                                            "#t": "string"
+                                                                        },
+                                                                        "saveInto": [
+                                                                            "<<jA0EAwMCb24pCQUucNUB0pUB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcF2neJxPteJr+u2csMYJp1\r\n88FniZYn3etMxBtgtXtg+tbRfSgj0IE2+p3yxZ48KsJXlMrek3CHMurD8msffXFp3DF+Hw7iOaNn\r\n8OJA7l7foJeWsNIGEuVXm389h9Y+FSa99D5E+13FBKEKjLHitZqterl0A0vx66rYpIENKw==\r\n>>"
+                                                                        ],
+                                                                        "tooltip": "",
+                                                                        "href": "",
+                                                                        "#t": "DynamicLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "cb7035d1bd17f4baae0b255f2b0ebe7e",
+                                                                        "label": "",
+                                                                        "value": {
+                                                                            "#v": "",
+                                                                            "#t": "string"
+                                                                        },
+                                                                        "saveInto": [
+                                                                            "<<jA0EAwMCb24pCQUucNUB0pUB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcF1XfA7vteJr+WW9UbgJyQ\r\nU87yjTeUFki247cTONxegeKOQkmTJoeHPKjXidSbTGD2Uhrg4M7tKhRoTTX/9DeKYmV6Ct49A2RU\r\nA0nGmWCP2oimr0zufOf96a7rvtRNSJhGQAjEihpm9PcyIktmWy7jz1b5tcJuG0KLR1NTfg==\r\n>>"
+                                                                        ],
+                                                                        "tooltip": "",
+                                                                        "href": "",
+                                                                        "#t": "DynamicLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "786e52e5f931d0d644ba270356a6ab7c",
+                                                                        "label": "",
+                                                                        "value": {
+                                                                            "#v": "",
+                                                                            "#t": "string"
+                                                                        },
+                                                                        "saveInto": [
+                                                                            "<<jA0EAwMCb24pCQUucNUB0pUB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcF1XfA7uteJr/LHyoCVn8U\r\noVHroY8RJUDXSVMA9xF7bgTKNliQvvG2JGuw+bS8T+qAD0cFnImBvn9P4k1Yd9qkh0Ke0vuEmO9R\r\nJdsjbo2rUe6B+RDLzLxE1ebE4ppsNnYBsAGJ00Uhma2e9xgyM6RGeIhRAm5oCs6pfXltyw==\r\n>>"
+                                                                        ],
+                                                                        "tooltip": "",
+                                                                        "href": "",
+                                                                        "#t": "DynamicLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "8c844a860782102de0b09484860d517a",
+                                                                        "label": "",
+                                                                        "value": {
+                                                                            "#v": "",
+                                                                            "#t": "string"
+                                                                        },
+                                                                        "saveInto": [
+                                                                            "<<jA0EAwMCb24pCQUucNUB0pUB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcF1XfA7uteJr/LHyoCVlUU\r\noZL7BO4CKDQNKepyVqSJaR3GCU8QAXTQwirxK7lSz/l1ZhR8unchIscleMEt6sbTYn35JIxnxP8z\r\nSTDm7u2RIAsUi1jgzG9cHX05Fi61AfjHpQ6Vr/UxvzLAmsdwP2DJmTsUkUjUe3eO0rZkTA==\r\n>>"
+                                                                        ],
+                                                                        "tooltip": "",
+                                                                        "href": "",
+                                                                        "#t": "DynamicLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "704aa9d1fcdc76446206f6cde6e90cb5",
+                                                                        "label": "",
+                                                                        "value": {
+                                                                            "#v": "",
+                                                                            "#t": "string"
+                                                                        },
+                                                                        "saveInto": [
+                                                                            "<<jA0EAwMCb24pCQUucNUB0pUB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcF1XfA7uteJr/LHyoCVlUU\r\noZL7Ou4CKDQNnxTrB6jo9TY9chpODL9Rj9kw7KmEpUaBJ74pZ9h8L+uY79hUij+KUexfQOy4SBZb\r\nk8lI85CcSKJPCVBZssdGjKzMbIx9FaXJkHl0sAHl/ke1L3fLp5klw28P1FuCKhunLQBH2g==\r\n>>"
+                                                                        ],
+                                                                        "tooltip": "",
+                                                                        "href": "",
+                                                                        "#t": "DynamicLink"
+                                                                    }
+                                                                ],
+                                                                "color": "#B77EA3"
+                                                            }
+                                                        ],
+                                                        "allowDecimalAxisLabels": false,
+                                                        "showLegend": true,
+                                                        "showDataLabels": false,
+                                                        "showTooltips": true,
+                                                        "stacking": "",
+                                                        "labelPosition": "ABOVE",
+                                                        "helpTooltip": "",
+                                                        "instructionsPosition": "ABOVE",
+                                                        "referenceLines": [],
+                                                        "accessibilityText": "",
+                                                        "#t": "BarChart"
+                                                    }
+                                                ],
+                                                "align": "",
+                                                "width": ""
+                                            },
+                                            {
+                                                "_cId": "04bec82118fec8780bb9c4f34d8791af",
+                                                "contents": [
+                                                    {
+                                                        "_cId": "33d03cb974d01c0e011d9590bee4dc2d",
+                                                        "label": "By Type",
+                                                        "instructions": "",
+                                                        "series": [
+                                                            {
+                                                                "label": "I need help with something else",
+                                                                "data": 335.0,
+                                                                "link": {
+                                                                    "_cId": "89f73d38299c67040ae0dd8afaf291c6",
+                                                                    "label": "",
+                                                                    "value": {
+                                                                        "#v": "",
+                                                                        "#t": "string"
+                                                                    },
+                                                                    "saveInto": [
+                                                                        "<<jA0EAwMCb24pCQUucNUB0pkB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcFv3Sx7YReJr+uhKuPEc/g\r\ncMOB2gaMnTKV2rhSJKmlHwt+Ng3CFklPDekbMHUz43QzZhzYgr81kyeuyOb9kT8dC7/lc1/EvUTb\r\nuBPg9UoKi2/yfHRfFFuX1eSMGZ+HyTvl4eEhwTuZ8csyrGuC2TP7wqJZI7Wnw0ywATBX8/wypYY=\r\n>>"
+                                                                    ],
+                                                                    "tooltip": "",
+                                                                    "href": "",
+                                                                    "#t": "DynamicLink"
+                                                                },
+                                                                "color": ""
+                                                            },
+                                                            {
+                                                                "label": "I need help with an Order",
+                                                                "data": 40.0,
+                                                                "link": {
+                                                                    "_cId": "97d7769d32a5704e4d4900658ea00637",
+                                                                    "label": "",
+                                                                    "value": {
+                                                                        "#v": "",
+                                                                        "#t": "string"
+                                                                    },
+                                                                    "saveInto": [
+                                                                        "<<jA0EAwMCb24pCQUucNUB0pkB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcF1XSx7YReJr9uOMZI6Y+6\r\nwFWxxIhrZIJbHAvjUh4f3JoEnPjE2ASCd7Lu0sOYQ5ZYmRVCatwNrb8Ek5qIYQfk6EdEqWh8Ya/L\r\n//OtoaCE7tJDgq3IN2oYQPo6c02E+hglQnmkJ4PKxUvwRCKdmKE34jee8qK+/lIez9JhRXv0ffM=\r\n>>"
+                                                                    ],
+                                                                    "tooltip": "",
+                                                                    "href": "",
+                                                                    "#t": "DynamicLink"
+                                                                },
+                                                                "color": ""
+                                                            },
+                                                            {
+                                                                "label": "I need to update my Account details",
+                                                                "data": 29.0,
+                                                                "link": {
+                                                                    "_cId": "ba2ae82d4f2063fd43ded563ed15f413",
+                                                                    "label": "",
+                                                                    "value": {
+                                                                        "#v": "",
+                                                                        "#t": "string"
+                                                                    },
+                                                                    "saveInto": [
+                                                                        "<<jA0EAwMCb24pCQUucNUB0pkB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcF1XSx7YReJr9uOMZI6Y+6\r\nx7N3FaKFNAX/EPaoBD492yLpT0ocsTEQN1IZmMUI/rqg/xTl7NkWIoIf10QJCHxoZTIR70FV0wVh\r\nMF4r5p9KlJg03MSk1jrnAb3NLeBF9MqsdJ2DmkGIu3haepjl3d1n/c/7kE6yv8yybeU/OOJRKgs=\r\n>>"
+                                                                    ],
+                                                                    "tooltip": "",
+                                                                    "href": "",
+                                                                    "#t": "DynamicLink"
+                                                                },
+                                                                "color": ""
+                                                            }
+                                                        ],
+                                                        "showTooltips": true,
+                                                        "labelPosition": "ABOVE",
+                                                        "helpTooltip": "",
+                                                        "instructionsPosition": "ABOVE",
+                                                        "accessibilityText": "",
+                                                        "#t": "PieChart"
+                                                    },
+                                                    {
+                                                        "_cId": "a8f52236d06a70a8ed06f820a7b107bb",
+                                                        "label": "By Products",
+                                                        "instructions": "",
+                                                        "xAxisTitle": "",
+                                                        "yAxisTitle": "",
+                                                        "categories": [
+                                                            "HP - Toner Cartridge - Black",
+                                                            "Canon - imageFORMULA DR-M160 Sheetfed Sc...",
+                                                            "Royal - PX1201 12-sheet Crosscut Paper S...",
+                                                            "Simpli Home - Carlton Collection Home Of...",
+                                                            "HP - Toner Cartridge - Black",
+                                                            "Brother - Toner Cartridge - Black - Blac...",
+                                                            "Vonage - Box",
+                                                            "HP - Ink Cartridge - Blue",
+                                                            "HP - Drum Cartridge",
+                                                            "HP - Yellow Original LaserJet Toner Cart..."
+                                                        ],
+                                                        "series": [
+                                                            {
+                                                                "label": "CSR #",
+                                                                "data": [
+                                                                    2.0,
+                                                                    1.0,
+                                                                    1.0,
+                                                                    1.0,
+                                                                    1.0,
+                                                                    1.0,
+                                                                    1.0,
+                                                                    1.0,
+                                                                    1.0,
+                                                                    1.0
+                                                                ],
+                                                                "links": [
+                                                                    {
+                                                                        "_cId": "a0e6e168a354820d907026fa1cefa894",
+                                                                        "uuid": "d1ea2edd-4da3-4f0f-a2db-236913478100",
+                                                                        "siteUrlStub": "D6JMim",
+                                                                        "pageUrlStub": "reports",
+                                                                        "recordIdentifier": "74",
+                                                                        "_recordRef": "lIBHer_bdD8Emw8hLTETeiApOtg30qtX87uJ3-_PNotBiATSJXBjNL8cvIyGBIRn-T_LeFXAfSZnuRrh7102FKYVs_c1YaA05ApR2-_4tBBSWSD",
+                                                                        "recordRef": {
+                                                                            "id": "2#{http://an-appian-instance.host.net/ae/types/2009}Integer#74",
+                                                                            "#t": "RecordReference"
+                                                                        },
+                                                                        "dashboard": "",
+                                                                        "label": "",
+                                                                        "tooltip": "",
+                                                                        "#t": "RecordLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "8c37267d7e3e332f71efe776007efa79",
+                                                                        "uuid": "d1ea2edd-4da3-4f0f-a2db-236913478100",
+                                                                        "siteUrlStub": "D6JMim",
+                                                                        "pageUrlStub": "reports",
+                                                                        "recordIdentifier": "22",
+                                                                        "_recordRef": "lIBHer_bdD8Emw8hLTETeiApOtg30qtX87uJ3-_PNotBiATSJXBjNL8cvIyGBIRn-T_LeFXAfSZnuRrgrt02NmMzHsNtSwNe9L3hRs66NStEN-G",
+                                                                        "recordRef": {
+                                                                            "id": "2#{http://an-appian-instance.host.net/ae/types/2009}Integer#22",
+                                                                            "#t": "RecordReference"
+                                                                        },
+                                                                        "dashboard": "",
+                                                                        "label": "",
+                                                                        "tooltip": "",
+                                                                        "#t": "RecordLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "853b97a649a9cb9f2ac88c7cd01e13eb",
+                                                                        "uuid": "d1ea2edd-4da3-4f0f-a2db-236913478100",
+                                                                        "siteUrlStub": "D6JMim",
+                                                                        "pageUrlStub": "reports",
+                                                                        "recordIdentifier": "112",
+                                                                        "_recordRef": "lMBHer_bdD8Emw8hLTETeiApOtg30qtX87uJ3-_PNotBiATSJXBjNL8cvIyGBIRn-T_LeFXAfSZnuRrgbiVH5UHzOn1KgU7mThwKxNbPkDmZq8dyg",
+                                                                        "recordRef": {
+                                                                            "id": "2#{http://an-appian-instance.host.net/ae/types/2009}Integer#112",
+                                                                            "#t": "RecordReference"
+                                                                        },
+                                                                        "dashboard": "",
+                                                                        "label": "",
+                                                                        "tooltip": "",
+                                                                        "#t": "RecordLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "42f57bf8c16b31722aec5a412d6fb499",
+                                                                        "uuid": "d1ea2edd-4da3-4f0f-a2db-236913478100",
+                                                                        "siteUrlStub": "D6JMim",
+                                                                        "pageUrlStub": "reports",
+                                                                        "recordIdentifier": "132",
+                                                                        "_recordRef": "lMBHer_bdD8Emw8hLTETeiApOtg30qtX87uJ3-_PNotBiATSJXBjNL8cvIyGBIRn-T_LeFXAfSZnuRrgbqVH5XYhfO2JdZjKZTQN6y8qMgBq3xbMQ",
+                                                                        "recordRef": {
+                                                                            "id": "2#{http://an-appian-instance.host.net/ae/types/2009}Integer#132",
+                                                                            "#t": "RecordReference"
+                                                                        },
+                                                                        "dashboard": "",
+                                                                        "label": "",
+                                                                        "tooltip": "",
+                                                                        "#t": "RecordLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "779fffa03dbb27eb3e0087843d77dece",
+                                                                        "uuid": "d1ea2edd-4da3-4f0f-a2db-236913478100",
+                                                                        "siteUrlStub": "D6JMim",
+                                                                        "pageUrlStub": "reports",
+                                                                        "recordIdentifier": "77",
+                                                                        "_recordRef": "lIBHer_bdD8Emw8hLTETeiApOtg30qtX87uJ3-_PNotBiATSJXBjNL8cvIyGBIRn-T_LeFXAfSZnuRrh7502E9dvnFW-P7sOS2qt5GOdYH18_FJ",
+                                                                        "recordRef": {
+                                                                            "id": "2#{http://an-appian-instance.host.net/ae/types/2009}Integer#77",
+                                                                            "#t": "RecordReference"
+                                                                        },
+                                                                        "dashboard": "",
+                                                                        "label": "",
+                                                                        "tooltip": "",
+                                                                        "#t": "RecordLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "c4e433c622dffa4cc53af9be1dca13d5",
+                                                                        "uuid": "d1ea2edd-4da3-4f0f-a2db-236913478100",
+                                                                        "siteUrlStub": "D6JMim",
+                                                                        "pageUrlStub": "reports",
+                                                                        "recordIdentifier": "14",
+                                                                        "_recordRef": "lIBHer_bdD8Emw8hLTETeiApOtg30qtX87uJ3-_PNotBiATSJXBjNL8cvIyGBIRn-T_LeFXAfSZnuRrgb102APTGdMIk7V6ZPCTgOOU4GNTYkQP",
+                                                                        "recordRef": {
+                                                                            "id": "2#{http://an-appian-instance.host.net/ae/types/2009}Integer#14",
+                                                                            "#t": "RecordReference"
+                                                                        },
+                                                                        "dashboard": "",
+                                                                        "label": "",
+                                                                        "tooltip": "",
+                                                                        "#t": "RecordLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "681c0bab0ed6877061334dc945a634dd",
+                                                                        "uuid": "d1ea2edd-4da3-4f0f-a2db-236913478100",
+                                                                        "siteUrlStub": "D6JMim",
+                                                                        "pageUrlStub": "reports",
+                                                                        "recordIdentifier": "141",
+                                                                        "_recordRef": "lMBHer_bdD8Emw8hLTETeiApOtg30qtX87uJ3-_PNotBiATSJXBjNL8cvIyGBIRn-T_LeFXAfSZnuRrgb2WH5Uqg03wYFN-elMAaaR9J9TxCyqEtw",
+                                                                        "recordRef": {
+                                                                            "id": "2#{http://an-appian-instance.host.net/ae/types/2009}Integer#141",
+                                                                            "#t": "RecordReference"
+                                                                        },
+                                                                        "dashboard": "",
+                                                                        "label": "",
+                                                                        "tooltip": "",
+                                                                        "#t": "RecordLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "c457342be7610b3d0e36cc12091dd50f",
+                                                                        "uuid": "d1ea2edd-4da3-4f0f-a2db-236913478100",
+                                                                        "siteUrlStub": "D6JMim",
+                                                                        "pageUrlStub": "reports",
+                                                                        "recordIdentifier": "58",
+                                                                        "_recordRef": "lIBHer_bdD8Emw8hLTETeiApOtg30qtX87uJ3-_PNotBiATSJXBjNL8cvIyGBIRn-T_LeFXAfSZnuRrhbF02Mu5TT15UFM0ie_CIa0mHNuAwrxq",
+                                                                        "recordRef": {
+                                                                            "id": "2#{http://an-appian-instance.host.net/ae/types/2009}Integer#58",
+                                                                            "#t": "RecordReference"
+                                                                        },
+                                                                        "dashboard": "",
+                                                                        "label": "",
+                                                                        "tooltip": "",
+                                                                        "#t": "RecordLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "2a54a835e8ad4012f925487882fb0937",
+                                                                        "uuid": "d1ea2edd-4da3-4f0f-a2db-236913478100",
+                                                                        "siteUrlStub": "D6JMim",
+                                                                        "pageUrlStub": "reports",
+                                                                        "recordIdentifier": "57",
+                                                                        "_recordRef": "lIBHer_bdD8Emw8hLTETeiApOtg30qtX87uJ3-_PNotBiATSJXBjNL8cvIyGBIRn-T_LeFXAfSZnuRrhb502IwJa4H7kFZyRlO0tsRJECKS13X0",
+                                                                        "recordRef": {
+                                                                            "id": "2#{http://an-appian-instance.host.net/ae/types/2009}Integer#57",
+                                                                            "#t": "RecordReference"
+                                                                        },
+                                                                        "dashboard": "",
+                                                                        "label": "",
+                                                                        "tooltip": "",
+                                                                        "#t": "RecordLink"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "d0abe1567a520d4f114aae44b7f95db3",
+                                                                        "uuid": "d1ea2edd-4da3-4f0f-a2db-236913478100",
+                                                                        "siteUrlStub": "D6JMim",
+                                                                        "pageUrlStub": "reports",
+                                                                        "recordIdentifier": "87",
+                                                                        "_recordRef": "lIBHer_bdD8Emw8hLTETeiApOtg30qtX87uJ3-_PNotBiATSJXBjNL8cvIyGBIRn-T_LeFXAfSZnuRriL502EWf1mwP6W7NGei3L9wxX3vMlSsd",
+                                                                        "recordRef": {
+                                                                            "id": "2#{http://an-appian-instance.host.net/ae/types/2009}Integer#87",
+                                                                            "#t": "RecordReference"
+                                                                        },
+                                                                        "dashboard": "",
+                                                                        "label": "",
+                                                                        "tooltip": "",
+                                                                        "#t": "RecordLink"
+                                                                    }
+                                                                ],
+                                                                "color": "#E48F1B"
+                                                            }
+                                                        ],
+                                                        "allowDecimalAxisLabels": false,
+                                                        "showLegend": true,
+                                                        "showDataLabels": false,
+                                                        "showTooltips": true,
+                                                        "stacking": "",
+                                                        "labelPosition": "ABOVE",
+                                                        "helpTooltip": "",
+                                                        "instructionsPosition": "ABOVE",
+                                                        "referenceLines": [],
+                                                        "accessibilityText": "",
+                                                        "#t": "BarChart"
+                                                    }
+                                                ],
+                                                "align": "",
+                                                "width": ""
+                                            }
+                                        ],
+                                        "alignVertical": "",
+                                        "layout": "",
+                                        "minHeight": "",
+                                        "#t": "ColumnArrayLayout"
+                                    }
+                                ],
+                                "divider": "",
+                                "errorLabel": "This section contains errors",
+                                "expandLabel": "Show section contents",
+                                "label": "",
+                                "validations": [],
+                                "labelStyle": "",
+                                "skinName": "",
+                                "marginBelow": "",
+                                "accessibilityText": "",
+                                "#t": "SectionLayout2"
+                            }
+                        ],
+                        "align": "",
+                        "width": ""
+                    }
+                ],
+                "alignVertical": "",
+                "layout": "",
+                "minHeight": "",
+                "isTopLevelComponent": true,
+                "#t": "ColumnArrayLayout"
+            }
+        ],
+        "padding": "",
+        "#t": "ContentLayout"
+    },
+    "context": {
+        "#v": "jA0EAwMCb24pCQUucNUB0sBCAQSph6tro1jRCsVRzFrX0Pf4yH8DxHpDGVbnZppwxY/58LNRiW8r\r\nFDGx3NaFLUjEClXJBJEHHWcAoLhl0W7F6no00F5879Apk/sy5ERYstPYS/Ioguf471MVNgFnjZmL\r\nxmTVm1PHRGu88SQgn2+FFRUqy4kAxvWbVM3QwWNuAljJcF6KfZxdeiTKweBZO0TeEqnnFMxhrBkb\r\nyTbCGhzTj79X0JvQ+BWnA+2rBCbzwHypH+XA5GOalRz6mxzVAtX+rlFuIp21+SjPE6Yi6k+tVPJa\r\nHPwpiX97ROxj8FXJJY6/LKI6sIvgUt0m19RqurimHjpuhl4Ubw0AmN1vmbzDEuaW\r\n",
+        "#t": "string"
+    },
+    "uuid": "93b79a76-f0df-4e88-b0fe-ba68a07e5f56",
+    "i18nInfo": {
+        "locale": "en-US",
+        "timezoneId": "GMT",
+        "calendarId": "gregorian",
+        "decimalSeparator": ".",
+        "groupingSeparator": ","
+    },
+    "timers": {
+        "#t": "Dictionary"
+    },
+    "#t": "UiConfig",
+    "#s": {
+        "#v": [
+            {
+                "id": 216,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RecordReference",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "RecordReference",
+                "description": "a Record Identifier",
+                "base": 53,
+                "foundation": 53,
+                "typeof": 216,
+                "list": 217,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 217,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RecordReference?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "RecordReference?list",
+                "description": "a list of Record Identifiers",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 216,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            }
+        ],
+        "#t": "DataType?list"
+    },
+    "shortcuts": [],
+    "#u": "<https://an-appian-instance.host.net/suite/tempo/records/type/{recordTypeName}/item/{opaqueId}/view/{dashboard}>; rel=\"x-web-bookmark\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/components/ping.do>; rel=\"x-resume-session\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/tempo/records/item/{_recordRef}/view/{dashboard}>; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/all>; rel=\"x-sites-all\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/tasks/task/{id}>; rel=\"x-site-task\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/usercard/{%40attributes.%40anyAttribute.recordIdentifier}>; rel=\"x-data-request-usercard\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/page/{pageUrlStub}/task/{id}>; rel=\"x-site-task-page\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/siteUrlStub}/page/{pageUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-web-bookmark-sites\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/page{/pageUrlStub}/nav>; rel=\"x-site-page-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/user/latest/user/{%40attributes.%40anyAttribute.user}/about>; rel=\"x-data-request-userinfo\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-leftnav\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/page/{pageUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest/{recordTypeUrlStub}/{recordId}/dashboards/{dashboardUrlStub}/transparentid>; rel=\"x-record-ui\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest{/recordTypeUrlStub}{/recordId}/dashboards{/dashboardUrlStub}/headerFeed>; rel=\"x-record-dashboard-feed-header\"; type=\"application/atom+json\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/task/latest/{taskId}/attributes>; rel=\"x-task-attributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}/views>; rel=\"x-data-request-site-mobile-record-views\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/internal/webapi/releaselock/{objectUuid}/{uiSourceUuid}>; rel=\"x-data-release-object-lock\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/tempo/records/type/{recordTypeName}/item/{opaqueId}/actions>; rel=\"x-web-bookmark-actions\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/>; rel=\"x-sasa-app\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/siteUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-web-bookmark-sites-nopage\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest{/recordTypeUrlStub}{/recordId}/dashboards{/dashboardUrlStub}>; rel=\"x-record-dashboard-feed\"; type=\"application/atom+json\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/api/feed/tempo?t=e,x,b,f&m=menu-records&s=mt{&_recordRef,dashboard,c}>; rel=\"x-record-news\"; type=\"application/atom+xml\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/app{/appName}{/path*}{?params*}>; rel=\"x-sail-application\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-nopage\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/tempo/records/item/{_recordRef}/view/{dashboard}>; rel=\"x-web-bookmark-records\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest/{recordTypeUrlStub}/{recordId}/feed/dashboards/{dashboardUrlStub}/transparentid>; rel=\"x-record-feed\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/api/feed/tempo?t=e,x,b,f&m=menu-records&s=mt{&_recordRef,dashboard,c}>; rel=\"x-data-request-record-news\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/recordType/{recordTypeUrlStub}/record/{opaqueRecordId}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-by-id-nopage\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest{/_recordRef}/dashboards{/dashboard}/headerFeed>; rel=\"x-record-dashboard-header\"; type=\"application/atom+xml\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest{/_recordRef}/dashboards{/dashboard}>; rel=\"x-record-dashboard\"; type=\"application/atom+xml\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/cors>; rel=\"x-cors\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/thumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-thumbnail\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/evaluateComponentTemplate{/templateId}>; rel=\"x-ifcdesigner-evaluatecomponenttemplate\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/pages/{pageUrlStub}/report>; rel=\"x-sites-report\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/nav>; rel=\"x-site-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites>; rel=\"x-site-main\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/page/{pageUrlStub}/recordType/{recordTypeUrlStub}/record/{opaqueRecordId}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-by-id\"; dt=\"RecordLink\""
+}

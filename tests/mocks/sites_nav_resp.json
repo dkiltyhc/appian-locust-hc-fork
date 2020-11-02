@@ -1,0 +1,82 @@
+{
+    "ui": {
+        "_cId": "a205b8222ea1e65839e3c16bc3980c8d",
+        "honorBranding": "true",
+        "windowtitle": "Create Modern Record News - Modern Record News ",
+        "pageWidth": "WIDE",
+        "siteName": "Modern Record News ",
+        "_dirty": "false",
+        "tabs": [
+            {
+                "_cId": "702b1e041f227a2d9c60bd3a675b36b6",
+                "fontAwesomeIconId": "f055",
+                "iconFriendlyName": "plus-circle",
+                "link": {
+                    "_cId": "28dc71c3e9c70ae256591ba58551ee4e",
+                    "siteUrlStub": "mrn",
+                    "pageUrlStub": "create-mrn",
+                    "label": "Create Modern Record News"
+                },
+                "status": true,
+                "pageWidth": "WIDE",
+                "skinName": ""
+            },
+            {
+                "_cId": "e845d541665a2bac6012e5077a393f6e",
+                "fontAwesomeIconId": "f1c0",
+                "iconFriendlyName": "database",
+                "link": {
+                    "_cId": "35c6ee1b7b9d5dbdc65f00bce41580d0",
+                    "siteUrlStub": "mrn",
+                    "pageUrlStub": "entity-backed2",
+                    "label": "Record News (Entity Backed)"
+                },
+                "status": false,
+                "pageWidth": "STANDARD",
+                "skinName": ""
+            },
+            {
+                "_cId": "f12e92d6e4d36595c20294e9496dcb6f",
+                "fontAwesomeIconId": "f0ec",
+                "iconFriendlyName": "exchange",
+                "link": {
+                    "_cId": "026939d89718b73208be925a97215ecb",
+                    "siteUrlStub": "mrn",
+                    "pageUrlStub": "process-backed2",
+                    "label": "Record News (Process Backed)"
+                },
+                "status": false,
+                "pageWidth": "NARROW",
+                "skinName": ""
+            },
+            {
+                "_cId": "8288a038a7690029652588d0cd21747b",
+                "fontAwesomeIconId": "f121",
+                "iconFriendlyName": "code",
+                "link": {
+                    "_cId": "35944c8a60de708ef9764acf7518be0e",
+                    "siteUrlStub": "mrn",
+                    "pageUrlStub": "expression-backed2",
+                    "label": "Record News (Expression Backed) "
+                },
+                "status": false,
+                "pageWidth": "WIDE",
+                "skinName": ""
+            },
+            {
+                "_cId": "8389d34fe556567f5b6e2575ffa6b1ae",
+                "fontAwesomeIconId": "f0c0",
+                "iconFriendlyName": "users",
+                "link": {
+                    "_cId": "5d31484e5640943ad7d32ad19db36bbb",
+                    "siteUrlStub": "mrn",
+                    "pageUrlStub": "users",
+                    "label": "Users"
+                },
+                "status": false,
+                "pageWidth": "NARROW",
+                "skinName": ""
+            }
+        ]
+    }
+}

@@ -1,0 +1,1400 @@
+{
+    "_cId": "428b8d8ea2f3a252fa7ec72eb125358f",
+    "isSystemUi": "true",
+    "_dirty": "false",
+    "sail-navigation-bookmark-url": "/design/app/AADkMByLgAAY4-jvkOjvkAAAfXQ",
+    "sail-navigation-endpoint-url": "/rest/a/applications/latest/app/design/app/AADkMByLgAAY4-jvkOjvkAAAfXQ",
+    "links": [
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/applications/latest/app/design/app/AADkMByLgAAY4-jvkOjvkAAAfXQ",
+            "rel": "update",
+            "title": "Update",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/applications/latest/app/design/app/AADkMByLgAAY4-jvkOjvkAAAfXQ",
+            "rel": "self",
+            "title": "",
+            "method": "GET"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/applications/latest/app/design/app/AADkMByLgAAY4-jvkOjvkAAAfXQ",
+            "rel": "self",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/api/tempo/file",
+            "rel": "upload",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/tempo/file-web/",
+            "rel": "upload-web",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/tempo/file-web-encrypt/",
+            "rel": "upload-web-encrypt",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/doc",
+            "rel": "x-docinfo",
+            "title": "",
+            "method": "POST",
+            "saveInto": "<<jA0EAwMC4cXSUge5PDQB0mcBoXSdvv7lMqfhXCTiz+Ljt+V3vlYK3EPfY0hEqAwp6U8l8YgnY4Yi\r\nAmKJZ20jPaq1DbnbvXbLZtvs++Hgqx/Mk5MxNPzXYTyY+DTnHnHXmrNZqn6ehyAVbYb5G9DFEm0J\r\nnOjPrJ0v\r\n>>"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/autosuggest",
+            "rel": "x-autosuggest",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/lozengequery",
+            "rel": "x-lozengequery",
+            "title": "",
+            "method": "POST"
+        }
+    ],
+    "triggers": [],
+    "ui": {
+        "_cId": "f89eb394963181c54bb49e1b29bebd5d",
+        "focusFieldId": "3fc00a2feb14a0fa7b26d41b8f068a89",
+        "dialogIds": "0,1,2,1,3,4,6,7,8,9,10,11,9,6,2,6,9,3,3,24,6,10,6,9,41,3,42,46,42,47,6,9,78,79,9,61,92,2,9,2,69,10,98,3,61,93,409,410,6,492",
+        "contents": [
+            {
+                "_cId": "7c867edd0c9a359bcd90e185385ab0b9",
+                "header": {
+                    "_cId": "44bf19fd6675886fdfc4e48cb03cf71d",
+                    "contents": [
+                        {
+                            "_cId": "9cc1b7ce293a1c95a70ad48b56db26f1",
+                            "testLabel": "WizardHeaderText",
+                            "label": "",
+                            "labelPosition": "COLLAPSED",
+                            "instructions": "",
+                            "value": {
+                                "_cId": "c31e37b7d50cd3fa855166f488ba81d3",
+                                "values": [
+                                    {
+                                        "_cId": "dc8900c0037d97dab6b4b38d01d9cee5",
+                                        "values": [
+                                            {
+                                                "_cId": "b070bad8476513eae4b00e01787ca81d",
+                                                "values": [
+                                                    {
+                                                        "#v": "Compare and Deploy  ",
+                                                        "#t": "string"
+                                                    }
+                                                ],
+                                                "#t": "StrongText"
+                                            }
+                                        ],
+                                        "#t": "LargeText"
+                                    },
+                                    {
+                                        "_cId": "8833413eaf5fc87048bc6a6cd63ea7fa",
+                                        "values": [
+                                            {
+                                                "_cId": "5a02d1e7205c33805661db4f059249d0",
+                                                "values": [
+                                                    {
+                                                        "#v": "(Appian to Appian)",
+                                                        "#t": "string"
+                                                    }
+                                                ],
+                                                "#t": "MediumText"
+                                            }
+                                        ],
+                                        "#t": "SecondaryText"
+                                    }
+                                ],
+                                "#t": "FormattedText"
+                            },
+                            "valueAlignment": "",
+                            "helpTooltip": "",
+                            "accessibilityText": "",
+                            "#t": "RichTextDisplayField"
+                        },
+                        {
+                            "_cId": "c22afa52e5b1303908d36323f7f03018",
+                            "testLabel": "WizardMilestone",
+                            "label": "",
+                            "instructions": "",
+                            "steps": [
+                                "Select Target Environment",
+                                "Prepare Package",
+                                "Inspect Package",
+                                "Review Details"
+                            ],
+                            "active": 4,
+                            "labelPosition": "ABOVE",
+                            "links": [
+                                {
+                                    "_cId": "a821d24951b27047fe1b2364b243e135",
+                                    "testLabel": "Select Target Environment",
+                                    "label": "",
+                                    "value": {
+                                        "#v": "",
+                                        "#t": "string"
+                                    },
+                                    "saveInto": [
+                                        "<<jA0EAwMC4cXSUge5PDQB0sA3AaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvvEMEo9wudnRp/7ZDT\r\nRXHFK244AiH+mv2B5JzRXVqTBBti2DxcXtUzXYPZyJQEqB4qk4H1pIfHtjJDRcAz/EMtFI/IISMC\r\nw1qcNygksjPgH8RU6MdqLvvqrSYLNbJoz7TozjOq2dPnXuPy8rvM/ZW0pe7SUPQcpaOg4hVAH/0K\r\n6gtOjJot5N1ObNqtq9D6q44OaD6zmuEwVpPp2zBkuCiBBpVfyMkrYnnX2JJYcuSRdODdGH3beNRg\r\nLc+SWuGzQCO9hBfavwJonfg+97xezT8HmhOSoAN1Ohfku7HExw==\r\n>>"
+                                    ],
+                                    "tooltip": "",
+                                    "href": "",
+                                    "#t": "DynamicLink"
+                                },
+                                {
+                                    "_cId": "e0b643fe50266bafb11a4f67ea108d7a",
+                                    "testLabel": "Prepare Package",
+                                    "label": "",
+                                    "value": {
+                                        "#v": "",
+                                        "#t": "string"
+                                    },
+                                    "saveInto": [
+                                        "<<jA0EAwMC4cXSUge5PDQB0sA3AaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvvEOcr9Q+NCOwpYyd8\r\ni/p/qTrj9oBcMA873FdgfQNPywWY9e2YjxHwZwTbBPc6Hia/hgniFcyPaqxo1orunwBpH00ndavb\r\n0lMYWcBYhTX0rCzOzZDJxLo9xFscGKgYgg4ONahktPu8DVgkXrTHc4QlxRaT1aqrm2Q85J7VKaFC\r\nfUo5mqtVIxC5UGL0t3k3L0RqnfYg7XUowsAwZQeldWQwHDOkv3VG5F5SROJho25vtaGmREJ/GbJ7\r\nvb+wCBbAMuQ9v0+y+WC4AknxSt3PicnUr8iOZRRdYwROkrNuEg==\r\n>>"
+                                    ],
+                                    "tooltip": "",
+                                    "href": "",
+                                    "#t": "DynamicLink"
+                                },
+                                {
+                                    "_cId": "15464bd61f84a70ac313b404ee5e0d1c",
+                                    "testLabel": "Inspect Package",
+                                    "label": "",
+                                    "value": {
+                                        "#v": "",
+                                        "#t": "string"
+                                    },
+                                    "saveInto": [
+                                        "<<jA0EAwMC4cXSUge5PDQB0sA3AaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvvOsEv9g+NvEhqNefR\r\nrl3J86EqlOwm8tEdI/ykThEAtZVpxj6Wxf/CqaDJmk/zGT9y/iF+hB5DdqVg6XIhEj9Aygqoqw/d\r\neKn+eAtl905IhfiC5Lf1bHf2P4wz8G3Tq51OJA3Vtk7IBqMc9MkMU4vlcL4k/st6DL9BVOPCgGc/\r\nbWf6z+IsgHyKg+A0uTyfq2xXmpZw6GB6Jo6C67RQXCpuprNK5WZGH34KemInXBd9GDYpXNK+Pkj0\r\nbx6MbGWqhaO/4WITE5KpuZliAsnf/q47fod3oTij9hE22vjJPg==\r\n>>"
+                                    ],
+                                    "tooltip": "",
+                                    "href": "",
+                                    "#t": "DynamicLink"
+                                },
+                                {
+                                    "#v": "",
+                                    "#t": "string"
+                                }
+                            ],
+                            "helpTooltip": "",
+                            "currentStepLabel": "Current Step",
+                            "completedStepLabel": "Completed Step",
+                            "futureStepLabel": "Future Step",
+                            "instructionsPosition": "ABOVE",
+                            "style": "",
+                            "orientation": "",
+                            "accessibilityText": "",
+                            "color": "",
+                            "#t": "MilestoneField"
+                        }
+                    ],
+                    "padding": "STANDARD",
+                    "#t": "ContentLayout"
+                },
+                "content": {
+                    "_cId": "5046a71312b4a1d9233566aaf93b26e7",
+                    "contents": [
+                        {
+                            "_cId": "a5c0ae052f3953fafa056372fe22b72c",
+                            "contents": [
+                                {
+                                    "_cId": "88e785e79cbce9565bbd6a0cf4ef1a71",
+                                    "columns": [
+                                        {
+                                            "_cId": "8cf860c6567efa8f63ae6c8d8317196f",
+                                            "contents": [
+                                                {
+                                                    "_cId": "3fc00a2feb14a0fa7b26d41b8f068a89",
+                                                    "label": "Name",
+                                                    "instructions": "",
+                                                    "required": true,
+                                                    "placeholder": "E.g. First Increment: View and Search Zoo Animals",
+                                                    "value": "RAD Replica Create Test App - 2020-03-19_2101",
+                                                    "saveInto": [
+                                                        "<<jA0EAwMC4cXSUge5PDQB0sAnAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvvEOco9QudQjiVguJ6\r\npQTYyHwteKJD1oe2UIc36mHSf70JI2G/uwRcJoNUXvhgeAjXaYEVPQlZzCmM1kvgIt+ON01lMyni\r\nkBo9s81wGr/MZEhPmTC8HsyypgFnPTfJaez8E3czTgFN3bfnUBLatj9KFzkXDHxIRGvbEIu6cdwi\r\nqqQCqUJc2VevQF6s0rUYPNonNfb3kqGPJQ/nbdUWAhymRQaBTcjsJOXLrNJZjjIwR5uVowMAEQnk\r\nGmjUc7bB+6V3wY9HW6L0uPzHJ+LH\r\n>>"
+                                                    ],
+                                                    "refreshAfter": "UNFOCUS",
+                                                    "keyboard": "STANDARD",
+                                                    "labelPosition": "ABOVE",
+                                                    "align": "DEFAULT",
+                                                    "helpTooltip": "The name will be reflected in the package file name and used to identify the deployment in the deployments view",
+                                                    "accessibilityText": "",
+                                                    "#t": "TextField"
+                                                }
+                                            ],
+                                            "align": "",
+                                            "width": ""
+                                        }
+                                    ],
+                                    "alignVertical": "TOP",
+                                    "marginBelow": "",
+                                    "spacing": "",
+                                    "#t": "MultiColumnLayout"
+                                },
+                                {
+                                    "_cId": "8de746342d0d9c9e83c63b029074acc1",
+                                    "label": "Description",
+                                    "instructions": "",
+                                    "placeholder": "E.g. Base functionality to view the animals in the zoo and search on name and species",
+                                    "value": "",
+                                    "saveInto": [
+                                        "<<jA0EAwMC4cXSUge5PDQB0sAnAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvvEOco9QudQjiVguJ6\r\npQTYyHwteKJD1oe2UIc36n78essuum3v/v/Ot2zByO+E9QKwF4rKmGJ4jsEfhoaeXxzQOIcG2QaY\r\ngZUB5e7h3974jNDphKwrMHWnNbYwCBMf3ilOwWrTr9sNr4fPri4p7hNPZtfTOKyD/iElWF4Qihhz\r\nw5hhccj9Ru7B3/rgv0mOFJXwf8xRa3Z+vi/pKmm59FaXZ1+nQ1MjzX6MQ4/fpdlbadQRag6WkwS2\r\nV6GpOtss2DdBzp4z2WWOh9WxZIqg\r\n>>"
+                                    ],
+                                    "refreshAfter": "UNFOCUS",
+                                    "labelPosition": "ABOVE",
+                                    "height": "SHORT",
+                                    "helpTooltip": "The description will be used to identify the deployment in the deployments view (does not apply for exports)",
+                                    "width": "",
+                                    "accessibilityText": "",
+                                    "#t": "ParagraphField"
+                                },
+                                {
+                                    "_cId": "2036dd5caeabd76f3e02762c37fb913b",
+                                    "padding": "LESS",
+                                    "#t": "ContentLayout"
+                                },
+                                {
+                                    "version": "1",
+                                    "_cId": "cd2e657917be4f320ab9c1bfee078937",
+                                    "testLabel": "DEPLOYMENT_PAPER_AIRPLANE",
+                                    "label": "",
+                                    "instructions": "",
+                                    "images": [
+                                        {
+                                            "_cId": "a3edb04d84e5dc89cbd6ab8f32fb7639",
+                                            "source": "https://an-appian-instance.host.net/suite/applications/img/deployment_paper_plane.png",
+                                            "altText": "",
+                                            "caption": "",
+                                            "backgroundColor": "",
+                                            "#t": "SafeImageWidget"
+                                        }
+                                    ],
+                                    "size": "LARGE",
+                                    "labelPosition": "COLLAPSED",
+                                    "helpTooltip": "",
+                                    "align": "CENTER",
+                                    "isThumbnail": false,
+                                    "style": "STANDARD",
+                                    "accessibilityText": "",
+                                    "#t": "ImageGalleryField"
+                                },
+                                {
+                                    "_cId": "82851a2b79b7aaa2ec55f1e772c2ac63",
+                                    "testLabel": "DEPLOYMENT_SUMMARY",
+                                    "label": "",
+                                    "labelPosition": "COLLAPSED",
+                                    "instructions": "",
+                                    "value": {
+                                        "_cId": "ee96fe80450cfe5e1a554d6e5b726028",
+                                        "values": [
+                                            {
+                                                "_cId": "ee9e7e1ef0cfb8164f44ee21dca831f7",
+                                                "values": [
+                                                    {
+                                                        "_cId": "77287a0fc16aced833e3819fa698f183",
+                                                        "values": [
+                                                            {
+                                                                "#v": "All application changes will be deployed to Appian",
+                                                                "#t": "string"
+                                                            }
+                                                        ],
+                                                        "#t": "MediumText"
+                                                    }
+                                                ],
+                                                "#t": "SecondaryText"
+                                            }
+                                        ],
+                                        "#t": "FormattedText"
+                                    },
+                                    "valueAlignment": "CENTER",
+                                    "helpTooltip": "",
+                                    "accessibilityText": "",
+                                    "#t": "RichTextDisplayField"
+                                }
+                            ],
+                            "padding": "NONE",
+                            "#t": "ContentLayout"
+                        }
+                    ],
+                    "padding": "STANDARD",
+                    "#t": "ContentLayout"
+                },
+                "footer": {
+                    "_cId": "fd184015c52ed957c78d8e45bb8eb48c",
+                    "contents": [
+                        {
+                            "_cId": "6282f77a4af168d240839905b313e3b1",
+                            "testLabel": "WizardButtons",
+                            "primaryButtons": [
+                                {
+                                    "_cId": "d023be89f77535212204da6a20808e0e",
+                                    "isFlat": "false",
+                                    "action": "VALIDATE",
+                                    "validate": "true",
+                                    "label": "Export",
+                                    "style": "",
+                                    "confirmHeader": "",
+                                    "confirmMessage": "",
+                                    "confirmButtonLabel": "",
+                                    "confirmButtonStyle": "PRIMARY",
+                                    "cancelButtonLabel": "",
+                                    "value": {
+                                        "#v": "",
+                                        "#t": "string"
+                                    },
+                                    "saveInto": [
+                                        "<<jA0EAwMC4cXSUge5PDQB0sAnAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvvEMEo9wudnRp/7ZLT\r\nLFjJcJyiD+QYg8jOOqkwMNCbWMWsAIk2ruveLrCFHqBnDRnEreYVQIU18YcH8ejQty2Z84cRLVJQ\r\nfxQyT2T8ypCINYA3KmKU7KRn3ZsARzK86sRje/y1LpcakhVVElht/ejOx6QOD4XSRA+RiV8/X3w8\r\nqWDVlt+uW3AcaLYdE49f+6SyZvPXN6fGnE6YXRf9Vj6zCDIzhZfgWjbeptrpdSM479bZyn0JL8ex\r\n5rhsGPonIwAlfMrClCB+wEdqQ2F/\r\n>>"
+                                    ],
+                                    "size": "",
+                                    "icon": "",
+                                    "buttonStyle": "NORMAL",
+                                    "ariaLabel": "",
+                                    "skinName": "",
+                                    "tooltipStyle": "",
+                                    "tooltipVerticalPosition": "",
+                                    "tooltipWidth": "",
+                                    "accessibilityText": "",
+                                    "shape": ""
+                                },
+                                {
+                                    "_cId": "d66e7b55d35a3d6f1cc552589bf4c22f",
+                                    "isFlat": "false",
+                                    "action": "VALIDATE",
+                                    "validate": "true",
+                                    "label": "Deploy",
+                                    "style": "",
+                                    "confirmHeader": "",
+                                    "confirmMessage": "",
+                                    "confirmButtonLabel": "",
+                                    "confirmButtonStyle": "PRIMARY",
+                                    "cancelButtonLabel": "",
+                                    "disabled": false,
+                                    "value": {
+                                        "#v": "",
+                                        "#t": "string"
+                                    },
+                                    "saveInto": [
+                                        "<<jA0EAwMC4cXSUge5PDQB0sAnAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvvEMEr9wuNO8CrM2vk\r\nRaI68YBm6cu5wl+ApK2rwBtWMkROONuUAHw4eFckA8DwOOvvm2z328r3d/ashDYiJEA/RswLRjpT\r\nFwPmKjtc/zu6CqsZZUo9grfQ+XoRiMkbC0dj5bwRF1WGeUMyvenN59ekRNOwWW6ZXVsKNZTaq4bh\r\nxrXn+jPMlNH1Jno5D5kTZ/Nt/gTmNOrPLndAbnvNWIkpm6aVt8gu695Y+/aLCW6jqIPJmO0x7hvq\r\nRKw4I3Joa7jJZFr9kro8xfq5u1SQ\r\n>>"
+                                    ],
+                                    "size": "",
+                                    "icon": "",
+                                    "buttonStyle": "PRIMARY",
+                                    "ariaLabel": "",
+                                    "skinName": "",
+                                    "tooltipStyle": "",
+                                    "tooltipVerticalPosition": "",
+                                    "tooltipWidth": "",
+                                    "accessibilityText": "",
+                                    "shape": ""
+                                }
+                            ],
+                            "secondaryButtons": [
+                                {
+                                    "_cId": "a357e0ca3fd99e0b872f88b940ae4a64",
+                                    "isFlat": "false",
+                                    "label": "Back",
+                                    "style": "",
+                                    "confirmHeader": "",
+                                    "confirmMessage": "",
+                                    "confirmButtonLabel": "",
+                                    "confirmButtonStyle": "PRIMARY",
+                                    "cancelButtonLabel": "",
+                                    "value": {
+                                        "#v": "",
+                                        "#t": "string"
+                                    },
+                                    "saveInto": [
+                                        "<<jA0EAwMC4cXSUge5PDQB0sAnAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvvEMEr9w+NX9LS5q6o\r\njoWgskJ6kfHZYOuu8A8v3iwNpHR4Od5FnembnImcVtmncb67TJ+hxclwOMYY8+if2MXMd+vT62KN\r\nsBj4TwtQQMuR2cMgF7siuAx27+Fgd+yp+2Fpu+7DK34cVT/KhFZJ8sC9HKg7QUYkEcd71NRz1upU\r\nTqUFzMMighBU7KeGE8MgAT6k2WwUfsFiaqgt5yvPAlKO12ZVyAj3iUkWzt0O4Ba7wRLA5ep6LSGP\r\nLm3IuzJW0/gZCtSvlropEgcRHr5g\r\n>>"
+                                    ],
+                                    "size": "",
+                                    "icon": "",
+                                    "buttonStyle": "NORMAL",
+                                    "ariaLabel": "",
+                                    "skinName": "",
+                                    "tooltipStyle": "",
+                                    "tooltipVerticalPosition": "",
+                                    "tooltipWidth": "",
+                                    "accessibilityText": "",
+                                    "shape": ""
+                                },
+                                {
+                                    "_cId": "18da79cf29608acd038bd6920d5d70b1",
+                                    "isFlat": "false",
+                                    "label": "Close",
+                                    "style": "",
+                                    "confirmHeader": "",
+                                    "confirmMessage": "",
+                                    "confirmButtonLabel": "",
+                                    "confirmButtonStyle": "PRIMARY",
+                                    "cancelButtonLabel": "",
+                                    "value": {
+                                        "#v": "",
+                                        "#t": "string"
+                                    },
+                                    "saveInto": [
+                                        "<<jA0EAwMC4cXSUge5PDQB0sAjAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvvEOcr9guNt6DSvnBp\r\n9N+X9/xgHYR63NBuLWrHKB5CXs7TgeiTUJ7A+4tV1UjaKeyy9sG49n5ERb6k5UjD9iehceQcegS4\r\n9FkRNZ0HzY6uhBJjz4qy4GCPF8GmrH1j9uPwEsR0dJgMMeuCaUKYnny6oa0o589u0NchGe/NXG5T\r\nMEnV/6r4JL+ytGOLFOZb4MsRTG1EJ/Ru619YZl3o5aYMrgRgsN+hF7BPLqoZBZriwbxamMrYuA0u\r\nMZRF88iYPZXYtW4MLGTyakc=\r\n>>"
+                                    ],
+                                    "actions": [
+                                        {
+                                            "_cId": "f999c223e58ad87dacdd7a2f4dbd779e",
+                                            "_actionName": "keyboard-shortcuts",
+                                            "keyboard-shortcuts:keys": "Escape",
+                                            "keyboard-shortcuts:fire-in-inputs": "true",
+                                            "testLabel": "shortcut-Close",
+                                            "label": "",
+                                            "value": {
+                                                "#v": "",
+                                                "#t": "string"
+                                            },
+                                            "saveInto": [
+                                                "<<jA0EAwMC4cXSUge5PDQB0sArAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WrvEOco9gudwQUry/w7\r\nSXd8WGRcoSFFirJ8PZ0zV5RRCGt+ZYT7zQ7bn2NygH55wc+Z+wbdB3SVu2WxYs01wqa9jDNtXG4F\r\nXBCwC/1BsiT1zxvEx9VhahUyxbgFgxtApaIH3J7IQZ+Uhs595TvRxMUszGO9v1Zr1gPCfeWdU6lz\r\nZu/wSoPpjLDQJB74giPCzgviuM3VqqeF1a56M1ZFIKbiZkHftxaRvyVfEYdXYvOZ/DUjrpQGBE8D\r\nyWNDOrK42RJ1xFIGnOnX1U5Oy+RoHMbrXw==\r\n>>"
+                                            ],
+                                            "tooltip": "",
+                                            "href": "",
+                                            "#t": "DynamicLink"
+                                        }
+                                    ],
+                                    "size": "",
+                                    "icon": "",
+                                    "buttonStyle": "NORMAL",
+                                    "ariaLabel": "",
+                                    "skinName": "",
+                                    "tooltipStyle": "",
+                                    "tooltipVerticalPosition": "",
+                                    "tooltipWidth": "",
+                                    "accessibilityText": "",
+                                    "shape": ""
+                                }
+                            ],
+                            "marginBelow": "NONE",
+                            "align": "",
+                            "accessibilityText": "",
+                            "#t": "ButtonLayout"
+                        }
+                    ],
+                    "padding": "STANDARD",
+                    "#t": "ContentLayout"
+                },
+                "#t": "HeaderContentFooterLayout"
+            }
+        ],
+        "height": "FIT",
+        "width": "FIT",
+        "#t": "ModalDialogLayout"
+    },
+    "context": {
+        "#v": "jA0EAwMC4cXSUge5PDQB0sAEAZfpFkoHTQJjIT0ofRjekq7xmrz8uRrFk2tkqpnQx4Eglu1/8vkm\r\nAjat/9BoAc3r8KsSrVFEk8CVbHP2O1P6FYDe9GIrp8iv8eO6Z/K2E6jlEJqfOJdTa9qEsdQaCw+0\r\nPlfbzojkptEKQnR0c0xPB3Ep8SJpTzNEX6XwNlc62vKa7N6FGHLNMJ06eNS0knd3VT8cCZQwO85i\r\nB6N6kxf5ruM7CIZ40ear/Q1CxPBskAk5mtvmt+3yMaF3aW3TFKAR9d+Okw==\r\n",
+        "#t": "string"
+    },
+    "uuid": "76df7399-7f24-43b5-bb35-5bda49816b1d",
+    "i18nInfo": {
+        "locale": "en-US",
+        "timezoneId": "GMT",
+        "calendarId": "gregorian",
+        "decimalSeparator": ".",
+        "groupingSeparator": ","
+    },
+    "timers": {
+        "#t": "Dictionary"
+    },
+    "#t": "UiConfig",
+    "#s": {
+        "#v": [
+            {
+                "id": 2676,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}TextField",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "TextField",
+                "description": "",
+                "base": 658,
+                "foundation": 95,
+                "typeof": 2676,
+                "list": 2677,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 2678
+                        }
+                    },
+                    {
+                        "name": "label",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "instructions",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "required",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "readOnly",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "disabled",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "placeholder",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "validations",
+                        "value": {
+                            "#t": "ValidationMessage?list"
+                        }
+                    },
+                    {
+                        "name": "saveInto",
+                        "value": {
+                            "#t": "Save?list"
+                        }
+                    },
+                    {
+                        "name": "refreshAfter",
+                        "value": {
+                            "#t": "RefreshAfterMode"
+                        }
+                    },
+                    {
+                        "name": "keyboard",
+                        "value": {
+                            "#t": "Keyboard"
+                        }
+                    },
+                    {
+                        "name": "labelPosition",
+                        "value": {
+                            "#t": "LabelPosition"
+                        }
+                    },
+                    {
+                        "name": "align",
+                        "value": {
+                            "#t": "Align"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "helpTooltip",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "masked",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "accessibilityText",
+                        "value": {
+                            "#t": "string"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                true,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2678,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 2676 (TextField)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 2678,
+                "list": 2679,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 774,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RefreshAfterMode",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "RefreshAfterMode",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 775,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1448,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Keyboard",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Keyboard",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 1449,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2677,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}TextField?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "TextField?list",
+                "description": "List of TextField",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2676,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2679,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2678,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 775,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RefreshAfterMode?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "RefreshAfterMode?list",
+                "description": "List of RefreshAfterMode",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 774,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1449,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Keyboard?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Keyboard?list",
+                "description": "List of Keyboard",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1448,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2116,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ParagraphField",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ParagraphField",
+                "description": "",
+                "base": 658,
+                "foundation": 95,
+                "typeof": 2116,
+                "list": 2117,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 2120
+                        }
+                    },
+                    {
+                        "name": "label",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "instructions",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "required",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "readOnly",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "disabled",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "linkify",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "placeholder",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "validations",
+                        "value": {
+                            "#t": "ValidationMessage?list"
+                        }
+                    },
+                    {
+                        "name": "saveInto",
+                        "value": {
+                            "#t": "Save?list"
+                        }
+                    },
+                    {
+                        "name": "refreshAfter",
+                        "value": {
+                            "#t": "RefreshAfterMode"
+                        }
+                    },
+                    {
+                        "name": "labelPosition",
+                        "value": {
+                            "#t": "LabelPosition"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "height",
+                        "value": {
+                            "#t": "ParagraphFieldHeight"
+                        }
+                    },
+                    {
+                        "name": "helpTooltip",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "width",
+                        "value": {
+                            "#t": "ComponentWidth"
+                        }
+                    },
+                    {
+                        "name": "accessibilityText",
+                        "value": {
+                            "#t": "string"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                true,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2120,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 2116 (ParagraphField)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 2120,
+                "list": 2121,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2118,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ParagraphFieldHeight",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ParagraphFieldHeight",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 2119,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2117,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ParagraphField?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ParagraphField?list",
+                "description": "List of ParagraphField",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2116,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2121,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2120,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2119,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ParagraphFieldHeight?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ParagraphFieldHeight?list",
+                "description": "List of ParagraphFieldHeight",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2118,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1776,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ImageGalleryField",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ImageGalleryField",
+                "description": "",
+                "base": 658,
+                "foundation": 95,
+                "typeof": 1776,
+                "list": 1777,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 1778
+                        }
+                    },
+                    {
+                        "name": "label",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "instructions",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "images",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "size",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "labelPosition",
+                        "value": {
+                            "#t": "LabelPosition"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "helpTooltip",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "align",
+                        "value": {
+                            "#t": "ComponentAlign"
+                        }
+                    },
+                    {
+                        "name": "isThumbnail",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "style",
+                        "value": {
+                            "#t": "ImageStyle"
+                        }
+                    },
+                    {
+                        "name": "accessibilityText",
+                        "value": {
+                            "#t": "string"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                true,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1778,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 1776 (ImageGalleryField)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1778,
+                "list": 1779,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1777,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ImageGalleryField?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ImageGalleryField?list",
+                "description": "List of ImageGalleryField",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1776,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1779,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1778,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            }
+        ],
+        "#t": "DataType?list"
+    },
+    "shortcuts": [
+        {
+            "_cId": "f999c223e58ad87dacdd7a2f4dbd779e",
+            "_actionName": "keyboard-shortcuts",
+            "keyboard-shortcuts:keys": "Escape",
+            "keyboard-shortcuts:fire-in-inputs": "true",
+            "testLabel": "shortcut-Close",
+            "label": "",
+            "value": {
+                "#v": "",
+                "#t": "string"
+            },
+            "saveInto": [
+                "<<jA0EAwMC4cXSUge5PDQB0sArAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WrvEOco9gudwQUry/w7\r\nSXd8WGRcoSFFirJ8PZ0zV5RRCGt+ZYT7zQ7bn2NygH55wc+Z+wbdB3SVu2WxYs01wqa9jDNtXG4F\r\nXBCwC/1BsiT1zxvEx9VhahUyxbgFgxtApaIH3J7IQZ+Uhs595TvRxMUszGO9v1Zr1gPCfeWdU6lz\r\nZu/wSoPpjLDQJB74giPCzgviuM3VqqeF1a56M1ZFIKbiZkHftxaRvyVfEYdXYvOZ/DUjrpQGBE8D\r\nyWNDOrK42RJ1xFIGnOnX1U5Oy+RoHMbrXw==\r\n>>"
+            ],
+            "tooltip": "",
+            "href": "",
+            "#t": "DynamicLink"
+        }
+    ],
+    "#u": "<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/>; rel=\"x-sasa-app\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/components/ping.do>; rel=\"x-resume-session\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/app{/appName}{/path*}{?params*}>; rel=\"x-sail-application\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/all>; rel=\"x-sites-all\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/tasks/task/{id}>; rel=\"x-site-task\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/page/{pageUrlStub}/task/{id}>; rel=\"x-site-task-page\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/page{/pageUrlStub}/nav>; rel=\"x-site-page-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/cors>; rel=\"x-cors\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/evaluateComponentTemplate{/templateId}>; rel=\"x-ifcdesigner-evaluatecomponenttemplate\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/pages/{pageUrlStub}/report>; rel=\"x-sites-report\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/nav>; rel=\"x-site-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites>; rel=\"x-site-main\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/task/latest/{taskId}/attributes>; rel=\"x-task-attributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/internal/webapi/releaselock/{objectUuid}/{uiSourceUuid}>; rel=\"x-data-release-object-lock\"; dt=\"UiConfig\""
+}
