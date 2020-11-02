@@ -1,0 +1,2734 @@
+{
+    "_cId": "fd87a2377aafb55ec496a57700f3f539",
+    "isSystemUi": "true",
+    "_dirty": "false",
+    "sail-navigation-bookmark-url": "/design",
+    "sail-navigation-endpoint-url": "/rest/a/applications/latest/app/design",
+    "links": [
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/applications/latest/app/design",
+            "rel": "update",
+            "title": "Update",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/applications/latest/app/design",
+            "rel": "self",
+            "title": "",
+            "method": "GET"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/applications/latest/app/design",
+            "rel": "self",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/api/tempo/file",
+            "rel": "upload",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/tempo/file-web/",
+            "rel": "upload-web",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/tempo/file-web-encrypt/",
+            "rel": "upload-web-encrypt",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/doc",
+            "rel": "x-docinfo",
+            "title": "",
+            "method": "POST",
+            "saveInto": "<<jA0EAwMCb24pCQUucNUB0mcB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcDgswXVrYp/IxK6CvO81TL\r\nxdahRwdtzSlvSlIbxR6sKIJuNFG5UBARntAL/m6K05146rwfaXjvsdldGU+r+W68Og3UV0lneCS2\r\nHut0Jy3Z\r\n>>"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/autosuggest",
+            "rel": "x-autosuggest",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/lozengequery",
+            "rel": "x-lozengequery",
+            "title": "",
+            "method": "POST"
+        }
+    ],
+    "actions": [
+        {
+            "_cId": "8333cdbab40a98c14806ddac91e84583",
+            "_actionName": "sail:record-action-trigger",
+            "label": "",
+            "saveInto": [
+                "<<jA0EAwMCb24pCQUucNUB0nkB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcHaFWmzvkn4VzE+kWNRhG0\r\nheIoOW1V7zOG+Xz/cieWYIfLB7OfWF35bdQ2T06JNZAnTW/FHAu2BdNz2j2NrH50B8SzdqkSO2nM\r\nhlYXZ3FM1eB7vPQbbv3on/WV1kTVNSg9\r\n>>"
+            ],
+            "tooltip": "",
+            "href": "",
+            "#t": "DynamicLink"
+        }
+    ],
+    "triggers": [],
+    "ui": {
+        "_cId": "9482f9b8eeb84d46cbc1cef371252be8",
+        "focusFieldId": "df3ece7eb7b1d0f67de26400fa8c0e8b",
+        "contents": [
+            {
+                "_cId": "c7a8666eaeb80513f95ce397623f6a08",
+                "header": {
+                    "_cId": "c3dbe047b16b2b3860fd939cf9c7a2fe",
+                    "contents": [
+                        {
+                            "_cId": "8f5c0f48f60dcab86e53fc3b2c2c657f",
+                            "label": "",
+                            "labelPosition": "COLLAPSED",
+                            "instructions": "",
+                            "value": {
+                                "_cId": "be99e48971df108330fcb7cd41bb469a",
+                                "values": [
+                                    {
+                                        "values": [
+                                            {
+                                                "#v": "Review Application Security",
+                                                "#t": "string"
+                                            }
+                                        ],
+                                        "#t": "TitleText"
+                                    }
+                                ],
+                                "#t": "FormattedText"
+                            },
+                            "valueAlignment": "",
+                            "helpTooltip": "",
+                            "accessibilityText": "",
+                            "#t": "RichTextDisplayField"
+                        }
+                    ],
+                    "padding": "STANDARD",
+                    "#t": "ContentLayout"
+                },
+                "content": {
+                    "_cId": "7abab8a95119b89834ba9a0e1bbcf388",
+                    "contents": [
+                        {
+                            "isCollapsible": "false",
+                            "isInitiallyCollapsed": "false",
+                            "_cId": "b484d6b54ef7dd185dba63b2a2c46582",
+                            "collapseLabel": "Hide section contents",
+                            "contents": [
+                                {
+                                    "_cId": "9278f1146d5c5b93e3341aa54e0ba5a9",
+                                    "columns": [
+                                        {
+                                            "_cId": "3b25c4bf9065971c1f8017db3b83171e",
+                                            "contents": [
+                                                {
+                                                    "_cId": "ae8e882d79eb975c61bb49cfc23ea324",
+                                                    "contents": {
+                                                        "_cId": "4069b80d8bc8f09925deb36b1dd51014",
+                                                        "label": "",
+                                                        "labelPosition": "",
+                                                        "instructions": "",
+                                                        "helpTooltip": "",
+                                                        "validations": [],
+                                                        "items": [
+                                                            {
+                                                                "_cId": "06e7d1ea1bbc9abb09c5cd367560bcfe",
+                                                                "item": {
+                                                                    "_cId": "8de6678ce77544dba91519118c76a887",
+                                                                    "label": "",
+                                                                    "labelPosition": "COLLAPSED",
+                                                                    "instructions": "",
+                                                                    "value": {
+                                                                        "_cId": "c6d5ab092f4c837c052ae23767659688",
+                                                                        "values": [
+                                                                            {
+                                                                                "_cId": "2a6b42acab0ee49c4f23c52b121be854",
+                                                                                "icon": "lightbulb-o",
+                                                                                "iconId": "f0eb",
+                                                                                "altText": "",
+                                                                                "caption": "",
+                                                                                "size": "LARGE",
+                                                                                "color": "SECONDARY",
+                                                                                "#t": "IconWidget"
+                                                                            }
+                                                                        ],
+                                                                        "#t": "FormattedText"
+                                                                    },
+                                                                    "valueAlignment": "",
+                                                                    "helpTooltip": "",
+                                                                    "accessibilityText": "",
+                                                                    "#t": "RichTextDisplayField"
+                                                                },
+                                                                "width": "MINIMIZE"
+                                                            },
+                                                            {
+                                                                "_cId": "98ea6f204eae75d9fe897dcbf1292ed5",
+                                                                "item": {
+                                                                    "_cId": "38e2566408045600df8d1ffcb99dc4c6",
+                                                                    "label": "",
+                                                                    "labelPosition": "COLLAPSED",
+                                                                    "instructions": "",
+                                                                    "value": {
+                                                                        "_cId": "1741944ae32a0ed5b0f42d7f973d9e77",
+                                                                        "values": [
+                                                                            {
+                                                                                "_cId": "096a73dc812e7c508ecabc9a5ecdd286",
+                                                                                "values": [
+                                                                                    {
+                                                                                        "#v": "Tip:",
+                                                                                        "#t": "string"
+                                                                                    },
+                                                                                    {
+                                                                                        "#v": " ",
+                                                                                        "#t": "string"
+                                                                                    }
+                                                                                ],
+                                                                                "#t": "StrongText"
+                                                                            },
+                                                                            {
+                                                                                "_cId": "51a3f122e74c5fdb4cf49e984e75b96c",
+                                                                                "values": [
+                                                                                    {
+                                                                                        "#v": "Basic users must have at least viewer rights to view a published applicationâ€™s feeds and actions at runtime.",
+                                                                                        "#t": "string"
+                                                                                    },
+                                                                                    {
+                                                                                        "#v": " ",
+                                                                                        "#t": "string"
+                                                                                    }
+                                                                                ],
+                                                                                "#t": "FormattedText"
+                                                                            },
+                                                                            {
+                                                                                "_cId": "246f1a3c5555d7f1a93633a01f25fd8d",
+                                                                                "values": {
+                                                                                    "_cId": "103c0cdaf118f31eaffb1515511cac03",
+                                                                                    "values": [
+                                                                                        {
+                                                                                            "#v": "Learn more",
+                                                                                            "#t": "string"
+                                                                                        },
+                                                                                        {
+                                                                                            "#v": " ",
+                                                                                            "#t": "string"
+                                                                                        },
+                                                                                        {
+                                                                                            "_cId": "9241467f136f9527e6d7246de48693ae",
+                                                                                            "icon": "external-link",
+                                                                                            "iconId": "f08e",
+                                                                                            "altText": "",
+                                                                                            "caption": "",
+                                                                                            "size": "SMALL",
+                                                                                            "color": "ACCENT",
+                                                                                            "#t": "IconWidget"
+                                                                                        }
+                                                                                    ],
+                                                                                    "#t": "FormattedText"
+                                                                                },
+                                                                                "link": {
+                                                                                    "_cId": "38c0ca2a1006ae5e1b3011f67f8d9fd9",
+                                                                                    "uri": "https://docs.appian.com/suite/help/20.2/applications-view.html#prodlink-security",
+                                                                                    "label": "",
+                                                                                    "tooltip": "",
+                                                                                    "#t": "SafeLink"
+                                                                                },
+                                                                                "linkStyle": "STANDALONE",
+                                                                                "#t": "LinkedItem"
+                                                                            }
+                                                                        ],
+                                                                        "#t": "FormattedText"
+                                                                    },
+                                                                    "valueAlignment": "",
+                                                                    "helpTooltip": "",
+                                                                    "accessibilityText": "",
+                                                                    "#t": "RichTextDisplayField"
+                                                                },
+                                                                "width": "9X"
+                                                            }
+                                                        ],
+                                                        "spacing": "",
+                                                        "alignVertical": "MIDDLE",
+                                                        "#t": "SideBySideGroup"
+                                                    },
+                                                    "label": "",
+                                                    "labelPosition": "COLLAPSED",
+                                                    "instructions": "",
+                                                    "instructionsPosition": "",
+                                                    "helpTooltip": "",
+                                                    "requiredStyle": "",
+                                                    "skinName": "",
+                                                    "marginBelow": "",
+                                                    "accessibilityText": "",
+                                                    "#t": "FieldLayout"
+                                                }
+                                            ],
+                                            "align": "",
+                                            "width": ""
+                                        }
+                                    ],
+                                    "alignVertical": "",
+                                    "layout": "",
+                                    "minHeight": "",
+                                    "#t": "ColumnArrayLayout"
+                                }
+                            ],
+                            "divider": "NONE",
+                            "errorLabel": "This section contains errors",
+                            "expandLabel": "Show section contents",
+                            "label": "",
+                            "validations": [],
+                            "labelStyle": "",
+                            "skinName": "",
+                            "marginBelow": "STANDARD",
+                            "accessibilityText": "",
+                            "#t": "SectionLayout2"
+                        },
+                        {
+                            "_cId": "f77feabe677929970b8e6da99b114eed",
+                            "label": "",
+                            "instructions": "",
+                            "readOnly": true,
+                            "placeholder": "",
+                            "value": "",
+                            "saveInto": [
+                                "<<jA0EAwMCb24pCQUucNUB0sAHAf3CVcGkLJpSUWDP5c3CLJjfCRKWAfnXAvYgrAETfC7OeKvmTLSX\r\n3f+pcYjRikaq6YTuk323wi9Vu9+R0eeq98HMZOHHJbH3gGdYoUh6wlFp++0gx3+AwDZjHAHDrqCH\r\nrMxUkblOjsST0xpWDjnSKPmZFQBVk9RkuXUaVki7RL0RRo3YLSJAO1rjxXCsqaPJW0RDWqq4PBov\r\ns8Z2M5i/ld/LJiVYW7JIKcvT4r3kj8uDGZ0om6XEcrSmFsrJMrUX25ttzWVeDA==\r\n>>"
+                            ],
+                            "refreshAfter": "UNFOCUS",
+                            "keyboard": "STANDARD",
+                            "labelPosition": "COLLAPSED",
+                            "align": "DEFAULT",
+                            "helpTooltip": "",
+                            "accessibilityText": "",
+                            "#t": "TextField"
+                        },
+                        {
+                            "_cId": "e3012c7b667e7fd909f70792fa92d3ae",
+                            "columns": [
+                                {
+                                    "_cId": "120a541a373c3fb4a1f951870d7139e3",
+                                    "contents": [
+                                        {
+                                            "_cId": "23ff33e835fb092a2bf9623eebf763f1",
+                                            "label": "Name",
+                                            "labelPosition": "ABOVE",
+                                            "instructions": "",
+                                            "value": {
+                                                "_cId": "4894aef0246b5d9f19b64619dfdc7615",
+                                                "values": [
+                                                    {
+                                                        "_cId": "d4b576a6b4c2a4266fc0c7d8a3631aba",
+                                                        "inRichTextImage": "true",
+                                                        "image": {
+                                                            "_cId": "7733fb462cdc4ce5c5c30c427d587f67",
+                                                            "source": "https://an-appian-instance.host.net/suite/applications/img/obj_unpublished_application40px.png",
+                                                            "altText": "",
+                                                            "caption": "",
+                                                            "backgroundColor": "",
+                                                            "#t": "SafeImageWidget"
+                                                        },
+                                                        "#t": "ImageWrapper"
+                                                    },
+                                                    {
+                                                        "_cId": "99bc17fa70c61be85b352b4526140b90",
+                                                        "testLabel": "objectName",
+                                                        "values": [
+                                                            {
+                                                                "#v": "locust app",
+                                                                "#t": "string"
+                                                            }
+                                                        ],
+                                                        "#t": "FormattedText"
+                                                    }
+                                                ],
+                                                "#t": "FormattedText"
+                                            },
+                                            "valueAlignment": "",
+                                            "helpTooltip": "",
+                                            "accessibilityText": "",
+                                            "#t": "RichTextDisplayField"
+                                        }
+                                    ],
+                                    "align": "",
+                                    "width": ""
+                                }
+                            ],
+                            "alignVertical": "TOP",
+                            "marginBelow": "STANDARD",
+                            "spacing": "",
+                            "#t": "MultiColumnLayout"
+                        },
+                        {
+                            "_cId": "cb8a6be02e488904a4ff7885302392ff",
+                            "label": "",
+                            "instructions": "",
+                            "readOnly": true,
+                            "placeholder": "",
+                            "value": "",
+                            "saveInto": [
+                                "<<jA0EAwMCb24pCQUucNUB0sAHAf3CVcGkLJpSUWDP5c3CLJjfCRKWAfnXAvYjrScTeCrOAllcUST1\r\nv3a/V2aToalDK5NtlzDKh5XQBvrGG1UlssaqxmtuHHRFqSQFo5IyREVdw9ceGoUm13mWl6aOMvB4\r\n7NLkxqOHqJoeT9kV9Rdyo8nORrM4GSxESgaeoIx5vsaquJFc/VWS7+rPEoz4Fdb4vfeIASzELkOJ\r\n07qXyytqGrP9ALbSOyaDdzcN4GA6U7tNyMhUCEA+cA/hYg4vCisR/zx3bfD5lw==\r\n>>"
+                            ],
+                            "refreshAfter": "UNFOCUS",
+                            "keyboard": "STANDARD",
+                            "labelPosition": "ABOVE",
+                            "align": "DEFAULT",
+                            "helpTooltip": "",
+                            "accessibilityText": "",
+                            "#t": "TextField"
+                        },
+                        {
+                            "_cId": "8b574e3aa3997ef1b4719c6a446d8acf",
+                            "label": "",
+                            "labelPosition": "COLLAPSED",
+                            "instructions": "",
+                            "value": {
+                                "_cId": "b0037f2178b5939e20aeff5d17682a95",
+                                "values": [
+                                    {
+                                        "_cId": "ec71d5c8af2e0c4accb76af73895e6cd",
+                                        "icon": "exclamation-triangle",
+                                        "iconId": "f071",
+                                        "altText": "",
+                                        "caption": "",
+                                        "size": "MEDIUM",
+                                        "color": "#ff9900",
+                                        "#t": "IconWidget"
+                                    },
+                                    {
+                                        "_cId": "33a22647ad0f358577b0fcb2f2e0bc54",
+                                        "values": [
+                                            {
+                                                "#v": "  1 warning detected   ",
+                                                "#t": "string"
+                                            }
+                                        ],
+                                        "#t": "FormattedText"
+                                    },
+                                    {
+                                        "_cId": "587ea60c544956188265fd2cb5773590",
+                                        "values": {
+                                            "_cId": "9513760fc7eec715cffd9e2eaa7bc0c2",
+                                            "values": [
+                                                {
+                                                    "#v": "Show More",
+                                                    "#t": "string"
+                                                }
+                                            ],
+                                            "#t": "FormattedText"
+                                        },
+                                        "link": {
+                                            "_cId": "0892ef7c2d2c237be5acad9dbfbb9ef8",
+                                            "testLabel": "showHideLink",
+                                            "label": "",
+                                            "value": {
+                                                "#v": "",
+                                                "#t": "string"
+                                            },
+                                            "saveInto": [
+                                                "<<jA0EAwMCb24pCQUucNUB0sAXAf3CVcGkLJpSUWDP5c3CLJjfCRKWAfnXAvYj9ycQfyreyNY3aAo6\r\nDrbnbjx8YLHHRmB8DoH/lXz2BpT7UhlrLJ8AtAHlWmNJ9A8mx9Du1bRgz4HRcA76qlni6GU7akTD\r\nx437u1vr2vJP6by/ChK3cyF95a8gqjQbyt09xvXo29PIUzQZRk6xn5Ii6ZfbxXA2shqpgI5RsjCg\r\n5DIzDGUsc8hqsLgHx7FdPmzpF7AkDADkPc9xQfUVX7mWmIZ5+nIJCcdBCyAqn/ueDiPHg9IXoMsy\r\n09DyrCE=\r\n>>"
+                                            ],
+                                            "tooltip": "",
+                                            "href": "",
+                                            "#t": "DynamicLink"
+                                        },
+                                        "linkStyle": "STANDALONE",
+                                        "#t": "LinkedItem"
+                                    }
+                                ],
+                                "#t": "FormattedText"
+                            },
+                            "valueAlignment": "",
+                            "helpTooltip": "",
+                            "accessibilityText": "",
+                            "#t": "RichTextDisplayField"
+                        },
+                        {
+                            "_cId": "e1199a7f83601d7898efb25dda2fb075",
+                            "contents": {
+                                "_cId": "3e1840f420be7e08e3543414ce6e7727",
+                                "isNavigable": "false",
+                                "columnConfigs": [
+                                    {
+                                        "_cId": "eed7981eef1f8dc3b456d62cbdd5f87c",
+                                        "align": "",
+                                        "width": "DISTRIBUTE",
+                                        "weight": 1,
+                                        "field": "",
+                                        "sortStatus": "",
+                                        "backgroundColor": ""
+                                    },
+                                    {
+                                        "_cId": "574734fd2067ed9ca1b97c3d10d504c3",
+                                        "align": "",
+                                        "width": "DISTRIBUTE",
+                                        "weight": 1,
+                                        "field": "",
+                                        "sortStatus": "",
+                                        "backgroundColor": ""
+                                    },
+                                    {
+                                        "_cId": "33805517aa7027f18a95808c40cdf0bc",
+                                        "align": "",
+                                        "width": "ICON",
+                                        "field": "",
+                                        "sortStatus": "",
+                                        "backgroundColor": ""
+                                    }
+                                ],
+                                "rowConfigs": [
+                                    {
+                                        "_cId": "403dcc23994df5f242047f4753d2d87f"
+                                    }
+                                ],
+                                "columnHeaders": [
+                                    {
+                                        "_cId": "4bab09f6b0787df41a3c1b967a605c4f",
+                                        "contents": [
+                                            {
+                                                "_cId": "8c6371bbdf94dbb6c760609bf7981080",
+                                                "label": "User or Group",
+                                                "helpTooltip": "",
+                                                "align": "START",
+                                                "sortLabel": "Sort by User or Group",
+                                                "#t": "GridHeaderCell"
+                                            },
+                                            {
+                                                "_cId": "62151d0307a045e832241888c1c41050",
+                                                "label": "Permission Level",
+                                                "helpTooltip": "",
+                                                "align": "START",
+                                                "sortLabel": "Sort by Permission Level",
+                                                "#t": "GridHeaderCell"
+                                            },
+                                            {
+                                                "_cId": "360423132f7ba4d1b152a04f5904938d",
+                                                "label": "",
+                                                "helpTooltip": "",
+                                                "align": "START",
+                                                "sortLabel": "Sort by ",
+                                                "#t": "GridHeaderCell"
+                                            }
+                                        ],
+                                        "backgroundColor": "",
+                                        "#t": "RowLayout"
+                                    }
+                                ],
+                                "contents": [
+                                    {
+                                        "_cId": "4f5fd9641a6db7a950f9d4028651a1dc",
+                                        "contents": [
+                                            {
+                                                "_cId": "139a02d2b0c713b9a81b20c1cc72cc44",
+                                                "label": "",
+                                                "instructions": "",
+                                                "readOnly": true,
+                                                "placeholder": "",
+                                                "value": "Default (All Other Users)",
+                                                "saveInto": [
+                                                    "<<jA0EAwMCb24pCQUucNUB0sAHAf3CVcGkLJpSUWDP5c3CLJjfCRKWAfnXBb9zw+2DXiav/Y2uJSTc\r\nr3rR95E0As1zFgWq2xHC8c5Z4Z6BEhaP2+sgloEqV2rss8bsAnvB3NitUe7wx2fJnJ7EV/DF97RH\r\n1ppoc0evJTcepSAxEzoaJlO7FLYOOqqszDHgkpWppxLGNSmkpMMrOI0hJUOsudiob2Kzt2P1luhp\r\ni1exkzhjIXnsW0mJaR3WgOHaY/hiKvyOoLe31AbxHSHiKGY71xHrZFL2hhLvQg==\r\n>>"
+                                                ],
+                                                "refreshAfter": "UNFOCUS",
+                                                "keyboard": "STANDARD",
+                                                "labelPosition": "ABOVE",
+                                                "align": "DEFAULT",
+                                                "helpTooltip": "",
+                                                "accessibilityText": "",
+                                                "#t": "TextField"
+                                            },
+                                            {
+                                                "_cId": "df3ece7eb7b1d0f67de26400fa8c0e8b",
+                                                "hasNoValue": "false",
+                                                "hasPlaceholderLabel": "false",
+                                                "testLabel": "defaultRoleDropdown",
+                                                "label": "",
+                                                "instructions": "",
+                                                "choices": [
+                                                    "Administrator",
+                                                    "Editor",
+                                                    "Viewer",
+                                                    "No Access"
+                                                ],
+                                                "value": 4,
+                                                "saveInto": [
+                                                    "<<jA0EAwMCb24pCQUucNUB0sATAf3CVcGkLJpSUWDP5c3CLJjfCRKWAfnXAvYj9wEQfCretKT5MaNp\r\ng5Xvz3I+hfrCJvhChSWxXGTU7R0l/HjaYZFRcdzWH+mpDbekN1scAjEPpYRDte06pZNtvUHpYap8\r\nJUFQNlyiOUQG88N8fV33TGN7KtHhZxGGiH22HUsbj3floska04BaBx6WbIm+EQiIUNgKvwpFfi6b\r\nMRBFDEtBGixxhcTJ+X1TbwOBlsTAgpMk6gxP40o/dIm/7yq0OTsCcgNeCjSbiVdlpFom1Id3Bl4n\r\n9w==\r\n>>"
+                                                ],
+                                                "labelPosition": "ABOVE",
+                                                "align": "DEFAULT",
+                                                "helpTooltip": "",
+                                                "width": "",
+                                                "showClearAllIcon": false,
+                                                "clearIconLabel": "Clear value",
+                                                "skinName": "",
+                                                "accessibilityText": "",
+                                                "#t": "DropdownField"
+                                            },
+                                            {
+                                                "_cId": "94246d8508e8e24871173417d8e64e58",
+                                                "label": "",
+                                                "instructions": "",
+                                                "readOnly": true,
+                                                "placeholder": "",
+                                                "value": "",
+                                                "saveInto": [
+                                                    "<<jA0EAwMCb24pCQUucNUB0sAHAf3CVcGkLJpSUWDP5c3CLJjfCRKWAfnXBb9zw+2DXiav/Y2uJSTc\r\nr3rR95E0As1zFgWq3TfA4Y5uI8Kh09kZnBoCE1T5NanQCF+Rc3wItzwKUNY0Wn2rufrX3WqOiSIn\r\nMLbcoqjRifgwAE9NnTSpOKItgXuk3X1hHC6rIhVYf/0zFhGKK+TIKlKK0cJcbzd4raeBEXPCRqQk\r\nplWazoIwnGtiigGPx6moqCy69tE3V0vDt+mwJVYzOkGJkdLegxld3R/vOFUhGA==\r\n>>"
+                                                ],
+                                                "refreshAfter": "UNFOCUS",
+                                                "keyboard": "STANDARD",
+                                                "labelPosition": "ABOVE",
+                                                "align": "DEFAULT",
+                                                "helpTooltip": "",
+                                                "accessibilityText": "",
+                                                "#t": "TextField"
+                                            }
+                                        ],
+                                        "id": {
+                                            "#v": "",
+                                            "#t": "string"
+                                        },
+                                        "backgroundColor": "",
+                                        "#t": "RowLayout"
+                                    }
+                                ],
+                                "validations": [],
+                                "addRowLink": {
+                                    "_cId": "007e8e5a4dcc4a9784536e810a4d2675",
+                                    "label": "Add Users or Groups",
+                                    "value": {
+                                        "#v": "",
+                                        "#t": "string"
+                                    },
+                                    "saveInto": [
+                                        "<<jA0EAwMCb24pCQUucNUB0sADAf3CVcGkLJpSUWDP5c3CLJjfCRKWAfnXBb9zicuAXiK/UiJOG2PN\r\nWFP5FBNSVQq4FwuE+hS7kwGuV6KX/36TP+VL9bvdFhZLUM3Uiz8/fqnJ2RmJ3egM4fSJ6k9Ib/a4\r\nI2kFllwgo7JjHBpQXIhvaQKiLG58gZ3Z+3KLOcTFwkTG6/HIxGWLxVIVeAPEFk1EaO2sQRNhRKmW\r\n8HWD9zjh8bvNHg20Vib/+9TSyZTRLPJfaTnLcJjcUA7mH9gPbO0ExzVn\r\n>>"
+                                    ],
+                                    "tooltip": "",
+                                    "href": "",
+                                    "#t": "DynamicLink"
+                                },
+                                "emptyGridMessage": "No items available",
+                                "borderStyle": "STANDARD",
+                                "spacing": "STANDARD",
+                                "rowStyle": "ZEBRA",
+                                "height": "",
+                                "selectable": false,
+                                "selectionDisabled": false,
+                                "selectionStyle": "CHECKBOX",
+                                "identifiers": [],
+                                "disabledRowIndices": [],
+                                "saveInto": [
+                                    "<<jA0EAwMCb24pCQUucNUB0sALAf3CVcGkLJpSUWDP5c3CLJjfCRKWAfnXAvYgrAEQeCreYRZz0bnL\r\nRgqNxx2i/hiMihWvgyF+Oo+RWOqltzIw6zRobxi12uPEKLhusIIA+epSdVfuwSurtMVFMDMzcURF\r\nMzWmwle2uOAXwH/8Tmf3BCooInhUiAi248PXBT3OyllVvcllkp80dDjSuJT54ypEJ/1GO8SXyD0z\r\nfcz0KsoCcASTDThYow/2GUrgPFRuNbor6XGd8FXPXhaR/x7665yamt2KB6oejn+mkbE=\r\n>>"
+                                ],
+                                "value": [],
+                                "pagingText": "",
+                                "firstPageLabel": "First page",
+                                "prevPageLabel": "Previous page",
+                                "nextPageLabel": "Next page",
+                                "lastPageLabel": "Last page",
+                                "#t": "GridWidget"
+                            },
+                            "label": "",
+                            "labelPosition": "ABOVE",
+                            "instructions": "",
+                            "instructionsPosition": "ABOVE",
+                            "helpTooltip": "",
+                            "requiredStyle": "",
+                            "skinName": "",
+                            "marginBelow": "",
+                            "accessibilityText": "",
+                            "#t": "FieldLayout"
+                        }
+                    ],
+                    "padding": "STANDARD",
+                    "#t": "ContentLayout"
+                },
+                "footer": {
+                    "_cId": "70680459798648fd6136905f1e738ecb",
+                    "contents": [
+                        {
+                            "_cId": "325cc8196c1e38b4913e0c06741ce74b",
+                            "primaryButtons": [
+                                {
+                                    "_cId": "67b2830dda1f01e681c5421592685bc6",
+                                    "isFlat": "false",
+                                    "action": "VALIDATE",
+                                    "validate": "true",
+                                    "label": "Save",
+                                    "style": "",
+                                    "confirmHeader": "",
+                                    "confirmMessage": "",
+                                    "confirmButtonLabel": "",
+                                    "confirmButtonStyle": "PRIMARY",
+                                    "cancelButtonLabel": "",
+                                    "value": {
+                                        "#v": "",
+                                        "#t": "string"
+                                    },
+                                    "saveInto": [
+                                        "<<jA0EAwMCb24pCQUucNUB0sALAf3CVcGkLJpSUWDP5c3CLJjfCRKWAfnXAvYg3QFPfCrenKjAlKIE\r\nAECBNz1tYvnfGNlgbNO7OJzqtBYkC2ValSz+t0vvxR3toKer0BaNmwhMhe9h4SxW+niruKZhbrnl\r\nWQBHSe+3MAE1gJKh2rJPmCxaJD9cDQJFMhZSWw/o+N4aghaZHFTQysaBdwdRYe1oylHK/ISCzDMM\r\nItjMNJUH1lX9ogDEXD9QNX9n6xh2KVD9zCP9MyJSmi9B1U1tuNqpJiVYUZ5L+xKprdM=\r\n>>"
+                                    ],
+                                    "size": "",
+                                    "icon": "",
+                                    "buttonStyle": "PRIMARY",
+                                    "ariaLabel": "",
+                                    "skinName": "",
+                                    "tooltipStyle": "",
+                                    "tooltipVerticalPosition": "",
+                                    "tooltipWidth": "",
+                                    "accessibilityText": "",
+                                    "shape": ""
+                                }
+                            ],
+                            "secondaryButtons": [],
+                            "marginBelow": "NONE",
+                            "align": "",
+                            "accessibilityText": "",
+                            "#t": "ButtonLayout"
+                        }
+                    ],
+                    "padding": "STANDARD",
+                    "#t": "ContentLayout"
+                },
+                "#t": "HeaderContentFooterLayout"
+            }
+        ],
+        "height": "ANCHORED",
+        "width": "MEDIUM",
+        "#t": "ModalDialogLayout"
+    },
+    "context": {
+        "#v": "jA0EAwMCb24pCQUucNUB0sAfAQSph6tro1jRCsVRy17TzLX6bSaWR9tc0aKOVJRFrqdPFtm45eVV\r\nuvikaY2IRyZxkSQC7B4hQ4eRrKkfmLsOYoOwzrHVdT7APN9DG6A6lud8CDKTMbe4+ceK7EI4LNZI\r\n17VkqGQZ9axcCptCu6SolbHwRZWlKCsc0OTHWuZV+Q5V0X7LWSINHBa2/PSKeCFKXcB87xEitZeA\r\nft+sY9euB21qLPKXAvdx1DSxFoD/wDJgE013L/rs9hrYVvjsE0SkHqb64LArO0WGO8MfkX93R7Fr\r\njesRtqo2tjFDOkCCSw==\r\n",
+        "#t": "string"
+    },
+    "uuid": "8e88eed4-80af-40af-8605-c6f138dbf966",
+    "i18nInfo": {
+        "locale": "en-US",
+        "timezoneId": "GMT",
+        "calendarId": "gregorian",
+        "decimalSeparator": ".",
+        "groupingSeparator": ","
+    },
+    "timers": {
+        "#t": "Dictionary"
+    },
+    "#t": "UiConfig",
+    "#s": {
+        "#v": [
+            {
+                "id": 1666,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}TitleText",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "TitleText",
+                "description": "",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1666,
+                "list": 1667,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "values",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1667,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}TitleText?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "TitleText?list",
+                "description": "List of TitleText",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1666,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1594,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}StrongText",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "StrongText",
+                "description": "",
+                "base": 632,
+                "foundation": 95,
+                "typeof": 1594,
+                "list": 1595,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 1596
+                        }
+                    },
+                    {
+                        "name": "values",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1596,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 1594 (StrongText)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1596,
+                "list": 1597,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1595,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}StrongText?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "StrongText?list",
+                "description": "List of StrongText",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1594,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1597,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1596,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1126,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ImageWrapper",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ImageWrapper",
+                "description": "",
+                "base": 632,
+                "foundation": 95,
+                "typeof": 1126,
+                "list": 1127,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 1128
+                        }
+                    },
+                    {
+                        "name": "image",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1128,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 1126 (ImageWrapper)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1128,
+                "list": 1129,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1127,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ImageWrapper?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ImageWrapper?list",
+                "description": "List of ImageWrapper",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1126,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1129,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1128,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1224,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MultiColumnLayout",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MultiColumnLayout",
+                "description": "",
+                "base": 632,
+                "foundation": 95,
+                "typeof": 1224,
+                "list": 1225,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 1226
+                        }
+                    },
+                    {
+                        "name": "columns",
+                        "value": {
+                            "#t": "ColumnLayout?list"
+                        }
+                    },
+                    {
+                        "name": "alignVertical",
+                        "value": {
+                            "#t": "ColumnVerticalAlign"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "marginBelow",
+                        "value": {
+                            "#t": "MarginBelow"
+                        }
+                    },
+                    {
+                        "name": "stackWhen",
+                        "value": {
+                            "#t": "FormFactor?list"
+                        }
+                    },
+                    {
+                        "name": "showDividers",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "spacing",
+                        "value": {
+                            "#t": "ColumnSpacing"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1226,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 1224 (MultiColumnLayout)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1226,
+                "list": 1227,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 750,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ColumnVerticalAlign",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ColumnVerticalAlign",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 751,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2338,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ColumnSpacing",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ColumnSpacing",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 2339,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1225,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MultiColumnLayout?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MultiColumnLayout?list",
+                "description": "List of MultiColumnLayout",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1224,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1227,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1226,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 751,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ColumnVerticalAlign?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ColumnVerticalAlign?list",
+                "description": "List of ColumnVerticalAlign",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 750,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2339,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ColumnSpacing?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ColumnSpacing?list",
+                "description": "List of ColumnSpacing",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2338,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1038,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}GridHeaderCell",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "GridHeaderCell",
+                "description": "",
+                "base": 632,
+                "foundation": 95,
+                "typeof": 1038,
+                "list": 1039,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 1040
+                        }
+                    },
+                    {
+                        "name": "label",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "helpTooltip",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "align",
+                        "value": {
+                            "#t": "ComponentAlign"
+                        }
+                    },
+                    {
+                        "name": "sortLabel",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "contextMenu",
+                        "value": {
+                            "#t": "MenuLayout"
+                        }
+                    },
+                    {
+                        "name": "endIcon",
+                        "value": {
+                            "#t": "IconWidget"
+                        }
+                    },
+                    {
+                        "name": "startIcon",
+                        "value": {
+                            "#t": "IconWidget"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1040,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 1038 (GridHeaderCell)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1040,
+                "list": 1041,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1039,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}GridHeaderCell?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "GridHeaderCell?list",
+                "description": "List of GridHeaderCell",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1038,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1041,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1040,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1434,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RowLayout",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "RowLayout",
+                "description": "",
+                "base": 632,
+                "foundation": 95,
+                "typeof": 1434,
+                "list": 1435,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 1436
+                        }
+                    },
+                    {
+                        "name": "contents",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "selectionDisabled",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "backgroundColor",
+                        "value": {
+                            "#t": "RowLayoutBackgroundColor"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1436,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 1434 (RowLayout)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1436,
+                "list": 1437,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2002,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RowLayoutBackgroundColor",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "RowLayoutBackgroundColor",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 2003,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1435,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RowLayout?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "RowLayout?list",
+                "description": "List of RowLayout",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1434,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1437,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1436,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2003,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RowLayoutBackgroundColor?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "RowLayoutBackgroundColor?list",
+                "description": "List of RowLayoutBackgroundColor",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2002,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1072,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}GridWidget",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "GridWidget",
+                "description": "",
+                "base": 632,
+                "foundation": 95,
+                "typeof": 1072,
+                "list": 1073,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 1074
+                        }
+                    },
+                    {
+                        "name": "columnConfigs",
+                        "value": {
+                            "#t": "GridColumnConfiguration?list"
+                        }
+                    },
+                    {
+                        "name": "rowConfigs",
+                        "value": {
+                            "#t": "GridRowConfiguration?list"
+                        }
+                    },
+                    {
+                        "name": "columnHeaders",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "contents",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "validations",
+                        "value": {
+                            "#t": "ValidationMessage?list"
+                        }
+                    },
+                    {
+                        "name": "addRowLink",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "totalCount",
+                        "value": {
+                            "#t": "int"
+                        }
+                    },
+                    {
+                        "name": "emptyGridMessage",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "startIndex",
+                        "value": {
+                            "#t": "int"
+                        }
+                    },
+                    {
+                        "name": "endIndex",
+                        "value": {
+                            "#t": "int"
+                        }
+                    },
+                    {
+                        "name": "borderStyle",
+                        "value": {
+                            "#t": "GridBorderStyle"
+                        }
+                    },
+                    {
+                        "name": "spacing",
+                        "value": {
+                            "#t": "GridSpacing"
+                        }
+                    },
+                    {
+                        "name": "rowStyle",
+                        "value": {
+                            "#t": "RowStyle"
+                        }
+                    },
+                    {
+                        "name": "height",
+                        "value": {
+                            "#t": "GridHeight"
+                        }
+                    },
+                    {
+                        "name": "allowScrolling",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "selectable",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "selectionDisabled",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "selectionStyle",
+                        "value": {
+                            "#t": "GridSelectionStyle"
+                        }
+                    },
+                    {
+                        "name": "rowHeader",
+                        "value": {
+                            "#t": "int"
+                        }
+                    },
+                    {
+                        "name": "identifiers",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "disabledRowIndices",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "saveInto",
+                        "value": {
+                            "#t": "Save?list"
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "pagingText",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "firstPageLabel",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "prevPageLabel",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "nextPageLabel",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "lastPageLabel",
+                        "value": {
+                            "#t": "string"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                true,
+                                true,
+                                true,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1074,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 1072 (GridWidget)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1074,
+                "list": 1075,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1021,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}GridColumnConfiguration?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "GridColumnConfiguration?list",
+                "description": "List of GridColumnConfiguration",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1020,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1053,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}GridRowConfiguration?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "GridRowConfiguration?list",
+                "description": "List of GridRowConfiguration",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1052,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1073,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}GridWidget?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "GridWidget?list",
+                "description": "List of GridWidget",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1072,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1075,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1074,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1020,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}GridColumnConfiguration",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "GridColumnConfiguration",
+                "description": "",
+                "base": 632,
+                "foundation": 95,
+                "typeof": 1020,
+                "list": 1021,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 1026
+                        }
+                    },
+                    {
+                        "name": "align",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "width",
+                        "value": {
+                            "#t": "GridColumnWidth"
+                        }
+                    },
+                    {
+                        "name": "weight",
+                        "value": {
+                            "#t": "int"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "value": {
+                            "#t": "DynamicLink"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "field",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "sortStatus",
+                        "value": {
+                            "#t": "SortStatus"
+                        }
+                    },
+                    {
+                        "name": "truncateText",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "backgroundColor",
+                        "value": {
+                            "#t": "GridColumnBackgroundColor"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1052,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}GridRowConfiguration",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "GridRowConfiguration",
+                "description": "",
+                "base": 632,
+                "foundation": 95,
+                "typeof": 1052,
+                "list": 1053,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 1054
+                        }
+                    },
+                    {
+                        "name": "selection",
+                        "value": {
+                            "#t": "CheckboxField"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1026,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 1020 (GridColumnConfiguration)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1026,
+                "list": 1027,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1022,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}GridColumnWidth",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "GridColumnWidth",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 1023,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1024,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}SortStatus",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "SortStatus",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 1025,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1986,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}GridColumnBackgroundColor",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "GridColumnBackgroundColor",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 1987,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1054,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 1052 (GridRowConfiguration)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1054,
+                "list": 1055,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1027,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1026,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1023,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}GridColumnWidth?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "GridColumnWidth?list",
+                "description": "List of GridColumnWidth",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1022,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1025,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}SortStatus?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "SortStatus?list",
+                "description": "List of SortStatus",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1024,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1987,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}GridColumnBackgroundColor?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "GridColumnBackgroundColor?list",
+                "description": "List of GridColumnBackgroundColor",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1986,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1055,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1054,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2004,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}HeaderContentFooterLayout",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "HeaderContentFooterLayout",
+                "description": "",
+                "base": 632,
+                "foundation": 95,
+                "typeof": 2004,
+                "list": 2005,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 2006
+                        }
+                    },
+                    {
+                        "name": "header",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "content",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "footer",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2006,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 2004 (HeaderContentFooterLayout)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 2006,
+                "list": 2007,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2005,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}HeaderContentFooterLayout?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "HeaderContentFooterLayout?list",
+                "description": "List of HeaderContentFooterLayout",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2004,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2007,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2006,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            }
+        ],
+        "#t": "DataType?list"
+    },
+    "shortcuts": [],
+    "#u": "<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/>; rel=\"x-sasa-app\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/components/ping.do>; rel=\"x-resume-session\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/app{/appName}{/path*}{?params*}>; rel=\"x-sail-application\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/all>; rel=\"x-sites-all\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/tasks/task/{id}>; rel=\"x-site-task\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/navigation/latest/default>; rel=\"x-default-landing-page\"; dt=\"SafeLink\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/page/{pageUrlStub}/task/{id}>; rel=\"x-site-task-page\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/page{/pageUrlStub}/nav>; rel=\"x-site-page-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/cors>; rel=\"x-cors\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/evaluateComponentTemplate{/templateId}>; rel=\"x-ifcdesigner-evaluatecomponenttemplate\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/record/latest/{%40attributes.%40anyAttribute.opaqueId}/followers>; rel=\"x-record-follow\"; dt=\"SafeLink\",<https://an-appian-instance.host.net/suite/rest/a/navigation/latest/intent{?uri*}>; rel=\"x-intent\"; dt=\"SafeLink\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/pages/{pageUrlStub}/report>; rel=\"x-sites-report\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/nav>; rel=\"x-site-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites>; rel=\"x-site-main\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/task/latest/{taskId}/attributes>; rel=\"x-task-attributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/internal/webapi/releaselock/{objectUuid}/{uiSourceUuid}>; rel=\"x-data-release-object-lock\"; dt=\"UiConfig\""
+}

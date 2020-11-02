@@ -1,0 +1,1463 @@
+{
+  "_cId": "a517fc870104e4c2cdf0b817116c1580",
+  "mobileEnabled": "true",
+  "empty": "false",
+  "formType": "START_FORM",
+  "links": [
+    {
+      "href": "https://an-appian-instance.host.net/suite/rest/a/model/latest/8/form",
+      "rel": "update",
+      "title": "Update",
+      "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
+      "method": "POST"
+    },
+    {
+      "href": "https://an-appian-instance.host.net/suite/rest/a/model/latest/8/form",
+      "rel": "self",
+      "title": "Update",
+      "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
+      "method": "GET"
+    },
+    {
+      "href": "https://an-appian-instance.host.net/suite/rest/a/model/latest/8/form",
+      "rel": "self",
+      "title": "Update",
+      "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
+      "method": "POST"
+    },
+    {
+      "href": "https://an-appian-instance.host.net/suite/api/tempo/file",
+      "rel": "upload",
+      "title": "",
+      "method": "POST"
+    },
+    {
+      "href": "https://an-appian-instance.host.net/suite/tempo/file-web/",
+      "rel": "upload-web",
+      "title": "",
+      "method": "POST"
+    }
+  ],
+  "triggers": [],
+  "ui": {
+    "_cId": "fad75b01f6270122375605a85124b15a",
+    "_isAppianInjected": "true",
+    "_dirty": "true",
+    "contents": [
+      {
+        "_cId": "3a6a551f689060e551ad8bb16a36add3",
+        "focusFieldId": "eeb9c31a634b628ee12a8c5e58c9a5c2",
+        "label": "New Customer Service Request",
+        "instructions": "Complete this form to create a new service request for a customer",
+        "buttons": {
+          "_cId": "7b100815c3605d51790f9f4c72c4eff1",
+          "primaryButtons": [
+            {
+              "_cId": "aafc261d31630572f2f2c47faebac79e",
+              "isFlat": "false",
+              "action": "SUBMIT",
+              "validate": "true",
+              "label": "Submit Request",
+              "style": "",
+              "confirmHeader": "",
+              "confirmMessage": "",
+              "confirmButtonLabel": "",
+              "confirmButtonStyle": "PRIMARY",
+              "cancelButtonLabel": "",
+              "disabled": true,
+              "value": {
+                "#v": "",
+                "#t": "string"
+              },
+              "saveInto": [
+                "<<jA0EAwMCb24pCQUucNUB0pEB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcEGBsqJkHqwD/iGo7JJhcA\r\nABaoaqhgrxzl8gJ+nJLpvYG6q7sPnXDqDd0GbePzdhyNoL6w5KF59R+6bh8xU112w0bjn4k7KcSC\r\n9GQajc3YMgh8QitRxeDoYcnINcN99qwnCvian/uaYzQ7zxXTmxpVFBsJN9vA//c9\r\n>>"
+              ],
+              "size": "",
+              "icon": "",
+              "buttonStyle": "PRIMARY",
+              "ariaLabel": "",
+              "skinName": "",
+              "tooltipStyle": "",
+              "tooltipVerticalPosition": "",
+              "tooltipWidth": "",
+              "accessibilityText": "",
+              "shape": ""
+            }
+          ],
+          "secondaryButtons": [
+            {
+              "_cId": "b6a135d1766f1b33681d8408df938e6e",
+              "isFlat": "false",
+              "action": "SUBMIT",
+              "validate": "false",
+              "label": "Cancel",
+              "style": "",
+              "confirmHeader": "",
+              "confirmMessage": "",
+              "confirmButtonLabel": "",
+              "confirmButtonStyle": "PRIMARY",
+              "cancelButtonLabel": "",
+              "value": {
+                "#v": "",
+                "#t": "string"
+              },
+              "saveInto": [
+                "<<jA0EAwMCb24pCQUucNUB0o0B/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcEcxthAB3q3D+u2ri49G7j\r\n9hP0mswDlxEl0sfu2K513TnMAvov2kUpqQvLXDIKIdge5NpimRTEb8FsD3VKcbu1icP5Vh82JQE3\r\n5WI2bUEQUNANaHvHa2tRvzMxd6SscWTRylvcrPu2bNkpcbpEEjkf8hE+2Tk=\r\n>>"
+              ],
+              "size": "",
+              "icon": "",
+              "buttonStyle": "NORMAL",
+              "ariaLabel": "",
+              "skinName": "",
+              "tooltipStyle": "",
+              "tooltipVerticalPosition": "",
+              "tooltipWidth": "",
+              "accessibilityText": "",
+              "shape": ""
+            }
+          ],
+          "marginBelow": "",
+          "align": "",
+          "accessibilityText": ""
+        },
+        "validations": [],
+        "contents": [
+          {
+            "_cId": "91652fb018af30ec102eb7efa6001a5c",
+            "isOldColumnArrayLayout": "true",
+            "columns": [
+              {
+                "_cId": "9a6559b5b8fb11124052da81545b5afa",
+                "contents": [
+                  {
+                    "isCollapsible": "false",
+                    "isInitiallyCollapsed": "false",
+                    "_cId": "42a91c601b30981e4fd26f5307f16e70",
+                    "collapseLabel": "Hide section contents",
+                    "contents": [
+                      {
+                        "_cId": "70cc32a833a8d38d91c259bda5682c11",
+                        "isOldColumnArrayLayout": "true",
+                        "columns": [
+                          {
+                            "_cId": "fbb460aafada2f3622ec1b3659c5fa57",
+                            "contents": [
+                              {
+                                "_cId": "92e0fc6fd04950212c6ca0fb23bc08d9",
+                                "contents": {
+                                  "_cId": "eeb9c31a634b628ee12a8c5e58c9a5c2",
+                                  "hasNoValue": "false",
+                                  "testLabel": "test-1. Select a Customer",
+                                  "required": true,
+                                  "maxSelections": 1,
+                                  "value": [
+                                    {
+                                      "_cId": "2e2ac1a71bad270600e2e5ed535e62eb",
+                                      "label": "Antilles Transport",
+                                      "identifier": {
+                                        "#v": 29,
+                                        "#t": "int"
+                                      },
+                                      "image": {
+                                        "#v": "",
+                                        "#t": "string"
+                                      },
+                                      "link": {
+                                        "_cId": "b302aba6bd9a2d185b249aadc37b9699",
+                                        "uuid": "7db9a56b-b303-46e1-81c9-c11dfffab8d8",
+                                        "siteUrlStub": "D6JMim",
+                                        "pageUrlStub": "actions",
+                                        "recordIdentifier": "29",
+                                        "_recordRef": "lIBHer_bdD8Emw8hLLETeiApBrxq-qoA49oyo6ZbfRANWNchnXIC8_QQLHMvQo3q8_3W_uY-NIUjTsvBAF9h4ZQp4bIPc2RHNsuiA0yT5iowbxG",
+                                        "recordRef": {
+                                          "id": "4#{http://an-appian-instance.host.net/ae/types/2009}Integer#29",
+                                          "#t": "RecordReference"
+                                        },
+                                        "dashboard": "summary",
+                                        "label": "",
+                                        "tooltip": "",
+                                        "#t": "RecordLink"
+                                      },
+                                      "tooltip": ""
+                                    }
+                                  ],
+                                  "saveInto": [
+                                    "<<jA0EAwMCb24pCQUucNUB0qEB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcFv3LA7YBZIr8BEc+L8KdF\r\nBv0Af2cmpwAW1p6rmZPV7lwitqeAAPzbO2tEofYgHj1c+v+VMuUBsHSMA6Qto7dEzH8r20uwovPH\r\nmh7uizPerDXWiPdaPMx63yilPyhfcQy7uzlLqlIkQCeDS8Pn2tWsRiQjenjPO8K6iu6mDEWWoQDc\r\nzjHfe+fmtQ==\r\n>>"
+                                  ],
+                                  "width": "",
+                                  "placeholder": "",
+                                  "suggestions": [],
+                                  "imageSize": "TINY",
+                                  "imageStyle": "STANDARD",
+                                  "noResultsLabel": "No results found",
+                                  "searchingLabel": "Searching…",
+                                  "selectedTokensHint": "1 value selected. Use arrow keys to navigate. To add new value, start typing to search.",
+                                  "numSuggestionsHint": "No results found",
+                                  "accessibilityText": "",
+                                  "#t": "PickerWidget"
+                                },
+                                "label": "1. Select a Customer",
+                                "labelPosition": "ABOVE",
+                                "instructions": "Select a customer to begin the service request",
+                                "instructionsPosition": "",
+                                "helpTooltip": "",
+                                "requiredStyle": "",
+                                "skinName": "",
+                                "marginBelow": "",
+                                "accessibilityText": "",
+                                "#t": "FieldLayout"
+                              }
+                            ],
+                            "align": "",
+                            "width": ""
+                          },
+                          {
+                            "_cId": "330c492087ba993c6467d01442291652",
+                            "contents": [
+                              {
+                                "version": "1",
+                                "gridOverrideSize": "GALLERY",
+                                "gridOverrideThumbnailing": "true",
+                                "_cId": "71e6fe59ec80f4e698118968428c2f32",
+                                "label": "",
+                                "instructions": "",
+                                "images": [
+                                  {
+                                    "_opaqueId": "icBHer_bdD8Emw8hLXeBLfb4Z-n71XtlnXKBXW4PZzyPugj03CHlWw",
+                                    "_cId": "c599e48141e10a77ac2254e772e563cf",
+                                    "document": {
+                                      "id": 3927,
+                                      "#t": "CollaborationDocument"
+                                    },
+                                    "caption": "",
+                                    "altText": "",
+                                    "backgroundColor": "",
+                                    "#t": "DocumentImage"
+                                  }
+                                ],
+                                "size": "GALLERY",
+                                "labelPosition": "ABOVE",
+                                "helpTooltip": "",
+                                "align": "",
+                                "isThumbnail": true,
+                                "style": "STANDARD",
+                                "accessibilityText": "",
+                                "#t": "ImageGalleryField"
+                              }
+                            ],
+                            "align": "",
+                            "width": ""
+                          }
+                        ],
+                        "alignVertical": "",
+                        "layout": "",
+                        "minHeight": "",
+                        "#t": "ColumnArrayLayout"
+                      }
+                    ],
+                    "divider": "",
+                    "errorLabel": "This section contains errors",
+                    "expandLabel": "Show section contents",
+                    "label": "",
+                    "validations": [],
+                    "labelStyle": "",
+                    "skinName": "",
+                    "marginBelow": "",
+                    "accessibilityText": "",
+                    "#t": "SectionLayout2"
+                  },
+                  {
+                    "_cId": "281cd2417021627894ea7321fd57882c",
+                    "hasNoValue": "true",
+                    "hasPlaceholderLabel": "true",
+                    "label": "2. What do you need help with?",
+                    "instructions": "",
+                    "required": true,
+                    "choices": [
+                      "--Select Case Type---",
+                      "I need to check my Order Status",
+                      "I need help with an Order",
+                      "I need to update my Account details",
+                      "I need help with something else"
+                    ],
+                    "value": 1,
+                    "saveInto": [
+                      "<<jA0EAwMCb24pCQUucNUB0pkB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcDo8o6WLIm5a7HGNLm4tSN\r\nX1qWeZbhZztemp2FksFx9NfX5E5ZIkHopzm44RzrT0tCybGGhbVD7G7wTiYBVMs8D6RjCr3zTfS+\r\nq7/6re2Jn6cUgnxWvEp8aJXudgqtb3ZP7hwXMQSDVs9RcrufO2iv44QTGfz8t2HXSh4LgcEw3Nc=\r\n>>"
+                    ],
+                    "labelPosition": "ABOVE",
+                    "align": "DEFAULT",
+                    "helpTooltip": "",
+                    "width": "",
+                    "clearIconLabel": "Clear value for 2. What do you need help with?",
+                    "skinName": "",
+                    "accessibilityText": "",
+                    "#t": "DropdownField"
+                  }
+                ],
+                "align": "",
+                "width": ""
+              }
+            ],
+            "alignVertical": "",
+            "layout": "",
+            "minHeight": "",
+            "isTopLevelComponent": true,
+            "#t": "ColumnArrayLayout"
+          }
+        ],
+        "layout": "",
+        "width": "",
+        "#t": "FormLayout"
+      }
+    ],
+    "padding": "STANDARD",
+    "#t": "ContentLayout"
+  },
+  "context": {
+    "#v": "jA0EAwMCb24pCQUucNUB0sAkAQSph6tro1jRCsVRyFKVmNDv28TEvYQp81LGT2PiWRoIH+pxWjTQ\r\nThoZNBGaBi7FGgk0LTefgoRufI/d4q/cv1TTUSr5bIlw7vF7QUmAOQ6D1xZ8b/DHgdAtFeZL/C1I\r\nMPp4Brxb5Gfw3BWsWN8PTMIqZ9nc4LYm4enzJPPyBjIok9iB4OnMCZkCFnada87bxDp33yGNCokF\r\nPq2Q53I2E5uW7g3HQgqKCTGEvriukgvf4t5627XEMASWJOsDjEbHVbZYqn5yRl2/gddyEX+vaVrF\r\nxlAHF2oFdEDPtoqQtfIWLBV4\r\n",
+    "#t": "string"
+  },
+  "uuid": "89fa185b-bb8b-4fdd-b23f-84638ab98d3f",
+  "i18nInfo": {
+    "locale": "en-US",
+    "timezoneId": "GMT",
+    "calendarId": "gregorian",
+    "decimalSeparator": ".",
+    "groupingSeparator": ","
+  },
+  "timers": {
+    "#t": "Dictionary"
+  },
+  "#t": "UiConfig",
+  "#s": {
+    "#v": [
+      {
+        "id": 216,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RecordReference",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "RecordReference",
+        "description": "a Record Identifier",
+        "base": 53,
+        "foundation": 53,
+        "typeof": 216,
+        "list": 217,
+        "flags": 12,
+        "instanceProperties": [],
+        "typeProperties": [],
+        "listViewMapping": ""
+      },
+      {
+        "id": 217,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RecordReference?list",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "RecordReference?list",
+        "description": "a list of Record Identifiers",
+        "base": 93,
+        "foundation": 93,
+        "typeof": 216,
+        "flags": 12,
+        "instanceProperties": [],
+        "typeProperties": [],
+        "listViewMapping": ""
+      },
+      {
+        "id": 53,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}StringKey",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "StringKey",
+        "description": "Key (String)",
+        "base": 53,
+        "foundation": 53,
+        "typeof": 53,
+        "list": 153,
+        "flags": 12,
+        "instanceProperties": [],
+        "typeProperties": [],
+        "listViewMapping": ""
+      },
+      {
+        "id": 153,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}StringKey?list",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "StringKey?list",
+        "description": "List of Key (String)",
+        "base": 93,
+        "foundation": 93,
+        "typeof": 53,
+        "flags": 12,
+        "instanceProperties": [],
+        "typeProperties": [],
+        "listViewMapping": ""
+      },
+      {
+        "id": 1368,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RecordLink",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "RecordLink",
+        "description": "",
+        "base": 632,
+        "foundation": 95,
+        "typeof": 1368,
+        "list": 1369,
+        "flags": 12,
+        "instanceProperties": [
+          {
+            "name": "@attributes",
+            "value": {
+              "#t": 1370
+            }
+          },
+          {
+            "name": "recordRef",
+            "value": {
+              "#t": "RecordReference"
+            }
+          },
+          {
+            "name": "dashboard",
+            "value": {
+              "#t": "string"
+            }
+          },
+          {
+            "name": "label",
+            "value": {
+              "#t": "string"
+            }
+          },
+          {
+            "name": "actions",
+            "value": {
+              "#t": "Variant?list"
+            }
+          },
+          {
+            "name": "tooltip",
+            "value": {
+              "#t": "string"
+            }
+          }
+        ],
+        "typeProperties": [
+          {
+            "name": "namespaces",
+            "value": {
+              "#v": [
+                "http://an-appian-instance.host.net/ae/types/internal",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009"
+              ],
+              "#t": "Text?list"
+            }
+          },
+          {
+            "name": "isNillable",
+            "value": {
+              "#v": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "#t": "Boolean?list"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 1370,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "",
+        "description": "Attributes record for type 1368 (RecordLink)",
+        "base": 95,
+        "foundation": 95,
+        "typeof": 1370,
+        "list": 1371,
+        "flags": 12,
+        "instanceProperties": [
+          {
+            "name": "@anyAttribute",
+            "value": {
+              "#t": "Dictionary"
+            }
+          },
+          {
+            "name": "@nil",
+            "value": {
+              "#t": "boolean"
+            }
+          }
+        ],
+        "typeProperties": [
+          {
+            "name": "namespaces",
+            "value": {
+              "#v": [
+                "http://an-appian-instance.host.net/ae/types/internal",
+                "http://an-appian-instance.host.net/ae/types/internal"
+              ],
+              "#t": "Text?list"
+            }
+          },
+          {
+            "name": "autoGenerated",
+            "value": {
+              "#v": true,
+              "#t": "boolean"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 1369,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RecordLink?list",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "RecordLink?list",
+        "description": "List of RecordLink",
+        "base": 93,
+        "foundation": 93,
+        "typeof": 1368,
+        "flags": 8,
+        "instanceProperties": [],
+        "typeProperties": [
+          {
+            "name": "autoGenerated",
+            "value": {
+              "#v": true,
+              "#t": "boolean"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 1371,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "",
+        "description": "List of ",
+        "base": 93,
+        "foundation": 93,
+        "typeof": 1370,
+        "flags": 12,
+        "instanceProperties": [],
+        "typeProperties": [
+          {
+            "name": "autoGenerated",
+            "value": {
+              "#v": true,
+              "#t": "boolean"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 13,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}CollaborationDocument",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "CollaborationDocument",
+        "description": "A document is any file that a user has stored on the system.  Typically this value will be provided from a Process Variable.",
+        "base": 52,
+        "foundation": 52,
+        "typeof": 52,
+        "list": 113,
+        "flags": 8,
+        "instanceProperties": [],
+        "typeProperties": [],
+        "listViewMapping": ""
+      },
+      {
+        "id": 113,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}CollaborationDocument?list",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "CollaborationDocument?list",
+        "description": "List of Document",
+        "base": 152,
+        "foundation": 93,
+        "typeof": 13,
+        "flags": 8,
+        "instanceProperties": [],
+        "typeProperties": [],
+        "listViewMapping": ""
+      },
+      {
+        "id": 52,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}IntegerKey",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "IntegerKey",
+        "description": "Key (Integer)",
+        "base": 52,
+        "foundation": 52,
+        "typeof": 52,
+        "list": 152,
+        "flags": 12,
+        "instanceProperties": [],
+        "typeProperties": [],
+        "listViewMapping": ""
+      },
+      {
+        "id": 152,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}IntegerKey?list",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "IntegerKey?list",
+        "description": "List of Key (Integer)",
+        "base": 93,
+        "foundation": 93,
+        "typeof": 52,
+        "flags": 12,
+        "instanceProperties": [],
+        "typeProperties": [],
+        "listViewMapping": ""
+      },
+      {
+        "id": 860,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}DocumentImage",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "DocumentImage",
+        "description": "",
+        "base": 632,
+        "foundation": 95,
+        "typeof": 860,
+        "list": 861,
+        "flags": 12,
+        "instanceProperties": [
+          {
+            "name": "@attributes",
+            "value": {
+              "#t": 862
+            }
+          },
+          {
+            "name": "document",
+            "value": {
+              "#t": "CollaborationDocument"
+            }
+          },
+          {
+            "name": "caption",
+            "value": {
+              "#t": "string"
+            }
+          },
+          {
+            "name": "altText",
+            "value": {
+              "#t": "string"
+            }
+          },
+          {
+            "name": "link",
+            "value": {
+              "#t": "Variant"
+            }
+          },
+          {
+            "name": "actions",
+            "value": {
+              "#t": "Variant?list"
+            }
+          },
+          {
+            "name": "backgroundColor",
+            "value": {
+              "#t": "string"
+            }
+          },
+          {
+            "name": "version",
+            "value": {
+              "#t": "int"
+            }
+          }
+        ],
+        "typeProperties": [
+          {
+            "name": "namespaces",
+            "value": {
+              "#v": [
+                "http://an-appian-instance.host.net/ae/types/internal",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009"
+              ],
+              "#t": "Text?list"
+            }
+          },
+          {
+            "name": "isNillable",
+            "value": {
+              "#v": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "#t": "Boolean?list"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 862,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "",
+        "description": "Attributes record for type 860 (DocumentImage)",
+        "base": 95,
+        "foundation": 95,
+        "typeof": 862,
+        "list": 863,
+        "flags": 12,
+        "instanceProperties": [
+          {
+            "name": "@anyAttribute",
+            "value": {
+              "#t": "Dictionary"
+            }
+          },
+          {
+            "name": "@nil",
+            "value": {
+              "#t": "boolean"
+            }
+          }
+        ],
+        "typeProperties": [
+          {
+            "name": "namespaces",
+            "value": {
+              "#v": [
+                "http://an-appian-instance.host.net/ae/types/internal",
+                "http://an-appian-instance.host.net/ae/types/internal"
+              ],
+              "#t": "Text?list"
+            }
+          },
+          {
+            "name": "autoGenerated",
+            "value": {
+              "#v": true,
+              "#t": "boolean"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 861,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}DocumentImage?list",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "DocumentImage?list",
+        "description": "List of DocumentImage",
+        "base": 93,
+        "foundation": 93,
+        "typeof": 860,
+        "flags": 8,
+        "instanceProperties": [],
+        "typeProperties": [
+          {
+            "name": "autoGenerated",
+            "value": {
+              "#v": true,
+              "#t": "boolean"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 863,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "",
+        "description": "List of ",
+        "base": 93,
+        "foundation": 93,
+        "typeof": 862,
+        "flags": 12,
+        "instanceProperties": [],
+        "typeProperties": [
+          {
+            "name": "autoGenerated",
+            "value": {
+              "#v": true,
+              "#t": "boolean"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 1116,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ImageGalleryField",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "ImageGalleryField",
+        "description": "",
+        "base": 632,
+        "foundation": 95,
+        "typeof": 1116,
+        "list": 1117,
+        "flags": 12,
+        "instanceProperties": [
+          {
+            "name": "@attributes",
+            "value": {
+              "#t": 1120
+            }
+          },
+          {
+            "name": "label",
+            "value": {
+              "#t": "string"
+            }
+          },
+          {
+            "name": "instructions",
+            "value": {
+              "#t": "string"
+            }
+          },
+          {
+            "name": "images",
+            "value": {
+              "#t": "Variant?list"
+            }
+          },
+          {
+            "name": "size",
+            "value": {
+              "#t": "string"
+            }
+          },
+          {
+            "name": "labelPosition",
+            "value": {
+              "#t": "LabelPosition"
+            }
+          },
+          {
+            "name": "actions",
+            "value": {
+              "#t": "Variant?list"
+            }
+          },
+          {
+            "name": "helpTooltip",
+            "value": {
+              "#t": "string"
+            }
+          },
+          {
+            "name": "align",
+            "value": {
+              "#t": "ComponentAlign"
+            }
+          },
+          {
+            "name": "isThumbnail",
+            "value": {
+              "#t": "boolean"
+            }
+          },
+          {
+            "name": "style",
+            "value": {
+              "#t": "ImageStyle"
+            }
+          },
+          {
+            "name": "accessibilityText",
+            "value": {
+              "#t": "string"
+            }
+          }
+        ],
+        "typeProperties": [
+          {
+            "name": "namespaces",
+            "value": {
+              "#v": [
+                "http://an-appian-instance.host.net/ae/types/internal",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009"
+              ],
+              "#t": "Text?list"
+            }
+          },
+          {
+            "name": "isNillable",
+            "value": {
+              "#v": [
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "#t": "Boolean?list"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 1120,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "",
+        "description": "Attributes record for type 1116 (ImageGalleryField)",
+        "base": 95,
+        "foundation": 95,
+        "typeof": 1120,
+        "list": 1121,
+        "flags": 12,
+        "instanceProperties": [
+          {
+            "name": "@anyAttribute",
+            "value": {
+              "#t": "Dictionary"
+            }
+          },
+          {
+            "name": "@nil",
+            "value": {
+              "#t": "boolean"
+            }
+          }
+        ],
+        "typeProperties": [
+          {
+            "name": "namespaces",
+            "value": {
+              "#v": [
+                "http://an-appian-instance.host.net/ae/types/internal",
+                "http://an-appian-instance.host.net/ae/types/internal"
+              ],
+              "#t": "Text?list"
+            }
+          },
+          {
+            "name": "autoGenerated",
+            "value": {
+              "#v": true,
+              "#t": "boolean"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 636,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}LabelPosition",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "LabelPosition",
+        "description": "",
+        "base": 3,
+        "foundation": 3,
+        "typeof": 3,
+        "list": 637,
+        "flags": 12,
+        "instanceProperties": [],
+        "typeProperties": [],
+        "listViewMapping": ""
+      },
+      {
+        "id": 1994,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ImageStyle",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "ImageStyle",
+        "description": "",
+        "base": 3,
+        "foundation": 3,
+        "typeof": 3,
+        "list": 1995,
+        "flags": 12,
+        "instanceProperties": [],
+        "typeProperties": [],
+        "listViewMapping": ""
+      },
+      {
+        "id": 1117,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ImageGalleryField?list",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "ImageGalleryField?list",
+        "description": "List of ImageGalleryField",
+        "base": 93,
+        "foundation": 93,
+        "typeof": 1116,
+        "flags": 8,
+        "instanceProperties": [],
+        "typeProperties": [
+          {
+            "name": "autoGenerated",
+            "value": {
+              "#v": true,
+              "#t": "boolean"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 1121,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "",
+        "description": "List of ",
+        "base": 93,
+        "foundation": 93,
+        "typeof": 1120,
+        "flags": 12,
+        "instanceProperties": [],
+        "typeProperties": [
+          {
+            "name": "autoGenerated",
+            "value": {
+              "#v": true,
+              "#t": "boolean"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 637,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}LabelPosition?list",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "LabelPosition?list",
+        "description": "List of LabelPosition",
+        "base": 93,
+        "foundation": 93,
+        "typeof": 636,
+        "flags": 8,
+        "instanceProperties": [],
+        "typeProperties": [
+          {
+            "name": "autoGenerated",
+            "value": {
+              "#v": true,
+              "#t": "boolean"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 1995,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ImageStyle?list",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "ImageStyle?list",
+        "description": "List of ImageStyle",
+        "base": 93,
+        "foundation": 93,
+        "typeof": 1994,
+        "flags": 8,
+        "instanceProperties": [],
+        "typeProperties": [
+          {
+            "name": "autoGenerated",
+            "value": {
+              "#v": true,
+              "#t": "boolean"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 868,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}DropdownField",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "DropdownField",
+        "description": "",
+        "base": 632,
+        "foundation": 95,
+        "typeof": 868,
+        "list": 869,
+        "flags": 12,
+        "instanceProperties": [
+          {
+            "name": "@attributes",
+            "value": {
+              "#t": 870
+            }
+          },
+          {
+            "name": "label",
+            "value": {
+              "#t": "string"
+            }
+          },
+          {
+            "name": "instructions",
+            "value": {
+              "#t": "string"
+            }
+          },
+          {
+            "name": "required",
+            "value": {
+              "#t": "boolean"
+            }
+          },
+          {
+            "name": "disabled",
+            "value": {
+              "#t": "boolean"
+            }
+          },
+          {
+            "name": "choices",
+            "value": {
+              "#t": "Text?list"
+            }
+          },
+          {
+            "name": "value",
+            "value": {
+              "#t": "int"
+            }
+          },
+          {
+            "name": "validations",
+            "value": {
+              "#t": "ValidationMessage?list"
+            }
+          },
+          {
+            "name": "saveInto",
+            "value": {
+              "#t": "Save?list"
+            }
+          },
+          {
+            "name": "labelPosition",
+            "value": {
+              "#t": "LabelPosition"
+            }
+          },
+          {
+            "name": "readOnly",
+            "value": {
+              "#t": "boolean"
+            }
+          },
+          {
+            "name": "align",
+            "value": {
+              "#t": "Align"
+            }
+          },
+          {
+            "name": "actions",
+            "value": {
+              "#t": "Variant?list"
+            }
+          },
+          {
+            "name": "helpTooltip",
+            "value": {
+              "#t": "string"
+            }
+          },
+          {
+            "name": "width",
+            "value": {
+              "#t": "ComponentWidth"
+            }
+          },
+          {
+            "name": "showClearAllIcon",
+            "value": {
+              "#t": "boolean"
+            }
+          },
+          {
+            "name": "clearIconLabel",
+            "value": {
+              "#t": "string"
+            }
+          },
+          {
+            "name": "tooltips",
+            "value": {
+              "#t": "Text?list"
+            }
+          },
+          {
+            "name": "skinName",
+            "value": {
+              "#t": "DropdownSkin"
+            }
+          },
+          {
+            "name": "accessibilityText",
+            "value": {
+              "#t": "string"
+            }
+          }
+        ],
+        "typeProperties": [
+          {
+            "name": "namespaces",
+            "value": {
+              "#v": [
+                "http://an-appian-instance.host.net/ae/types/internal",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009",
+                "http://an-appian-instance.host.net/ae/types/2009"
+              ],
+              "#t": "Text?list"
+            }
+          },
+          {
+            "name": "isNillable",
+            "value": {
+              "#v": [
+                false,
+                true,
+                true,
+                false,
+                false,
+                true,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "#t": "Boolean?list"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 870,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "",
+        "description": "Attributes record for type 868 (DropdownField)",
+        "base": 95,
+        "foundation": 95,
+        "typeof": 870,
+        "list": 871,
+        "flags": 12,
+        "instanceProperties": [
+          {
+            "name": "@anyAttribute",
+            "value": {
+              "#t": "Dictionary"
+            }
+          },
+          {
+            "name": "@nil",
+            "value": {
+              "#t": "boolean"
+            }
+          }
+        ],
+        "typeProperties": [
+          {
+            "name": "namespaces",
+            "value": {
+              "#v": [
+                "http://an-appian-instance.host.net/ae/types/internal",
+                "http://an-appian-instance.host.net/ae/types/internal"
+              ],
+              "#t": "Text?list"
+            }
+          },
+          {
+            "name": "autoGenerated",
+            "value": {
+              "#v": true,
+              "#t": "boolean"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 628,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Align",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "Align",
+        "description": "",
+        "base": 3,
+        "foundation": 3,
+        "typeof": 3,
+        "list": 629,
+        "flags": 12,
+        "instanceProperties": [],
+        "typeProperties": [],
+        "listViewMapping": ""
+      },
+      {
+        "id": 2550,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}DropdownSkin",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "DropdownSkin",
+        "description": "",
+        "base": 3,
+        "foundation": 3,
+        "typeof": 3,
+        "list": 2551,
+        "flags": 12,
+        "instanceProperties": [],
+        "typeProperties": [],
+        "listViewMapping": ""
+      },
+      {
+        "id": 869,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}DropdownField?list",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "DropdownField?list",
+        "description": "List of DropdownField",
+        "base": 93,
+        "foundation": 93,
+        "typeof": 868,
+        "flags": 8,
+        "instanceProperties": [],
+        "typeProperties": [
+          {
+            "name": "autoGenerated",
+            "value": {
+              "#v": true,
+              "#t": "boolean"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 871,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "",
+        "description": "List of ",
+        "base": 93,
+        "foundation": 93,
+        "typeof": 870,
+        "flags": 12,
+        "instanceProperties": [],
+        "typeProperties": [
+          {
+            "name": "autoGenerated",
+            "value": {
+              "#v": true,
+              "#t": "boolean"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 629,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Align?list",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "Align?list",
+        "description": "List of Align",
+        "base": 93,
+        "foundation": 93,
+        "typeof": 628,
+        "flags": 8,
+        "instanceProperties": [],
+        "typeProperties": [
+          {
+            "name": "autoGenerated",
+            "value": {
+              "#v": true,
+              "#t": "boolean"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      },
+      {
+        "id": 2551,
+        "uuid": "{http://an-appian-instance.host.net/ae/types/2009}DropdownSkin?list",
+        "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+        "localPart": "DropdownSkin?list",
+        "description": "List of DropdownSkin",
+        "base": 93,
+        "foundation": 93,
+        "typeof": 2550,
+        "flags": 8,
+        "instanceProperties": [],
+        "typeProperties": [
+          {
+            "name": "autoGenerated",
+            "value": {
+              "#v": true,
+              "#t": "boolean"
+            }
+          }
+        ],
+        "listViewMapping": ""
+      }
+    ],
+    "#t": "DataType?list"
+  },
+  "shortcuts": [],
+  "#u": "<https://an-appian-instance.host.net/suite/tempo/records/type/{recordTypeName}/item/{opaqueId}/view/{dashboard}>; rel=\"x-web-bookmark\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/components/ping.do>; rel=\"x-resume-session\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/tempo/records/item/{_recordRef}/view/{dashboard}>; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/thumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-icon\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/all>; rel=\"x-sites-all\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/tasks/task/{id}>; rel=\"x-site-task\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/usercard/{%40attributes.%40anyAttribute.recordIdentifier}>; rel=\"x-data-request-usercard\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/page/{pageUrlStub}/task/{id}>; rel=\"x-site-task-page\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/siteUrlStub}/page/{pageUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-web-bookmark-sites\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/custom/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-custom\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/page{/pageUrlStub}/nav>; rel=\"x-site-page-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/user/latest/user/{%40attributes.%40anyAttribute.user}/about>; rel=\"x-data-request-userinfo\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-leftnav\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/o>; rel=\"x-attachment-temp\"; type=\"application/vnd.appian.tv+json\"; dt=\"CollaborationDocument\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/page/{pageUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest/{recordTypeUrlStub}/{recordId}/dashboards/{dashboardUrlStub}/transparentid>; rel=\"x-record-ui\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest{/recordTypeUrlStub}{/recordId}/dashboards{/dashboardUrlStub}/headerFeed>; rel=\"x-record-dashboard-feed-header\"; type=\"application/atom+json\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/task/latest/{taskId}/attributes>; rel=\"x-task-attributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}/views>; rel=\"x-data-request-site-mobile-record-views\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/internal/webapi/releaselock/{objectUuid}/{uiSourceUuid}>; rel=\"x-data-release-object-lock\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/tempo/records/type/{recordTypeName}/item/{opaqueId}/actions>; rel=\"x-web-bookmark-actions\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/>; rel=\"x-sasa-app\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/siteUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-web-bookmark-sites-nopage\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest{/recordTypeUrlStub}{/recordId}/dashboards{/dashboardUrlStub}>; rel=\"x-record-dashboard-feed\"; type=\"application/atom+json\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/api/feed/tempo?t=e,x,b,f&m=menu-records&s=mt{&_recordRef,dashboard,c}>; rel=\"x-record-news\"; type=\"application/atom+xml\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/app{/appName}{/path*}{?params*}>; rel=\"x-sail-application\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-nopage\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/tempo/records/item/{_recordRef}/view/{dashboard}>; rel=\"x-web-bookmark-records\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest/{recordTypeUrlStub}/{recordId}/feed/dashboards/{dashboardUrlStub}/transparentid>; rel=\"x-record-feed\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/user/latest/{%40attributes.%40anyAttribute.user}/about>; rel=\"x-user-cover-photo\"; dt=\"DocumentImage\",<https://an-appian-instance.host.net/suite/api/feed/tempo?t=e,x,b,f&m=menu-records&s=mt{&_recordRef,dashboard,c}>; rel=\"x-data-request-record-news\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/o>; rel=\"x-document-image\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/recordType/{recordTypeUrlStub}/record/{opaqueRecordId}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-by-id-nopage\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/o>; rel=\"x-attachment-temp\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/thumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-thumbnail\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/viewportThumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-viewport\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://an-appian-instance.host.net/suite/rest/a/record/latest{/_recordRef}/dashboards{/dashboard}/headerFeed>; rel=\"x-record-dashboard-header\"; type=\"application/atom+xml\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest{/_recordRef}/dashboards{/dashboard}>; rel=\"x-record-dashboard\"; type=\"application/atom+xml\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/cors>; rel=\"x-cors\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/thumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-thumbnail\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/evaluateComponentTemplate{/templateId}>; rel=\"x-ifcdesigner-evaluatecomponenttemplate\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/pages/{pageUrlStub}/report>; rel=\"x-sites-report\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/nav>; rel=\"x-site-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/thumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-thumbnail\"; dt=\"DocumentImage\",<https://an-appian-instance.host.net/suite/sites>; rel=\"x-site-main\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/page/{pageUrlStub}/recordType/{recordTypeUrlStub}/record/{opaqueRecordId}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-by-id\"; dt=\"RecordLink\""
+}

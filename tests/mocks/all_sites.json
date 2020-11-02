@@ -1,0 +1,2526 @@
+{
+    "_cId": "33740e3b85fb9a05cb4fe3119d33546f",
+    "isSystemUi": "true",
+    "_dirty": "false",
+    "sail-application-url": "sites/D6JMim%2Fpage%2Frecords%2Fnav",
+    "links": [
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/sites/latest/D6JMim/page/records/nav",
+            "rel": "update",
+            "title": "Update",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/sites/latest/D6JMim/page/records/nav",
+            "rel": "self",
+            "title": "",
+            "method": "GET"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/sites/latest/D6JMim/page/records/nav",
+            "rel": "self",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/api/tempo/file",
+            "rel": "upload",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/tempo/file-web/",
+            "rel": "upload-web",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/tempo/file-web-encrypt/",
+            "rel": "upload-web-encrypt",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/doc",
+            "rel": "x-docinfo",
+            "title": "",
+            "method": "POST",
+            "saveInto": "<<jA0EAwMCFCVDL0xm5aoB0mcBmzWHdRXwHVJhENz/lfUkjtH/cH9DkHnkYfxId8X9Lvz/JjT1YBMO\r\nKLBHaqCIOUMprKhGP+QyRk6ND7HIac84otHT7ps5rJKNXJZKlfDyFnsJXkgq4t22txLofwhpiTnG\r\n+Fa/QmBk\r\n>>"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/autosuggest",
+            "rel": "x-autosuggest",
+            "title": "",
+            "method": "POST"
+        }
+    ],
+    "actions": [
+        {
+            "_cId": "8333cdbab40a98c14806ddac91e84583",
+            "_actionName": "sail:record-action-trigger",
+            "label": "",
+            "saveInto": [
+                "<<jA0EAwMCFCVDL0xm5aoB0n0BmzWHdRXwHVJhENz/lfUkjtH/cH9DkHngn0LOz9oKd82vopYnmPRL\r\noNb4WmYIlULgLaqXxh5Cad7vVuaF21Ejt79WDB5vMEzO/G8Jw7YkwTjOZTR+yMMNlxr3/vGU0QRC\r\nUI1YsHBMJAcecU1c5UdK9qjz0auncRAKaJC5IA==\r\n>>"
+            ],
+            "tooltip": "",
+            "href": "",
+            "#t": "DynamicLink"
+        }
+    ],
+    "triggers": [],
+    "ui": {
+        "_cId": "14e313477064434f3c3a115ead840dd3",
+        "honorBranding": "true",
+        "windowtitle": "Records",
+        "pageWidth": "STANDARD",
+        "_dirty": "false",
+        "tabs": [
+            {
+                "_cId": "6e2af521e16536d3164e3b02cbfa68b1",
+                "fontAwesomeIconId": "f0e7",
+                "iconFriendlyName": "bolt",
+                "link": {
+                    "_cId": "2eefb21c4aa2bfd0fe371c3820e24b24",
+                    "siteUrlStub": "D6JMim",
+                    "pageUrlStub": "news",
+                    "label": "News"
+                },
+                "status": false,
+                "pageWidth": "STANDARD",
+                "skinName": "TEMPO_SITE"
+            },
+            {
+                "_cId": "14dcd02f17360fc7bf8a905442101906",
+                "fontAwesomeIconId": "f0e7",
+                "iconFriendlyName": "bolt",
+                "link": {
+                    "_cId": "644fbbd180195c0207d8065a3bc08905",
+                    "siteUrlStub": "D6JMim",
+                    "pageUrlStub": "tasks",
+                    "label": "Tasks (56)"
+                },
+                "status": false,
+                "pageWidth": "STANDARD",
+                "skinName": "TEMPO_SITE"
+            },
+            {
+                "_cId": "ae5e57491c1fdee8b0a88e8bc6dc398e",
+                "fontAwesomeIconId": "f0e7",
+                "iconFriendlyName": "bolt",
+                "link": {
+                    "_cId": "cac57057a7507bd229fb8d886a33d6c7",
+                    "siteUrlStub": "D6JMim",
+                    "pageUrlStub": "records",
+                    "label": "Records"
+                },
+                "status": true,
+                "pageWidth": "STANDARD",
+                "skinName": "TEMPO_SITE"
+            },
+            {
+                "_cId": "ede30f193bf3d32f988ecb9f21f1bd52",
+                "fontAwesomeIconId": "f0e7",
+                "iconFriendlyName": "bolt",
+                "link": {
+                    "_cId": "5cc0867649ae2931acbda4bc86f02ebb",
+                    "siteUrlStub": "D6JMim",
+                    "pageUrlStub": "reports",
+                    "label": "Reports"
+                },
+                "status": false,
+                "pageWidth": "STANDARD",
+                "skinName": "TEMPO_SITE"
+            },
+            {
+                "_cId": "706be72500e0d477a8dcfde5d68dcc2c",
+                "fontAwesomeIconId": "f0e7",
+                "iconFriendlyName": "bolt",
+                "link": {
+                    "_cId": "d5fbd21933bdf4583221a361eb57014d",
+                    "siteUrlStub": "D6JMim",
+                    "pageUrlStub": "actions",
+                    "label": "Actions"
+                },
+                "status": false,
+                "pageWidth": "STANDARD",
+                "skinName": "TEMPO_SITE"
+            }
+        ],
+        "userProfileLayout": {
+            "_cId": "6a65b76126207ffe2065de0f4e17d26e",
+            "logoutLink": {
+                "_cId": "8741adefe1eba64593d4dfaa3d8387c2",
+                "label": "Sign Out",
+                "#t": "LogoutLink"
+            },
+            "profileLink": {
+                "_cId": "ba400e45cf0b41830b3520720ecd780d",
+                "uuid": "SYSTEM_RECORD_TYPE_USER",
+                "siteUrlStub": "D6JMim",
+                "isUserRecord": "true",
+                "recordIdentifier": "_h-0000e489-c54e-8000-c089-d61e94d61e94_1706",
+                "_recordRef": "nkB5056POt-blgDkffkH7Qd-eOaeMjetYG5O4SdIF7s3zN0Ylb2_O6E7K1mvdcn57DO0ratcUb_1UXKbr079VzR9eyxGJe2wx1SigkiYcXzY5prbNuO2QkCA9xvVcYlOzivAlvsXNHZKUKbARr_B80SB56z4SRiz19F",
+                "recordRef": {
+                    "id": "1#{http://an-appian-instance.host.net/ae/types/2009}Text#_h-0000e489-c54e-8000-c089-d61e94d61e94_1706",
+                    "#t": "RecordReference"
+                },
+                "dashboard": "",
+                "label": "Profile",
+                "tooltip": "",
+                "#t": "RecordLink"
+            },
+            "settingsLink": {
+                "_cId": "b64a94c382d8f9fe547c82a1473d6ef8",
+                "label": "Settings",
+                "value": {
+                    "#v": "",
+                    "#t": "string"
+                },
+                "saveInto": [
+                    "<<jA0EAwMCFCVDL0xm5aoB0p0BmzWHdRXwHVJhENz/lfUkjtH/cH9DkHniZIMUPgpz3rGzAiuLqIyW\r\nz0BjV2KltPJkA2YIxt/PoHxNur63C3yIeQhS207COSgGDuSo4948cXvHuc7wgR4ZqSiEJeId+fM3\r\nP/DtPX9LTvAnjfUwImGwHbRW/pQB+8QaJDtQSBO/Pd+krXaugdncGYJgK6XpwSW9TcMRVNTXgC4+\r\ncQ4g\r\n>>"
+                ],
+                "tooltip": "",
+                "href": "",
+                "#t": "DynamicLink"
+            },
+            "avatarImageUri": "https://an-appian-instance.host.net/suite/personalization/img/nophoto.jpg",
+            "openMenuLabel": "Open user options menu",
+            "signedInAsLabelPrefix": "Signed in as",
+            "currentUserFullname": "Matthew Kornfield System"
+        },
+        "contextWidget": {
+            "_cId": "1f666a6891ec64d98ade276e777f316e",
+            "headerImageUrl": "",
+            "headerText": "",
+            "icon": "th",
+            "style": "",
+            "size": "STANDARD",
+            "tooltip": "Navigation",
+            "ariaLabel": "Navigation Menu",
+            "contents": [
+                {
+                    "_cId": "bbbda573647a1ca128b4f1bed1046783",
+                    "primaryText": "Admin Console",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "bf82a49fccbbf10fa7b1b2636b29884a",
+                        "uri": "https://an-appian-instance.host.net/suite/admin",
+                        "label": "",
+                        "tooltip": "",
+                        "#t": "SafeLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "611be0377dad52c8317e1fec5b47523f",
+                    "primaryText": "Appian Designer",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "49a2871356c1a4491a19b4638e33cc7b",
+                        "uri": "https://an-appian-instance.host.net/suite/design",
+                        "label": "",
+                        "tooltip": "",
+                        "#t": "SafeLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "b5d5338d2415f62b099089f1dcc1e833",
+                    "primaryText": "Cloud Database",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "8ebbac27a5bd96509e669be3db140f0a",
+                        "uri": "https://an-appian-instance.host.net/suite/dblogin",
+                        "label": "",
+                        "tooltip": "",
+                        "#t": "SafeLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "e73970f962e2749ef618314a2feda029",
+                    "primaryText": "System Logs",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "ec603271ea4a5581e851c4469be93c80",
+                        "uri": "https://an-appian-instance.host.net/suite/logs",
+                        "label": "",
+                        "tooltip": "",
+                        "#t": "SafeLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "9824577010a6e423a1f9f58e047be221",
+                    "style": "STANDARD",
+                    "#t": "MenuDivider"
+                },
+                {
+                    "_cId": "14c6ea50bc738086f9be3f073832e35b",
+                    "primaryText": "                        Site 3 - Leading and Trailing Spaces                                                         ",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "7d40d4d9d70ce0b6f3a67fa937834adc",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "site3",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "f94414f91c21fbb1626d07f905389887",
+                    "primaryText": "! E2E Tasks",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "0092a1d3bf9484cec567b1b00e4ed949",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "e2e-tasks",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "6d5cf245999ef6d92023e7b75b0b34bb",
+                    "primaryText": "<b>site 1 - HTML Injection Page Title</b>",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "29a72aad28a2a3172428f160fe7d3dbe",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "site1",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "d4af6a678712b5194ae519dc3c4a344a",
+                    "primaryText": "barcharcolumn_gwit",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "5401163c3a2bda16e336dc5825d6f602",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "barcharcolumn-gwit",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "cee748ed0215cffa58a36c943159ce7a",
+                    "primaryText": "barchart",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "3d63b3d1f2df67e931bd82032106b6e2",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "barchart",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "6c615ccb04cc09f6a068769e9fa1af23",
+                    "primaryText": "barchart_gwit",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "df4c8f8c1df5b6390d1fd4b73b2f0fd7",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "barchart-gwit",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "b2f5a32fa5724ca2913ea46ab3e15b19",
+                    "primaryText": "barchartcolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "14d9da8a3c09596231eaee1741f03ae9",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "barchartcolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "248fe3405887153409d4506da308a4b5",
+                    "primaryText": "barchartlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "55d92f44156c0dbade0f698548e25368",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "barchartlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "218e65d8331a6f41cf916f5d522298db",
+                    "primaryText": "barchartlocal_gwit",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "174e7b3938d6bafd0d3dffa873c4e73e",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "barchartlocal-gwit",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "9e27365e00e43b3bbddf0bbdac78033d",
+                    "primaryText": "barcodesite",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "d40f3bb424f7ba52b7c8d72a0b15cdaf",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "barcodesite",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "baa8b138a5cbbd2e51926f321a64b42c",
+                    "primaryText": "BlankInterfaceSite",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "90a1f86fa9323a920268c2ae269a1473",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "blankinterfacesite",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "442dff107f7401e3459c5fd53775b4b3",
+                    "primaryText": "browsers",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "d12f27737e62c07e9e202968818cd232",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "browsers",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "6cb94ea4460ef63aec0718af33b7b302",
+                    "primaryText": "browsers2",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "79c3eaecea5abaa5052d32baedc3b941",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "browsers2",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "30a44b3f8ce012ea9db10d4beed1fa1b",
+                    "primaryText": "button",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "8ee52a708995dec2f1107ff05a975698",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "button",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "38b0957685232f4db490e5e5fbed0ac9",
+                    "primaryText": "buttoncolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "5a0b451018858c6be8eb0f9c55bb6a1b",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "buttoncolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "c3308796af78610cff30c02aece003bb",
+                    "primaryText": "buttonlayout",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "1584d87a95bf92e5940049eae43e140c",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "buttonlayout",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "e4e026a76182c538e60bdcd966a422a1",
+                    "primaryText": "buttonlayoutcolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "333337845ad488c201067dafe039ec2f",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "buttonlayoutcolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "740024c9bcccfa6aca92de325882d384",
+                    "primaryText": "buttonlayoutlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "85cc83e3c74b860757d1b7cb8b85de75",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "buttonlayoutlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "a556cf480d204ee8926caa880a6c1db4",
+                    "primaryText": "buttonlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "f021b3c68ab935fbe8ba68294e357f72",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "buttonlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "572604b468d20cfa42b8567c235feab0",
+                    "primaryText": "Case Management",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "e37e644864f491ecabaaeb10629d766e",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "case-management",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "782efa5c4c45101e18317dfc5d950ea4",
+                    "primaryText": "charts",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "5ccad5908b62cb32f75fd3d91a0d79f9",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "charts",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "7ffffb6a03f24e9f94b09c9aa3850245",
+                    "primaryText": "checkbox",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "f9fe7353d3fb3e64a1ff406e51230a64",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "checkbox",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "4179ba98bb8922209e0c502e4f7f8d21",
+                    "primaryText": "checkboxcolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "2fef72649307da355e2214e21e6a34ad",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "checkboxcolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "d05f41cff530a68c466375127ffac67f",
+                    "primaryText": "checkboxlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "51481c1db1a34c92259a91fb10ee75c5",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "checkboxlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "fbdffd1da9138b1ad8c372517664989d",
+                    "primaryText": "columnchart",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "642d1282ab8067fe5491228ba42fd49f",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "columnchart",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "81982f8fe2d8cd9c4d6868c58bb0e8b6",
+                    "primaryText": "columnchartcolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "ba6f1165a25cd6cb17eca1813d935e03",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "columnchartcolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "1877ab762adeda06c366ff0dfd82c67f",
+                    "primaryText": "columnchartlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "74c36518858518f8e55aed1ee9259137",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "columnchartlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "117733161e10141fc1f4913d7bf98935",
+                    "primaryText": "components1",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "ebe076a638c189a3c19802c106b742fa",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "components1",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "1397acc150b38da565f351367a63e181",
+                    "primaryText": "components2",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "e663ed98d9d58b5c0b01bff9ed3af7bb",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "components2",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "095c02520fa61fdf36c20b3b36a80d9d",
+                    "primaryText": "components3",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "f6e160d707437c5d910c56c1ea1b08d8",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "components3",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "12c5e92a94d558ba7ec194d6e9435692",
+                    "primaryText": "components4",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "3a2d63ff8c599ddf2819de6426376c28",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "components4",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "b7e8dadd3f9e15c29f26b29f4b7b058a",
+                    "primaryText": "components5",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "4e44da170b380b745eadc2c1de902cc2",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "components5",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "30d50ecd84c7b977ca2173e83610fe1a",
+                    "primaryText": "components6",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "2b5d9960cbb07652e28b617b736b348f",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "components6",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "fe062b424f6630970289d05d6672999b",
+                    "primaryText": "components7",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "d090b6f22017d35747a56f87f6e128c6",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "components7",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "18556e1f551ca11189a122008e747660",
+                    "primaryText": "components8",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "fbda46c9fba80f5cf63cbeb4a2eb17c0",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "components8",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "b074e4af9cc6089b7694b917fc64e614",
+                    "primaryText": "Conditional Stacking Tester",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "dacf8d339d5145f36afbb4ba2520b31f",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "kp-stack-test",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "c697c4067562de8a50c48669637fe7e7",
+                    "primaryText": "Crawler Test Site Page",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "2a181423915682549ad1012fd49c5c8a",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "crawler-test-app-site-page",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "b65f0913f96cdd41a0ea27643b93d5e5",
+                    "primaryText": "Customer Service Requests",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "8478ae781978922c08a92ae4fd5be73b",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "csr",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "aa1c3550f47ab1df9012cf4b5d3e2e41",
+                    "primaryText": "Data Server Workbench",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "9796ba4d7958f33114fbdd5ba318669e",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "data-server-workbench",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "84a47b859969f17693e1f20b0ba77f14",
+                    "primaryText": "date",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "ae568afac89babaafd0f336a43ea7537",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "date",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "38a458f76b2c7bee6a586beed48b164c",
+                    "primaryText": "datecolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "351925fbf4c3550a870278420074d299",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "datecolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "e3b43b0e01ef09d1df21bd2225cf4036",
+                    "primaryText": "dropdown",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "aedc9289311e1fa4196d42489852a12d",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "dropdown",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "5406e7bc877fb27bd8eacfbbfbb3b74b",
+                    "primaryText": "dropdowncolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "389d115323ecf03ed1d85270086649fd",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "dropdowncolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "33c7c1999b47082eaa57adedd21d6c9a",
+                    "primaryText": "dropdownlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "4b5c1b56600c9b55ce23096245e2e347",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "dropdownlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "ff0d8e6f8a945f35d9ffe35214524fbb",
+                    "primaryText": "DSE Backed Records",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "013b17ea8d2b9c651ea797aaf111a731",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "dse-backed-records",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "5aa609691967487c699e301c209fea04",
+                    "primaryText": "Expression Backed Records",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "cdf40083b4c3169d24cc5029f5b89319",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "expression-backed-records",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "4e37d2e13a192d4a78a697d56063890a",
+                    "primaryText": "Generate All Components",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "ee30e0ff77a6a9b23623e39f27949891",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "generate-all-components",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "d31b7e35478ad75a9267eb11eed3b52d",
+                    "primaryText": "Grid Component Tester",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "d9fe72039c82299002a955c6fe499932",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "gridTester",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "c444a15142c3c9159f29ce03dc5e326a",
+                    "primaryText": "gridfield",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "f88c4ed5aa81dbfa3d694f3b0c0086ca",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "gridfield",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "0bbef082803edbe1c59cfbdf53b6f96b",
+                    "primaryText": "gridfieldcolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "0bd9dbb1133577ada0fcff1e75bcb1d5",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "gridfieldcolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "256adce8386e03598916f139b357607e",
+                    "primaryText": "gridfieldlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "118fd43398914a5deec9fea1dd382f8b",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "gridfieldlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "43ac9a3620ed84447f0c31793850f83e",
+                    "primaryText": "gridlayout",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "601cc3ea984be2879a5408c1bf3bbf46",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "gridlayout",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "ea4e54958b6a19baac05324cc044895d",
+                    "primaryText": "gridlayoutincolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "d9f0e0066949ad230669ce479d864b7e",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "gridlayoutincolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "a17feb4ead5ad1fd60dd4aedd5d43c71",
+                    "primaryText": "gridlayoutlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "e9b78e96d63ee37093ddcf7dfe748f2b",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "gridlayoutlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "a1e93b86e33dab8aa964899b90df3bfc",
+                    "primaryText": "grids",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "20d33ca5eabfdf5fe96395b56ca76f22",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "grids",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "a83d0ee931756aeeeaae55481ea0de8d",
+                    "primaryText": "home",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "6915d40a36f8b359044ff3dd5ce07d00",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "home",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "d8a82d3118830eebdaa3b5d478779757",
+                    "primaryText": "Investigations Site",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "90e0a8b5303e95bd0f5204e9a755b0f2",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "investigations",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "60402da90e27990fa9b8723abb88cc02",
+                    "primaryText": "Layouts",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "6d4d8a928bb962dfc8a7cd0cf7c86e62",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "layouts",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "2378611a9a557044927f018e8af69403",
+                    "primaryText": "Layouts2",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "6044ecd3cc4066f5929c2a168cfc68e3",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "layouts2",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "9f2c330b83f7eab74a3acbe6f02625f2",
+                    "primaryText": "linechart",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "baa49d1a18eeef76e8caa70e6b2979fb",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "linechart",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "eaa87335a1a03fb993682cfce77cdb60",
+                    "primaryText": "linechartcolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "e8100ace9281d98d56384ba3c823d97b",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "linechartcolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "c2783a96add114f33e79574655b28c74",
+                    "primaryText": "linechartlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "eeb3e8203ffce464875103c33d4c132f",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "linechartlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "de2ca9a03d6b9337b477959e02255a97",
+                    "primaryText": "linkfield",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "7122ab97767b1ed650d3827fc367ae4f",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "linkfield",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "46437d6f60cb0fa97413f896e7500a7e",
+                    "primaryText": "linkfieldcolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "6de3b350b238eaf4e85e343291c9794d",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "linkfieldcolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "a71ae010d27d91fa710683005e3139d9",
+                    "primaryText": "linkfieldlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "5e3d1bddd79616cfe83789dce627372f",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "linkfieldlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "dbbad9ee15ec9bcf79d53175d486e38b",
+                    "primaryText": "messagelayout",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "ae7beb18e3b37d4da91838ebb57d6716",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "messagelayout",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "08dc086a8445d8110feea67035648504",
+                    "primaryText": "messagelayoutcolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "6dd78972516e7f7cf103baa9a88e6094",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "messagelayoutcolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "381de87d24cbc87b768a49b5b63b7ab9",
+                    "primaryText": "messagelayoutlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "80803b66d0640b396fee1c71998ed34f",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "messagelayoutlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "4a4be34e52a99ef12b6ddd8bfd81c246",
+                    "primaryText": "milestone",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "39c670cf31b241e682e16697f90d0d7a",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "milestone",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "cadab2a7738f23fc0ed8c31f9e815d4d",
+                    "primaryText": "milestonecolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "c4acc0528758c11607ad9d6b75ff34a1",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "milestonecolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "dc8e317bcf486ae73f94b5a33fd9a553",
+                    "primaryText": "milestonelocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "846fdd45fc8a406024eec50eb203ba39",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "milestonelocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "88315dd927a8fcb3308c1303b5f20b53",
+                    "primaryText": "MMUI E2E Tests Site",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "33c8a81827eba91bc0bd6908cf7d8572",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "mmui-e2e-tests-site",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "00cab4cfb236909446e7e8fe1e63887c",
+                    "primaryText": "Modern Record News ",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "20e298fda34f8af23c77863af966d0de",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "mrn",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "696df80b8c3a93e1e13a2e7b6cbba269",
+                    "primaryText": "Modern Records Tester",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "325d8cf49907c6bdb0195140aa5699fc",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "modern-records-tester",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "4c1e1d794842c7db02feef576dee5fe1",
+                    "primaryText": "modernui",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "355ca82bc09f82950294fcf58a1c0511",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "modernui",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "04ebd95c166e59b3b811f39bc042f14f",
+                    "primaryText": "multipledropdown",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "71bd90a27c63645336c3691955b5abd7",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "multipledropdown",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "935b6ec0d84a7cd438becf350942c588",
+                    "primaryText": "multipledropdowncolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "8341cfbf5c9e67f9b4f4c8f882b0c738",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "multipledropdowncolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "0fb42c14c5cbf9f71fd94606309986be",
+                    "primaryText": "multipledropdownlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "327bd92d25c3884f464e61d57b593552",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "multipledropdownlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "feab4a4074a137aeaafff183000cb904",
+                    "primaryText": "name",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "f40ef92af3d4265ddd96b42700a1dbe0",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "name",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "04a70386e990d7a7d72a263675c72418",
+                    "primaryText": "Order Management",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "f24ed141e0aa459d2133957e0a1aceba",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "orders",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "d0c89db16210c3a376128d212bc2e3f0",
+                    "primaryText": "paragraph",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "d719e2cbfa5a5ccecf7658d3a5bcf8fd",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "paragraph",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "dfedbc2d43569fd059310c92c1ff98c1",
+                    "primaryText": "paragraphcolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "b4c04d19d230285bcd2f2b1a78a705cc",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "paragraphcolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "ae4b21861f188617f114fcb98873af7f",
+                    "primaryText": "paragraphlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "d5a53a1ec5a976ff07dd020e28f31c4a",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "paragraphlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "5a206f82c6a9358e3d42ea78f50f5f34",
+                    "primaryText": "picker",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "898c5b97350850ba25880d5cccb200be",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "picker",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "9c498ca9bd09b2bee177b31f7300eb66",
+                    "primaryText": "pickercolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "7c43bbddea20d2453e3812193f8ddd6c",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "pickercolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "8d756e4ec67de43bc2d0096b669e5443",
+                    "primaryText": "pickerlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "edb79e3c25cc0471136c2607faf35801",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "pickerlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "bf0551d78f216279932988bb1e40e0df",
+                    "primaryText": "pickers1",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "e0ed8ad00b3a81e5d2ab6bcd5cc45496",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "pickers1",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "c2bbcdc5e54c6e071a3af7baf50a47f7",
+                    "primaryText": "pickers2",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "f1d23c9e681bd0658bb62bb61c1a7b2f",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "pickers2",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "83022af82cafc43495007a22d8b89ae3",
+                    "primaryText": "piechart",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "b71eac1d2ff3c140cd5aa08081cea9ba",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "piechart",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "1ce10970f97249dfaecafbe8280fea21",
+                    "primaryText": "piechartcolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "68ce7d20bab766f4a5c008249cb6ea0b",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "piechartcolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "6e079d74882579ca5f953b2577edb065",
+                    "primaryText": "piechartlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "890997779c1debf3faf2a3894ba2a4e4",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "piechartlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "1e9d2c1b56aaa308820e6adf9be3212a",
+                    "primaryText": "Process Backed Records",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "2ea09f99457de72759d7e7322ae3db26",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "process-backed-records",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "685460874c75afa5064cda04d2ca3609",
+                    "primaryText": "progress",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "2a5426d4bce57854372d211fb05cc90d",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "progress",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "f1a4110f879bab0643d73d4aa9bf5eed",
+                    "primaryText": "progresscolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "2acc5b1c1115a1e3b70ea207e20260ae",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "progresscolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "e078a617a2cd603653a34e13679beda2",
+                    "primaryText": "progresslocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "9c062dd76c9de269ce8e1b51a8e4a810",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "progresslocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "327e1077df376b9188e7372e1fae1a05",
+                    "primaryText": "radiobutton",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "a155182fc1b597414833e5ec8ce55b83",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "radiobutton",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "b735e9bc7518e75537285964a7673515",
+                    "primaryText": "radiobuttoncolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "1fabfe139b30b7823c6e0632fc6296ef",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "radiobuttoncolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "0e5445d59bda632938bd1233fa086d01",
+                    "primaryText": "radiobuttonlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "d220571c442830fb44b9bd5618e9e014",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "radiobuttonlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "df42ee65e55583b974197d7c19bc5ecb",
+                    "primaryText": "Record Action Component and Grid",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "aa4e9c70d7dd76e794c8bd3a38a5e65b",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "record-action-component-and-gr",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "f72bd796c5628f280010ae1866ae8615",
+                    "primaryText": "Record List Action ",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "01f4bc2e68003bfbc3a91cb145c6ab3f",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "rla",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "2e28d48681ddd65eb50b307b89a0923e",
+                    "primaryText": "Records",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "c658569d0e54238400e345c6657b2a49",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "records",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "029efc52d3f4764d4543b74c336480f3",
+                    "primaryText": "ReplicaUpdate_12M_ALL_DOUBLY_NESTED",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "64df15191d6fd1ea147659aaa420ef20",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "12m-all-doubly-nested",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "6658c9d0ebca8b69061370c8fbfe90df",
+                    "primaryText": "ReplicaUpdate_12M_REFRESH",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "f446414e6cececc2f8ab5fad512753f7",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "12m-refresh",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "fc3e44e908656d1ebdf4ad4bed0dc33e",
+                    "primaryText": "ReplicaUpdate_M21_REFRESH",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "faf5c7cf813deedfe4a279a0b9acc9ed",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "m21-refresh",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "7ff6c14d77adba3b3a755938b4278c43",
+                    "primaryText": "ReplicaUpdate_SKINNY_Inventory",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "bd17431497ae28b363702e4472283c9d",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "skinny-inventory",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "793c45215f225edf4c938358a4d37d9a",
+                    "primaryText": "richtext",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "0b51f1c97523895e3a668642aebaac75",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "richtext",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "a5221be813729ef71aa87895b76858ca",
+                    "primaryText": "richtextcolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "142adbea188265e23051cacc6c1e5afa",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "richtextcolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "86b41ca5c25ef587d6939a7fd00ea822",
+                    "primaryText": "richtextlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "a8d0a57be1a98d28002f19ba80a86374",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "richtextlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "3c957aa3103a3d0af41a281476060dd5",
+                    "primaryText": "sectionlayout",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "cd126d947898b0f0854b311a25aec0ae",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "sectionlayout",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "561ea12f01dd9570054bfbc635bfc6f2",
+                    "primaryText": "sectionlayoutcolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "91bad8ed09271685f6d176857a360e7e",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "sectionlayoutcolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "7f5630c7a2e8d50ddd42cd93d828e274",
+                    "primaryText": "sectionlayoutlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "f27e992581d247ff47532bd8ef07b421",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "sectionlayoutlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "9583c113a54e4310b1813db63489e021",
+                    "primaryText": "Site 10",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "fe766da217d71888a9b80b17f29c8e15",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "site10",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "cd8503a23ac4bad6120aa2c5ef62184a",
+                    "primaryText": "Site 2 Unicode Characters ♞♞♞♞♞",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "99093e91f81d267ba85320d68d499238",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "site2",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "edd32437fcc0d70f2d0398314c4d5860",
+                    "primaryText": "Site 4 - This is a really long name for a Site to see how the chars wrap when displayed for Sites Discoverability in the Dropdown menu ",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "a932d4f461c35ccfef241ed2287a5262",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "site4",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "721601b5d1164c96a2f33620bb24e36a",
+                    "primaryText": "Site 5",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "c519ff8c854af9b20b2c72b414a72950",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "site5",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "64d0c9a5722424680a3ac4327b8f266a",
+                    "primaryText": "Site 6",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "9614b61969180c04ab8c1b60562f472c",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "site6",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "8254ba83e8af709a1bc47ba10658c43a",
+                    "primaryText": "Site 7 - This Site should have the Site Name as the dropdown",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "9b15b3d301909c9d0a6ce2616b1cde34",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "site7",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "0badb6baeb44fff8943d2d4a9a49969a",
+                    "primaryText": "Site 8 - This Site will have the Tempo link",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "75ff351d7b28812fdfc2234a553f225a",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "site8",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "9087c56bb1dfddda26fd8b5d39fe0668",
+                    "primaryText": "Site 9",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "3510369ffe7b82c90f2c4fb60c8fc6b9",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "site9",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "196f0dd257dcd61e9afb795b59b60e43",
+                    "primaryText": "SUI_L_Site",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "40f30598ac0180af5db80d38f5ffa9e7",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "sui-l-site",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "2df6b4a319fa5ffac2f2a1208edc5f4d",
+                    "primaryText": "Table Of Contents",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "5e6967cffad6d0ad638e77d667b950c6",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "toc",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "17762993e053f8ac82412e4a7f1315d0",
+                    "primaryText": "Test",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "4f0d3926bd2ec5709738d510a98192fa",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "test",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "f6d69b0de84d694e5986fa2ee780f013",
+                    "primaryText": "text",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "cecfe64add86ffbd1399d7bc593feeb6",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "text",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "5b8b034c88316c8c40c204c8c53f65cc",
+                    "primaryText": "textcolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "071ddefd9d72cb0a22bd8ab413cd3e3b",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "textcolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "d60bcbdd0d6da95e656617422f479b0d",
+                    "primaryText": "textdisabled",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "c43d138cfa38312920736b67584214f8",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "textdisabled",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "4b60183364912391832ed97fae3fb4b4",
+                    "primaryText": "textdisabledcolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "26c425715e5b0e0b4616e1a5141bc1fc",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "textdisabledcolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "573640c4f63716839b5b489c1d0d09af",
+                    "primaryText": "textlocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "98ab97987f6e783830a40e14c3d32ff4",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "textlocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "1a1b08fce8e913a40cce125a71c1f4f9",
+                    "primaryText": "textreadonly",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "e0c13b117eb605a4369a7ea704eb44ab",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "textreadonly",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "8e6257fbf4fcd0a1f6dfb139108e3366",
+                    "primaryText": "textreadonlycolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "aef62d134e41b4f155801e9f689187bb",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "textreadonlycolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "a9955e5ec55e6dafc644bb21fca87ae5",
+                    "primaryText": "textvalidations",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "81ee784de254a97ce8cdd52e10877562",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "textvalidations",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "89a976fd805733e93c53e13ce29e5e38",
+                    "primaryText": "textvalidationscolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "5cbf1be0f21e1408880cc581a3416518",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "textvalidationscolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "3e092fe6ecf7d6f6e6c261b680235ae2",
+                    "primaryText": "timedisplay",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "433f5ebbc0ca7021f8e1241438b9d8d8",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "timedisplay",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "074af7616255b8e8d066503f5558f7df",
+                    "primaryText": "timedisplaycolumns",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "f86db8aa2285b22d16b7c7afaff65036",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "timedisplaycolumns",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "3dda47cf29930f00560f377cae2e0abf",
+                    "primaryText": "timedisplaylocal",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "333c2dfaed7870b9e0c235b30dc2ed86",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "timedisplaylocal",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "3c96b018ec432bddb9072463e38565a1",
+                    "primaryText": "treebrowser",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "a3d8cd56817779c618e1df0ca9fa14d9",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "treebrowser",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                },
+                {
+                    "_cId": "ff0802ea016ec807279bf88607d27881",
+                    "primaryText": "Visibility",
+                    "secondaryText": "",
+                    "tooltip": "",
+                    "link": {
+                        "_cId": "9850064daea90b58063815d31d6f27d8",
+                        "isDiscoverableSite": "true",
+                        "siteUrlStub": "visibility",
+                        "pageUrlStub": "",
+                        "label": "",
+                        "#t": "SitePageLink"
+                    },
+                    "disabledHelpText": "",
+                    "#t": "MenuItem"
+                }
+            ],
+            "hasPulldown": false,
+            "menuAlignment": "END",
+            "buttonSkinName": "TEMPO_SITE_NAVIGATION_MENU",
+            "tooltipStyle": "SUBTLE",
+            "menuHeight": "",
+            "#t": "MenuLayout"
+        },
+        "source": "",
+        "#t": "SiteHeaderLayout"
+    },
+    "context": {
+        "type": "stateful",
+        "value": "jA0EAwMCFCVDL0xm5aoB0sAEAQoR7668U+Df2ztAg81N+k0g6XBRKlLyCl8nEmKiUDtsaT8jNbSg\r\nJwP5B0xRhP8rlrobl3kGIJ6MIYNEBSWKEUcWTzyeuOoOAe3xBAYUF0aA225moBghor53/QK8q5F0\r\n+r0drMk92gmUGYvgRYf4jbtIjbHNANOfeHo2hx/PrEIzMtnrHVksZTNV8g/wp8hvKaCJoQpf8mde\r\nT3TtEf2oMwbCIFCTfDRI4Th4mFTZfuPn9fJOr82xMCzoXGdXmmZ9oPaF+Q==\r\n",
+        "#t": "Map"
+    },
+    "identifier": {
+        "uuid": "",
+        "name": "",
+        "urlStub": "D6JMim/page/records/nav",
+        "description": "",
+        "logoHref": "",
+        "faviconHref": "",
+        "headerBackgroundColor": "",
+        "selectedTabBackgroundColor": "",
+        "unselectedTabForegroundColor": "",
+        "selectedTabForegroundColor": "",
+        "tabHoverColor": "",
+        "accentColor": "",
+        "tempoLinkVisibility": "",
+        "tasksInSitesVisibility": "",
+        "logoAltText": "",
+        "buttonShape": "",
+        "loadingBarColor": "",
+        "#t": "Site"
+    },
+    "uuid": "47546255-59fe-467d-997d-0ad425ddc813",
+    "i18nInfo": {
+        "locale": "en-US",
+        "timezoneId": "GMT",
+        "calendarId": "gregorian",
+        "decimalSeparator": ".",
+        "groupingSeparator": ","
+    },
+    "timers": {
+        "#t": "Dictionary"
+    },
+    "#t": "UiConfig",
+    "#s": {
+        "#v": [
+            {
+                "id": 216,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RecordReference",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "RecordReference",
+                "description": "a Record Identifier",
+                "base": 53,
+                "foundation": 53,
+                "typeof": 216,
+                "list": 217,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 217,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RecordReference?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "RecordReference?list",
+                "description": "a list of Record Identifiers",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 216,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            }
+        ],
+        "#t": "DataType?list"
+    },
+    "shortcuts": [],
+    "#u": "<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/usercard/{%40attributes.%40anyAttribute.recordIdentifier}>; rel=\"x-data-request-usercard\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/sites{/siteUrlStub}/page/{pageUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-web-bookmark-sites\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}>; rel=\"x-sites-app\"; dt=\"Site\",<https://an-appian-instance.host.net/suite/rest/a/navigation/latest/intent{?uri*}>; rel=\"x-intent\"; dt=\"SafeLink\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/page/{pageUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest/{recordTypeUrlStub}/{recordId}/dashboards/{dashboardUrlStub}/transparentid>; rel=\"x-record-ui\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites/{siteUrlStub}/page/{pageUrlStub}>; rel=\"x-sites-app-page\"; dt=\"SitePageLink\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites/{siteUrlStub}/page/{pageUri}>; rel=\"x-data-request-site-page-uri\"; dt=\"SitePageLink\",<https://an-appian-instance.host.net/suite/internal/webapi/releaselock/{objectUuid}/{uiSourceUuid}>; rel=\"x-data-release-object-lock\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/tempo/records/type/{recordTypeName}/item/{opaqueId}/actions>; rel=\"x-web-bookmark-actions\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/>; rel=\"x-sasa-app\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/siteUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-web-bookmark-sites-nopage\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest{/recordTypeUrlStub}{/recordId}/dashboards{/dashboardUrlStub}>; rel=\"x-record-dashboard-feed\"; type=\"application/atom+json\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/sites{/siteUrlStub}/page/{pageUrlStub}>; rel=\"x-web-bookmark\"; dt=\"SitePageLink\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-nopage\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/tempo/records/item/{_recordRef}/view/{dashboard}>; rel=\"x-web-bookmark-records\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/navigation/latest/default>; rel=\"x-default-landing-page\"; dt=\"SafeLink\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/recordType/{recordTypeUrlStub}/record/{opaqueRecordId}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-by-id-nopage\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest{/_recordRef}/dashboards{/dashboard}>; rel=\"x-record-dashboard\"; type=\"application/atom+xml\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/cors>; rel=\"x-cors\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/evaluateComponentTemplate{/templateId}>; rel=\"x-ifcdesigner-evaluatecomponenttemplate\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/pages/{pageUrlStub}/report>; rel=\"x-sites-report\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites/{siteUrlStub}/page/{pageUrlStub}>; rel=\"x-data-request-site-page\"; dt=\"SitePage\",<https://an-appian-instance.host.net/suite/sites>; rel=\"x-site-main\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/tempo/records/type/{recordTypeName}/item/{opaqueId}/view/{dashboard}>; rel=\"x-web-bookmark\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/components/ping.do>; rel=\"x-resume-session\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/tempo/records/item/{_recordRef}/view/{dashboard}>; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/tasks/task/{id}>; rel=\"x-site-task\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/siteUrlStub}/page/{pageUri}>; rel=\"x-web-bookmark-page-uri\"; dt=\"SitePageLink\",<https://an-appian-instance.host.net/suite/logout>; rel=\"x-web-bookmark\"; dt=\"LogoutLink\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/page/{pageUrlStub}/task/{id}>; rel=\"x-site-task-page\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/page{/pageUrlStub}/nav>; rel=\"x-site-page-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/user/latest/user/{%40attributes.%40anyAttribute.user}/about>; rel=\"x-data-request-userinfo\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-leftnav\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest{/recordTypeUrlStub}{/recordId}/dashboards{/dashboardUrlStub}/headerFeed>; rel=\"x-record-dashboard-feed-header\"; type=\"application/atom+json\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/task/latest/{taskId}/attributes>; rel=\"x-task-attributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}/views>; rel=\"x-data-request-site-mobile-record-views\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/api/feed/tempo?t=e,x,b,f&m=menu-records&s=mt{&_recordRef,dashboard,c}>; rel=\"x-record-news\"; type=\"application/atom+xml\"; dt=\"RecordLink\",<sites{/urlStub}>; dt=\"Site\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/app{/appName}{/path*}{?params*}>; rel=\"x-sail-application\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/record/latest/{recordTypeUrlStub}/{recordId}/feed/dashboards/{dashboardUrlStub}/transparentid>; rel=\"x-record-feed\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/api/feed/tempo?t=e,x,b,f&m=menu-records&s=mt{&_recordRef,dashboard,c}>; rel=\"x-data-request-record-news\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest{/_recordRef}/dashboards{/dashboard}/headerFeed>; rel=\"x-record-dashboard-header\"; type=\"application/atom+xml\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/thumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-thumbnail\"; dt=\"RecordLink\",<https://an-appian-instance.host.net/suite/rest/a/record/latest/{%40attributes.%40anyAttribute.opaqueId}/followers>; rel=\"x-record-follow\"; dt=\"SafeLink\",<https://an-appian-instance.host.net/suite/sites{/urlStub}>; rel=\"x-web-bookmark-without-page\"; dt=\"SitePageLink\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/nav>; rel=\"x-site-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/tempo/{pageUrlStub}>; rel=\"x-web-bookmark-tempo\"; dt=\"SitePageLink\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/page/{pageUrlStub}/recordType/{recordTypeUrlStub}/record/{opaqueRecordId}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-by-id\"; dt=\"RecordLink\""
+}

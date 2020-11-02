@@ -1,0 +1,1640 @@
+{
+    "_cId": "428b8d8ea2f3a252fa7ec72eb125358f",
+    "isSystemUi": "true",
+    "_dirty": "false",
+    "sail-navigation-bookmark-url": "/design/app/AADkMByLgAAY4-jvkOjvkAAAfXQ",
+    "sail-navigation-endpoint-url": "/rest/a/applications/latest/app/design/app/AADkMByLgAAY4-jvkOjvkAAAfXQ",
+    "links": [
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/applications/latest/app/design/app/AADkMByLgAAY4-jvkOjvkAAAfXQ",
+            "rel": "update",
+            "title": "Update",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/applications/latest/app/design/app/AADkMByLgAAY4-jvkOjvkAAAfXQ",
+            "rel": "self",
+            "title": "",
+            "method": "GET"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/applications/latest/app/design/app/AADkMByLgAAY4-jvkOjvkAAAfXQ",
+            "rel": "self",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/api/tempo/file",
+            "rel": "upload",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/tempo/file-web/",
+            "rel": "upload-web",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/tempo/file-web-encrypt/",
+            "rel": "upload-web-encrypt",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/doc",
+            "rel": "x-docinfo",
+            "title": "",
+            "method": "POST",
+            "saveInto": "<<jA0EAwMC4cXSUge5PDQB0mcBoXSdvv7lMqfhXCTiz+Ljt+V3vlYK3EPfY0hEqAwp6U8l8YgnY4Yi\r\nAmKJZ20jPaq1DbnbvXbLZtvs++Hgqx/Mk5MxNPzXYTyY+DTnHnHXmrNZqn6ehyAVbYb5G9DFEm0J\r\nnOjPrJ0v\r\n>>"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/autosuggest",
+            "rel": "x-autosuggest",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/lozengequery",
+            "rel": "x-lozengequery",
+            "title": "",
+            "method": "POST"
+        }
+    ],
+    "triggers": [],
+    "ui": {
+        "_cId": "f89eb394963181c54bb49e1b29bebd5d",
+        "focusFieldId": "1bc4bef4aef7e8ceca9f53bfb7ad1466",
+        "dialogIds": "0,1,2,1,3,4,6,7,8,9,10,11,9,6,2,6,9,3,3,24,6,10,6,9,41,3,42,46,42,47,6,9,78,79,9,61,92,2,9,2,69,10,98,3,61,93,409,410,6,492",
+        "contents": [
+            {
+                "_cId": "7c867edd0c9a359bcd90e185385ab0b9",
+                "header": {
+                    "_cId": "44bf19fd6675886fdfc4e48cb03cf71d",
+                    "contents": [
+                        {
+                            "_cId": "9cc1b7ce293a1c95a70ad48b56db26f1",
+                            "testLabel": "WizardHeaderText",
+                            "label": "",
+                            "labelPosition": "COLLAPSED",
+                            "instructions": "",
+                            "value": {
+                                "_cId": "c31e37b7d50cd3fa855166f488ba81d3",
+                                "values": [
+                                    {
+                                        "_cId": "dc8900c0037d97dab6b4b38d01d9cee5",
+                                        "values": [
+                                            {
+                                                "_cId": "b070bad8476513eae4b00e01787ca81d",
+                                                "values": [
+                                                    {
+                                                        "#v": "Compare and Deploy  ",
+                                                        "#t": "string"
+                                                    }
+                                                ],
+                                                "#t": "StrongText"
+                                            }
+                                        ],
+                                        "#t": "LargeText"
+                                    },
+                                    {
+                                        "_cId": "8833413eaf5fc87048bc6a6cd63ea7fa",
+                                        "values": [
+                                            {
+                                                "_cId": "5a02d1e7205c33805661db4f059249d0",
+                                                "values": [
+                                                    {
+                                                        "#v": "(Appian to Appian)",
+                                                        "#t": "string"
+                                                    }
+                                                ],
+                                                "#t": "MediumText"
+                                            }
+                                        ],
+                                        "#t": "SecondaryText"
+                                    }
+                                ],
+                                "#t": "FormattedText"
+                            },
+                            "valueAlignment": "",
+                            "helpTooltip": "",
+                            "accessibilityText": "",
+                            "#t": "RichTextDisplayField"
+                        },
+                        {
+                            "_cId": "c22afa52e5b1303908d36323f7f03018",
+                            "testLabel": "WizardMilestone",
+                            "label": "",
+                            "instructions": "",
+                            "steps": [
+                                "Select Target Environment",
+                                "Prepare Package",
+                                "Inspect Package",
+                                "Review Details"
+                            ],
+                            "active": 2,
+                            "labelPosition": "ABOVE",
+                            "links": [
+                                {
+                                    "_cId": "a821d24951b27047fe1b2364b243e135",
+                                    "testLabel": "Select Target Environment",
+                                    "label": "",
+                                    "value": {
+                                        "#v": "",
+                                        "#t": "string"
+                                    },
+                                    "saveInto": [
+                                        "<<jA0EAwMC4cXSUge5PDQB0sA3AaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvvEMEo9wudnRp/7ZDT\r\nRXHFK244AiH+mv2B5JzRXVqTBBti2DxcXtUzXYPZyJQEqB4qk4H1pIfHtjJDRcAz/EMtFI/IISMC\r\nw1qcNygksjPgH8RU6MdqLvvqrSYLNbJoz7TozjOq2dPnXuPy8rvM/ZW0pe7SUPQcpaOg4hVAH/0K\r\n6gtOjJot5N1ObNqtq9D6q44OaD6zmuEwVpPp2zBkuCiBBpVfyMkrYnnX2JJYcuSRdODdGH3beNRg\r\nLc+SWuGzQCO9hBfavwJonfg+97xezT8HmhOSoAN1Ohfku7HExw==\r\n>>"
+                                    ],
+                                    "tooltip": "",
+                                    "href": "",
+                                    "#t": "DynamicLink"
+                                },
+                                {
+                                    "#v": "",
+                                    "#t": "string"
+                                },
+                                {
+                                    "#v": "",
+                                    "#t": "string"
+                                },
+                                {
+                                    "#v": "",
+                                    "#t": "string"
+                                }
+                            ],
+                            "helpTooltip": "",
+                            "currentStepLabel": "Current Step",
+                            "completedStepLabel": "Completed Step",
+                            "futureStepLabel": "Future Step",
+                            "instructionsPosition": "ABOVE",
+                            "style": "",
+                            "orientation": "",
+                            "accessibilityText": "",
+                            "color": "",
+                            "#t": "MilestoneField"
+                        }
+                    ],
+                    "padding": "STANDARD",
+                    "#t": "ContentLayout"
+                },
+                "content": {
+                    "_cId": "5046a71312b4a1d9233566aaf93b26e7",
+                    "contents": [
+                        {
+                            "_cId": "a5c0ae052f3953fafa056372fe22b72c",
+                            "contents": [
+                                {
+                                    "_cId": "93d4c7809c126d83e594c0a0b1f07203",
+                                    "contents": [
+                                        {
+                                            "_cId": "c4275c583f5cf89a0f68af4535e2039d",
+                                            "testLabel": "NEW-APP-INFO",
+                                            "contents": [
+                                                {
+                                                    "_cId": "1bdab1be46d93649eed34a737fb865ac",
+                                                    "contents": [
+                                                        {
+                                                            "_cId": "b3a1c5284c6b16529c194cf914c41583",
+                                                            "contents": {
+                                                                "_cId": "9d565b330579dd3c7e58bcb6379ebe74",
+                                                                "label": "",
+                                                                "labelPosition": "",
+                                                                "instructions": "",
+                                                                "helpTooltip": "",
+                                                                "validations": [],
+                                                                "items": [
+                                                                    {
+                                                                        "_cId": "e2ba61892f834e0323ee3f3c60b7a14c",
+                                                                        "item": {
+                                                                            "_cId": "35e7bc68f6cd22d1b49fa209761b850c",
+                                                                            "label": "",
+                                                                            "labelPosition": "COLLAPSED",
+                                                                            "instructions": "",
+                                                                            "value": {
+                                                                                "_cId": "5b716f05708b55d797ff05e597549e07",
+                                                                                "values": [
+                                                                                    {
+                                                                                        "_cId": "70102931b6909b337004ee9cd9473146",
+                                                                                        "icon": "info-circle",
+                                                                                        "iconId": "f05a",
+                                                                                        "altText": "",
+                                                                                        "caption": "",
+                                                                                        "size": "LARGE",
+                                                                                        "color": "ACCENT",
+                                                                                        "#t": "IconWidget"
+                                                                                    }
+                                                                                ],
+                                                                                "#t": "FormattedText"
+                                                                            },
+                                                                            "valueAlignment": "",
+                                                                            "helpTooltip": "",
+                                                                            "accessibilityText": "",
+                                                                            "#t": "RichTextDisplayField"
+                                                                        },
+                                                                        "width": "MINIMIZE"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "6d5ab9802440429c99d7e7d806b31a17",
+                                                                        "item": {
+                                                                            "_cId": "357bb2c807185e8d0e7c297ae89ee119",
+                                                                            "label": "",
+                                                                            "labelPosition": "COLLAPSED",
+                                                                            "instructions": "",
+                                                                            "value": {
+                                                                                "_cId": "92ee7f7181684ee939244f9c58e774ec",
+                                                                                "values": [
+                                                                                    {
+                                                                                        "_cId": "ce25b470a7b030f8783e1da466bd00b1",
+                                                                                        "values": [
+                                                                                            {
+                                                                                                "#v": "New Application",
+                                                                                                "#t": "string"
+                                                                                            }
+                                                                                        ],
+                                                                                        "#t": "StrongText"
+                                                                                    },
+                                                                                    {
+                                                                                        "#v": "\n",
+                                                                                        "#t": "string"
+                                                                                    },
+                                                                                    {
+                                                                                        "_cId": "e97f651c6388c0358c5866ff649f6fe3",
+                                                                                        "values": [
+                                                                                            {
+                                                                                                "#v": "We noticed this is a new application to Appian. Click Next to continue deploying the entire application and its objects.",
+                                                                                                "#t": "string"
+                                                                                            }
+                                                                                        ],
+                                                                                        "#t": "SmallText"
+                                                                                    }
+                                                                                ],
+                                                                                "#t": "FormattedText"
+                                                                            },
+                                                                            "valueAlignment": "",
+                                                                            "helpTooltip": "",
+                                                                            "accessibilityText": "",
+                                                                            "#t": "RichTextDisplayField"
+                                                                        },
+                                                                        "width": ""
+                                                                    }
+                                                                ],
+                                                                "spacing": "STANDARD",
+                                                                "alignVertical": "",
+                                                                "#t": "SideBySideGroup"
+                                                            },
+                                                            "label": "",
+                                                            "labelPosition": "COLLAPSED",
+                                                            "instructions": "",
+                                                            "instructionsPosition": "",
+                                                            "helpTooltip": "",
+                                                            "requiredStyle": "",
+                                                            "skinName": "",
+                                                            "marginBelow": "",
+                                                            "accessibilityText": "",
+                                                            "#t": "FieldLayout"
+                                                        }
+                                                    ],
+                                                    "padding": "LESS",
+                                                    "#t": "ContentLayout"
+                                                }
+                                            ],
+                                            "height": "AUTO",
+                                            "width": "FIT",
+                                            "style": "INFO",
+                                            "tooltip": "",
+                                            "marginBelow": "STANDARD",
+                                            "accessibilityText": "",
+                                            "browserTooltip": "",
+                                            "#t": "CardLayout"
+                                        },
+                                        {
+                                            "_cId": "83600aa0a67ed1b52a5ca5ceca146d9a",
+                                            "isButtonArrayLayout": "true",
+                                            "secondaryButtons": [
+                                                {
+                                                    "_cId": "07e290ff234becbf3f6e4a43b5b5b96c",
+                                                    "isFlat": "false",
+                                                    "action": "VALIDATE",
+                                                    "validate": "true",
+                                                    "label": "Application",
+                                                    "style": "",
+                                                    "confirmHeader": "",
+                                                    "confirmMessage": "",
+                                                    "confirmButtonLabel": "",
+                                                    "confirmButtonStyle": "PRIMARY",
+                                                    "cancelButtonLabel": "",
+                                                    "value": {
+                                                        "#v": "",
+                                                        "#t": "string"
+                                                    },
+                                                    "saveInto": [
+                                                        "<<jA0EAwMC4cXSUge5PDQB0sAvAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2Q7vEMEo9wudGHUoHyi9\r\nY1Ezt4NzOsFZsgKlXnfW2FN8YS5YbhbUbW8GOKX5b6OIiqKCwpQHVMRBuRmMMXgzwpCATyN3Jv7C\r\nd1MyTHAkDECElmFZ9lVusxfw1Zplf6/rKCTzDaCK1MPg0xZNIky8LxXHMm52rOTfMNw123f45S0J\r\nC0Z1JfoMYDRAL1mghcHDIOEDCQhCAveW2qU4G+A4XrqZeD57xuqxV3P+EsAyelb+p2GU/eU7O++H\r\nnTHfBMWh3vbosbKZ6QTV22oSJOmsczAYWxS7lrI=\r\n>>"
+                                                    ],
+                                                    "size": "",
+                                                    "icon": "",
+                                                    "buttonStyle": "PRIMARY",
+                                                    "ariaLabel": "",
+                                                    "skinName": "",
+                                                    "tooltipStyle": "",
+                                                    "tooltipVerticalPosition": "",
+                                                    "tooltipWidth": "",
+                                                    "accessibilityText": "",
+                                                    "shape": ""
+                                                },
+                                                {
+                                                    "_cId": "2fde41bfb245f4e29e52cc6e1d0298f8",
+                                                    "isFlat": "false",
+                                                    "label": "Database Scripts",
+                                                    "style": "",
+                                                    "confirmHeader": "",
+                                                    "confirmMessage": "",
+                                                    "confirmButtonLabel": "",
+                                                    "confirmButtonStyle": "PRIMARY",
+                                                    "cancelButtonLabel": "",
+                                                    "value": {
+                                                        "#v": "",
+                                                        "#t": "string"
+                                                    },
+                                                    "saveInto": [
+                                                        "<<jA0EAwMC4cXSUge5PDQB0sAvAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2Q7vEMEo9wudGHUoHyi9\r\nY1Ezt4NzOsFZsgKlXnfW2FN8YS5YbhbUbW8GOKX5b6OIiqKCwpQHVMRBuRmMMXgzwpCATyN3Jv7C\r\nd1MyTHAkDECElmFZ9lVusxfw1Zplf6/rKCTzDaCK1MPg0xZNIky8LxXHMm52rOTfMNw123f45S0J\r\nC0Z1JfoMYDRAL1mghcHDIOEDCQhCAveW2qU4G+A4XrqZeD57xur0V6yM76XC1GsCPNoLG+t0DweI\r\n4qAa2svLq0IzR6zAEQ1BMMqOBvnPwDxbma//ciw=\r\n>>"
+                                                    ],
+                                                    "size": "",
+                                                    "icon": "",
+                                                    "buttonStyle": "LINK",
+                                                    "ariaLabel": "",
+                                                    "skinName": "",
+                                                    "tooltipStyle": "",
+                                                    "tooltipVerticalPosition": "",
+                                                    "tooltipWidth": "",
+                                                    "accessibilityText": "",
+                                                    "shape": ""
+                                                },
+                                                {
+                                                    "_cId": "0cf2dd793b1ebf2a0f3044eefda30a28",
+                                                    "isFlat": "false",
+                                                    "label": "Plug-ins",
+                                                    "style": "",
+                                                    "confirmHeader": "",
+                                                    "confirmMessage": "",
+                                                    "confirmButtonLabel": "",
+                                                    "confirmButtonStyle": "PRIMARY",
+                                                    "cancelButtonLabel": "",
+                                                    "value": {
+                                                        "#v": "",
+                                                        "#t": "string"
+                                                    },
+                                                    "saveInto": [
+                                                        "<<jA0EAwMC4cXSUge5PDQB0sAvAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2Q7vEMEo9wudGHUoHyi9\r\nY1Ezt4NzOsFZsgKlXnfW2HNh55aNGztu6Nmt6I4JAvYxhyv69sd7VH62OU+2C6RPkJ/20xgt9P4l\r\n4IiDT1FCwg1L5poz5QJf4xECp/M7jnexNNDxAJVqg0ahBJV3OOkJyuVz4wmOnUbzZA3zuA+4ZuXA\r\nrl3W/pa/vhd28NMi4Qeh8gSITsNlKAR1yfyEslUANnajdUW4uTWpYz32nFaQ/4WK3GxP4dfv1t9L\r\n9aKlBo3C/jtMVCi19kuGdwwnnRjzezUqP89r0js=\r\n>>"
+                                                    ],
+                                                    "size": "",
+                                                    "icon": "",
+                                                    "buttonStyle": "LINK",
+                                                    "ariaLabel": "",
+                                                    "skinName": "",
+                                                    "tooltipStyle": "",
+                                                    "tooltipVerticalPosition": "",
+                                                    "tooltipWidth": "",
+                                                    "accessibilityText": "",
+                                                    "shape": ""
+                                                }
+                                            ],
+                                            "marginBelow": "",
+                                            "align": "START",
+                                            "accessibilityText": "",
+                                            "#t": "ButtonLayout"
+                                        },
+                                        {
+                                            "_cId": "270dc9b2b6bdeadc8c8c389e83fb54a1",
+                                            "contents": [
+                                                {
+                                                    "_cId": "6f4817d5e635afd7569ac469cdf4b9bf",
+                                                    "contents": [
+                                                        {
+                                                            "_cId": "947a1551fac1fb7397332ac758ae4d40",
+                                                            "label": "",
+                                                            "labelPosition": "COLLAPSED",
+                                                            "instructions": "",
+                                                            "value": {
+                                                                "_cId": "6cfb42edbfe3998284ece93e63e55d24",
+                                                                "values": [
+                                                                    {
+                                                                        "_cId": "5f5e96ec96c49617d6a945e26ec76b64",
+                                                                        "icon": "exclamation-triangle",
+                                                                        "iconId": "f071",
+                                                                        "altText": "",
+                                                                        "caption": "",
+                                                                        "size": "STANDARD",
+                                                                        "color": "#ff9900",
+                                                                        "#t": "IconWidget"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "7a47bc270f95dba0ea1db8cc849e7f3f",
+                                                                        "values": [
+                                                                            {
+                                                                                "#v": "  Object security warnings detected.  ",
+                                                                                "#t": "string"
+                                                                            }
+                                                                        ],
+                                                                        "#t": "StrongText"
+                                                                    },
+                                                                    {
+                                                                        "_cId": "53133e3b648474eead697e071141e06f",
+                                                                        "values": {
+                                                                            "_cId": "c57661112f223e7df1eb842890d4a2c8",
+                                                                            "values": [
+                                                                                {
+                                                                                    "#v": "Review Security Summary",
+                                                                                    "#t": "string"
+                                                                                }
+                                                                            ],
+                                                                            "#t": "FormattedText"
+                                                                        },
+                                                                        "link": {
+                                                                            "_cId": "03e92f358737af9f4a7617f7c313bd1b",
+                                                                            "testLabel": "reviewSecuritySummary",
+                                                                            "label": "",
+                                                                            "value": {
+                                                                                "#v": "",
+                                                                                "#t": "string"
+                                                                            },
+                                                                            "saveInto": [
+                                                                                "<<jA0EAwMC4cXSUge5PDQB0sAzAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvvOsEv9g+NvEhqNefR\r\nrlhp6GycYGgpjwa/lYNHyFqc6oPcqP8dhBMsslcWzXmMfDVOk2yB2VqsCylly5eFiDImPhP9cyCY\r\nFVDAlyx0KirJDfBYLWZDJ67brVZcDUdq6C0qyPCUbYf0VM//XV8ROGRHRm5GV0SmTPxnRUvci3Bb\r\nGEFa0+C43mbBC2eniCKV5QNrmIMTLN11X8fMcpcIm5BpCgbo3Z3UYW8YkuSps4WRmDk9wRCdi6h6\r\nuUkldRmf1n+svOymXKA7y+IG+ceHaJBVzvRtdsGGSffu\r\n>>"
+                                                                            ],
+                                                                            "tooltip": "",
+                                                                            "href": "",
+                                                                            "#t": "DynamicLink"
+                                                                        },
+                                                                        "linkStyle": "STANDALONE",
+                                                                        "#t": "LinkedItem"
+                                                                    }
+                                                                ],
+                                                                "#t": "FormattedText"
+                                                            },
+                                                            "valueAlignment": "",
+                                                            "helpTooltip": "",
+                                                            "accessibilityText": "",
+                                                            "#t": "RichTextDisplayField"
+                                                        }
+                                                    ],
+                                                    "padding": "LESS",
+                                                    "#t": "ContentLayout"
+                                                }
+                                            ],
+                                            "height": "",
+                                            "width": "FIT",
+                                            "style": "WARN",
+                                            "tooltip": "",
+                                            "marginBelow": "STANDARD",
+                                            "accessibilityText": "",
+                                            "browserTooltip": "",
+                                            "#t": "CardLayout"
+                                        },
+                                        {
+                                            "_cId": "f1aad63f3d5dc8674ae581aa49f2cb5b",
+                                            "contents": {
+                                                "_cId": "963bcc9bd871dfef00550d91e970297d",
+                                                "label": "",
+                                                "labelPosition": "",
+                                                "instructions": "",
+                                                "helpTooltip": "",
+                                                "items": [
+                                                    {
+                                                        "_cId": "9e06ad6bdf1d921bb5e7f522fa03e285",
+                                                        "item": {
+                                                            "_cId": "1bc4bef4aef7e8ceca9f53bfb7ad1466",
+                                                            "testLabel": "statusFilter",
+                                                            "label": "",
+                                                            "instructions": "",
+                                                            "choices": [
+                                                                "Conflict Detected",
+                                                                "Changed",
+                                                                "New",
+                                                                "Not Changed"
+                                                            ],
+                                                            "saveInto": [
+                                                                "<<jA0EAwMC4cXSUge5PDQB0sA7AaF0nb7+5TKn4Vwk4s/i47fld75WCtxD3kF6PM/CT0lm4VPe1BTT\r\nTvOmzET3kuCYSB5dcUFBAjRFW3ySMP+uzKP33ECLnB+pyyUoyIb0k8lrz0aVclu7PjKa0UthhBi8\r\nngj5Y5Av9roGaRvjuvAY7ca/g6nD6RFc2N3K9T+HarfkOxq9uimb3FtsuxfLNFamB7hr5W+Bs7x0\r\nbLPbxwYybd0e4sr/n8r46DsqJsZSk/XKstWk1gwu3EWFK/MakCmw722vmw153WRE2GdPhnnKWneB\r\nruDGVHlnuNJey64q0/NqNYheHlCrWSGzR5vOj3xVnWJKguF5xBhLEJg=\r\n>>"
+                                                            ],
+                                                            "labelPosition": "COLLAPSED",
+                                                            "placeholder": "All Statuses",
+                                                            "helpTooltip": "",
+                                                            "width": "",
+                                                            "accessibilityText": "",
+                                                            "#t": "MultipleDropdownField"
+                                                        },
+                                                        "width": ""
+                                                    },
+                                                    {
+                                                        "_cId": "41622ebb0d4904e39e1b54b5ea1f6769",
+                                                        "item": {
+                                                            "_cId": "04fa0e26748a5a4ba339ac197a5c0076",
+                                                            "testLabel": "objectTypeFilter",
+                                                            "label": "",
+                                                            "instructions": "",
+                                                            "choices": [
+                                                                "Record Type"
+                                                            ],
+                                                            "saveInto": [
+                                                                "<<jA0EAwMC4cXSUge5PDQB0sA3AaF0nb7+5TKn4Vwk4s/i47fld75WCtxD3kFlPM/CT0lmCPN7ejLf\r\ntZJW5Jo+KZ+vPGYgQ/afgbelkObYta4FiuizLZeMH4FkeCxDAFYlX/pePydMA6o3lODQno3VEx6G\r\n68L7KvDxm60mu99F1pWpXU06KyG4gyCPEE4MvE62VW6vLx37VFyjA0y//C+15Erpmrp7jY9/HTR5\r\nVpob/gnQNKW/4xs9qoE8U8grbZwzZtKgzI/dZ0LHktnUlNZgqSjbzNIXQTUNdFaxQwqDx1zMyGWS\r\nJm+rMT0gr8a3GvD1AFMzu1AW39nvEztCg1A1AynM4uS9FAId5A==\r\n>>"
+                                                            ],
+                                                            "labelPosition": "COLLAPSED",
+                                                            "placeholder": "All Object Types",
+                                                            "helpTooltip": "",
+                                                            "width": "",
+                                                            "accessibilityText": "",
+                                                            "#t": "MultipleDropdownField"
+                                                        },
+                                                        "width": ""
+                                                    },
+                                                    {
+                                                        "_cId": "e1057ca1915600ebf3dc66779f75dd70",
+                                                        "item": {
+                                                            "_cId": "d05269e32afb2d2df6d855be727c70e4",
+                                                            "pickerType": "USER",
+                                                            "testLabel": "lastModifiedByFilter",
+                                                            "contents": {
+                                                                "_cId": "12dc73898f009cb32831aae6b5dae826",
+                                                                "hasNoValue": "true",
+                                                                "value": [],
+                                                                "saveInto": [
+                                                                    "<<jA0EAwMC4cXSUge5PDQB0sBHAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD3kF6PMC6T0l22EyPhChm\r\nAoLzi7oz3+vKQ0RWIonPJ3WE8sTUiNlcDl+c3K9fN2FrsDE3s5VaTrAjSVoq+RV8qZZ0tfXBTUHq\r\nAcfRhqMFKyUUcRpSqwY25Xg40zTn1UYR+VUqytDyabOSZ8c1HlByyv61HpwAfgtQ/dn54bqQVDEj\r\nzCvx1yDyHM+ffqTOxce9wD0R91Hy7sExypIcUam4HrAXpRa+6nDAdAGFb93XIXRgavwocqBvPnKY\r\neXTg3RtEflSA7P5WfM91O7p66MW5hTmTqQ+Cax9Mx2RUIO+GR6UwXGr0eBwRfrXQyoJbGvg=\r\n>>"
+                                                                ],
+                                                                "width": "",
+                                                                "placeholder": "Last Modified By",
+                                                                "suggestions": [],
+                                                                "imageSize": "TINY",
+                                                                "imageStyle": "AVATAR",
+                                                                "noResultsLabel": "No results found",
+                                                                "searchingLabel": "Searchingâ€¦",
+                                                                "selectedTokensHint": "No values selected. Start typing to search.",
+                                                                "numSuggestionsHint": "No results found",
+                                                                "accessibilityText": "",
+                                                                "#t": "PickerWidget"
+                                                            },
+                                                            "label": "",
+                                                            "labelPosition": "COLLAPSED",
+                                                            "instructions": "",
+                                                            "instructionsPosition": "",
+                                                            "helpTooltip": "",
+                                                            "requiredStyle": "",
+                                                            "skinName": "",
+                                                            "marginBelow": "",
+                                                            "accessibilityText": "",
+                                                            "#t": "FieldLayout"
+                                                        },
+                                                        "width": ""
+                                                    },
+                                                    {
+                                                        "_cId": "9177a816823b9983a13ede6c28f640d3",
+                                                        "item": {
+                                                            "_cId": "10c312386c46aa3a06eb9dd868cfefc0",
+                                                            "label": "clearFiltersText",
+                                                            "labelPosition": "COLLAPSED",
+                                                            "instructions": "",
+                                                            "value": {
+                                                                "_cId": "b7c49e211177b2fb11e968a381b0e1cd",
+                                                                "values": [
+                                                                    {
+                                                                        "_cId": "1c983846246a60b3c46cedbd028bfd77",
+                                                                        "values": {
+                                                                            "_cId": "725f1f621d39db7fbd68dde8c4a56573",
+                                                                            "values": [
+                                                                                {
+                                                                                    "_cId": "adf15f35cc4dcbaf2df3498661c3204c",
+                                                                                    "icon": "times",
+                                                                                    "iconId": "f00d",
+                                                                                    "altText": "",
+                                                                                    "caption": "",
+                                                                                    "size": "",
+                                                                                    "color": "",
+                                                                                    "#t": "IconWidget"
+                                                                                },
+                                                                                {
+                                                                                    "#v": " ",
+                                                                                    "#t": "string"
+                                                                                },
+                                                                                {
+                                                                                    "#v": " ",
+                                                                                    "#t": "string"
+                                                                                },
+                                                                                {
+                                                                                    "#v": "Clear Filters",
+                                                                                    "#t": "string"
+                                                                                }
+                                                                            ],
+                                                                            "#t": "FormattedText"
+                                                                        },
+                                                                        "link": {
+                                                                            "_cId": "c61f97b52a821af2529d6a43e2b2a1ae",
+                                                                            "testLabel": "clearFiltersLink",
+                                                                            "label": "",
+                                                                            "value": {
+                                                                                "#v": "",
+                                                                                "#t": "string"
+                                                                            },
+                                                                            "saveInto": [
+                                                                                "<<jA0EAwMC4cXSUge5PDQB0sA3AaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvvEMEo9wudnRp/7ZLT\r\nLFjJcJyiDOQYg4fdkMUo5QhBB27W+g5pA1H0ctoF9AhjPHkbCFM8cuEibHXItn6+XfqFncFCynWo\r\nvApbpMJ9yFFUEi+ZqQc71Ukpat0IMSIq0bjpZG3qkymdIQ/vI0PdLn8NVpNqttTcxvoPjZrO2wcc\r\nk3QxsfWz6Ay9j2b3ybR9piKRkwMwY2LAjuQlEglUNOaYUyjPI+1n3UES6EUEV2lCfaEtxNNAgpho\r\nCaJvABclm3KrCzIU80MAP3yZp4a3WBgXU1NstOCRiQamvf4gNQ==\r\n>>"
+                                                                            ],
+                                                                            "tooltip": "",
+                                                                            "href": "",
+                                                                            "#t": "DynamicLink"
+                                                                        },
+                                                                        "linkStyle": "STANDALONE",
+                                                                        "#t": "LinkedItem"
+                                                                    }
+                                                                ],
+                                                                "#t": "FormattedText"
+                                                            },
+                                                            "valueAlignment": "",
+                                                            "helpTooltip": "",
+                                                            "accessibilityText": "",
+                                                            "#t": "RichTextDisplayField"
+                                                        },
+                                                        "width": ""
+                                                    },
+                                                    {
+                                                        "_cId": "508ffbb0109a8745ef59b136f8726439",
+                                                        "item": {
+                                                            "_cId": "31eda83aad775881e0adb5503cc73663",
+                                                            "isButtonArrayLayout": "true",
+                                                            "primaryButtons": [
+                                                                {
+                                                                    "_cId": "ad336f0ebeab2c31986a6f967ad28f36",
+                                                                    "isFlat": "false",
+                                                                    "testLabel": "Refresh",
+                                                                    "tooltip": "Refresh",
+                                                                    "@tooltipStyle": "NATIVE",
+                                                                    "label": "",
+                                                                    "style": "",
+                                                                    "confirmHeader": "",
+                                                                    "confirmMessage": "",
+                                                                    "confirmButtonLabel": "",
+                                                                    "confirmButtonStyle": "PRIMARY",
+                                                                    "cancelButtonLabel": "",
+                                                                    "value": {
+                                                                        "#v": "",
+                                                                        "#t": "string"
+                                                                    },
+                                                                    "saveInto": [
+                                                                        "<<jA0EAwMC4cXSUge5PDQB0sA7AaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvvEMEo9wudnRp/7ZLT\r\nLFjJcJyiDOQYg4fdkMUo5S1rLwEqQWTt2FD9K4o7MpNVOwKl53lpLaPxBW7aKn7nLCadGuGGbCB9\r\nZS7m4Ovv6Qr9ZLEH33nkHq/HQCxXiIrREumi95DvcHKXxFVrdfyY06e2KnnzpajguH6ThBUe1005\r\n336fpQMQSb19Mr/XdI15OY8LBWJzZLDB0zgOdfpIm5lPTa7qd/2Lsl4/AKQpXRkPXoDYHOsHbcxQ\r\nwcev29xms7CCq/MDjvkx7UZi4lNgwFem25QwYKin7nlSBi8HBHNH/RQ=\r\n>>"
+                                                                    ],
+                                                                    "size": "SMALL",
+                                                                    "icon": "REFRESH",
+                                                                    "buttonStyle": "SECONDARY",
+                                                                    "ariaLabel": "",
+                                                                    "skinName": "",
+                                                                    "tooltipStyle": "",
+                                                                    "tooltipVerticalPosition": "",
+                                                                    "tooltipWidth": "",
+                                                                    "accessibilityText": "",
+                                                                    "shape": ""
+                                                                }
+                                                            ],
+                                                            "marginBelow": "",
+                                                            "align": "END",
+                                                            "accessibilityText": "",
+                                                            "#t": "ButtonLayout"
+                                                        },
+                                                        "width": ""
+                                                    }
+                                                ],
+                                                "spacing": "",
+                                                "alignVertical": "MIDDLE",
+                                                "#t": "SideBySideGroup"
+                                            },
+                                            "label": "",
+                                            "labelPosition": "COLLAPSED",
+                                            "instructions": "",
+                                            "instructionsPosition": "",
+                                            "helpTooltip": "",
+                                            "requiredStyle": "",
+                                            "skinName": "",
+                                            "marginBelow": "",
+                                            "accessibilityText": "",
+                                            "#t": "FieldLayout"
+                                        },
+                                        {
+                                            "_cId": "4a0b30e3c58ef6be44358321e27392f2",
+                                            "testLabel": "compareAppDialog",
+                                            "contents": [
+                                                {
+                                                    "_cId": "dd523778ba59f972f36f8d1284cc07eb",
+                                                    "contents": {
+                                                        "_cId": "129d9ece246c580062bea2146d8dc0fe",
+                                                        "label": "",
+                                                        "labelPosition": "",
+                                                        "instructions": "",
+                                                        "helpTooltip": "",
+                                                        "validations": [],
+                                                        "items": [
+                                                            {
+                                                                "_cId": "51f5fadfbf5a1e10a3e325a18df2d5b8",
+                                                                "item": {
+                                                                    "#v": "",
+                                                                    "#t": "string"
+                                                                },
+                                                                "width": ""
+                                                            },
+                                                            {
+                                                                "_cId": "2800e957396c9e24b88160d32e7e564d",
+                                                                "item": {
+                                                                    "_cId": "dce5b37bf7701e76ce7d6009fc2e19e2",
+                                                                    "isButtonArrayLayout": "true",
+                                                                    "primaryButtons": [],
+                                                                    "marginBelow": "",
+                                                                    "align": "END",
+                                                                    "accessibilityText": "",
+                                                                    "#t": "ButtonLayout"
+                                                                },
+                                                                "width": ""
+                                                            }
+                                                        ],
+                                                        "spacing": "",
+                                                        "alignVertical": "MIDDLE",
+                                                        "#t": "SideBySideGroup"
+                                                    },
+                                                    "label": "",
+                                                    "labelPosition": "COLLAPSED",
+                                                    "instructions": "",
+                                                    "instructionsPosition": "",
+                                                    "helpTooltip": "",
+                                                    "requiredStyle": "",
+                                                    "skinName": "",
+                                                    "marginBelow": "NONE",
+                                                    "accessibilityText": "",
+                                                    "#t": "FieldLayout"
+                                                },
+                                                {
+                                                    "_cId": "b805fbca64b11bace663eec459d51333",
+                                                    "hasNoValue": "true",
+                                                    "requiredMessage": "At least one item must be selected",
+                                                    "testLabel": "GRID-LABEL",
+                                                    "nowrap": "true",
+                                                    "label": "",
+                                                    "instructions": "",
+                                                    "columns": [
+                                                        {
+                                                            "version": "1",
+                                                            "_cId": "ae9bb4b296a79d79c7a14b2f74eb0b0d",
+                                                            "@style": "narrow",
+                                                            "label": "",
+                                                            "field": "resource",
+                                                            "data": [
+                                                                {
+                                                                    "_cId": "d28570644d223c28d842603ea49ec573",
+                                                                    "source": "https://an-appian-instance.host.net/suite/applications/img/obj_record40px.png",
+                                                                    "altText": "Record Type",
+                                                                    "caption": "Record Type",
+                                                                    "backgroundColor": "",
+                                                                    "#t": "SafeImageWidget"
+                                                                }
+                                                            ],
+                                                            "size": "ICON",
+                                                            "isThumbnail": false,
+                                                            "style": "",
+                                                            "#t": "GridImageColumn"
+                                                        },
+                                                        {
+                                                            "_cId": "05d1ca50037b74475efabb01e3c991b4",
+                                                            "label": "Name",
+                                                            "helpTooltip": "",
+                                                            "field": "name",
+                                                            "data": [
+                                                                "RR1"
+                                                            ],
+                                                            "alignment": "DEFAULT",
+                                                            "links": [
+                                                                {
+                                                                    "uri": "/suite/design/koBD1iTIu_lxy_3T_t0N8jso0TBdqIf_Y7s5rSaf8oBs2fDl5Pf48oj-V0OxtaArI-Fa3IThl9pgiYU-sgmuweCNZNJZw9Qh7wN0A",
+                                                                    "label": "RR1",
+                                                                    "tooltip": "",
+                                                                    "#t": "SafeLink"
+                                                                }
+                                                            ],
+                                                            "truncateText": true,
+                                                            "weight": 3,
+                                                            "#t": "GridTextColumn"
+                                                        },
+                                                        {
+                                                            "_cId": "78c33cdefca51f868a45d53a31801fa9",
+                                                            "label": "Description",
+                                                            "helpTooltip": "",
+                                                            "field": "description",
+                                                            "data": [
+                                                                ""
+                                                            ],
+                                                            "alignment": "DEFAULT",
+                                                            "truncateText": true,
+                                                            "weight": 5,
+                                                            "#t": "GridTextColumn"
+                                                        },
+                                                        {
+                                                            "_cId": "3548b41a5a5751e1001009a85f1cd138",
+                                                            "label": "Last Modified",
+                                                            "helpTooltip": "",
+                                                            "field": "modifiedAt",
+                                                            "data": [
+                                                                "3/19/2020 5:16 PM by Admin User"
+                                                            ],
+                                                            "alignment": "DEFAULT",
+                                                            "truncateText": true,
+                                                            "weight": 3,
+                                                            "#t": "GridTextColumn"
+                                                        },
+                                                        {
+                                                            "_cId": "c25f7b3f1d9b552348f7cb317d47c8aa",
+                                                            "label": "Status",
+                                                            "helpTooltip": "",
+                                                            "field": "diffStatusSortOrder",
+                                                            "data": [
+                                                                "New"
+                                                            ],
+                                                            "alignment": "DEFAULT",
+                                                            "links": [
+                                                                {
+                                                                    "#v": "",
+                                                                    "#t": "string"
+                                                                }
+                                                            ],
+                                                            "truncateText": true,
+                                                            "weight": 3,
+                                                            "#t": "GridTextColumn"
+                                                        }
+                                                    ],
+                                                    "saveInto": [
+                                                        "<<jA0EAwMC4cXSUge5PDQB0sBDAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvwEMEo9wudGIoibpmH\r\nSEaTdAFQdofPcGtbTuV2c159Lqbcz7yQqwXi4vWFJBdqliRxyfzqzDJ9RSp3AuSQ1Q4QhoOSgbrn\r\nX+hTkTyLToRZoyeyJa0P5m1ftirTb+uB5CMhG2eB1B9PImWEHqn/bIt0lzq9//bP0TCIoz4fAzJ/\r\nMJLhafEANfXpPc/Ur2dFw7jvEG1VsIkaqraIKbZBRvtuvbGof7qGtcbYWQDytALpTOb3Q5ocsod7\r\ndx8K7b2LgMOEYyKo19YYkO1p2pi90Wiq3Q1dPEhjXrTR9GxVSZfvNXJJTaV9d2cUDw==\r\n>>"
+                                                    ],
+                                                    "value": {
+                                                        "selected": [],
+                                                        "pagingInfo": {
+                                                            "startIndex": 1,
+                                                            "batchSize": 20,
+                                                            "sort": [
+                                                                {
+                                                                    "field": "modifiedAt",
+                                                                    "ascending": false
+                                                                },
+                                                                {
+                                                                    "field": "diffStatusSortOrder",
+                                                                    "ascending": true
+                                                                }
+                                                            ]
+                                                        },
+                                                        "#t": "GridSelection"
+                                                    },
+                                                    "totalCount": 1,
+                                                    "identifiers": [
+                                                        {
+                                                            "#v": "021eaff7-b3a6-45ca-9c2b-1f64e79f19f7",
+                                                            "#t": "string"
+                                                        }
+                                                    ],
+                                                    "readOnly": true,
+                                                    "labelPosition": "COLLAPSED",
+                                                    "helpTooltip": "",
+                                                    "emptyGridMessage": "There are no application objects to compare on Appian",
+                                                    "instructionsPosition": "ABOVE",
+                                                    "numRowsToDisplay": 1,
+                                                    "pagingText": "",
+                                                    "firstPageLabel": "First page",
+                                                    "prevPageLabel": "Previous page",
+                                                    "nextPageLabel": "Next page",
+                                                    "lastPageLabel": "Last page",
+                                                    "spacing": "STANDARD",
+                                                    "borderStyle": "STANDARD",
+                                                    "rowStyle": "ZEBRA",
+                                                    "selectionStyle": "CHECKBOX",
+                                                    "height": "",
+                                                    "showJumpControls": false,
+                                                    "accessibilityText": "",
+                                                    "#t": "GridField"
+                                                }
+                                            ],
+                                            "padding": "NONE",
+                                            "#t": "ContentLayout"
+                                        }
+                                    ],
+                                    "padding": "NONE",
+                                    "#t": "ContentLayout"
+                                }
+                            ],
+                            "padding": "NONE",
+                            "#t": "ContentLayout"
+                        }
+                    ],
+                    "padding": "STANDARD",
+                    "#t": "ContentLayout"
+                },
+                "footer": {
+                    "_cId": "fd184015c52ed957c78d8e45bb8eb48c",
+                    "contents": [
+                        {
+                            "_cId": "6282f77a4af168d240839905b313e3b1",
+                            "testLabel": "WizardButtons",
+                            "primaryButtons": [
+                                {
+                                    "_cId": "26f4c3ba19cecfaf9ef930dc98335c74",
+                                    "isFlat": "false",
+                                    "action": "VALIDATE",
+                                    "validate": "true",
+                                    "label": "Next",
+                                    "style": "",
+                                    "confirmHeader": "",
+                                    "confirmMessage": "",
+                                    "confirmButtonLabel": "",
+                                    "confirmButtonStyle": "PRIMARY",
+                                    "cancelButtonLabel": "",
+                                    "disabled": false,
+                                    "value": {
+                                        "#v": "",
+                                        "#t": "string"
+                                    },
+                                    "saveInto": [
+                                        "<<jA0EAwMC4cXSUge5PDQB0sAnAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvvEMEo9wudnRp/7ZLT\r\nLFjJcJyiD+QYg8jOOqkwMNCbWMWsAIk2ruveLrCFHqBnDRnEreYVQIU18YcH8ejQty2Z84cRLVJQ\r\nfxQyT2T8ypCINYA3KmKU7KRn3ZsARzK86sRje/y1LpcakhVVElht/ejOx6QOD4XSRA+RiV8/X3w8\r\nqWDVlt+uW3AcaLYdE49f+6SyZvPXN6fGnE6YXRX9bBm/VFqDFzp2LYEx8S5Cwo0C9W+5mR74AwT9\r\nJVIrzd+s7oKKs5o1HckJYEKNCkJb\r\n>>"
+                                    ],
+                                    "size": "",
+                                    "icon": "",
+                                    "buttonStyle": "PRIMARY",
+                                    "ariaLabel": "",
+                                    "skinName": "",
+                                    "tooltipStyle": "",
+                                    "tooltipVerticalPosition": "",
+                                    "tooltipWidth": "",
+                                    "accessibilityText": "",
+                                    "shape": ""
+                                }
+                            ],
+                            "secondaryButtons": [
+                                {
+                                    "_cId": "a357e0ca3fd99e0b872f88b940ae4a64",
+                                    "isFlat": "false",
+                                    "label": "Back",
+                                    "style": "",
+                                    "confirmHeader": "",
+                                    "confirmMessage": "",
+                                    "confirmButtonLabel": "",
+                                    "confirmButtonStyle": "PRIMARY",
+                                    "cancelButtonLabel": "",
+                                    "value": {
+                                        "#v": "",
+                                        "#t": "string"
+                                    },
+                                    "saveInto": [
+                                        "<<jA0EAwMC4cXSUge5PDQB0sAnAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvvEMEr9w+NX9LS5q6o\r\njoWgskJ6kfHZYOuu8A8v3iwNpHR4Od5FnembnImcVtmncb67TJ+hxclwOMYY8+if2MXMd+vT62KN\r\nsBj4TwtQQMuR2cMgF7siuAx27+Fgd+yp+2Fpu+7DK34cVT/KhFZJ8sC9HKg7QUYkEcd71NRz1upU\r\nTqUFzMMighBU7KeGE8MgAT6k2WwUfsFiaqgt5yvPAlKO12ZVyAj3iUkWzt0O4Ba7wRLA5ep6LSGP\r\nLm3IuzJW0/gZCtSvlropEgcRHr5g\r\n>>"
+                                    ],
+                                    "size": "",
+                                    "icon": "",
+                                    "buttonStyle": "NORMAL",
+                                    "ariaLabel": "",
+                                    "skinName": "",
+                                    "tooltipStyle": "",
+                                    "tooltipVerticalPosition": "",
+                                    "tooltipWidth": "",
+                                    "accessibilityText": "",
+                                    "shape": ""
+                                },
+                                {
+                                    "_cId": "18da79cf29608acd038bd6920d5d70b1",
+                                    "isFlat": "false",
+                                    "label": "Close",
+                                    "style": "",
+                                    "confirmHeader": "",
+                                    "confirmMessage": "",
+                                    "confirmButtonLabel": "",
+                                    "confirmButtonStyle": "PRIMARY",
+                                    "cancelButtonLabel": "",
+                                    "value": {
+                                        "#v": "",
+                                        "#t": "string"
+                                    },
+                                    "saveInto": [
+                                        "<<jA0EAwMC4cXSUge5PDQB0sAjAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WvvEOcr9guNt6DSvnBp\r\n9N+X9/xgHYR63NBuLWrHKB5CXs7TgeiTUJ7A+4tV1UjaKeyy9sG49n5ERb6k5UjD9iehceQcegS4\r\n9FkRNZ0HzY6uhBJjz4qy4GCPF8GmrH1j9uPwEsR0dJgMMeuCaUKYnny6oa0o589u0NchGe/NXG5T\r\nMEnV/6r4JL+ytGOLFOZb4MsRTG1EJ/Ru619YZl3o5aYMrgRgsN+hF7BPLqoZBZriwbxamMrYuA0u\r\nMZRF88iYPZXYtW4MLGTyakc=\r\n>>"
+                                    ],
+                                    "actions": [
+                                        {
+                                            "_cId": "f999c223e58ad87dacdd7a2f4dbd779e",
+                                            "_actionName": "keyboard-shortcuts",
+                                            "keyboard-shortcuts:keys": "Escape",
+                                            "keyboard-shortcuts:fire-in-inputs": "true",
+                                            "testLabel": "shortcut-Close",
+                                            "label": "",
+                                            "value": {
+                                                "#v": "",
+                                                "#t": "string"
+                                            },
+                                            "saveInto": [
+                                                "<<jA0EAwMC4cXSUge5PDQB0sArAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WrvEOco9gudwQUry/w7\r\nSXd8WGRcoSFFirJ8PZ0zV5RRCGt+ZYT7zQ7bn2NygH55wc+Z+wbdB3SVu2WxYs01wqa9jDNtXG4F\r\nXBCwC/1BsiT1zxvEx9VhahUyxbgFgxtApaIH3J7IQZ+Uhs595TvRxMUszGO9v1Zr1gPCfeWdU6lz\r\nZu/wSoPpjLDQJB74giPCzgviuM3VqqeF1a56M1ZFIKbiZkHftxaRvyVfEYdXYvOZ/DUjrpQGBE8D\r\nyWNDOrK42RJ1xFIGnOnX1U5Oy+RoHMbrXw==\r\n>>"
+                                            ],
+                                            "tooltip": "",
+                                            "href": "",
+                                            "#t": "DynamicLink"
+                                        }
+                                    ],
+                                    "size": "",
+                                    "icon": "",
+                                    "buttonStyle": "NORMAL",
+                                    "ariaLabel": "",
+                                    "skinName": "",
+                                    "tooltipStyle": "",
+                                    "tooltipVerticalPosition": "",
+                                    "tooltipWidth": "",
+                                    "accessibilityText": "",
+                                    "shape": ""
+                                }
+                            ],
+                            "marginBelow": "NONE",
+                            "align": "",
+                            "accessibilityText": "",
+                            "#t": "ButtonLayout"
+                        }
+                    ],
+                    "padding": "STANDARD",
+                    "#t": "ContentLayout"
+                },
+                "#t": "HeaderContentFooterLayout"
+            }
+        ],
+        "height": "FIT",
+        "width": "FIT",
+        "#t": "ModalDialogLayout"
+    },
+    "context": {
+        "#v": "jA0EAwMC4cXSUge5PDQB0sAEAZfpFkoHTQJjIT0ofRjekq7xmrz8uRrFk2tkqpnQx4Eglu1/8vkm\r\nAjat/9BoAc3r8KsSrVFEk8CVbHP2O1P6FYDe9GIrp8iv8eO6Z/K2E6jlEJqfOJdTa9qEsdQaCw+0\r\nPlfbzojkptEKQnR0c0xPB3Ep8SJpTzNEX6XwNlc62vKa7N6FGHLNMJ06eNS0knd3VT8cCZQwO85i\r\nB6N6kxf5ruM7CIZ40ear/Q1CxPBskAk5mtvmt+3yMaF3aW3TFKAR9d+Okw==\r\n",
+        "#t": "string"
+    },
+    "uuid": "76df7399-7f24-43b5-bb35-5bda49816b1d",
+    "i18nInfo": {
+        "locale": "en-US",
+        "timezoneId": "GMT",
+        "calendarId": "gregorian",
+        "decimalSeparator": ".",
+        "groupingSeparator": ","
+    },
+    "timers": {
+        "#t": "Dictionary"
+    },
+    "#t": "UiConfig",
+    "#s": {
+        "#v": [
+            {
+                "id": 1952,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MediumText",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MediumText",
+                "description": "",
+                "base": 658,
+                "foundation": 95,
+                "typeof": 1952,
+                "list": 1953,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 1954
+                        }
+                    },
+                    {
+                        "name": "values",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1954,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 1952 (MediumText)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1954,
+                "list": 1955,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1953,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MediumText?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MediumText?list",
+                "description": "List of MediumText",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1952,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1955,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1954,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2486,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}SecondaryText",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "SecondaryText",
+                "description": "",
+                "base": 658,
+                "foundation": 95,
+                "typeof": 2486,
+                "list": 2487,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 2488
+                        }
+                    },
+                    {
+                        "name": "values",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2488,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 2486 (SecondaryText)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 2488,
+                "list": 2489,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2487,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}SecondaryText?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "SecondaryText?list",
+                "description": "List of SecondaryText",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2486,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2489,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2488,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1998,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MultipleDropdownField",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MultipleDropdownField",
+                "description": "",
+                "base": 658,
+                "foundation": 95,
+                "typeof": 1998,
+                "list": 1999,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 2000
+                        }
+                    },
+                    {
+                        "name": "label",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "instructions",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "required",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "disabled",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "choices",
+                        "value": {
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "value": {
+                            "#t": "Integer?list"
+                        }
+                    },
+                    {
+                        "name": "validations",
+                        "value": {
+                            "#t": "ValidationMessage?list"
+                        }
+                    },
+                    {
+                        "name": "saveInto",
+                        "value": {
+                            "#t": "Save?list"
+                        }
+                    },
+                    {
+                        "name": "labelPosition",
+                        "value": {
+                            "#t": "LabelPosition"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "placeholder",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "helpTooltip",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "width",
+                        "value": {
+                            "#t": "ComponentWidth"
+                        }
+                    },
+                    {
+                        "name": "accessibilityText",
+                        "value": {
+                            "#t": "string"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                true,
+                                true,
+                                false,
+                                false,
+                                true,
+                                true,
+                                false,
+                                true,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2000,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 1998 (MultipleDropdownField)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 2000,
+                "list": 2001,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1999,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MultipleDropdownField?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MultipleDropdownField?list",
+                "description": "List of MultipleDropdownField",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1998,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2001,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2000,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            }
+        ],
+        "#t": "DataType?list"
+    },
+    "shortcuts": [
+        {
+            "_cId": "f999c223e58ad87dacdd7a2f4dbd779e",
+            "_actionName": "keyboard-shortcuts",
+            "keyboard-shortcuts:keys": "Escape",
+            "keyboard-shortcuts:fire-in-inputs": "true",
+            "testLabel": "shortcut-Close",
+            "label": "",
+            "value": {
+                "#v": "",
+                "#t": "string"
+            },
+            "saveInto": [
+                "<<jA0EAwMC4cXSUge5PDQB0sArAaF0nb7+5TKn4Vwk4s/i47fld75WCtxD2WrvEOco9gudwQUry/w7\r\nSXd8WGRcoSFFirJ8PZ0zV5RRCGt+ZYT7zQ7bn2NygH55wc+Z+wbdB3SVu2WxYs01wqa9jDNtXG4F\r\nXBCwC/1BsiT1zxvEx9VhahUyxbgFgxtApaIH3J7IQZ+Uhs595TvRxMUszGO9v1Zr1gPCfeWdU6lz\r\nZu/wSoPpjLDQJB74giPCzgviuM3VqqeF1a56M1ZFIKbiZkHftxaRvyVfEYdXYvOZ/DUjrpQGBE8D\r\nyWNDOrK42RJ1xFIGnOnX1U5Oy+RoHMbrXw==\r\n>>"
+            ],
+            "tooltip": "",
+            "href": "",
+            "#t": "DynamicLink"
+        }
+    ],
+    "#u": "<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/>; rel=\"x-sasa-app\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/components/ping.do>; rel=\"x-resume-session\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/app{/appName}{/path*}{?params*}>; rel=\"x-sail-application\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/all>; rel=\"x-sites-all\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/tasks/task/{id}>; rel=\"x-site-task\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/navigation/latest/default>; rel=\"x-default-landing-page\"; dt=\"SafeLink\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/page/{pageUrlStub}/task/{id}>; rel=\"x-site-task-page\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/page{/pageUrlStub}/nav>; rel=\"x-site-page-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/cors>; rel=\"x-cors\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/evaluateComponentTemplate{/templateId}>; rel=\"x-ifcdesigner-evaluatecomponenttemplate\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/record/latest/{%40attributes.%40anyAttribute.opaqueId}/followers>; rel=\"x-record-follow\"; dt=\"SafeLink\",<https://an-appian-instance.host.net/suite/rest/a/navigation/latest/intent{?uri*}>; rel=\"x-intent\"; dt=\"SafeLink\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/pages/{pageUrlStub}/report>; rel=\"x-sites-report\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/nav>; rel=\"x-site-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites>; rel=\"x-site-main\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/task/latest/{taskId}/attributes>; rel=\"x-task-attributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/internal/webapi/releaselock/{objectUuid}/{uiSourceUuid}>; rel=\"x-data-release-object-lock\"; dt=\"UiConfig\""
+}

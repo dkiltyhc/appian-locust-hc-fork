@@ -1,0 +1,22 @@
+[[source]]
+url = 'https://pypi.python.org/simple'
+verify_ssl = true
+name = 'pypi'
+
+[packages]
+locust = "==1.0.2"
+pycodestyle = "==2.5.0"
+mypy = "==0.720"
+
+[dev-packages]
+pytest-cov = "==2.7.1"
+autopep8 = "==1.4.4"
+appian-locust = {editable = true,path = "."}
+twine = "==2.0.0"
+flake8 = "==3.7.9"
+
+[pipenv]
+allow_prereleases = true
+
+[requires]
+python_version = "3.7"

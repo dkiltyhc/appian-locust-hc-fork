@@ -1,0 +1,466 @@
+{
+  "_cId": "a517fc870104e4c2cdf0b817116c1580",
+  "mobileEnabled": "true",
+  "empty": "false",
+  "formType": "START_FORM",
+  "links": [
+    {
+      "href": "https://an-appian-instance.host.net/suite/rest/a/model/latest/8/form",
+      "rel": "update",
+      "title": "Update",
+      "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
+      "method": "POST"
+    },
+    {
+      "href": "https://an-appian-instance.host.net/suite/rest/a/model/latest/8/form",
+      "rel": "self",
+      "title": "Update",
+      "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
+      "method": "GET"
+    },
+    {
+      "href": "https://an-appian-instance.host.net/suite/rest/a/model/latest/8/form",
+      "rel": "self",
+      "title": "Update",
+      "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
+      "method": "POST"
+    },
+    {
+      "href": "https://an-appian-instance.host.net/suite/api/tempo/file",
+      "rel": "upload",
+      "title": "",
+      "method": "POST"
+    },
+    {
+      "href": "https://an-appian-instance.host.net/suite/tempo/file-web/",
+      "rel": "upload-web",
+      "title": "",
+      "method": "POST"
+    }
+  ],
+  "triggers": [],
+  "ui": {
+    "_cId": "fad75b01f6270122375605a85124b15a",
+    "_isAppianInjected": "true",
+    "_dirty": "false",
+    "contents": [
+      {
+        "_cId": "3a6a551f689060e551ad8bb16a36add3",
+        "focusFieldId": "eeb9c31a634b628ee12a8c5e58c9a5c2",
+        "label": "New Customer Service Request",
+        "instructions": "Complete this form to create a new service request for a customer",
+        "buttons": {
+          "_cId": "7b100815c3605d51790f9f4c72c4eff1",
+          "primaryButtons": [
+            {
+              "_cId": "aafc261d31630572f2f2c47faebac79e",
+              "isFlat": "false",
+              "action": "SUBMIT",
+              "validate": "true",
+              "label": "Submit Request",
+              "style": "",
+              "confirmHeader": "",
+              "confirmMessage": "",
+              "confirmButtonLabel": "",
+              "confirmButtonStyle": "PRIMARY",
+              "cancelButtonLabel": "",
+              "disabled": true,
+              "value": {
+                "#v": "",
+                "#t": "string"
+              },
+              "saveInto": [
+                "<<jA0EAwMCb24pCQUucNUB0pEB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcEGBsqJkHqwD/iGo7JJhcA\r\nABaoaqhgrxzl8gJ+nJLpvYG6q7sPnXDqDd0GbePzdhyNoL6w5KF59R+6bh8xU112w0bjn4k7KcSC\r\n9GQajc3YMgh8QitRxeDoYcnINcN99qwnCvian/uaYzQ7zxXTmxpVFBsJN9vA//c9\r\n>>"
+              ],
+              "size": "",
+              "icon": "",
+              "buttonStyle": "PRIMARY",
+              "ariaLabel": "",
+              "skinName": "",
+              "tooltipStyle": "",
+              "tooltipVerticalPosition": "",
+              "tooltipWidth": "",
+              "accessibilityText": "",
+              "shape": ""
+            }
+          ],
+          "secondaryButtons": [
+            {
+              "_cId": "b6a135d1766f1b33681d8408df938e6e",
+              "isFlat": "false",
+              "action": "SUBMIT",
+              "validate": "false",
+              "label": "Cancel",
+              "style": "",
+              "confirmHeader": "",
+              "confirmMessage": "",
+              "confirmButtonLabel": "",
+              "confirmButtonStyle": "PRIMARY",
+              "cancelButtonLabel": "",
+              "value": {
+                "#v": "",
+                "#t": "string"
+              },
+              "saveInto": [
+                "<<jA0EAwMCb24pCQUucNUB0o0B/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcEcxthAB3q3D+u2ri49G7j\r\n9hP0mswDlxEl0sfu2K513TnMAvov2kUpqQvLXDIKIdge5NpimRTEb8FsD3VKcbu1icP5Vh82JQE3\r\n5WI2bUEQUNANaHvHa2tRvzMxd6SscWTRylvcrPu2bNkpcbpEEjkf8hE+2Tk=\r\n>>"
+              ],
+              "size": "",
+              "icon": "",
+              "buttonStyle": "NORMAL",
+              "ariaLabel": "",
+              "skinName": "",
+              "tooltipStyle": "",
+              "tooltipVerticalPosition": "",
+              "tooltipWidth": "",
+              "accessibilityText": "",
+              "shape": ""
+            }
+          ],
+          "marginBelow": "",
+          "align": "",
+          "accessibilityText": ""
+        },
+        "validations": [],
+        "contents": [
+          {
+            "_cId": "91652fb018af30ec102eb7efa6001a5c",
+            "isOldColumnArrayLayout": "true",
+            "columns": [
+              {
+                "_cId": "9a6559b5b8fb11124052da81545b5afa",
+                "contents": [
+                  {
+                    "isCollapsible": "false",
+                    "isInitiallyCollapsed": "false",
+                    "_cId": "42a91c601b30981e4fd26f5307f16e70",
+                    "collapseLabel": "Hide section contents",
+                    "contents": [
+                      {
+                        "_cId": "70cc32a833a8d38d91c259bda5682c11",
+                        "isOldColumnArrayLayout": "true",
+                        "columns": [
+                          {
+                            "_cId": "fbb460aafada2f3622ec1b3659c5fa57",
+                            "contents": [
+                              {
+                                "_cId": "92e0fc6fd04950212c6ca0fb23bc08d9",
+                                "contents": {
+                                  "_cId": "eeb9c31a634b628ee12a8c5e58c9a5c2",
+                                  "hasNoValue": "true",
+                                  "testLabel": "test-1. Select a Customer",
+                                  "required": true,
+                                  "maxSelections": 1,
+                                  "value": [],
+                                  "saveInto": [
+                                    "<<jA0EAwMCb24pCQUucNUB0qEB/cJVwaQsmlJRYM/lzcIsmN8JEpYB+dcFv3LA7YBZIr8BEc+L8KdF\r\nBv0Af2cmpwAW1p6rmZPV7lwitqeAAPzbO2tEofYgHj1c+v+VMuUBsHSMA6Qto7dEzH8r20uwovPH\r\nmh7uizPerDXWiPdaPMx63yilPyhfcQy7uzlLqlIkQCeDS8Pn2tWsRiQjenjPO8K6iu6mDEWWoQDc\r\nzjHfe+fmtQ==\r\n>>"
+                                  ],
+                                  "width": "",
+                                  "placeholder": "",
+                                  "suggestions": [
+                                    {
+                                      "_cId": "ad4faff47d729a27ce4a8821e58c6b50",
+                                      "label": "Alcubierre Taxi Service",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 35,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "46666e06991d694657be7ac0f4a16799",
+                                      "label": "Almach",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 42,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "c3802360d60469d1229d122487d68976",
+                                      "label": "Altair Teas and Coffees",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 49,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "4df07dc32a4e5e6b68a2c6431e0977bf",
+                                      "label": "Antilles Transport",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 29,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "c8cf17d8f4a5ea5de4dc74c195be2500",
+                                      "label": "Boson Banquets and Catering",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 13,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "266230068ba5713277580837a32db86e",
+                                      "label": "Bossk Tourist Adventures",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 25,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "54556e2b24530a03bd0ce1deefc8a3b6",
+                                      "label": "Dengar Dynamics",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 24,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "512874c56603e5757ad1593507e07832",
+                                      "label": "Dune Office Automation",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 14,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "0c6b8b1ea04692ce769429c0c07b02a5",
+                                      "label": "Electra Utilities",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 36,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "5541b192017273732578b5445e1a52b4",
+                                      "label": "Galaxy Corporation",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 8,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "5cbd390c531de6d305883c193c708392",
+                                      "label": "Gemma",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 11,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "5a9dcb6844f83e8de0eb71ea89dde23f",
+                                      "label": "Gliese and Associates",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 7,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "720bf6a50ed51c649d38f193993a0a45",
+                                      "label": "Globex Corporation",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 22,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "15dd7ea6cfe99a3ed478a04b1b603541",
+                                      "label": "Groombridge Cleaning",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 10,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "e8de5bec0bf8b41b9233ef1bc30efaf0",
+                                      "label": "Hamal",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 45,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "5e7770da17a2d74084425ed172507049",
+                                      "label": "Helicon Double Layer Desserts",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 41,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "218d13f44b4e13d4bd351c5325b332a1",
+                                      "label": "Kaku Corn and Feed",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 18,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "be24ca9a85f8d550e5b1cb29da62510c",
+                                      "label": "Kaus Media",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 33,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "aee5627a4edfbacb514f833404d73850",
+                                      "label": "Lorentz and FitzGerald",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 39,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "eb36ff6899118d8127ca01d9c780ad5f",
+                                      "label": "Malakili Animal Care",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 23,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "5d644266b12700640636794dbb3e3a52",
+                                      "label": "Merak ",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 43,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "7f750009f02f9b6d1e5517c551bf12e1",
+                                      "label": "Mira Delivery",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 37,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "9dc22e08da4f559f5499dac43828edb8",
+                                      "label": "Nash Hotels",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 46,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "72468db51ee2732eb7e261421cb1bc9e",
+                                      "label": "Parsec Express",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 2,
+                                        "#t": "int"
+                                      }
+                                    },
+                                    {
+                                      "_cId": "91586d22e2c275dfc483eada588a5675",
+                                      "label": "Peacock Pet Care",
+                                      "description": "",
+                                      "identifier": {
+                                        "#v": 44,
+                                        "#t": "int"
+                                      }
+                                    }
+                                  ],
+                                  "imageSize": "TINY",
+                                  "imageStyle": "STANDARD",
+                                  "noResultsLabel": "No results found",
+                                  "searchingLabel": "Searching…",
+                                  "selectedTokensHint": "No values selected. Start typing to search.",
+                                  "numSuggestionsHint": "25 results available. Use up and down arrow keys to navigate.",
+                                  "accessibilityText": "",
+                                  "#t": "PickerWidget"
+                                },
+                                "label": "1. Select a Customer",
+                                "labelPosition": "ABOVE",
+                                "instructions": "Select a customer to begin the service request",
+                                "instructionsPosition": "",
+                                "helpTooltip": "",
+                                "requiredStyle": "",
+                                "skinName": "",
+                                "marginBelow": "",
+                                "accessibilityText": "",
+                                "#t": "FieldLayout"
+                              }
+                            ],
+                            "align": "",
+                            "width": ""
+                          }
+                        ],
+                        "alignVertical": "",
+                        "layout": "",
+                        "minHeight": "",
+                        "#t": "ColumnArrayLayout"
+                      }
+                    ],
+                    "divider": "",
+                    "errorLabel": "This section contains errors",
+                    "expandLabel": "Show section contents",
+                    "label": "",
+                    "validations": [],
+                    "labelStyle": "",
+                    "skinName": "",
+                    "marginBelow": "",
+                    "accessibilityText": "",
+                    "#t": "SectionLayout2"
+                  }
+                ],
+                "align": "",
+                "width": ""
+              }
+            ],
+            "alignVertical": "",
+            "layout": "",
+            "minHeight": "",
+            "isTopLevelComponent": true,
+            "#t": "ColumnArrayLayout"
+          }
+        ],
+        "layout": "",
+        "width": "",
+        "#t": "FormLayout"
+      }
+    ],
+    "padding": "STANDARD",
+    "#t": "ContentLayout"
+  },
+  "context": {
+    "#v": "jA0EAwMCb24pCQUucNUB0sAkAQSph6tro1jRCsVRyFKVmNDv28TEvYQp81LGT2PiWRoIH+pxWjTQ\r\nThoZNBGaBi7FGgk0LTefgoRufI/d4q/cv1TTUSr5bIlw7vF7QUmAOQ6D1xZ8b/DHgdAtFeZL/C1I\r\nMPp4Brxb5Gfw3BWsWN8PTMIqZ9nc4LYm4enzJPPyBjIok9iB4OnMCZkCFnada87bxDp33yGNCokF\r\nPq2Q53I2E5uW7g3HQgqKCTGEvriukgvf4t5627XEMASWJOsDjEbHVbZYqn5yRl2/gddyEX+vaVrF\r\nxlAHF2oFdEDPtoqQtfIWLBV4\r\n",
+    "#t": "string"
+  },
+  "uuid": "89fa185b-bb8b-4fdd-b23f-84638ab98d3f",
+  "i18nInfo": {
+    "locale": "en-US",
+    "timezoneId": "GMT",
+    "calendarId": "gregorian",
+    "decimalSeparator": ".",
+    "groupingSeparator": ","
+  },
+  "timers": {
+    "#t": "Dictionary"
+  },
+  "#t": "UiConfig",
+  "shortcuts": [],
+  "#u": "<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/>; rel=\"x-sasa-app\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/components/ping.do>; rel=\"x-resume-session\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/app{/appName}{/path*}{?params*}>; rel=\"x-sail-application\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/all>; rel=\"x-sites-all\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/tasks/task/{id}>; rel=\"x-site-task\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/page/{pageUrlStub}/task/{id}>; rel=\"x-site-task-page\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/page{/pageUrlStub}/nav>; rel=\"x-site-page-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/cors>; rel=\"x-cors\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/evaluateComponentTemplate{/templateId}>; rel=\"x-ifcdesigner-evaluatecomponenttemplate\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/pages/{pageUrlStub}/report>; rel=\"x-sites-report\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/nav>; rel=\"x-site-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites>; rel=\"x-site-main\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/task/latest/{taskId}/attributes>; rel=\"x-task-attributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/internal/webapi/releaselock/{objectUuid}/{uiSourceUuid}>; rel=\"x-data-release-object-lock\"; dt=\"UiConfig\""
+}

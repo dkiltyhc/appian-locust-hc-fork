@@ -1,0 +1,57 @@
+{
+    "_cId": "414c8eb91e02ec1617e5d9f0658767d4",
+    "isSystemUi": "true",
+    "_dirty": "false",
+    "sail-navigation-bookmark-url": "/records/view/all",
+    "sail-navigation-endpoint-url": "/rest/a/applications/latest/app/records/view/all",
+    "triggers": [],
+    "ui": {
+        "_cId": "ec11194ecb0560dfbd16116b1bdea706",
+        "contents": [
+            {
+                "_cId": "71d4dc85ba3b4131184669491c776d33",
+                "listStyle": "recordTypes",
+                "feedItems": [
+                    {
+                        "_cId": "d8694450ecbd949a077972094fa55b22",
+                        "image": {
+                            "_cId": "53abecaf44157a79d33a412eeaadd530",
+                            "image": {
+                                "_opaqueId": "icB0K7YxC0UQ2Fhx4pkdRs_sZuXyf65H43_qASZHQiZfsBnmU8w960",
+                                "_cId": "97a1a2510b2505f71a609032079f899f",
+                                "document": {
+                                    "id": 1151,
+                                    "#t": "{http://an-appian-instance.host.net/ae/types/2009}CollaborationDocument"
+                                },
+                                "caption": "",
+                                "altText": "",
+                                "backgroundColor": "",
+                                "#t": "{http://an-appian-instance.host.net/ae/types/2009}DocumentImage"
+                            },
+                            "#t": "{http://an-appian-instance.host.net/ae/types/2009}ImageWrapper"
+                        },
+                        "title": "Commits",
+                        "link": {
+                            "_cId": "11ec603cc2f13bcabfdbbb791a87d779",
+                            "label": "Commits",
+                            "value": {
+                                "_cId": "ee69598ac0631a9158544c72ce528153",
+                                "label": "",
+                                "urlstub": "commit",
+                                "view": "all",
+                                "#t": "{http://an-appian-instance.host.net/ae/types/2009}TempoRecordTypeLink"
+                            },
+                            "rel":"x-web-bookmark",
+                            "#t": "{http://an-appian-instance.host.net/ae/types/2009}CustomLink"
+                        },
+                        "chemicalCharacters": "",
+                        "details": "All commits that have been created on Sprints. Source from Entity",
+                        "#t": "{http://an-appian-instance.host.net/ae/types/2009}RecordFeedItemLayout"
+                    }
+                ],
+                "#t": "{http://an-appian-instance.host.net/ae/types/2009}RecordFeedItemContainer"
+            }
+        ],
+        "title": "Records"
+    }
+}

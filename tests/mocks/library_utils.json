@@ -1,0 +1,48 @@
+{
+    "testset": [
+        {
+            "Test1": [
+                {
+                    "testLabel": "Actions Page"
+                },
+                {
+                    "steps": [
+                        {
+                            "step1": {
+                                "step1_status": "pass"
+                            }
+                        },
+                        {
+                            "step2": {
+                                "step2_status": "fail"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Test2": [
+                {
+                    "testLabel": "News Page"
+                },
+                {
+                    "steps": [
+                        [
+                            {
+                                "step1": {
+                                    "step1_status": "fail"
+                                }
+                            },
+                            {
+                                "step2": {
+                                    "step2_status": "pass"
+                                }
+                            }
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

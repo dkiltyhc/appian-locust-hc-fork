@@ -1,0 +1,8 @@
+{
+    "cluster_domain": "appiancloud.com",
+    "site_name": "site-name",
+    "auth": [
+        "username",
+        "password"
+    ]
+}
