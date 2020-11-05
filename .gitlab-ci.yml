@@ -1,0 +1,25 @@
+image: python:3.7
+stages:
+  - validate
+  - release
+
+Run Unit Tests:
+  stage: validate
+  script:
+    - python3 -m pip install -U pipenv
+    - pipenv install --dev --ignore-pipfile
+    - bin/verify.sh
+
+Release appian-locust to Pypi:
+  only:
+    variables:
+      - $CI_PROJECT_NAMESPACE =~ /^appian-oss.*/
+    refs:
+      - master
+      - tags
+  stage: release
+  before_script:
+    - bin/writeTagToVersionFile.sh
+  script:
+    - echo "Publishing appian-locust Python Package to Pypi"
+    - bin/releaseLib.sh

@@ -2,13 +2,20 @@ import os
 from setuptools import setup, find_packages
 
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 with open(os.path.join('appian_locust', 'VERSION')) as version_file:
     version = version_file.read().strip()
+
 setup(
     name="appian-locust",
     version=version or "UNKNOWN",
     description='Tools and functions to make testing Appian with Locust easier',
     author='Appian Performance & Reliability Engineering Squad',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://gitlab.com/appian-oss/appian-locust",
     packages=find_packages(exclude=["contrib",
                                     "docs",
                                     "tasks",
