@@ -11,12 +11,8 @@ Run Unit Tests:
     - bin/verify.sh
 
 Release appian-locust to Pypi:
-  only:
-    variables:
-      - $CI_PROJECT_NAMESPACE =~ /^appian-oss.*/
-    refs:
-      - master
-      - tags
+  rules:
+    - if: '$CI_COMMIT_TAG != null && $CI_PROJECT_NAMESPACE =~ /^appian-oss.*/ && $CI_COMMIT_REF_NAME == "master"'
   stage: release
   before_script:
     - bin/writeTagToVersionFile.sh
