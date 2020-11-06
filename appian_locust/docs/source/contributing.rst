@@ -1,7 +1,8 @@
 ####################
-Contributing!
+Contributing
 ####################
 
+* Read and agree to our `Contributing Policy <https://gitlab.com/appian-oss/appian-locust/-/blob/master/CONTRIBUTING>`__
 * Fork the `appian-locust <https://gitlab.com/appian-oss/appian-locust>`__ repository
 * Make any desired changes to python files, etc.
 * Commit changes and push to your fork
