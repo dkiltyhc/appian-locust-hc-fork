@@ -1,23 +1,21 @@
-#######################################
-What is the Appian Performance Library?
-#######################################
-
-This is a set of helper libraries built on top of Locust.
-These are tools for interacting with Appian for load testing purposes, as well as a few helpers to store and use configurations when testing.
-
-Here are example capabilities
-
-- Form interactions
-- Logging in and logging out
-- Finding components in a SAIL interface
-- Navigating to records/reports/sites
+.. include:: ../../../README.rst
+  :start-after: what_is_appian_locust-inclusion-begin-do-not-remove
+  :end-before: what_is_appian_locust-inclusion-end-do-not-remove
 
 What is Locust?
-_______________________________________
+_________________________________
 
 It’s an open source python library for doing load testing (think `JMeter <https://jmeter.apache.org/>`_, but in Python).
 It is by default HTTP-driven, but can be made to work with other types of interactions.
 Visit `Locust <https://docs.locust.io/en/stable/>`__ for more information.
+
+Locust has the benefit of relying purely on API requests, which makes it lower overhead than frameworks building
+on Selenium or browser automation libraries. We have also found python to be common denominator across software and quality engineers,
+making it a convenient language for extending the framework and defining tests.
+Locust's model of ``TaskSets`` and ``TaskSequences``, it is easy to compose user operations while maintaining the details in code,
+Appian-Locust builds on this concepts by defining :class:`.AppianTaskSet` and :class:`.AppianTaskSequence`, which layer on Appian-specific
+functionality such as login and session management.
+For more detail information, see the `Appian Locust Guide <basic_usage.html#locust-guide>`__.
 
 
 SAIL Navigation

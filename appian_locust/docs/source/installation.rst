@@ -6,10 +6,18 @@ Install from pypi
 -----------------
 
 The performance library is known by the python package name "appian-locust".
+
+Simple ``pip install``:
+
+.. code-block:: bash
+
+    pip install appian-locust
+
+
 It's recommended to use pipenv to manage dependencies but any dependency management tool
 (poetry, pip, etc.) should work.
 
-If using ``pipenv``, simply run the following:
+If using ``pipenv``, simply start from the following ``Pipfile``:
 
 .. code-block:: toml
 
@@ -21,7 +29,6 @@ If using ``pipenv``, simply run the following:
 
     [pipenv]
     allow_prereleases = true
-
 
 Installing from source
 ----------------------
