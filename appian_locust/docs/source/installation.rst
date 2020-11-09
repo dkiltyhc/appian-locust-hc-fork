@@ -5,7 +5,7 @@ Installation
 Install from pypi
 -----------------
 
-The performance library is known by the python package name "appian-locust".
+This library is available on Pypi, under the python package name "appian-locust".
 
 Simple ``pip install``:
 
