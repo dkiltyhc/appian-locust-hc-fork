@@ -83,9 +83,9 @@ Troubleshooting
 .. quick_start-inclusion-end-do-not-remove
 
 .. contrib-inclusion-begin-do-not-remove
-####################
+********************
 Contributing
-####################
+********************
 
 * Read and agree to our `Contributing Policy <https://gitlab.com/appian-oss/appian-locust/-/blob/master/CONTRIBUTING>`__
 * Fork the `appian-locust <https://gitlab.com/appian-oss/appian-locust>`__ repository
@@ -94,7 +94,7 @@ Contributing
 * Make a merge request to the upstream fork
 
 To test changes
-****************
+-----------------
 In any test-implementation repo where you use appian-locust, change the following (assuming you're using a ``Pipfile``)
 
 .. code-block:: python
