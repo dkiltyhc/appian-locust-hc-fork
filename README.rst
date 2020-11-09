@@ -3,20 +3,29 @@
 What is Appian Locust?
 #######################################
 
-This is a set of helper libraries built on top of Locust.
-These are tools for interacting with Appian for load testing purposes, as well as a few helpers to store and use configurations when testing.
+Appian Locust is a wrapper library around `Locust <https://locust.io>`__ for load testing Appian.
+This library is intended to be used as an alternative to tools such as Jmeter and Load Runner.
 
-Here are example capabilities
+Appian Locust capabilities
 
-- Form interactions
 - Logging in and logging out
-- Finding components in a SAIL interface
+- Form interactions (filling/submitting)
+- Finding and interacting with basic components on a SAIL interface
 - Navigating to records/reports/sites
 
 .. what_is_appian_locust-inclusion-end-do-not-remove
 
 
 For full documentation, visit the `docs page <https://appian-locust.readthedocs.io/en/latest/>`__
+
+.. disclaimer-inclusion-begin-do-not-remove
+**Disclaimer:**
+This library is continuously evolving.
+Currently the main focus is supporting essential use-cases.
+We are happy to accept contributions to further extend functionality, address bug fixes and improve usability.
+Please see the `Contributing <contributing.html>`__ section and feel free to reach out.
+
+.. disclaimer-inclusion-end-do-not-remove
 
 .. quick_start-inclusion-begin-do-not-remove
 ********************
@@ -61,7 +70,7 @@ If everything is set up correctly, you should start to see output from the load 
 * For more examples of different site interactions, see the `example_*.py` files included in this repository.
 * For more in-depth information about the test library, see the rest of this documentation.
 
-Troubleshooting:
+Troubleshooting
 ----------------
 * **"Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known"**
 
@@ -72,3 +81,30 @@ Troubleshooting:
   * check that `auth` specifies a valid username and password combination for the site you're testing on in `example_config.json`.
 
 .. quick_start-inclusion-end-do-not-remove
+
+.. contrib-inclusion-begin-do-not-remove
+####################
+Contributing
+####################
+
+* Read and agree to our `Contributing Policy <https://gitlab.com/appian-oss/appian-locust/-/blob/master/CONTRIBUTING>`__
+* Fork the `appian-locust <https://gitlab.com/appian-oss/appian-locust>`__ repository
+* Make any desired changes to python files, etc.
+* Commit changes and push to your fork
+* Make a merge request to the upstream fork
+
+To test changes
+****************
+In any test-implementation repo where you use appian-locust, change the following (assuming you're using a ``Pipfile``)
+
+.. code-block:: python
+
+    appian-locust = {path="../appian-locust", editable=true}
+
+**NOTE** The path above assumes appian-locust is checked out locally, hence we can use a relative directory path.
+
+And run ``pipenv install --skip-lock`` to allow you to use a local version of appian-locust
+without recreating the lock file. However, remember to use a lock file in your test-implementation repo.
+
+You can run your changes as you would following the :ref:`ways_of_running_locust` section
+.. contrib-inclusion-end-do-not-remove

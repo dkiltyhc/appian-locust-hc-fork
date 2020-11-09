@@ -5,10 +5,27 @@ stages:
 
 Run Unit Tests:
   stage: validate
+  only:
+    - merge_requests
+    - master
   script:
     - python3 -m pip install -U pipenv
     - pipenv install --dev --ignore-pipfile
     - bin/verify.sh
+
+Build Candidate Docs:
+  stage: validate
+  only:
+    - merge_requests
+  artifacts:
+    expose_as: 'Candidate Documentation'
+    paths:
+      - 'appian_locust/docs/build/html/'
+    expire_in: 30 days
+  script:
+    - cd appian_locust/docs
+    - python3 -m pip install -r requirements.txt
+    - make html
 
 Release appian-locust to Pypi:
   rules:

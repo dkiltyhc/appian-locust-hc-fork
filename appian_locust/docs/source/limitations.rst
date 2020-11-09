@@ -2,16 +2,15 @@
 Limitations
 ################
 
-**Disclaimer:** This library is continuously evolving.
-Currently the main focus is on supporting for the essential use-cases.
-We are happy to accept contributions to further extend functionality, address bug fixes and improve usability.
-Please see the `Contributing <contributing.html>`__ section and feel free to reach out.
+.. include:: ../../../README.rst
+  :start-after: disclaimer-inclusion-begin-do-not-remove
+  :end-before: disclaimer-inclusion-end-do-not-remove
 
 Currently *unsupported* Appian Interactions
 ********************************************
 
-* Clicking links with the same name after the first
-* Chained forms
+* Multiple links with the same name on the same page, use labels to differentiate
+* Activity-Chained forms
 * Legacy forms
 
 Limitations when running Locust
