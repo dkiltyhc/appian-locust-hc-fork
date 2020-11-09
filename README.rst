@@ -1,4 +1,5 @@
 .. what_is_appian_locust-inclusion-begin-do-not-remove
+
 #######################################
 What is Appian Locust?
 #######################################
@@ -19,6 +20,7 @@ Appian Locust capabilities
 For full documentation, visit the `docs page <https://appian-locust.readthedocs.io/en/latest/>`__
 
 .. disclaimer-inclusion-begin-do-not-remove
+
 **Disclaimer:**
 This library is continuously evolving.
 Currently the main focus is supporting essential use-cases.
@@ -28,6 +30,7 @@ Please see the `Contributing <contributing.html>`__ section and feel free to rea
 .. disclaimer-inclusion-end-do-not-remove
 
 .. quick_start-inclusion-begin-do-not-remove
+
 ********************
 Quick Start Guide
 ********************
@@ -83,6 +86,7 @@ Troubleshooting
 .. quick_start-inclusion-end-do-not-remove
 
 .. contrib-inclusion-begin-do-not-remove
+
 ********************
 Contributing
 ********************
@@ -106,5 +110,7 @@ In any test-implementation repo where you use appian-locust, change the followin
 And run ``pipenv install --skip-lock`` to allow you to use a local version of appian-locust
 without recreating the lock file. However, remember to use a lock file in your test-implementation repo.
 
-You can run your changes as you would following the :ref:`ways_of_running_locust` section
+Now you can test your changes as you normally would.
+
 .. contrib-inclusion-end-do-not-remove
+
