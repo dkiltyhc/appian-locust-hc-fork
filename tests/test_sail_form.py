@@ -141,6 +141,57 @@ class TestSailUiForm(unittest.TestCase):
         with self.assertRaises(Exception):
             resp = sail_form.fill_picker_field(label, value)
 
+    def test_upload_document_invalid_component(self) -> None:
+        with self.assertRaisesRegex(Exception, 'Provided component was not a FileUploadWidget'):
+            label = 'my_label'
+            ui = {
+                'contents': [
+
+                    {
+                        "contents": {
+                            "label": label,
+                            "#t": "Some other thing"
+                        },
+                        "label": label,
+                        "labelPosition": "ABOVE",
+                        "instructions": "",
+                        "instructionsPosition": "",
+                        "helpTooltip": "Upload an application or a multi-patch package",
+                        "requiredStyle": "",
+                        "skinName": "",
+                        "marginBelow": "",
+                        "accessibilityText": "",
+                        "#t": "FieldLayout"
+                    },
+                ]
+            }
+            sail_form = SailUiForm(self.task_set.appian.interactor, ui, "/suite/rest/a/model/latest/8/form")
+            sail_form.upload_document_to_upload_field(label, 'fake_file')
+
+    def test_upload_document_missing_file(self) -> None:
+        file = 'fake_file'
+        with self.assertRaisesRegex(Exception, f"No such file or directory: '{file}'"):
+            label = 'my_label'
+            ui = {
+                'contents': [
+
+                    {
+                        "label": label,
+                        "labelPosition": "ABOVE",
+                        "instructions": "",
+                        "instructionsPosition": "",
+                        "helpTooltip": "Upload an application or a multi-patch package",
+                        "requiredStyle": "",
+                        "skinName": "",
+                        "marginBelow": "",
+                        "accessibilityText": "",
+                        "#t": "FileUploadWidget"
+                    },
+                ]
+            }
+            sail_form = SailUiForm(self.task_set.appian.interactor, ui, "/suite/rest/a/model/latest/8/form")
+            sail_form.upload_document_to_upload_field(label, file)
+
 
 if __name__ == '__main__':
     unittest.main()

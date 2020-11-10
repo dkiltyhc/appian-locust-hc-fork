@@ -664,21 +664,27 @@ class SailUiForm:
         component = find_component_by_attribute_in_dict(
             'label', label, self.state)
 
-        # Inner component is the upload field
         self._validate_component_found(component, label)
 
-        inner_component = component['contents']
-        is_encrypted = inner_component.get("isEncrypted", False)
+        # Inner component can be the upload field
+        if component.get('#t') != 'FileUploadWidget' and 'contents' in component:
+            component = component['contents']
+
+        # Check again to see if the wrong component
+        if component.get('#t') != 'FileUploadWidget':
+            raise Exception(f"Provided component was not a FileUploadWidget, was instead of type '{component.get('#t')}'")
+
+        is_encrypted = component.get("isEncrypted", False)
 
         if not os.path.exists(file_path):
             raise FileNotFoundError(errno.ENOENT, os.strerror(errno.ENOENT), file_path)
         doc_id = self.interactor.upload_document_to_server(file_path, is_encrypted=is_encrypted)
         locust_label = locust_request_label or f"{self.breadcrumb}.FileUpload.{label}"
         new_state = self.interactor.upload_document_to_field(
-            self.form_url, inner_component, self.context, self.uuid, doc_id=doc_id, locust_label=locust_label)
+            self.form_url, component, self.context, self.uuid, doc_id=doc_id, locust_label=locust_label)
         if not new_state:
             raise Exception(
-                f"No response returned when trying to check checkbox with testLabel '{label}'")
+                f"No response returned when trying to upload file to field '{label}'")
         return self._reconcile_and_produce_new_form(new_state)
 
     @raises_locust_error("uiform.py/move_to_end_of_paging_grid()")
