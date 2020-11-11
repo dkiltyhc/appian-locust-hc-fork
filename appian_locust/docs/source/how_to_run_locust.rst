@@ -42,10 +42,9 @@ If you supply no arguments to ``locust`` other than the locustfile, Locust will 
 
 If you navigate to http://localhost:8089/ you’ll see the following:
 
-TODO update picture to give generic hostname
 .. image:: _images/locust_web.png
-:width: 400
-:alt: Alternative text
+  :width: 300
+  :alt: Locust web view
 
 These arguments map to the same arguments described in the :ref:`command_line_flow_args` section.
 
