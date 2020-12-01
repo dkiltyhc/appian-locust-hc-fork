@@ -34,30 +34,38 @@ These tasks are composed within a class called a TaskSet, which can be unordered
 
 
 
-These together form a locustfile. You can see an example file [here](https://gitlab.com/appian-oss/appian-locust/-/blob/master/example_locustfile.py).
+These together form a locustfile. You can see an example file `here <https://gitlab.com/appian-oss/appian-locust/-/blob/master/example_locustfile.py>`_.
 
-TaskSequence
+SequentialTaskSet
 ********************************************
-A TaskSequence is similar to a TaskSet, except it allows you to specify the order in which tests should be run.
+A SequentialTaskSet is a TaskSet whose tasks will be executed in the order that they are declared. It is possible to nest SequentialTaskSets within a TaskSet and vice versa.
 
 .. code-block:: python
 
-    class TestTaskSequence(AppianTaskSequence):
-        def on_start(self):
+    class OrderedEndToEndTaskSequence(AppianTaskSequence):
+        @task
+        def nav_to_random_site(self):
             pass
 
-        @seq_task(1)
-        def get_front_page(self):
-            self.client.get('/')
+        @task
+        @repeat(5, WAIT_TIME)
+        def nav_to_specific_site(self):
+            pass
 
-        @seq_task(2)
-        @task(2)
-        def get_help_page(self):
-            self.client.get('/help')
+        @task
+        @repeat(10, WAIT_TIME)
+        def increment_iteration_counter(self):
+            if self.iterations >= max_iterations:
+                logger.info(f"Stopping the Locust runner")
+                ENV.runner.greenlet.kill(block=True)
+            else:
+                logger.info(f"Incrementing the iteration set counter")
+                self.iterations += 1
 
-- `@seq_task` defines the order of the tasks by the value passed in to this decorator. In the example above ``get_front_page`` will execute before ``get_help_page``.
-- Along with the ``seq_task`` decorator, one can also define an ``@task`` decorator with a value specifying how many times the given task should execute.
-- A Locust-spawned user will repeatedly execute tasks in the order and with the frequency specified by these annotations until the test completes.
+- A Locust-spawned user will repeatedly execute tasks in the order and with the frequency specified by `@repeat` annotation. In this case test will have to be stopped
+  manually by the dev based on some condition. Usually it can be based on a set number of iterations as shown by the example above.
+- `WAIT_TIME` passed into @repeat decorator will make sure there is set amount of time between the repetitions of a particular task.
+- Taks which do not have the @repeat decorator will only execute one during their turn.
 
 HttpUser
 ********************************************
