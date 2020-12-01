@@ -228,7 +228,7 @@ class SailUiForm:
     @raises_locust_error("uiform.py/fill_picker_field()")
     def fill_picker_field(self, label: str, value: str, fill_request_label: str = "", pick_request_label: str = "") -> 'SailUiForm':
         """
-        Enters the value in the picker widget and on the form, selects the seggested item
+        Enters the value in the picker widget and on the form, selects the suggested item
         if the widget is present with the following label (case sensitive)
         Otherwise throws a NotFoundException
 
