@@ -382,7 +382,7 @@ class SailUiForm:
         If no link is found, throws a ComponentNotFoundException
 
         Args:
-            label(str): Label of the dropdown
+            label(str): Label of the link
             site_name(str): Name of the site (i.e. the Sites feature)
             page_name(str): Name of the page within the site
 
@@ -417,12 +417,11 @@ class SailUiForm:
     @raises_locust_error("uiform.py/click_start_process_link_on_mobile()")
     def click_start_process_link_on_mobile(self, label: str, site_name: str, page_name: str, locust_request_label: str = "") -> 'SailUiForm':
         """
-        Selects a dropdown item on the form
-        If no dropdown found, throws a NotFoundException
-        If no element found, throws a ChoiceNotFoundException
+        Clicks a start process link on the form by label (for Mobile)
+        If no link is found, throws a ComponentNotFoundException
 
         Args:
-            label(str): Label of the dropdown
+            label(str): Label of the link
             site_name(str): Name of the site (i.e. the Sites feature)
             page_name(str): Name of the page within the site
 
@@ -446,7 +445,7 @@ class SailUiForm:
         If no link is found, throws a ComponentNotFoundException
 
         Args:
-            label(str): Label of the dropdown
+            label(str): Label of the related action
 
         Keyword Args:
             locust_request_label(str): Label used to identify the request for locust statistics
