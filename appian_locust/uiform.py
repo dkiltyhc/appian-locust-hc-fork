@@ -487,7 +487,7 @@ class SailUiForm:
         return self._reconcile_and_produce_new_form(new_state, form_url=reeval_url)
 
     @raises_locust_error("uiform.py/select_dropdown_item()")
-    def select_dropdown_item(self, label: str, choice_label: str, locust_request_label: str = "") -> 'SailUiForm':
+    def select_dropdown_item(self, label: str, choice_label: str, locust_request_label: str = "", is_test_label: bool = False) -> 'SailUiForm':
         """
         Selects a dropdown item on the form
         If no dropdown found, throws a NotFoundException
@@ -496,6 +496,8 @@ class SailUiForm:
         Args:
             label(str): Label of the dropdown
             choice_label(str): Label of the dropdown item to select
+            is_test_label(bool): If you are interacting with a dropdown via a test label instead of a label, set this boolean to true.
+                                 User filters on a record instance list use test labels.
 
         Keyword Args:
             locust_request_label(str): Label used to identify the request for locust statistics
@@ -507,8 +509,9 @@ class SailUiForm:
             >>> form.select_dropdown_item('MyDropdown', 'My First Choice')
 
         """
+        attribute_to_find = 'testLabel' if is_test_label else 'label'
         component = find_component_by_attribute_in_dict(
-            'label', label, self.state)
+            attribute_to_find, label, self.state)
 
         self._validate_component_found(component, label)
 
