@@ -35,15 +35,15 @@ class TestRecords(unittest.TestCase):
             self.task_set.on_start()
 
         self.custom_locust.set_response("/suite/rest/a/applications/latest/app/records/view/all", 200,
-                                        TestRecords.record_types)
+                                        self.record_types)
         self.custom_locust.set_response("/suite/rest/a/sites/latest/D6JMim/pages/records/recordType/commit", 200,
-                                        TestRecords.records)
+                                        self.records)
         self.custom_locust.set_response("/suite/rest/a/applications/latest/legacy/tempo/records/type/commit/view/all", 200,
-                                        TestRecords.records)
+                                        self.records)
         self.custom_locust.set_response(
             "/suite/rest/a/sites/latest/D6JMim/page/records/record/lQB0K7YxC0UQ2Fhx4pmY1F49C_MjItD4hbtRdKDmOo6V3MOBxI47ipGa_bJKZf86CLtvOCp1cfX-sa2O9hp6WTKZpbGo5MxRaaTwMkcYMeDl8kN8Hg/view/summary",
             200,
-            TestRecords.record_summary_view)
+            self.record_summary_view)
 
     def tearDown(self) -> None:
         self.task_set.on_stop()
