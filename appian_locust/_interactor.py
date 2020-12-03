@@ -533,6 +533,7 @@ class _Interactor:
             .context(context)\
             .uuid(uuid)\
             .value(new_value)\
+            .record_url_stub(self._get_record_instance_list_url_stub(post_url))\
             .build()
 
         locust_label = label or f'Select \'{dropdown["label"]}\' Dropdown'
@@ -858,7 +859,7 @@ class _Interactor:
                 uuid: the uuid parsed from the json response
                 context_label: the label to be displayed by locust for this action
 
-            Returns: the response of post operation as jso
+            Returns: the response of post operation as json
         """
         url_stub = post_url.split('/')[-1]
         payload = save_builder()\
@@ -874,6 +875,19 @@ class _Interactor:
         )
         resp.raise_for_status()
         return resp.json()
+
+    def _get_record_instance_list_url_stub(self, post_url: str) -> Optional[str]:
+        """
+            Given post_url, returns the URL stub IF the url matches the url for a record instance list.
+            If, not returns None.
+
+            Args:
+                post_url: the url (not including the host and domain) to post to
+
+            Returns: The url stub if post_url matches a record instance list url, otherwise None
+        """
+        record_url_match = match(r'[\S]+\/pages\/records\/recordType\/([\w]+)', post_url)
+        return record_url_match.groups()[0] if record_url_match else None
 
 
 class DataTypeCache(object):

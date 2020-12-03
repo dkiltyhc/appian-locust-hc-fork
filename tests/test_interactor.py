@@ -293,7 +293,7 @@ class TestInteractor(unittest.TestCase):
         default_header = self.task_set.appian.interactor.setup_request_headers()
         self.assertEqual(default_header["User-Agent"], self.default_user_agent)
 
-        # Swith to mobile
+        # Switch to mobile
         self.task_set.appian.interactor.set_user_agent_to_mobile()
         new_header = self.task_set.appian.interactor.setup_request_headers()
         self.assertNotEqual(new_header, default_header)
@@ -305,3 +305,33 @@ class TestInteractor(unittest.TestCase):
 
         # Then
         self.assertEqual(new_header, default_header)
+
+    def test_get_record_instance_list_url_stub_from_record_instance_list_url(self) -> None:
+        # Given a record instance list url
+        record_instance_list_url = '/suite/rest/a/sites/latest/D6JMim/pages/records/recordType/1vM_9A'
+
+        # Attempt to get url stub
+        record_instance_list_url_stub = self.task_set.appian.interactor._get_record_instance_list_url_stub(record_instance_list_url)
+
+        # Then the record instance list url has its stub returned
+        self.assertEqual(record_instance_list_url_stub, '1vM_9A')
+
+    def test_get_record_instance_list_url_stub_from_record_type_list_url(self) -> None:
+        # Given a record type list url
+        record_type_list_url = '/suite/rest/a/applications/latest/legacy/sites/D6JMim/page/records'
+
+        # Attempt to get url stub
+        record_type_list_url_stub = self.task_set.appian.interactor._get_record_instance_list_url_stub(record_type_list_url)
+
+        # Then None is returned
+        self.assertIsNone(record_type_list_url_stub)
+
+    def test_get_record_instance_list_url_stub_from_record_instance_url(self) -> None:
+        # Given a record instance url
+        record_instance_url = '/suite/rest/a/sites/latest/D6JMim/page/records/record/lQBU8YV4nEFVwMuczMM/view/summary'
+
+        # Attempt to get url stub
+        record_instance_url_stub = self.task_set.appian.interactor._get_record_instance_list_url_stub(record_instance_url)
+
+        # Then None is returned
+        self.assertIsNone(record_instance_url_stub)

@@ -34,7 +34,7 @@ class _SaveRequestBuilder:
         self._value = value
         return self
 
-    def record_url_stub(self, record_url_stub: str) -> '_SaveRequestBuilder':
+    def record_url_stub(self, record_url_stub: Optional[str]) -> '_SaveRequestBuilder':
         self._record_url_stub = record_url_stub
         return self
 
