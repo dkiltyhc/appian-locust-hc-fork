@@ -1,6 +1,6 @@
 from ._base import _Base
 from ._interactor import _Interactor
-from .helper import format_label, find_component_by_attribute_in_dict, log_locust_error
+from .helper import format_label
 from .records_helper import get_all_records_from_json, get_record_summary_view_response
 from .uiform import SailUiForm
 from typing import Dict, Tuple, Any, Optional
@@ -255,6 +255,25 @@ class _Records(_Base):
             record_type = self._get_random_record_type()
 
         return self._record_type_list_request(record_type)
+
+    def visit_record_instance_and_get_feed_form(self, record_type: str = "", record_name: str = "", exact_match: bool = True) -> SailUiForm:
+        """
+        This function calls the API for the specific record view/instance and returns a SAILUiForm object for "feed" response.
+        The returned SailUiForm object can then be used to get header response by using calling get_record_header_form(). The header form
+        should have related actions available to interact with.
+
+        Args:
+            record_type (str): Record Type Name. If not specified, a random record type will be selected.
+            record_name (str): Name of the record to be called. If not specified, a random record will be selected.
+            exact_match (bool, optional): Should record type and record name matched exactly as it is or partial match.
+
+        Returns: Custom SailUiForm object that can interact with Appian forms. Use this object to fill textfields, click links/buttons, etc...
+        """
+        # view_url_stub does not matter in case of feed response for a record instance. Feed Response for each tab on an record instance is the same
+        # no matter which dashboard is selected.
+        form_json, form_uri = self.visit_record_instance(record_type, record_name, view_url_stub="summary", exact_match=exact_match)
+        breadcrumb = f'Records.{record_type}.{record_name}.Feed'
+        return SailUiForm(self.interactor, form_json, form_uri, breadcrumb=breadcrumb)
 
     def visit_record_instance_and_get_form(self, record_type: str = "", record_name: str = "", view_url_stub: str = "", exact_match: bool = False) -> SailUiForm:
         """

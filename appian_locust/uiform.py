@@ -228,7 +228,7 @@ class SailUiForm:
     @raises_locust_error("uiform.py/fill_picker_field()")
     def fill_picker_field(self, label: str, value: str, fill_request_label: str = "", pick_request_label: str = "") -> 'SailUiForm':
         """
-        Enters the value in the picker widget and on the form, selects the seggested item
+        Enters the value in the picker widget and on the form, selects the suggested item
         if the widget is present with the following label (case sensitive)
         Otherwise throws a NotFoundException
 
@@ -382,7 +382,7 @@ class SailUiForm:
         If no link is found, throws a ComponentNotFoundException
 
         Args:
-            label(str): Label of the dropdown
+            label(str): Label of the link
             site_name(str): Name of the site (i.e. the Sites feature)
             page_name(str): Name of the page within the site
 
@@ -417,12 +417,11 @@ class SailUiForm:
     @raises_locust_error("uiform.py/click_start_process_link_on_mobile()")
     def click_start_process_link_on_mobile(self, label: str, site_name: str, page_name: str, locust_request_label: str = "") -> 'SailUiForm':
         """
-        Selects a dropdown item on the form
-        If no dropdown found, throws a NotFoundException
-        If no element found, throws a ChoiceNotFoundException
+        Clicks a start process link on the form by label (for Mobile)
+        If no link is found, throws a ComponentNotFoundException
 
         Args:
-            label(str): Label of the dropdown
+            label(str): Label of the link
             site_name(str): Name of the site (i.e. the Sites feature)
             page_name(str): Name of the page within the site
 
@@ -446,7 +445,7 @@ class SailUiForm:
         If no link is found, throws a ComponentNotFoundException
 
         Args:
-            label(str): Label of the dropdown
+            label(str): Label of the related action
 
         Keyword Args:
             locust_request_label(str): Label used to identify the request for locust statistics
@@ -454,7 +453,15 @@ class SailUiForm:
         Returns (SailUiForm): The latest state of the UiForm
 
         Examples:
-            >>> form.click_related_action('Request upgrade',,
+            How to use click_related_action():
+            Use records function - visit_record_instance_and_get_feed_form() to get Record Instance SailUiForm, then get the header response
+            and finally click on the related action by label.
+
+            >>> feed_form = records.visit_record_instance_and_get_feed_form()
+
+            >>> header_form = feed_form.get_record_header_form()
+
+            >>> header_form.click_related_action('Request upgrade')
 
         """
         component = find_component_by_attribute_in_dict('label', label, self.state)

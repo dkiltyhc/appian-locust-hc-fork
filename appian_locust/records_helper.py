@@ -41,6 +41,9 @@ def get_all_records_from_json(json_response: Dict[str, Any]) -> Tuple[Dict[str, 
 
 
 def get_record_summary_view_response(form_json: Dict[str, Any]) -> str:
+    """
+        This returns the contents of "x-embedded-summary" from Record Instance's Feed response
+    """
     # SAIL Code for the Record Summary View is embedded within the response.
     record_summary_response = find_component_by_attribute_in_dict("name", "x-embedded-summary", form_json).get("children")
     if not record_summary_response or len(record_summary_response) < 1:
@@ -52,6 +55,10 @@ def get_record_summary_view_response(form_json: Dict[str, Any]) -> str:
 
 
 def get_record_header_response(form_json: Dict[str, Any]) -> str:
+    """
+        This returns the contents of "x-embedded-header" from Record Instance's Feed response.
+        Header response is needed in cases like clicking on a related action.
+    """
     # SAIL Code for the Record Header is embedded within the response.
     record_header_response = find_component_by_attribute_in_dict("name", "x-embedded-header", form_json).get("children")
     if not record_header_response or len(record_header_response) < 1:
