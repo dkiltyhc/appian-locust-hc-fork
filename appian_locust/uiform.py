@@ -453,7 +453,15 @@ class SailUiForm:
         Returns (SailUiForm): The latest state of the UiForm
 
         Examples:
-            >>> form.click_related_action('Request upgrade',,
+            How to use click_related_action():
+            Use records function - visit_record_instance_and_get_feed_form() to get Record Instance SailUiForm, then get the header response
+            and finally click on the related action by label.
+
+            >>> feed_form = records.visit_record_instance_and_get_feed_form()
+
+            >>> header_form = feed_form.get_record_header_form()
+
+            >>> header_form.click_related_action('Request upgrade')
 
         """
         component = find_component_by_attribute_in_dict('label', label, self.state)
