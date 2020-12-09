@@ -1,11 +1,28 @@
-import unittest
+import json
 import time
+import unittest
 from typing import List
 
-from appian_locust.helper import repeat
+from appian_locust.helper import (find_component_by_attribute_in_dict,
+                                  find_component_by_label_and_type_dict,
+                                  repeat)
+
+from .mock_reader import read_mock_file
 
 
 class TestHelper(unittest.TestCase):
+    form_dict = json.loads(read_mock_file("test_response.json"))
+
+    def test_find_component_by_label_and_type(self) -> None:
+        component = find_component_by_label_and_type_dict('label', 'Log Contacts', 'StartProcessLink', self.form_dict)
+        # finds first component with that label and type
+        self.assertEqual(component['cacheKey'], '3ba597c4-1eaf-42ef-947a-698397169f9c')
+        self.assertEqual(component['processModelOpaqueId'], 'iMB8GmxIr5iZT6YnVyo69ieCl0Uw2I5NY9p4g4W9_3ZRs-8MA')
+
+    def test_find_component_by_attribute_in_dict(self) -> None:
+        component = find_component_by_attribute_in_dict('label', 'Log Contacts', self.form_dict)
+        # finds first component by that label
+        self.assertEqual(component['#t'], 'RichTextDisplayField')
 
     def test_repeat_decorator(self) -> None:
         # Given

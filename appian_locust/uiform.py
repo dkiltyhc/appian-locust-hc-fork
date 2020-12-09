@@ -8,15 +8,18 @@ from functools import wraps
 from typing import Any, Callable, Dict, List, Optional
 from urllib.parse import urlparse
 
+from appian_locust.records_helper import _is_grid
+
+from . import logger
 from ._grid_interactor import GridInteractor
 from ._interactor import _Interactor
 from ._ui_reconciler import UiReconciler
 from .helper import (extract_all_by_label, extract_item_by_label,
                      find_component_by_attribute_in_dict,
-                     find_component_by_index_in_dict, log_locust_error)
-from .records_helper import get_record_header_response, get_record_summary_view_response
-from . import logger
-from appian_locust.records_helper import _is_grid
+                     find_component_by_index_in_dict,
+                     find_component_by_label_and_type_dict, log_locust_error)
+from .records_helper import (get_record_header_response,
+                             get_record_summary_view_response)
 
 KEY_UUID = "uuid"
 KEY_CONTEXT = "context"
@@ -396,7 +399,8 @@ class SailUiForm:
             >>> form.click_start_process_link('Request upgrade')
 
         """
-        component = find_component_by_attribute_in_dict('label', label, self.state)
+
+        component = find_component_by_label_and_type_dict('label', label, 'StartProcessLink', self.state)
         self._validate_component_found(component, label)
 
         process_model_opaque_id = component.get("processModelOpaqueId", "")

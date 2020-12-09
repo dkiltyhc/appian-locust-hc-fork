@@ -161,6 +161,32 @@ def find_component_by_attribute_in_dict(attribute: str, value: str, component_tr
         return val
 
 
+def find_component_by_label_and_type_dict(attribute: str, value: str, type: str, component_tree: Dict[str, Any]) -> Any:
+    """
+    Find a UI component by the given attribute (like label) in a dictionary, and the type of the component as well.
+    (`#t` should match the type value passed in)
+    It only returns the first match in a depth first search of the json tree.
+    It returns the dictionary that contains the given attribute with the given label and type
+    or returns None when not found.
+
+    Args:
+        label: label of the component to search
+        value: the value of the label
+        type: Type of the component (TextField, StartProcessLink etc.)
+        component_tree: the json response.
+
+    Returns:
+        the json object of the component or None if none is found
+
+    Example:
+        >>> find_component_by_label_and_type_dict('label', 'MyLabel', 'StartProcessLink', self.json_response)
+
+    """
+    for val in extract(component_tree, attribute, value):
+        if (('#t' in val) and (val['#t'] == type)):
+            return val
+
+
 def find_component_by_index_in_dict(attribute: str, index: int, component_tree: Dict[str, Any]) -> Any:
     """
     Find a UI component by the index of a given component ("RadioButtonField" for example) in a dictionary
