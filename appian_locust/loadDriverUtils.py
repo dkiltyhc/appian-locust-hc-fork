@@ -3,8 +3,7 @@ import os
 from . import logger
 
 default_config = {
-    "site_name": "replace-me",
-    "cluster_domain": "host.net",
+    "host_address": "replace-me.host.net",
     "cluster_size": 1,
     "tests": "all",
     "run_time_in_secs": 300,
