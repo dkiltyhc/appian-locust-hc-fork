@@ -107,8 +107,7 @@ A minimal `config.json` looks like:
 .. code-block:: json
 
     {
-        "cluster_domain": "appiancloud.com",
-        "site_name": "site-name",
+        "host_address": "site-name.appiancloud.com",
         "auth": [
             "user.name",
             "password"

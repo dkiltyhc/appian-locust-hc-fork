@@ -81,7 +81,6 @@ class RecordsUserActor(HttpUser):
     # for each task run, ie this script has no waiting by default.
     wait_time = between(0.500, 0.500)
 
-    host = "https://" + utls.c["site_name"] + "." + \
-        utls.c.get("cluster_domain", "appiancloud.com")
+    host = "https://" + utls.c['host_address']
     auth = utls.c["auth"]
     config = utls.c

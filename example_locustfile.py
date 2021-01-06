@@ -23,6 +23,6 @@ class UserActor(HttpUser):
             config = json.load(config_file)
     else:
         raise Exception("No config.json found")
-    host = f'https://{config["site_name"]}.{config["cluster_domain"]}'
+    host = f'https://{config["host_address"]}'
     auth = config["auth"]
     wait_time = between(0.500, 0.500)

@@ -48,14 +48,13 @@ Setup
 
 2. Configure your test to point at the Appian instance you will be using. In `example_config.json`:
 
-  - Set `site_name` and `cluster_domain` to the address of your Appian instance.
+  - Set `host_address` to the address of your Appian instance.
   - In `auth`, specify the username and password of the user account to use.
 
   .. code-block:: json
 
       {
-          "cluster_domain": "appiancloud.com",
-          "site_name": "site-name",
+          "host_address": "site-name.appiancloud.com",
           "auth": [
               "user.name",
               "password"
@@ -77,7 +76,7 @@ Troubleshooting
 ----------------
 * **"Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known"**
 
-  * check that `cluster_domain` and `site_name` are specified correctly in `example_config.json`.
+  * check that `host_address` is specified correctly in `example_config.json`.
 
 * **"Login unsuccessful, no multipart cookie found...make sure credentials are correct"**
 
