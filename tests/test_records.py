@@ -7,6 +7,7 @@ from appian_locust import AppianTaskSet, logger
 from appian_locust.uiform import SailUiForm
 from locust import Locust, TaskSet
 
+from requests.exceptions import HTTPError
 from tests.mock_client import CustomLocust
 from tests.mock_reader import read_mock_file
 
@@ -51,6 +52,13 @@ class TestRecords(unittest.TestCase):
     def test_records_get_all(self) -> None:
         all_records = self.task_set.appian.records.get_all()
         self.assertIsInstance(all_records, dict)
+
+    def test_records_get_all_http_error(self) -> None:
+        self.custom_locust.set_response("/suite/rest/a/sites/latest/D6JMim/pages/records/recordType/commit", 500,
+                                        self.records)
+        with(self.assertLogs(level="WARN")) as msg:
+            self.task_set.appian.records.get_all()
+        self.assertIn("HTTP ERROR CODE: 500", msg.output[0])
 
     def test_records_get_all_bad_response(self) -> None:
 

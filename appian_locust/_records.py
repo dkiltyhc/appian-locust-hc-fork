@@ -6,6 +6,10 @@ from .uiform import SailUiForm
 from typing import Dict, Tuple, Any, Optional
 import json
 import random
+import requests
+from appian_locust import logger
+
+log = logger.getLogger(__name__)
 
 
 class _Records(_Base):
@@ -39,7 +43,12 @@ class _Records(_Base):
         """
         self.get_all_record_types()
         for record_type in self._record_types:
-            self.get_all_records_of_record_type(record_type)
+            try:
+                self.get_all_records_of_record_type(record_type)
+            except requests.exceptions.HTTPError as e:
+                log.warning(e)
+                continue
+
         return self._records
 
     def get_all_record_types(self) -> Dict[str, Any]:
