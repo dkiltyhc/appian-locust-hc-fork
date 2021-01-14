@@ -231,9 +231,14 @@ class SailUiForm:
     @raises_locust_error("uiform.py/fill_picker_field()")
     def fill_picker_field(self, label: str, value: str, fill_request_label: str = "", pick_request_label: str = "") -> 'SailUiForm':
         """
-        Enters the value in the picker widget and on the form, selects the suggested item
+        Enters the value in the picker widget and selects one of the suggested items
         if the widget is present with the following label (case sensitive)
-        Otherwise throws a NotFoundException
+
+        If there is more than one suggestion, this method will select a random one out of the list
+
+        Otherwise this throws a NotFoundException
+
+        The mechanism it uses to find a pickerWidget is prefixing the picker field label with test- and looking for a testLabel
 
         Args:
             label(str): Label of the field to fill out
@@ -248,12 +253,12 @@ class SailUiForm:
         Examples:
 
             >>> form.fill_picker_field('Title','My New Novel')
+            >>> form.fill_picker_field('People','Jeff George')
 
         """
-        component = find_component_by_attribute_in_dict(
-            'label', label, self.state)
-
-        self._validate_component_found(component, label)
+        # pickerFieldCustom will add a test-Label at the level where the suggestions/saveInto exist
+        test_label = f'test-{label}'
+        component = find_component_by_label_and_type_dict('testLabel', test_label, 'PickerWidget', self.state)
 
         locust_label = fill_request_label or f"{self.breadcrumb}.FillPickerField.{label}"
         new_state = self.interactor.fill_pickerfield_text(
@@ -262,19 +267,27 @@ class SailUiForm:
         if not new_state:
             raise Exception(f"No response returned when trying to update field with label '{label}'")
 
-        component = find_component_by_attribute_in_dict(
-            'label', label, new_state)
+        component = find_component_by_label_and_type_dict('testLabel', test_label, 'PickerWidget', new_state)
 
-        suggestions_list = extract_all_by_label(new_state, 'suggestions')
+        suggestions_list = extract_all_by_label(component, 'suggestions')
 
         if not suggestions_list:
             raise Exception(f"No suggestions returned when '{value}' was entered in the picker field.")
 
-        v = extract_all_by_label(suggestions_list, '#v')
-        t = extract_all_by_label(suggestions_list, '#t')
+        identifiers = extract_all_by_label(suggestions_list, 'identifier')
 
-        v_choice = random.choice(range(len(v)))
-        dict_value = {"#v": v[v_choice], "#t": t[v_choice]}
+        if not identifiers:
+            raise Exception(f"No identifiers found when '{value}' was entered in the picker field.")
+
+        # Introspect to see if there's an ID
+        index_by_id = identifiers[0].get('id') is not None
+        id_index = 'id' if index_by_id else '#v'
+        v_or_id = [identifier.get(id_index) for identifier in identifiers if identifier.get(id_index)]
+        t = [identifier.get('#t') for identifier in identifiers]
+        if not v_or_id:
+            raise Exception(f"Could not extract picker values '{id_index}' from suggestions_list {suggestions_list}")
+        v_choice = random.choice(range(len(v_or_id)))
+        dict_value = {id_index: v_or_id[v_choice], "#t": t[v_choice]}
 
         locust_label = pick_request_label or f"{self.breadcrumb}.SelectPickerSuggestion.{label}"
         newer_state = self.interactor.select_pickerfield_suggestion(
@@ -1031,7 +1044,7 @@ class SailUiForm:
         new_form_url = form_url if form_url else self.form_url
         return SailUiForm(self.interactor, reconciled_state, new_form_url, breadcrumb=self.breadcrumb)
 
-    def _validate_component_found(self, component: Dict[str, Any], label: str) -> None:
+    def _validate_component_found(self, component: Optional[Dict[str, Any]], label: str) -> None:
         if not component:
             raise ComponentNotFoundException(
                 f"Could not find the component with label '{label}' in the provided form"

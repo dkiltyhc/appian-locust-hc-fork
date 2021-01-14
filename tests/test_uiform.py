@@ -117,7 +117,7 @@ class TestSailUiForm(unittest.TestCase):
         with self.assertRaisesRegex(Exception, "Cannot click a tab with label: 'DoesNotExistLabel' inside the TabButtonGroup component"):
             deployments_sail_form.get_latest_form().click_tab_by_label("DoesNotExistLabel", "deployment-secondary-tabs")
 
-    def test_picker_widget_interaction(self) -> None:
+    def test_fill_picker_field_interaction(self) -> None:
         sail_ui_actions_cmf = json.loads(read_mock_file("sail_ui_actions_cmf.json"))
         picker_widget_suggestions = read_mock_file("picker_widget_suggestions.json")
         picker_widget_selected = read_mock_file("picker_widget_selected.json")
@@ -131,7 +131,25 @@ class TestSailUiForm(unittest.TestCase):
         value = 'Antilles Transport'
         sail_form.fill_picker_field(label, value)
 
-    def test_picker_widget_no_suggestions(self) -> None:
+    def test_fill_picker_field_user(self) -> None:
+        sail_ui_actions_cmf = json.loads(read_mock_file("sail_ui_actions_cmf.json"))
+        picker_widget_selected = read_mock_file("picker_widget_selected.json")
+        label = '1. Select a Customer'
+        resp = {
+            'testLabel': f'test-{label}',
+            '#t': 'PickerWidget',
+            'suggestions': [{'identifier': {'id': 1, "#t": "User"}}],
+            'saveInto': {},
+            '_cId': "abc"
+        }
+        self.custom_locust.enqueue_response(200, json.dumps(resp))
+        self.custom_locust.enqueue_response(200, picker_widget_selected)
+        sail_form = SailUiForm(self.task_set.appian.interactor, sail_ui_actions_cmf, "/suite/rest/a/model/latest/8/form")
+
+        value = 'Admin User'
+        sail_form.fill_picker_field(label, value)
+
+    def test_fill_picker_field_no_suggestions(self) -> None:
         sail_ui_actions_cmf = json.loads(read_mock_file("sail_ui_actions_cmf.json"))
         picker_widget_suggestions = read_mock_file("picker_widget_no_suggestions.json")
 
@@ -140,8 +158,62 @@ class TestSailUiForm(unittest.TestCase):
 
         label = '1. Select a Customer'
         value = 'You will not find me'
-        with self.assertRaises(Exception):
-            resp = sail_form.fill_picker_field(label, value)
+        with self.assertRaisesRegex(Exception, "No suggestions returned"):
+            sail_form.fill_picker_field(label, value)
+
+    def test_fill_picker_field_no_response(self) -> None:
+        sail_ui_actions_cmf = json.loads(read_mock_file("sail_ui_actions_cmf.json"))
+        self.custom_locust.enqueue_response(200, '{}')
+        sail_form = SailUiForm(self.task_set.appian.interactor, sail_ui_actions_cmf, "/suite/rest/a/model/latest/8/form")
+
+        label = '1. Select a Customer'
+        value = 'You will not find me'
+        with self.assertRaisesRegex(Exception, "No response returned"):
+            sail_form.fill_picker_field(label, value)
+
+    def test_fill_picker_field_no_identifiers(self) -> None:
+        sail_ui_actions_cmf = json.loads(read_mock_file("sail_ui_actions_cmf.json"))
+        label = '1. Select a Customer'
+        resp = {
+            'testLabel': f'test-{label}',
+            '#t': 'PickerWidget',
+            'suggestions': [{'a': 'b'}]
+        }
+        self.custom_locust.enqueue_response(200, json.dumps(resp))
+        sail_form = SailUiForm(self.task_set.appian.interactor, sail_ui_actions_cmf, "/suite/rest/a/model/latest/8/form")
+
+        value = 'Antilles Transport'
+        with self.assertRaisesRegex(Exception, "No identifiers found"):
+            sail_form.fill_picker_field(label, value)
+
+    def test_fill_picker_field_not_id_or_v(self) -> None:
+        sail_ui_actions_cmf = json.loads(read_mock_file("sail_ui_actions_cmf.json"))
+        label = '1. Select a Customer'
+        resp = {
+            'testLabel': f'test-{label}',
+            '#t': 'PickerWidget',
+            'suggestions': [{'identifier': {'idx': 1}}]
+        }
+        self.custom_locust.enqueue_response(200, json.dumps(resp))
+        sail_form = SailUiForm(self.task_set.appian.interactor, sail_ui_actions_cmf, "/suite/rest/a/model/latest/8/form")
+
+        value = 'Antilles Transport'
+        with self.assertRaisesRegex(Exception, "Could not extract picker values"):
+            sail_form.fill_picker_field(label, value)
+
+    def test_fill_picker_field_interaction_no_selection_resp(self) -> None:
+        sail_ui_actions_cmf = json.loads(read_mock_file("sail_ui_actions_cmf.json"))
+        picker_widget_suggestions = read_mock_file("picker_widget_suggestions.json")
+
+        self.custom_locust.enqueue_response(200, picker_widget_suggestions)
+        self.custom_locust.enqueue_response(200, '{}')
+
+        sail_form = SailUiForm(self.task_set.appian.interactor, sail_ui_actions_cmf, "/suite/rest/a/model/latest/8/form")
+
+        label = '1. Select a Customer'
+        value = 'Antilles Transport'
+        with self.assertRaisesRegex(Exception, 'No response returned'):
+            sail_form.fill_picker_field(label, value)
 
     def test_upload_document_invalid_component(self) -> None:
         with self.assertRaisesRegex(Exception, 'Provided component was not a FileUploadWidget'):
