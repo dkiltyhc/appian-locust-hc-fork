@@ -20,7 +20,7 @@ log = logger.getLogger(__name__)
 # TODO: Consider breaking this class up into smaller pieces
 
 
-RECORD_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), "recorded_files")
+RECORD_PATH = "recorded_responses"
 
 
 class _Interactor:
@@ -304,8 +304,7 @@ class _Interactor:
             label(Optional[str]): Optional label, used to name the file
             response(Response): Response object to write to a file
 
-        Writes to the current folder that _interactor is in, meaning you may have to search in
-        your virtualenv if not running appian_locust in its own repository
+        Writes to a recorded_responses folder from wherever you run locust
         """
         cleaned_label = label.replace("/", "|") if label else "response"
         file_name = cleaned_label + " " + str(datetime.now())

@@ -111,3 +111,4 @@ cython_debug/
 config.json
 pyproject.toml
 .vscode
+recorded_responses/
