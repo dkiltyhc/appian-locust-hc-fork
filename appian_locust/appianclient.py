@@ -102,6 +102,29 @@ def setup_distributed_creds(CONFIG: dict) -> dict:
     return CONFIG['credentials']
 
 
+class NoOpEvents():
+    def fire(self, *args: str, **kwargs: int) -> None:
+        pass
+
+
+def appian_client_without_locust(host: str, record_mode: bool = False, base_path_override: str = None) -> 'AppianClient':
+    """
+    Returns an AppianClient that can be used without locust to make requests against a host, e.g.
+
+    >>> appian_client_without_locust()
+    >>> client.login(auth=('username', 'password'))
+    >>> client.get_client_feature_toggles()
+
+    This can be used for debugging/ making CLI style requests, instead of load testing
+    Returns:
+        AppianClient: an Appian client that can be used
+    """
+    inner_client = HttpSession(host, NoOpEvents(), NoOpEvents())
+    if record_mode:
+        setattr(inner_client, 'record_mode', True)
+    return AppianClient(inner_client, host=host, base_path_override=base_path_override)
+
+
 class AppianClient:
     def __init__(self, session: HttpSession, host: str, base_path_override: str = None) -> None:
         """
