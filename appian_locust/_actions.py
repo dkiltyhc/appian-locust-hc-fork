@@ -1,12 +1,13 @@
-from typing import Any, Dict, List
+from typing import Any, Dict
 from urllib.parse import urlparse
 
+from requests.models import Response
+
+from . import logger
 from ._base import _Base
 from ._interactor import _Interactor
-from .helper import format_label
+from .helper import format_label, log_locust_error
 from .uiform import SailUiForm
-from . import logger
-from .helper import log_locust_error
 
 log = logger.getLogger(__name__)
 
@@ -73,7 +74,7 @@ class _Actions(_Base):
             return self._actions
         return self._actions
 
-    def get_action(self, action_name: str, exact_match: bool = True) -> Dict[str, Any]:
+    def get_action(self, action_name: str, exact_match: bool = False) -> Dict[str, Any]:
         """
         Get the information about specific action by name.
 
@@ -101,7 +102,7 @@ class _Actions(_Base):
                 action_name, exact_match)))
         return current_action
 
-    def visit(self, action_name: str, exact_match: bool = True, label: str = "") -> Dict[str, Any]:
+    def visit(self, action_name: str, exact_match: bool = False, label: str = "") -> Dict[str, Any]:
         """
         This function calls the API for the specific action to get its "form" data
 
@@ -140,9 +141,11 @@ class _Actions(_Base):
         )
         return resp.json()
 
-    def visit_and_get_form(self, action_name: str, exact_match: bool = True) -> SailUiForm:
+    def visit_and_get_form(self, action_name: str, exact_match: bool = False) -> SailUiForm:
         """
         Gets the action by name and returns the corresponding SailUiForm to interact with
+
+        If the action is activity chained, this will attempt to start the process and retrieve the chained SAIL form.
 
         Args:
             action_name (str): Name of the action
@@ -155,10 +158,17 @@ class _Actions(_Base):
         action_key = format_label(action_name, "::", 0)
         label = f'Actions.GetUi.{action_key}'
         form_json: dict = self.visit(action_name, exact_match, label=label)
+
+        # Check to see if we're in an activity chained form, and if so, make post call
+        if form_json.get('empty') == 'true':
+            resp: Response = self.start_action(action_name, exact_match=exact_match)
+            resp.raise_for_status()
+            form_json = resp.json()
+
         breadcrumb = f'Actions.SailUi.{action_key}'
         return SailUiForm(self.interactor, form_json, form_url, breadcrumb=breadcrumb)
 
-    def start_action(self, action_name: str, skip_design_call: bool = False, exact_match: bool = False) -> None:
+    def start_action(self, action_name: str, skip_design_call: bool = False, exact_match: bool = False) -> Response:
         """
         Perform the post operation on action's API to start specific action.
         Actions that do not have a UI can be called directly without using "GET" to retrieve the UI.
@@ -180,14 +190,12 @@ class _Actions(_Base):
 
         if not skip_design_call:
             # Note: Actions which do not have a UI component this call is
-            # not required to kick of processes. This request causes a call
+            # not required to kick off processes. This request causes a call
             # to design to retrieve the UI, meaning this it will cause more K
             # activity, but it does not kick off processes on the exec engines.
             self.visit(action_name)
 
-        headers = self.interactor.setup_request_headers()
-        headers["Accept"] = "application/vnd.appian.tv.ui+json"
-        headers["Content-Type"] = "application/vnd.appian.tv+json"
+        headers = self.interactor.setup_sail_headers()
         headers["Origin"] = self.interactor.host
 
         del headers["X-Atom-Content-Type"]
@@ -195,10 +203,11 @@ class _Actions(_Base):
 
         # To debug with wireshark, force http for this connection:
         #   action[KEY_FORM_HREF].replace("https","http"),
-        self.interactor.post_page(
+        resp = self.interactor.post_page(
             action_under_test[KEY_FORM_HREF].replace("/form", ""),
             payload={},
             headers=headers,
             label='Actions.StartAction.' + format_label(
                 action_name, "::", 0)
         )
+        return resp
