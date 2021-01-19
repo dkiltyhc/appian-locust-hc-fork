@@ -70,7 +70,7 @@ class TestActions(unittest.TestCase):
 
     def test_actions_get_missing_action(self) -> None:
         with self.assertRaisesRegex(Exception, "There is no action with name .* in the system under test.*"):
-            self.task_set.appian.actions.get_action("Create a Case")
+            self.task_set.appian.actions.get_action("Create a Case", exact_match=True)
 
     def setup_action_response_no_ui(self) -> None:
         action = self.task_set.appian.actions.get_action("Create a Case", False)
@@ -103,6 +103,24 @@ class TestActions(unittest.TestCase):
             '/suite/rest/a/model/latest/228/form', 200, '{"context":"12345","ui": {"#t": "UiComponentsDelta", "modifiedComponents":[]}}')
         sail_form: SailUiForm = self.task_set.appian.actions.visit_and_get_form(
             "Create a Case", False)
+
+        label = 'Title'
+        value = "Look at me, I am filling out a form"
+        button_label = 'Submit'
+        latest_form = sail_form.fill_text_field(label, value).click(button_label)
+
+        resp = latest_form.get_response()
+        self.assertEqual("12345", resp['context'])
+
+    def test_actions_form_example_activity_chained(self) -> None:
+        action = self.task_set.appian.actions.get_action("Create a Case", False)
+        resp_json = read_mock_file("form_content_response.json")
+
+        self.custom_locust.set_response(action['formHref'], 200, '{"mobileEnabled": "false", "empty": "true", "formType": "START_FORM"}')
+        self.custom_locust.set_response(action['initiateActionHref'], 200, resp_json)
+        self.custom_locust.set_response(
+            '/suite/rest/a/model/latest/228/form', 200, '{"context":"12345","ui": {"#t": "UiComponentsDelta", "modifiedComponents":[]}}')
+        sail_form: SailUiForm = self.task_set.appian.actions.visit_and_get_form("Create a Case")
 
         label = 'Title'
         value = "Look at me, I am filling out a form"
