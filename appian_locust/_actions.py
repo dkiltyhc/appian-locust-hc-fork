@@ -87,13 +87,14 @@ class _Actions(_Base):
         Raises: In case of action is not found in the system, it throws an "Exception"
 
         Example:
-            If full name of action is known,
+            If full name of action is known, with the opaque ID,
 
-            >>> self.appian.action.get("action_name")
+            >>> self.appian.action.get_action("action_name:igB0K7YxC0UQ2Fhx4hicRw...", exact_match=True)
 
-            If only partial name is known,
+            If only the display name is known, or part of the display name
 
-            >>> self.appian.action.get("act", exact_match=False)
+            >>> self.appian.action.get_action("action_name")
+            >>> self.appian.action.get_action("actio")
 
         """
         _, current_action = super().get(self._actions, action_name, exact_match)
@@ -115,13 +116,14 @@ class _Actions(_Base):
 
         Examples:
 
-            If full name of action is known,
+            If the full name of the action is known, with the opaque ID,
+
+            >>> self.appian.action.visit("action_name:igB0K7YxC0UQ2Fhx4hicRw...", exact_match=True)
+
+            If only the display name is known, or part of the display name
 
             >>> self.appian.action.visit("action_name")
-
-            If only partial name is known,
-
-            >>> self.appian.action.visit("act", exact_match=False)
+            >>> self.appian.action.visit("actio")
 
         """
 
