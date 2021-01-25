@@ -1,16 +1,16 @@
+import os
 import urllib.parse
 import uuid
-import os
-from typing import Any, Dict, List, Tuple
+from typing import List, Tuple
 
 from locust import SequentialTaskSet, TaskSet
 from locust.clients import HttpSession
 from requests import Response
 
+from . import logger
 from ._actions import _Actions
 from ._admin import Admin
 from ._app_importer import AppImporter
-from ._base import _Base
 from ._design import Design
 from ._feature_flag import FeatureFlag
 from ._feature_toggle_helper import (get_client_feature_toggles,
@@ -22,9 +22,8 @@ from ._records import _Records
 from ._reports import _Reports
 from ._sites import _Sites
 from ._tasks import _Tasks
+from .exceptions import MissingConfigurationException
 from .helper import log_locust_error
-from . import logger
-from .exceptions import BadCredentialsException, MissingConfigurationException
 
 log = logger.getLogger(__name__)
 
@@ -264,7 +263,7 @@ class AppianClient:
         )
 
         headers = self.interactor.setup_request_headers(logout_uri)
-        resp = self.interactor.get_page(logout_uri, headers=headers, label="Logout.LoadUi", check_login=False)
+        self.interactor.get_page(logout_uri, headers=headers, label="Logout.LoadUi", check_login=False)
 
     def get_client_feature_toggles(self) -> None:
         try:

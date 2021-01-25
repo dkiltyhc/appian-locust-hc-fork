@@ -10,7 +10,7 @@ from locust.clients import HttpSession, ResponseContextManager
 from requests import Response
 
 from ._save_request_builder import save_builder
-from .helper import (find_component_by_attribute_in_dict, list_filter,
+from .helper import (find_component_by_attribute_in_dict,
                      log_locust_error, test_response_for_error, get_username)
 from . import logger
 from .exceptions import BadCredentialsException, MissingCsrfTokenException
@@ -430,10 +430,7 @@ class _Interactor:
         else:
             spl_link_url = f"/suite/rest/a/sites/latest/{site_name}/page/{page_name}/startProcess/{process_model_opaque_id}?cacheKey={cache_key}"
 
-        headers = self.setup_request_headers()
-        headers["Accept"] = "application/vnd.appian.tv.ui+json"
-        headers["Content-Type"] = "application/vnd.appian.tv+json"
-
+        headers = self.setup_sail_headers()
         locust_label = locust_request_label or "Clicking StartProcessLink: " + component["label"]
         resp = self.post_page(
             self.host + spl_link_url, payload={}, headers=headers, label=locust_label
@@ -458,10 +455,7 @@ class _Interactor:
         # Web url:
         related_action_link_url = f"/suite/rest/a/record/latest/{record_type_stub}/{opaque_record_id}/actions/{opaque_related_action_id}"
 
-        headers = self.setup_request_headers()
-        headers["Accept"] = "application/vnd.appian.tv.ui+json"
-        headers["Content-Type"] = "application/vnd.appian.tv+json"
-
+        headers = self.setup_sail_headers()
         locust_label = locust_request_label or "Clicking RelatedActionLink: " + component["label"]
         resp = self.post_page(
             self.host + related_action_link_url, payload={}, headers=headers, label=locust_label

@@ -1,17 +1,17 @@
-import unittest
 import json
-
-from requests.exceptions import HTTPError
+import unittest
+from typing import List
+from unittest import mock
+from unittest.mock import patch, MagicMock
 
 from appian_locust import AppianTaskSet, SailUiForm
-from locust import User, TaskSet
+from appian_locust.helper import ENV, find_component_by_attribute_in_dict
+from appian_locust.records_helper import get_record_header_response
+from locust import TaskSet, User
+from requests.exceptions import HTTPError
 
 from .mock_client import CustomLocust
 from .mock_reader import read_mock_file
-from typing import List
-from appian_locust.helper import find_component_by_attribute_in_dict
-from appian_locust.helper import ENV
-from appian_locust.records_helper import get_record_header_response
 
 
 class TestSailUiForm(unittest.TestCase):
@@ -283,6 +283,19 @@ class TestSailUiForm(unittest.TestCase):
         # Assert fields on the related action form
         text_component = find_component_by_attribute_in_dict('label', 'Action Type', record_instance_related_action_form.state)
         self.assertEqual(text_component.get("#t"), "TextField")
+
+    @patch('appian_locust._interactor._Interactor.get_page')
+    def test_filter_records_using_searchbox(self, mock_get_page: MagicMock) -> None:
+        uri = 'suite/rest/a/sites/latest/D6JMim/pages/records/recordType/commit'
+        record_type_list_form = SailUiForm(self.task_set.appian.interactor,
+                                           json.loads(read_mock_file("records_response.json")),
+                                           uri)
+        record_type_list_form.filter_records_using_searchbox("Actions Page")
+
+        mock_get_page.assert_called_once()
+        args, kwargs = mock_get_page.call_args_list[0]
+        self.assertEqual(kwargs['uri'], f"{uri}?searchTerm=Actions%20Page")
+        self.assertEqual(kwargs['headers']['Accept'], "application/vnd.appian.tv.ui+json")
 
 
 if __name__ == '__main__':
