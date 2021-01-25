@@ -1,13 +1,17 @@
+import json
+import random
+from typing import Any, Dict, Tuple
+
+import requests
+
+from appian_locust import logger
+
 from ._base import _Base
 from ._interactor import _Interactor
 from .helper import format_label
-from .records_helper import get_all_records_from_json, get_record_summary_view_response
+from .records_helper import (get_all_records_from_json,
+                             get_record_summary_view_response)
 from .uiform import SailUiForm
-from typing import Dict, Tuple, Any, Optional
-import json
-import random
-import requests
-from appian_locust import logger
 
 log = logger.getLogger(__name__)
 

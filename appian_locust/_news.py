@@ -1,10 +1,9 @@
 from typing import Any, Dict, Tuple
 
-from locust.clients import HttpSession
-
+from appian_locust import logger
 from appian_locust._base import _Base
 from appian_locust._interactor import _Interactor
-from appian_locust import logger
+
 from .helper import log_locust_error
 
 log = logger.getLogger(__name__)

@@ -6,7 +6,7 @@ import random
 import warnings
 from functools import wraps
 from typing import Any, Callable, Dict, List, Optional
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 
 from appian_locust.records_helper import _is_grid
 
@@ -14,7 +14,7 @@ from . import logger
 from ._grid_interactor import GridInteractor
 from ._interactor import _Interactor
 from ._ui_reconciler import UiReconciler
-from .helper import (extract_all_by_label, extract_item_by_label,
+from .helper import (extract_all_by_label,
                      find_component_by_attribute_in_dict,
                      find_component_by_index_in_dict,
                      find_component_by_label_and_type_dict, log_locust_error)
@@ -215,7 +215,7 @@ class SailUiForm:
         reeval_url = self._get_update_url_for_reeval(self.state)
         locust_label = locust_request_label or f"{self.breadcrumb}.FillTextFieldByAttribute.{attribute}"
         new_state = self.interactor.fill_textfield(
-            reeval_url, component, text_to_fill, self.context, self.uuid, label=locust_request_label)
+            reeval_url, component, text_to_fill, self.context, self.uuid, label=locust_label)
         if not new_state:
             raise Exception(
                 f'''
@@ -498,7 +498,7 @@ class SailUiForm:
         locust_label = locust_request_label or f"{self.breadcrumb}.ClickRelatedActionLink.{label}"
 
         new_state = self.interactor.click_related_action(component, record_type_stub, opaque_record_id,
-                                                         opaque_related_action_id, locust_request_label)
+                                                         opaque_related_action_id, locust_label)
         # get the re-eval URI from links object of the response (new_state)
         reeval_url = self._get_update_url_for_reeval(new_state)
         return self._reconcile_and_produce_new_form(new_state, form_url=reeval_url)
@@ -605,7 +605,7 @@ class SailUiForm:
             raise Exception(f"No testLabel provided to select a checkbox")
 
         locust_label = locust_request_label or f'{self.breadcrumb}.CheckCheckboxByTestLabel.{test_label}'
-        return self._check_checkbox_by_attribute('testLabel', test_label, indices)
+        return self._check_checkbox_by_attribute('testLabel', test_label, indices, locust_request_label=locust_label)
 
     @raises_locust_error("uiform.py/check_checkbox_by_label()")
     def check_checkbox_by_label(self, label: str, indices: List[int], locust_request_label: str = "") -> 'SailUiForm':
@@ -978,7 +978,8 @@ class SailUiForm:
             raise Exception("Not a grid record list")
         component = find_component_by_attribute_in_dict(
             'label', label, self.state)
-        new_state = self.interactor.interact_with_record_grid(post_url=reeval_url, grid_component=component, context=self.context, uuid=self.uuid)
+        new_state = self.interactor.interact_with_record_grid(
+            post_url=reeval_url, grid_component=component, context=self.context, uuid=self.uuid, context_label=context_label)
         if not new_state:
             raise Exception(
                 f"No response returned when navigating to next page on record list '{reeval_url}'")
@@ -1021,6 +1022,29 @@ class SailUiForm:
         self.breadcrumb = "Record.ViewForm.SailUi"
 
         return SailUiForm(self.interactor, json.loads(record_view_response), self.form_url, breadcrumb=self.breadcrumb)
+
+    def filter_records_using_searchbox(self, search_term: str = "", locust_request_label: str = "") -> 'SailUiForm':
+        """
+        This method allows you to Filter the Record Type List (displaying record instance for a specific record type)
+        which makes the same request when typing something in the search box and reloading the page.
+        More interactions (with the filtered list) can be performed on the returned SailUiForm Object.
+
+        Note: This is different from how an end user interacts with the SearchBox. In that case you would type something in the box
+        and when you would unfocus from the box a reevaluation happens and then you click the 'Search' button which returns the filtered
+        results.
+
+        Examples:
+
+            >>> form.filter_records_using_searchbox('Donuts')
+
+        Returns (SailUiForm): The record type list UiForm with the filtered results.
+        """
+        context_label = locust_request_label or f"{self.breadcrumb}.RecordType.SearchByText"
+        search_uri = f"{self.form_url}?searchTerm={quote(search_term)}"
+
+        headers = self.interactor.setup_sail_headers()
+        response = self.interactor.get_page(uri=search_uri, headers=headers, label=context_label)
+        return SailUiForm(self.interactor, response.json(), self.form_url, breadcrumb=context_label)
 
     def assert_no_validations_present(self) -> 'SailUiForm':
         """

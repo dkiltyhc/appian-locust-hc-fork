@@ -100,7 +100,7 @@ class Design:
         """
         return self._create_object(app_form, link_name='Report', object_name=report_name)
 
-    def _create_object(self, ui_form: SailUiForm, link_name: str,  object_name: str) -> 'SailUiForm':
+    def _create_object(self, ui_form: SailUiForm, link_name: str, object_name: str) -> 'SailUiForm':
         return ui_form.click(link_name)\
             .fill_text_field('Name', object_name)\
             .click('Create')\

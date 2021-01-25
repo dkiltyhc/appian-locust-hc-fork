@@ -1,17 +1,17 @@
 import enum
 import json
 import random
-from typing import Any, Dict, List, Tuple, Union
+from typing import Any, Dict, List, Union
 
 from requests import Response
 
+from . import logger
 from ._base import _Base
 from ._interactor import _Interactor
-from .helper import extract_values, format_label, log_locust_error
+from .helper import extract_values, format_label
 from .records_helper import (get_all_records_from_json,
                              get_record_summary_view_response)
 from .uiform import SailUiForm
-from . import logger
 
 log = logger.getLogger(__name__)
 
@@ -57,7 +57,6 @@ class _Sites(_Base):
         if page_name not in [page.page_name for page in site.pages.values()]:
             raise PageNotFoundException(f"The site with name '{site_name}' does not contain the page {page_name}")
         page = site.pages[page_name]
-        site_display_name = site.display_name
         page_type = page.page_type.value
 
         headers = self._setup_headers_with_sail_json()

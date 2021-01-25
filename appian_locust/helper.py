@@ -1,14 +1,12 @@
+import functools
 import random
 import re
-import functools
+from typing import Any, Callable, Dict, Generator, List, Union
+
 import gevent  # type: ignore
-from typing import Any, Dict, List, Tuple, Union, Generator, Callable
-
-from requests import Response
-from requests.exceptions import ConnectionError, HTTPError
-
-from locust.env import Environment
 from locust.clients import ResponseContextManager
+from locust.env import Environment
+from requests.exceptions import HTTPError
 
 from . import logger
 

@@ -1,11 +1,9 @@
 from typing import Any, Dict, Optional
 
-import requests
-
-from ._interactor import _Interactor
-from .helper import (extract_all_by_label, find_component_by_attribute_in_dict)
-from .uiform import SailUiForm, raises_locust_error
 from . import logger
+from ._interactor import _Interactor
+from .helper import extract_all_by_label, find_component_by_attribute_in_dict
+from .uiform import SailUiForm, raises_locust_error
 
 log = logger.getLogger(__name__)
 
