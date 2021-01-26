@@ -408,7 +408,7 @@ class _Interactor:
         )
         return resp.json()
 
-    def click_start_process_link(self, label: str, component: Dict[str, Any], process_model_opaque_id: str,
+    def click_start_process_link(self, component: Dict[str, Any], process_model_opaque_id: str,
                                  cache_key: str, site_name: str, page_name: str, is_mobile: bool = False,
                                  locust_request_label: str = None) -> Dict[str, Any]:
         '''
