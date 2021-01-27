@@ -185,16 +185,16 @@ def find_component_by_label_and_type_dict(attribute: str, value: str, type: str,
             return val
 
 
-def find_component_by_index_in_dict(attribute: str, index: int, component_tree: Dict[str, Any]) -> Any:
+def find_component_by_index_in_dict(component_type: str, index: int, component_tree: Dict[str, Any]) -> Any:
     """
-    Find a UI component by the index of a given component ("RadioButtonField" for example) in a dictionary
+    Find a UI component by the index of a given type of component ("RadioButtonField" for example) in a dictionary
     Performs a depth first search and counts quantity of the component, so the 1st is the first one
     It returns the dictionary that contains the given attribute with the requested index
     or returns the total number of components with that attribute when the index could not be matched
 
     Args:
-        attribute: an attribute to search ('RadioButtonField' for example)
-        index: the index of the component with the attribute ('1' for example)
+        component_type: type of the component(#t in the JSON response, 'RadioButtonField' for example)
+        index: the index of the component with the component_type ('1' for example - Indices start from 1)
         component_tree: the json response
 
     Returns:
@@ -210,13 +210,13 @@ def find_component_by_index_in_dict(attribute: str, index: int, component_tree: 
         raise Exception(
             f"Invalid index: '{index}'.  Please enter a positive number")
 
-    result = _find_component_by_type_and_index(attribute, index, component_tree, 0)
+    result = _find_component_by_type_and_index(component_type, index, component_tree, 0)
 
     if isinstance(result, int):
         if result == 0:
-            raise Exception(f"No components of type '{attribute}' found on page")
+            raise Exception(f"No components of type '{component_type}' found on page")
         else:
-            raise Exception(f"Bad index: only '{result}' components of type '{attribute}' found on page, " +
+            raise Exception(f"Bad index: only '{result}' components of type '{component_type}' found on page, " +
                             f"requested '{index}'")
 
     return result

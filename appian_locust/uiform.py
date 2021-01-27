@@ -301,7 +301,7 @@ class SailUiForm:
     @raises_locust_error("uiform.py/click()")
     def click(self, label: str, is_test_label: bool = False, locust_request_label: str = "") -> 'SailUiForm':
         """
-        Fills a field on the form, if there is one present with the following label (case sensitive)
+        Clicks on a component on the form, if there is one present with the following label (case sensitive)
         Otherwise throws a NotFoundException
 
         Args:
@@ -354,22 +354,27 @@ class SailUiForm:
         Returns (SailUiForm): The latest state of the UiForm
 
         Examples:
+            This finds link field on the 2nd card layout on the page and clicks it. It handles StartProcessLink as well, so
+            no need to call click_start_process_link() when it is on a CardLayout.
 
             >>> form.click_card_layout_by_index(2)
 
         """
         component = find_component_by_index_in_dict("CardLayout", index, self.state)
 
-        link_component = component["link"]
+        if "link" in component and component["link"]:
+            link_component = component["link"]
+        else:
+            raise Exception(f"CardLayout found at index: {index} does not have a link on it")
+
         locust_label = locust_request_label or f"{self.breadcrumb}.ClickCardLayout.Index.{index}"
 
         if link_component["#t"] == "StartProcessLink":
             site_name = link_component["siteUrlStub"] or "D6JMim"
             page_name = link_component["sitePageUrlStub"]
-            new_state = self._click_start_process_link(site_name, page_name, False, locust_request_label, link_component)
+            new_state = self._click_start_process_link(site_name, page_name, False, link_component, locust_request_label=locust_label)
         else:
-            reeval_url = self._get_update_url_for_reeval(self.state)
-            new_state = self.interactor.click_component(reeval_url, link_component, self.context, self.uuid, label=locust_label)
+            new_state = self.interactor.click_component(self.form_url, link_component, self.context, self.uuid, label=locust_label)
 
         if not new_state:
             raise Exception(f"No response returned when trying to click card layout at index '{index}'")
@@ -426,7 +431,8 @@ class SailUiForm:
         component = find_component_by_label_and_type_dict('label', label, 'StartProcessLink', self.state)
         self._validate_component_found(component, label)
 
-        new_state = self._click_start_process_link(site_name, page_name, is_mobile, locust_request_label, component)
+        locust_label = locust_request_label or f"{self.breadcrumb}.ClickStartProcessLink.{label}"
+        new_state = self._click_start_process_link(site_name, page_name, is_mobile, component, locust_request_label=locust_label)
 
         # get the re-eval URI from links object of the response (new_state)
         reeval_url = self._get_update_url_for_reeval(new_state)
@@ -455,6 +461,23 @@ class SailUiForm:
         """
         locust_label = locust_request_label or f"{self.breadcrumb}.ClickStartProcessLink.Mobile.{label}"
         return self.click_start_process_link(label, site_name, page_name, is_mobile=True, locust_request_label=locust_label)
+
+    def _click_start_process_link(self, site_name: str, page_name: str, is_mobile: bool,
+                                  component: Dict[str, Any], locust_request_label: str) -> Dict[str, Any]:
+        """
+        This internal function is called by both click_start_process_link() and click_card_layout_by_index().
+        It takes parameters needed for making a start process lnik call to the server and calls the interactor to do that.
+        """
+        process_model_opaque_id = component.get("processModelOpaqueId", "")
+        cache_key = component.get("cacheKey", "")
+        if not process_model_opaque_id:
+            raise Exception(f"StartProcessLink component does not have process model opaque id set.")
+        elif not cache_key:
+            raise Exception(f"StartProcessLink component does not have cache key set.")
+
+        return self.interactor.click_start_process_link(component=component, process_model_opaque_id=process_model_opaque_id,
+                                                        cache_key=cache_key, site_name=site_name, page_name=page_name, is_mobile=is_mobile,
+                                                        locust_request_label=locust_request_label)
 
     @raises_locust_error("uiform.py/click_related_action_link()")
     def click_related_action(self, label: str, locust_request_label: str = "") -> 'SailUiForm':
@@ -550,17 +573,6 @@ class SailUiForm:
                 f"No response returned when trying to click button with label '{label}'")
 
         return self._reconcile_and_produce_new_form(new_state, form_url=reeval_url)
-
-    def _click_start_process_link(self, site_name: str, page_name: str, is_mobile: bool,
-                                  locust_request_label: str, component: Dict[str, Any]) -> Dict[str, Any]:
-        process_model_opaque_id = component.get("processModelOpaqueId", "")
-        cache_key = component.get("cacheKey", "")
-        if not process_model_opaque_id or not cache_key:
-            raise Exception(f"StartProcessLink component does not have process model opaque id or cache key set.")
-
-        return self.interactor.click_start_process_link(component, process_model_opaque_id,
-                                                        cache_key, site_name, page_name, is_mobile,
-                                                        locust_request_label)
 
     def _check_checkbox_by_attribute(self, attribute: str, value_for_attribute: str, indices: List[int], locust_request_label: str = "") -> 'SailUiForm':
         """
