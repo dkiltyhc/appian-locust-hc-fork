@@ -1,6 +1,6 @@
 import json
 import os
-from locust import HttpUser, TaskSet, task, between
+from locust import HttpUser, task, between
 
 from appian_locust import AppianTaskSet
 

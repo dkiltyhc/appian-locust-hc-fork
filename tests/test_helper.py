@@ -14,13 +14,13 @@ class TestHelper(unittest.TestCase):
     form_dict = json.loads(read_mock_file("test_response.json"))
 
     def test_find_component_by_label_and_type(self) -> None:
-        component = find_component_by_label_and_type_dict('label', 'Log Contacts', 'StartProcessLink', self.form_dict)
+        component = find_component_by_label_and_type_dict('label', 'Request Pass', 'StartProcessLink', self.form_dict)
         # finds first component with that label and type
-        self.assertEqual(component['cacheKey'], '3ba597c4-1eaf-42ef-947a-698397169f9c')
-        self.assertEqual(component['processModelOpaqueId'], 'iMB8GmxIr5iZT6YnVyo69ieCl0Uw2I5NY9p4g4W9_3ZRs-8MA')
+        self.assertEqual(component['cacheKey'], 'c93e2f33-06eb-42b2-9cfc-2c4a0e14088e')
+        self.assertEqual(component['processModelOpaqueId'], 'iQB8GmxIr5iZT6YnVytCx9QKdJBPaRDdv_-hRj3HM747ZtRjSw')
 
     def test_find_component_by_attribute_in_dict(self) -> None:
-        component = find_component_by_attribute_in_dict('label', 'Log Contacts', self.form_dict)
+        component = find_component_by_attribute_in_dict('label', 'Request Pass', self.form_dict)
         # finds first component by that label
         self.assertEqual(component['#t'], 'RichTextDisplayField')
 
