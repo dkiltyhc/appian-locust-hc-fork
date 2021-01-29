@@ -1,11 +1,11 @@
 from queue import Queue
-from appian_locust import AppianTaskSequence
-from locust import User, SequentialTaskSet, task, events
-from locust.clients import HttpSession
-from requests.models import Response, Request, PreparedRequest
-from typing import List, Tuple, Any, Optional, Type, AnyStr
-from types import TracebackType
+from typing import Any, AnyStr, Dict, List, Tuple
+
 import requests
+from appian_locust import AppianTaskSequence
+from locust import User, events, task
+from locust.clients import HttpSession
+from requests.models import PreparedRequest, Response
 
 
 class CustomLocust(User):
@@ -17,8 +17,13 @@ class CustomLocust(User):
         else:
             self.client = MockClient()
 
-    def get_request_list(self) -> list:
+    def get_request_list(self) -> List[Dict[str, Any]]:
         return self.client.request_list
+
+    def get_request_list_as_method_path_tuple(self) -> List[Tuple[str, str]]:
+        # Return request list as a list of tuples, which is also a copy
+        tuples = [(item['method'], item['path']) for item in self.client.request_list]
+        return tuples
 
     def set_response(self, path: str, status_code: int, body: AnyStr, cookies: dict = None,  headers: dict = {}) -> None:
         self.client.set_response(path, status_code, body, cookies=cookies, headers=headers)
@@ -63,7 +68,7 @@ class MockClient:
         self.cookies = {"JSESSIONID": "a", "__appianCsrfToken": "b",
                         "__appianMultipartCsrfToken": "c"}
         self.enqueue_cookies = {"JSESSIONID": "a"}
-        self.request_list: List[Tuple[str, str]] = []
+        self.request_list: List[Dict[str, Any]] = []
         self.response_dict: dict = {}
         self.default_response = MockResponse()
         self.default_response.status_code = 200
@@ -80,24 +85,26 @@ class MockClient:
 
         self.dummy_responses: Queue = Queue()
 
-    def _response(self, path: str, **kwargs: dict) -> 'MockResponse':
+    def _response(self, path: str) -> 'MockResponse':
         if path in self.response_dict:
             resp = self.response_dict[path]
             self.cookies = resp.cookies
             return self.response_dict[path]
         return self.default_response
 
-    def get(self, path: str, **kwargs: dict) -> 'MockResponse':
-        self.request_list.append(("get", path))
-        if not self.dummy_responses.empty():
-            return self.dummy_responses.get()
-        return self._response(path, **kwargs)
+    def get(self, path: str, **kwargs: Any) -> 'MockResponse':
+        request_data = {'path': path, 'method': 'get', **kwargs}
+        return self._respond(path, request_data)
 
-    def post(self, path: str, **kwargs: dict) -> 'MockResponse':
-        self.request_list.append(("post", path))
+    def post(self, path: str, **kwargs: Any) -> 'MockResponse':
+        request_data = {'path': path, 'method': 'post', **kwargs}
+        return self._respond(path, request_data)
+
+    def _respond(self, path: str, request_data: dict) -> 'MockResponse':
+        self.request_list.append(request_data)
         if not self.dummy_responses.empty():
             return self.dummy_responses.get()
-        return self._response(path, **kwargs)
+        return self._response(path)
 
     def enqueue_response(self, status_code: int, body: str) -> None:
         response = self.make_response(status_code, body, cookies=self.enqueue_cookies)

@@ -1,3 +1,4 @@
+import datetime
 import enum
 import errno
 import json
@@ -14,8 +15,7 @@ from . import logger
 from ._grid_interactor import GridInteractor
 from ._interactor import _Interactor
 from ._ui_reconciler import UiReconciler
-from .helper import (extract_all_by_label,
-                     find_component_by_attribute_in_dict,
+from .helper import (extract_all_by_label, find_component_by_attribute_in_dict,
                      find_component_by_index_in_dict,
                      find_component_by_label_and_type_dict, log_locust_error)
 from .records_helper import (get_record_header_response,
@@ -738,6 +738,86 @@ class SailUiForm:
                 f"No response returned when trying to upload file to field '{label}'")
         return self._reconcile_and_produce_new_form(new_state)
 
+    @raises_locust_error("uiform.py/fill_date_field()")
+    def fill_date_field(self, label: str, date_input: datetime.date, locust_request_label: str = "") -> 'SailUiForm':
+        """
+        Fills a date field with the specified date
+
+        Args:
+            label(str): Label of the date field
+            date_input(date): Date used to fill the field
+
+        Keyword Args:
+            locust_request_label(str): Label used to identify the request for locust statistics
+
+        Returns (SailUiForm): The latest state of the UiForm
+
+        Examples:
+
+            >>> form.fill_date_field('Today', datetime.date.today())
+            >>> form.fill_date_field('Date of Birth', datetime.date(1992, 12, 30))
+
+        """
+        if not isinstance(date_input, datetime.date):
+            raise Exception("Input must be of type datetime.date")
+        field_type = 'DatePickerField'
+        date_field = find_component_by_label_and_type_dict('label', label, field_type, self.state)
+        self._validate_component_found(date_field, label, type=field_type)
+
+        locust_label = locust_request_label or f'{self.breadcrumb}.FillDateField'
+        reeval_url = self._get_update_url_for_reeval(self.state)
+
+        new_state = self.interactor.update_date_field(
+            reeval_url, date_field, date_input, self.context, self.uuid, locust_label=locust_label)
+        if not new_state:
+            raise Exception(f'''No response returned when trying to update: '{label}'
+                            with its value: '{date_input}' on the current page
+                            ''')
+
+        return self._reconcile_and_produce_new_form(new_state, form_url=reeval_url)
+
+    @raises_locust_error("uiform.py/fill_datetime_field()")
+    def fill_datetime_field(self, label: str, datetime_input: datetime.datetime, locust_request_label: str = "") -> 'SailUiForm':
+        """
+        Fills a datetime field with the specified datetime
+
+        NOTE: this does one api call for both the date and time, whereas filling the elements on screen requires
+        two separate evaluations, one to fill the date field and one to fill the time field. This is the
+        way the request would look if one of the fields were already filled.
+
+        Args:
+            label(str): Label of the datetime field
+            datetime_input(date): Date time used to fill the field
+
+        Keyword Args:
+            locust_request_label(str): Label used to identify the request for locust statistics
+
+        Returns (SailUiForm): The latest state of the UiForm
+
+        Examples:
+
+            >>> form.fill_datetime_field('Now', datetime.datetime.now())
+            >>> form.fill_datetime_field('Date and Time of Birth', datetime.datetime(1992, 12, 30, 12, 30, 5))
+
+        """
+        if not isinstance(datetime_input, datetime.datetime):
+            raise Exception("Input must be of type datetime.datetime")
+        field_type = 'DateTimePickerField'
+        datetime_field = find_component_by_label_and_type_dict('label', label, field_type, self.state)
+        self._validate_component_found(datetime_field, label, type=field_type)
+
+        locust_label = locust_request_label or f'{self.breadcrumb}.FillDateTimeField'
+        reeval_url = self._get_update_url_for_reeval(self.state)
+
+        new_state = self.interactor.update_datetime_field(
+            reeval_url, datetime_field, datetime_input, self.context, self.uuid, locust_label=locust_label)
+        if not new_state:
+            raise Exception(f'''No response returned when trying to update: '{label}'
+                            with its value: '{datetime_input}' on the current page
+                            ''')
+
+        return self._reconcile_and_produce_new_form(new_state, form_url=reeval_url)
+
     @raises_locust_error("uiform.py/move_to_end_of_paging_grid()")
     def move_to_end_of_paging_grid(self, label: str = None, index: int = None, locust_request_label: str = "") -> 'SailUiForm':
         """
@@ -1092,11 +1172,11 @@ class SailUiForm:
         new_form_url = form_url if form_url else self.form_url
         return SailUiForm(self.interactor, reconciled_state, new_form_url, breadcrumb=self.breadcrumb)
 
-    def _validate_component_found(self, component: Optional[Dict[str, Any]], label: str) -> None:
+    def _validate_component_found(self, component: Optional[Dict[str, Any]], label: str, type: Optional[str] = None) -> None:
         if not component:
-            raise ComponentNotFoundException(
-                f"Could not find the component with label '{label}' in the provided form"
-            )
+            optional_type_info = f" of type '{type}'" if type else ''
+            msg = f"Could not find the component with label '{label}'{optional_type_info} in the provided form"
+            raise ComponentNotFoundException(msg)
 
     def _validate_component_found_by_attribute(self, component: Dict[str, Any], attribute: str, value_for_attribute: str) -> None:
         if not component:

@@ -49,18 +49,18 @@ class TestInteractor(unittest.TestCase):
 
     def test_unauthed_get_page(self) -> None:
         # Given
-        expected_requests = self.custom_locust.get_request_list().copy()
+        expected_requests = self.custom_locust.get_request_list_as_method_path_tuple()
         expected_requests.append(("get", "/suite/whatever"))
         expected_requests.append(("get", "/suite/?signin=native"))
         expected_requests.append(("post", "/suite/auth?appian_environment=tempo"))
         # When
         self.task_set.appian.interactor.get_page("/suite/whatever")
         # Then
-        self.assertEqual(expected_requests, self.custom_locust.get_request_list())
+        self.assertEqual(expected_requests, self.custom_locust.get_request_list_as_method_path_tuple())
 
     def test_authed_get_page(self) -> None:
         # Given
-        expected_requests = self.custom_locust.get_request_list().copy()
+        expected_requests = self.custom_locust.get_request_list_as_method_path_tuple()
         expected_requests.append(("get", "/suite/whatever"))
         cookies = {'JSESSIONID': 'abc'}
         self.custom_locust.set_response("/suite/whatever", 200, '', cookies=cookies)
@@ -68,11 +68,11 @@ class TestInteractor(unittest.TestCase):
         # When
         self.task_set.appian.interactor.get_page("/suite/whatever")
         # Then
-        self.assertEqual(expected_requests, self.custom_locust.get_request_list())
+        self.assertEqual(expected_requests, self.custom_locust.get_request_list_as_method_path_tuple())
 
     def test_500_but_still_logged_in_get_page(self) -> None:
         # Given
-        expected_requests = self.custom_locust.get_request_list().copy()
+        expected_requests = self.custom_locust.get_request_list_as_method_path_tuple()
         expected_requests.append(("get", "/suite/500err"))
         expected_requests.append(("get", "/suite/"))
         self.custom_locust.set_response("/suite/500err", 500, '{}')
@@ -82,13 +82,13 @@ class TestInteractor(unittest.TestCase):
             self.task_set.appian.interactor.get_page("/suite/500err")
         # Then
         except Exception as e:
-            self.assertEqual(expected_requests, self.custom_locust.get_request_list())
+            self.assertEqual(expected_requests, self.custom_locust.get_request_list_as_method_path_tuple())
 
     def test_base_path_override(self) -> None:
         # Given
         self.setUpWithPath('/ae')
 
-        expected_requests = self.custom_locust.get_request_list().copy()
+        expected_requests = self.custom_locust.get_request_list_as_method_path_tuple()
         expected_requests.append(("get", "/ae/whatever"))
         cookies = {'JSESSIONID': 'abc'}
         self.custom_locust.set_response("/ae/whatever", 200, '', cookies=cookies)
@@ -96,11 +96,11 @@ class TestInteractor(unittest.TestCase):
         # When
         self.task_set.appian.interactor.get_page("/suite/whatever")
         # Then
-        self.assertEqual(expected_requests, self.custom_locust.get_request_list())
+        self.assertEqual(expected_requests, self.custom_locust.get_request_list_as_method_path_tuple())
 
     def test_500_and_not_logged_in_get_page(self) -> None:
         # Given
-        expected_requests = self.custom_locust.get_request_list().copy()
+        expected_requests = self.custom_locust.get_request_list_as_method_path_tuple()
         expected_requests.append(("get", "/suite/500err"))
         expected_requests.append(("get", "/suite/"))
         expected_requests.append(("get", "/suite/?signin=native"))
@@ -115,7 +115,7 @@ class TestInteractor(unittest.TestCase):
             self.task_set.appian.interactor.get_page("/suite/500err")
         # Then
         except Exception as e:
-            self.assertEqual(expected_requests, self.custom_locust.get_request_list())
+            self.assertEqual(expected_requests, self.custom_locust.get_request_list_as_method_path_tuple())
 
     def test_click_record_link(self) -> None:
         record_link = find_component_by_attribute_in_dict("label", "Profile",
