@@ -2,18 +2,18 @@ import json
 import os
 import sys
 import urllib.parse
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from re import match, search
 from typing import Any, Dict, Optional, Set, Tuple
 
 from locust.clients import HttpSession, ResponseContextManager
 from requests import Response
 
-from ._save_request_builder import save_builder
-from .helper import (find_component_by_attribute_in_dict,
-                     log_locust_error, test_response_for_error, get_username)
 from . import logger
+from ._save_request_builder import save_builder
 from .exceptions import BadCredentialsException, MissingCsrfTokenException
+from .helper import (find_component_by_attribute_in_dict, get_username,
+                     log_locust_error, test_response_for_error)
 
 log = logger.getLogger(__name__)
 
@@ -778,10 +778,10 @@ class _Interactor:
 
             Args:
                 post_url: the url (not including the host and domain) to post to
-                checkbox: the JSON representing the desired checkbox
+                upload_field: the JSON representing the desired checkbox
                 context: the Sail context parsed from the json response
                 uuid: the uuid parsed from the json response
-                indices: indices of the checkbox
+                doc_id: document id for the upload
                 context_label: the label to be displayed by locust for this action
                 client_mode: where this is being uploaded to, defaults to DESIGN
 
@@ -803,6 +803,81 @@ class _Interactor:
         # Override the default headers here
         headers = self.setup_sail_headers()
         headers['X-Client-Mode'] = client_mode
+        resp = self.post_page(
+            self.host + post_url, payload=payload, headers=headers, label=locust_label
+        )
+        return resp.json()
+
+    def update_date_field(self, post_url: str, date_field_component: Dict[str, Any],
+                          date_input: date, context: Dict[str, Any], uuid: str,
+                          locust_label: str = None) -> Dict[str, Any]:
+        '''
+            Calls the post operation to update a date field
+
+            Args:
+                post_url: the url (not including the host and domain) to post to
+                date_field_component: the JSON representing the date field component
+                date_input: date field to convert to proper text format
+                context: the Sail context parsed from the json response
+                uuid: the uuid parsed from the json response
+
+            Returns: the response of post operation as json
+        '''
+        new_value = {
+            "#t": "date",
+            "#v": f"{date_input.isoformat()}Z" if date_input else None
+        }
+
+        payload = save_builder()\
+            .component(date_field_component)\
+            .context(context)\
+            .uuid(uuid)\
+            .value(new_value)\
+            .build()
+
+        locust_label = locust_label or "Filling Date Field for " + \
+            date_field_component.get("label", date_field_component.get("testLabel", "DateField"))
+
+        headers = self.setup_sail_headers()
+
+        resp = self.post_page(
+            self.host + post_url, payload=payload, headers=headers, label=locust_label
+        )
+        return resp.json()
+
+    def update_datetime_field(self, post_url: str, datetime_field: Dict[str, Any],
+                              datetime_input: datetime, context: Dict[str, Any], uuid: str,
+                              locust_label: str = None) -> Dict[str, Any]:
+        '''
+            Calls the post operation to update a date field
+
+            Args:
+                post_url: the url (not including the host and domain) to post to
+                datetime_field: the JSON representing the datetime field to edit
+                datetime_input: datetime field to convert to the proper text format
+                context: the Sail context parsed from the json response
+                uuid: the uuid parsed from the json response
+
+            Returns: the response of post operation as json
+        '''
+
+        new_value = {
+            "#t": "dateTime",
+            "#v": f"{datetime_input.replace(second=0, microsecond=0).isoformat()}Z" if datetime_input else None
+        }
+
+        payload = save_builder()\
+            .component(datetime_field)\
+            .context(context)\
+            .uuid(uuid)\
+            .value(new_value)\
+            .build()
+
+        locust_label = locust_label or "Filling Date Time Field for " + \
+            datetime_field.get("label", datetime_field.get("testLabel", "DateField"))
+
+        headers = self.setup_sail_headers()
+
         resp = self.post_page(
             self.host + post_url, payload=payload, headers=headers, label=locust_label
         )

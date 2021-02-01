@@ -1,3 +1,4 @@
+import datetime
 import json
 import unittest
 from typing import List
@@ -5,7 +6,8 @@ from unittest.mock import MagicMock, patch
 
 from appian_locust import AppianTaskSet, SailUiForm
 from appian_locust.helper import (ENV, find_component_by_attribute_in_dict,
-                                  find_component_by_label_and_type_dict, find_component_by_index_in_dict)
+                                  find_component_by_index_in_dict,
+                                  find_component_by_label_and_type_dict)
 from locust import TaskSet, User
 from requests.exceptions import HTTPError
 
@@ -18,9 +20,11 @@ class TestSailUiForm(unittest.TestCase):
     record_instance_response = read_mock_file("record_summary_dashboard_response.json")
     related_action_response = read_mock_file("related_action_response.json")
     spl_response = read_mock_file("test_response.json")
+    date_response = read_mock_file("date_task.json")
     sail_ui_actions_response = read_mock_file("sail_ui_actions_cmf.json")
     design_uri = "/suite/rest/a/applications/latest/app/design"
     report_link_uri = "/suite/rest/a/sites/latest/D6JMim/pages/reports/report/nXLBqg/reportlink"
+    date_task_uri = '/suite/rest/a/task/latest/EMlJYSQyFKe2tvm5/form'
     report_name = "Batch Query Report"
     picker_label = '1. Select a Customer'
     picker_value = 'Antilles Transport'
@@ -363,6 +367,55 @@ class TestSailUiForm(unittest.TestCase):
 
         with self.assertRaisesRegex(Exception, "CardLayout found at index: 2 does not have a link on it"):
             test_form.click_card_layout_by_index(2)
+
+    def _setup_date_form(self) -> SailUiForm:
+        uri = self.date_task_uri
+        self.custom_locust.set_response(self.date_task_uri, 200, self.date_response)
+        test_form = SailUiForm(self.task_set.appian.interactor,
+                               json.loads(self.date_response),
+                               uri)
+        return test_form
+
+    def _unwrap_value(self, json_str: str) -> str:
+        return json.loads(json_str)['updates']['#v'][0]['value']['#v']
+
+    def test_fill_datefield_not_found(self) -> None:
+        test_form = self._setup_date_form()
+        with self.assertRaisesRegex(Exception, "Could not find the component with label 'Datey' of type 'DatePickerField'"):
+            test_form.fill_date_field('Datey', datetime.date.today())
+
+    def test_fill_datefield_bad_input(self) -> None:
+        test_form = self._setup_date_form()
+        with self.assertRaisesRegex(Exception, "Input must be of type date"):
+            test_form.fill_date_field('Dt', 'abc')
+
+    def test_fill_datefield_success(self) -> None:
+        test_form = self._setup_date_form()
+        test_form.fill_date_field('Date', datetime.date(1990, 1, 5))
+
+        last_request = self.custom_locust.get_request_list().pop()
+        self.assertEqual('post', last_request['method'])
+        self.assertEqual(self.date_task_uri, last_request['path'])
+        self.assertEqual('1990-01-05Z', self._unwrap_value(last_request['data']))
+
+    def test_fill_datetimefield_bad_input(self) -> None:
+        test_form = self._setup_date_form()
+        with self.assertRaisesRegex(Exception, "Input must be of type datetime"):
+            test_form.fill_datetime_field('Dt', 'abc')
+
+    def test_fill_datetimefield_not_found(self) -> None:
+        test_form = self._setup_date_form()
+        with self.assertRaisesRegex(Exception, "Could not find the component with label 'Dt' of type 'DateTimePickerField'"):
+            test_form.fill_datetime_field('Dt', datetime.datetime.now())
+
+    def test_fill_datetimefield_success(self) -> None:
+        test_form = self._setup_date_form()
+        test_form.fill_datetime_field('Date Time', datetime.datetime(1990, 1, 2, 1, 30, 50))
+
+        last_request = self.custom_locust.get_request_list().pop()
+        self.assertEqual('post', last_request['method'])
+        self.assertEqual(self.date_task_uri, last_request['path'])
+        self.assertEqual('1990-01-02T01:30:00Z', self._unwrap_value(last_request['data']))
 
 
 if __name__ == '__main__':

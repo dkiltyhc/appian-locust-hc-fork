@@ -46,7 +46,7 @@ def _get_javascript_and_find_feature_flag(client: HttpSession, script_uri: str, 
     """
     Read through minified javascript for feature flags
     """
-
+    flag_str = None
     # Since this is a large request, read incrementally
     with client.get(
             script_uri,
@@ -64,6 +64,9 @@ def _get_javascript_and_find_feature_flag(client: HttpSession, script_uri: str, 
         var RAW_DEFAULT_FEATURE_FLAGS=jsbi__WEBPACK_IMPORTED_MODULE_10__["default"].BigInt("0b110100100111011100000111111111111111001110111010111100");
         """
         for chunk in res.iter_content(8192, decode_unicode=True):
+            if flag_str:
+                # Not reading the whole stream will throw errors, so continue reading once found
+                continue
             script_regexes = [
                 r'RAW_DEFAULT_FEATURE_FLAGS=(0x\w+|\d+);',
                 r'RAW_DEFAULT_FEATURE_FLAGS=jsbi__WEBPACK_IMPORTED_MODULE_\d+__\["default"\].BigInt\("(0b[01]+)"\);',
@@ -72,9 +75,8 @@ def _get_javascript_and_find_feature_flag(client: HttpSession, script_uri: str, 
                 js_match = re.search(script_regex, prev_chunk + chunk)
                 if js_match:
                     flag_str = js_match.groups()[0]
-                    return flag_str
             prev_chunk = chunk
-    return None
+    return flag_str
 
 
 def _get_feature_flags_from_regex_match(flag_str: str) -> Tuple[str, str]:
