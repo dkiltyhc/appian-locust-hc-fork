@@ -1,7 +1,23 @@
 image: python:3.7
+include:
+  - template: Dependency-Scanning.gitlab-ci.yml
 stages:
   - validate
+  - test
   - release
+
+gemnasium-python-dependency_scanning:
+  stage: test
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_BRANCH == "master"
+      when: always
+  variables:
+    DS_REMEDIATE: "false"
+    DS_DEFAULT_ANALYZERS: "gemnasium-python"
+  allow_failure: true
+  artifacts:
+    reports:
+      dependency_scanning: gl-dependency-scanning-report.json
 
 Run Unit Tests:
   stage: validate
