@@ -55,8 +55,6 @@ class AppImporter:
         import_result = find_component_by_attribute_in_dict("testLabel", "importResultsText", modal_form.state)
         if import_result:
             log.info(f"Import of {app_file_path} was successful")
-            import_message = import_result.get("value", {}).get("values", {})[0].get("#v", {})
-            log.info(import_message)
         else:
             validations: list = extract_all_by_label(modal_form.state, "validations")
             raise Exception(f"Import failed, validation were {validations}")
