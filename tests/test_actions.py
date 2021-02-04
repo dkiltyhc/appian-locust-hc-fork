@@ -197,14 +197,16 @@ class TestActions(unittest.TestCase):
 
         sail_form: SailUiForm = self.task_set.appian.actions.visit_and_get_form(
             "Create a Case", False)
+        initial_state = sail_form.state
 
         dropdown_label = "Customer Type"
         sail_form.select_dropdown_item(dropdown_label, 'Buy Side Asset Manager')
 
-        mock_get_update_url_for_reeval.assert_called_once_with(sail_form.state)
+        mock_get_update_url_for_reeval.assert_called_once_with(initial_state)
         mock_send_dropdown_update.assert_called_once()
         args, kwargs = mock_send_dropdown_update.call_args
         self.assertEqual(args[0], "/mocked/re-eval/url")
+        self.assertNotEqual(sail_form.state, initial_state)
 
     @patch('appian_locust.uiform.find_component_by_attribute_in_dict')
     @patch('appian_locust.uiform._Interactor.select_radio_button')
@@ -253,12 +255,13 @@ class TestActions(unittest.TestCase):
         self.setup_action_response_with_ui('dropdown_test_ui.json')
         sail_form: SailUiForm = self.task_set.appian.actions.visit_and_get_form(
             "Create a Case", False)
-
+        initial_state = sail_form.state
         button_index = 1
         sail_form.select_radio_button_by_index(button_index, 1)
 
         mock_select_radio_button.assert_called_once()
-        mock_find_component_by_index.assert_called_with('RadioButtonField', button_index, sail_form.state)
+        mock_find_component_by_index.assert_called_with('RadioButtonField', button_index, initial_state)
+        self.assertNotEqual(sail_form.state, initial_state)
 
     def test_actions_form_radio_button_by_index_error(self) -> None:
         self.setup_action_response_with_ui('dropdown_test_ui.json')
