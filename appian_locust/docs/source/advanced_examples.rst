@@ -39,7 +39,7 @@ Here's a snippet showing how to run a test for a set number of iterations.
             # This would mean approximately 40K requests in total for the test.
             if self.iterations >= CONFIG["num_of_iterations"]:
                 logger.info(f"Stopping the Locust runner")
-                ENV.runner.greenlet.kill(block=True)
+                ENV.runner.quit()
             else:
                 logger.info(f"Incrementing the iteration set counter")
                 self.iterations += 1
@@ -74,8 +74,8 @@ If you want to wait for your test to spawn all of the Locust users
     all_locusts_spawned = Semaphore()
     all_locusts_spawned.acquire()
 
-    @events.hatch_complete.add_listener
-    def on_hatch_complete(**kw):
+    @events.spawning_complete.add_listener
+    def on_spawn_complete(**kw):
         print("All news users can start now!")
         all_locusts_spawned.release()
 

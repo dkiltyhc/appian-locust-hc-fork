@@ -29,6 +29,6 @@ setup(
         ]
     },
     install_requires=[
-        "locust==1.0.2"
+        "locust==1.4.3"
     ]
 )

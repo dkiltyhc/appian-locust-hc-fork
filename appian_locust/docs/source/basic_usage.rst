@@ -57,7 +57,7 @@ A SequentialTaskSet is a TaskSet whose tasks will be executed in the order that 
         def increment_iteration_counter(self):
             if self.iterations >= max_iterations:
                 logger.info(f"Stopping the Locust runner")
-                ENV.runner.greenlet.kill(block=True)
+                ENV.runner.quit()
             else:
                 logger.info(f"Incrementing the iteration set counter")
                 self.iterations += 1
@@ -132,4 +132,4 @@ for initialization (which includes a reference to it) it and to store this refer
         ENV = environment
 
     def end_test():
-        ENV.runner.greenlet.kill(block=True)
+        ENV.runner.quit()
