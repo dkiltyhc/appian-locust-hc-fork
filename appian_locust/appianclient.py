@@ -101,6 +101,10 @@ def setup_distributed_creds(CONFIG: dict) -> dict:
     return CONFIG['credentials']
 
 
+def _trim_trailing_slash(host: str) -> str:
+    return host[:-1] if host and host.endswith('/') else host
+
+
 class NoOpEvents():
     def fire(self, *args: str, **kwargs: int) -> None:
         pass
@@ -118,7 +122,7 @@ def appian_client_without_locust(host: str, record_mode: bool = False, base_path
     Returns:
         AppianClient: an Appian client that can be used
     """
-    inner_client = HttpSession(host, NoOpEvents(), NoOpEvents())
+    inner_client = HttpSession(_trim_trailing_slash(host), NoOpEvents(), NoOpEvents())
     if record_mode:
         setattr(inner_client, 'record_mode', True)
     return AppianClient(inner_client, host=host, base_path_override=base_path_override)
@@ -138,7 +142,7 @@ class AppianClient:
 
         """
         self.client = session
-        self.host = host
+        self.host = _trim_trailing_slash(host)
         self._interactor = _Interactor(self.client, self.host)
 
         self._actions = _Actions(self.interactor)

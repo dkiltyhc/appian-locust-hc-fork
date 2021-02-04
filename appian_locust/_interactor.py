@@ -169,6 +169,7 @@ class _Interactor:
         # load initial page to get tokens/cookies
         token_uri = uri + '?signin=native'
         resp = self.get_page(token_uri, label="Login.LoadUi", check_login=False)
+        log.info(f"Attempting to load page {self.replace_base_path_if_appropriate(token_uri)}")
         payload = {
             "un": self.auth[0],
             "pw": self.auth[1],
@@ -184,10 +185,11 @@ class _Interactor:
             "Referer": self.host,
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36",
         }
-
+        login_url = uri + "auth?appian_environment=tempo"
+        log.info(f"Logging in at {self.replace_base_path_if_appropriate(login_url)}")
         # Post Auth
         resp = self.post_page(
-            uri + "auth?appian_environment=tempo",
+            login_url,
             payload=urllib.parse.urlencode(payload),
             headers=headers,
             label="Login.SubmitAuth",
@@ -318,6 +320,8 @@ class _Interactor:
             proposed_file_name = proposed_file_name[:-length_of_file_type] + " (1)" + file_ending
         with open(proposed_file_name, 'w') as f:
             f.write(response.text)
+        if 'X-Trace-Id' in response.headers:
+            log.info(cleaned_label + ' | X-Trace-Id: ' + response.headers['X-Trace-Id'])
 
     def click_record_link(self, get_url: str, component: Dict[str, Any], context: Dict[str, Any],
                           label: str = None, headers: Dict[str, Any] = None, locust_label: str = "") -> Dict[str, Any]:
