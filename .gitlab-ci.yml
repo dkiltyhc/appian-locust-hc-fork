@@ -1,54 +1,57 @@
+# You can override the included template(s) by including variable overrides
+# See https://docs.gitlab.com/ee/user/application_security/sast/#customizing-the-sast-settings
+# Note that environment variables can be set in several places
+# See https://docs.gitlab.com/ee/ci/variables/#priority-of-environment-variables
 image: python:3.7
 include:
-  - template: Dependency-Scanning.gitlab-ci.yml
+- template: Dependency-Scanning.gitlab-ci.yml
+- template: Security/SAST.gitlab-ci.yml
 stages:
-  - validate
-  - test
-  - release
-
+- validate
+- test
+- release
 gemnasium-python-dependency_scanning:
   stage: test
   rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_BRANCH == "master"
-      when: always
+  - if: $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_BRANCH == "master"
+    when: always
   variables:
-    DS_REMEDIATE: "false"
-    DS_DEFAULT_ANALYZERS: "gemnasium-python"
+    DS_REMEDIATE: 'false'
+    DS_DEFAULT_ANALYZERS: gemnasium-python
   allow_failure: true
   artifacts:
     reports:
       dependency_scanning: gl-dependency-scanning-report.json
-
 Run Unit Tests:
   stage: validate
   only:
-    - merge_requests
-    - master
+  - merge_requests
+  - master
   script:
-    - python3 -m pip install -U pipenv
-    - pipenv install --dev --ignore-pipfile
-    - bin/verify.sh
-
+  - python3 -m pip install -U pipenv
+  - pipenv install --dev --ignore-pipfile
+  - bin/verify.sh
 Build Candidate Docs:
   stage: validate
   only:
-    - merge_requests
+  - merge_requests
   artifacts:
-    expose_as: 'Candidate Documentation'
+    expose_as: Candidate Documentation
     paths:
-      - 'appian_locust/docs/build/html/'
+    - appian_locust/docs/build/html/
     expire_in: 30 days
   script:
-    - cd appian_locust/docs
-    - python3 -m pip install -r requirements.txt
-    - make html
-
+  - cd appian_locust/docs
+  - python3 -m pip install -r requirements.txt
+  - make html
 Release appian-locust to Pypi:
   rules:
-    - if: '$CI_COMMIT_TAG != null && $CI_PROJECT_NAMESPACE =~ /^appian-oss.*/'
+  - if: "$CI_COMMIT_TAG != null && $CI_PROJECT_NAMESPACE =~ /^appian-oss.*/"
   stage: release
   before_script:
-    - bin/writeTagToVersionFile.sh
+  - bin/writeTagToVersionFile.sh
   script:
-    - echo "Publishing appian-locust Python Package to Pypi"
-    - bin/releaseLib.sh
+  - echo "Publishing appian-locust Python Package to Pypi"
+  - bin/releaseLib.sh
+sast:
+  stage: test
