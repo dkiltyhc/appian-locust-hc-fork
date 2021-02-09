@@ -1,23 +1,46 @@
 image: python:3.7
 include:
   - template: Dependency-Scanning.gitlab-ci.yml
+  - template: Security/SAST.gitlab-ci.yml
 stages:
   - validate
   - test
   - release
 
-gemnasium-python-dependency_scanning:
-  stage: test
+.run_on_merge_and_master: &run_on_merge_and_master
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_BRANCH == "master"
       when: always
+
+gemnasium-python-dependency_scanning:
+  stage: test
+  <<: *run_on_merge_and_master
   variables:
     DS_REMEDIATE: "false"
     DS_DEFAULT_ANALYZERS: "gemnasium-python"
   allow_failure: true
   artifacts:
+    public: false
+    when: on_failure
+    paths:
+      - gl-dependency-scanning-report.json
     reports:
       dependency_scanning: gl-dependency-scanning-report.json
+
+#SAST - Static Application Security Testing
+bandit-sast:
+  stage: test
+  <<: *run_on_merge_and_master
+  variables:
+    SAST_BANDIT_EXCLUDED_PATHS: "*/tests/*"
+  allow_failure: true
+  artifacts:
+    public: false
+    when: on_failure
+    paths:
+      - gl-sast-report.json
+    reports:
+      sast: gl-sast-report.json
 
 Run Unit Tests:
   stage: validate
