@@ -58,7 +58,7 @@ Here's a snippet showing how to run a test for a set number of iterations.
         wait_time = between(0.500, 0.500)
 
 
-Note: ``CONFIG["num_of_iterations"]`` is retrieved from the test configuration. This should be provided in the `example_config.json <https://gitlab.com/appian-oss/appian-locust/-/blob/master/example_config.json>`_ file.
+Note: ``CONFIG["num_of_iterations"]`` is retrieved from the test configuration. This should be provided in the `example_config.json <https://gitlab.com/appian-oss/appian-locust/-/blob/master/examples/example_config.json>`_ file.
 
 The way to achieve specific number of tasks in this test is by having a counter in your task, that you increment once in a specific Locust task and then stop the test when you have reached the desired number of iterations.
 
