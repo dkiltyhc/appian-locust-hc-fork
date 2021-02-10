@@ -42,6 +42,7 @@ class AppImporter:
 
         # Optionally upload import cust file
         if customization_file_path:
+            log.info("Adding customization file")
             modal_form = modal_form.check_checkbox_by_test_label("propertiesCheckboxField", [1])
             modal_form.upload_document_to_upload_field("Import Customization File (PROPERTIES)", customization_file_path)
 

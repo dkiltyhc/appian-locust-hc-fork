@@ -47,7 +47,7 @@ Setup
       pip install appian-locust
 
 2. Configure your test to point at the Appian instance you will be using.
-You can use example file provided in this repository `example_config.json <https://gitlab.com/appian-oss/appian-locust/-/blob/master/example_config.json>`_:
+You can use example file provided in this repository `example_config.json <https://gitlab.com/appian-oss/appian-locust/-/blob/master/examples/example_config.json>`_:
 
 - Set ``host_address`` to the address of your Appian instance.
 - In ``auth``, specify the username and password of the user account to use.
@@ -62,7 +62,7 @@ You can use example file provided in this repository `example_config.json <https
         ]
     }
 
-3. Run the sample test `example_locustfile.py <https://gitlab.com/appian-oss/appian-locust/-/blob/master/example_locustfile.py>`_.
+3. Run the sample test `example_locustfile.py <https://gitlab.com/appian-oss/appian-locust/-/blob/master/examples/example_locustfile.py>`_.
 
 .. code-block:: bash
 
@@ -77,11 +77,11 @@ Troubleshooting
 ----------------
 * **"Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known"**
 
-  * check that ``host_address`` is specified correctly in `example_config.json <https://gitlab.com/appian-oss/appian-locust/-/blob/master/example_config.json>`_.
+  * check that ``host_address`` is specified correctly in `example_config.json <https://gitlab.com/appian-oss/appian-locust/-/blob/master/examples/example_config.json>`_.
 
 * **"Login unsuccessful, no multipart cookie found...make sure credentials are correct"**
 
-  * check that `auth` specifies a valid username and password combination for the site you're testing on in `example_config.json <https://gitlab.com/appian-oss/appian-locust/-/blob/master/example_config.json>`_.
+  * check that `auth` specifies a valid username and password combination for the site you're testing on in `example_config.json <https://gitlab.com/appian-oss/appian-locust/-/blob/master/examples/example_config.json>`_.
 
 .. quick_start-inclusion-end-do-not-remove
 

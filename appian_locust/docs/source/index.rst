@@ -26,6 +26,7 @@ Using Locust
     basic_usage
     how_to_run_locust
     appian_locust_records_example
+    appian_locust_multiple_users_example
 
 Advanced Usage
 ---------------

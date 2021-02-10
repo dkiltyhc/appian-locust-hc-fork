@@ -34,7 +34,7 @@ These tasks are composed within a class called a TaskSet, which can be unordered
 
 
 
-These together form a locustfile. You can see an example file `here <https://gitlab.com/appian-oss/appian-locust/-/blob/master/example_locustfile.py>`_.
+These together form a locustfile. You can see an example file `here <https://gitlab.com/appian-oss/appian-locust/-/blob/master/examples/example_locustfile.py>`_.
 
 SequentialTaskSet
 ********************************************

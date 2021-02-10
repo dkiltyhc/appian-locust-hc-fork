@@ -2,7 +2,7 @@
 Locust Test Example: Records
 ############################
 
-An example of a Locust Test showing interaction with Appian Records - `example_locust_test_records.py <https://gitlab.com/appian-oss/appian-locust/-/blob/master/example_locustfile.py>`_.
+An example of a Locust Test showing interaction with Appian Records - `example_locust_test_records.py <https://gitlab.com/appian-oss/appian-locust/-/blob/master/examples/example_locustfile.py>`_.
 
 This test has 3 locust tasks defined and it will execute all three for each spawned locust user for the duration of the test.
 

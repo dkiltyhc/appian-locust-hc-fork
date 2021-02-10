@@ -1,0 +1,7 @@
+{
+    "host_address": "site-name.appiancloud.com",
+    "auth": [
+        "adminusername",
+        "adminpassword"
+    ]
+}
