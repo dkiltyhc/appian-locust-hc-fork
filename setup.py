@@ -30,5 +30,6 @@ setup(
     },
     install_requires=[
         "locust==1.4.3"
-    ]
+    ],
+    license='Apache 2.0'
 )
