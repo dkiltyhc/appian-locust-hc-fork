@@ -3,7 +3,6 @@ from typing import Any, Dict
 from . import logger
 from ._interactor import _Interactor
 from .helper import find_component_by_attribute_in_dict
-from .uiform import SailUiForm
 
 log = logger.getLogger(__name__)
 
@@ -22,7 +21,7 @@ class _TaskOpener:
 
         self._tasks: Dict[str, Any] = dict()
 
-    def accept_a_task(self, payload: str, task_id: str, headers: Dict[str, Any] = {}, task_title: str = "") -> Dict[str, Any]:
+    def accept_a_task(self, payload: str, task_id: str, headers: Dict[str, Any] = None, task_title: str = "") -> Dict[str, Any]:
         """Accept a task if necessary
 
         Args:
@@ -38,6 +37,7 @@ class _TaskOpener:
         # whether or not the Task has been accepted. Send "assigned" or
         # "accepted" as the payload to manually assign ƒthe tasks state.
         uri = "/suite/rest/a/task/latest/{}/status".format(task_id)
+        headers = headers.copy() if headers else {}
         headers["Accept"] = "application/vnd.appian.tv.ui+json"
         headers["Content-Type"] = "text/plain;charset=UTF-8"
 
@@ -51,18 +51,22 @@ class _TaskOpener:
                                          label=label)
         return resp.json()
 
-    def visit_by_task_id(self, task_title: str, task_id: str) -> Dict[str, Any]:
-        """Visit a task page and get the corresponding json, by its identifier
+    def visit_by_task_id(self, task_title: str, task_id: str, extra_headers: Dict[str, Any] = None) -> Dict[str, Any]:
+        """Vist a task page and the corresponding json using the task_id
 
         Args:
-            task_title (str): Label used to identify the task
-            task_id (str): Identifier used to access the task
+            task_title (str): Title to identify the task
+            task_id (str): Id used to navigate to the task
+            extra_headers (Dict[str, Any], optional): Extra headers, used for sites requests. Defaults to None.
 
         Returns:
-            Dict[str, Any]: [description]
+            Dict[str, Any]: State returned by visiting the task
         """
+
         uri = "/suite/rest/a/task/latest/{}/attributes".format(task_id)
         headers = self.interactor.setup_request_headers(uri)
+        if extra_headers:
+            headers.update(extra_headers)
         label = f'Tasks.{task_title}'
         resp = self.interactor.get_page(uri=uri, label=label, headers=headers).json()
 
@@ -94,19 +98,3 @@ class _TaskOpener:
             # The task does not need to be accepted in this case
             accepted_task_form = self.accept_a_task("accepted", task_id, task_title=task_title, headers=headers)
         return accepted_task_form
-
-    def visit_and_get_form_by_task_id(self, task_title: str, task_id: str) -> SailUiForm:
-        """Allows a user to get the SailForm by a task id and title
-
-        Args:
-            task_title (str): Title to identify the task
-            task_id (str): Id used to navigate to the task
-
-        Returns:
-            SailUiForm: Form returned by navigating to the task
-        """
-        form_uri = "/suite/rest/a/task/latest/{}/status".format(task_id)
-
-        form_json = self.visit_by_task_id(task_title, task_id)
-        breadcrumb = f"Tasks.{task_title}"
-        return SailUiForm(self.interactor, form_json, form_uri, breadcrumb=breadcrumb)

@@ -14,6 +14,7 @@ from appian_locust.records_helper import _is_grid
 from . import logger
 from ._grid_interactor import GridInteractor
 from ._interactor import _Interactor
+from ._task_opener import _TaskOpener
 from ._ui_reconciler import UiReconciler
 from .helper import (extract_all_by_label, find_component_by_attribute_in_dict,
                      find_component_by_index_in_dict,
@@ -23,6 +24,8 @@ from .records_helper import (get_record_header_response,
 
 KEY_UUID = "uuid"
 KEY_CONTEXT = "context"
+START_PROCESS_LINK_TYPE = 'StartProcessLink'
+PROCESS_TASK_LINK_TYPE = 'ProcessTaskLink'
 COMPONENTS_THAT_CAN_BE_FILLED = ["ParagraphField", "TextField"]
 
 log = logger.getLogger(__name__)
@@ -60,6 +63,7 @@ class SailUiForm:
 
         """
         self.interactor: _Interactor = interactor
+        self.task_opener: _TaskOpener = _TaskOpener(self.interactor)
         self.state: Dict[str, Any] = state
         self.form_url = url
         if any(key not in self.state for key in (KEY_CONTEXT, KEY_UUID)):
@@ -306,6 +310,8 @@ class SailUiForm:
 
         Can also be called with 'click_link' or 'click_button' to convey intent
 
+        This can also click StartProcessLinks or ProcessTaskLinks
+
         Args:
             label(str): Label of the component to click
             is_test_label(bool): If you are clicking a button or link via a test label instead of a label, set this boolean to true
@@ -430,7 +436,7 @@ class SailUiForm:
 
         """
 
-        component = find_component_by_label_and_type_dict('label', label, 'StartProcessLink', self.state)
+        component = find_component_by_label_and_type_dict('label', label, START_PROCESS_LINK_TYPE, self.state)
         self._validate_component_found(component, label)
 
         locust_label = locust_request_label or f"{self.breadcrumb}.ClickStartProcessLink.{label}"
@@ -490,14 +496,34 @@ class SailUiForm:
             locust_label (str): Label used to identify the request for locust statistics
 
         Returns:
-            [type]: [description]
+            Dict[str, Any]: State returned by the interaction
         """
-        link_component = component.get('link', {})
-        component_type = link_component.get('#t')
-        if component_type == "StartProcessLink":
+        component_type = component.get('#t')
+        # Check if component is already a supported link
+        if component_type in [START_PROCESS_LINK_TYPE, PROCESS_TASK_LINK_TYPE]:
+            link_component = component
+            link_type = component_type
+        else:
+            link_component = component.get('link', {})
+            link_type = link_component.get('#t')
+
+        if link_type == START_PROCESS_LINK_TYPE:
             site_name = link_component["siteUrlStub"] or "D6JMim"
             page_name = link_component["sitePageUrlStub"]
             new_state = self._click_start_process_link(site_name, page_name, False, link_component, locust_request_label=locust_label)
+        elif link_type == PROCESS_TASK_LINK_TYPE:
+            task_name = link_component.get('label') or 'Unnammed Task'
+            task_id = link_component.get('opaqueTaskId')
+            if not task_id:
+                raise Exception(f"No task id found for task with name '{task_name}'")
+            site_name = link_component.get("siteUrlStub") or "D6JMim"
+            page_name = link_component.get("sitePageUrlStub")
+            headers = {
+                'X-Site-UrlStub': site_name,
+                'X-Page-UrlStub': page_name,
+                'X-Client-Mode': 'SITES'
+            }
+            new_state = self.task_opener.visit_by_task_id(task_name, task_id, extra_headers=headers)
         elif link_component:
             new_state = self.interactor.click_component(self.form_url, link_component, self.context, self.uuid, label=locust_label)
         else:

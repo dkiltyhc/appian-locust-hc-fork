@@ -141,4 +141,7 @@ class _Tasks(_Base):
         children = initial_task_resp.get("content", {}).get("children", [])
         task_title = children[0]
 
-        return self.task_opener.visit_and_get_form_by_task_id(task_title, clean_id)
+        form_json = self.task_opener.visit_by_task_id(task_title, clean_id)
+        breadcrumb = f"Tasks.{task_title}"
+        form_uri = "/suite/rest/a/task/latest/{}/form".format(clean_id)
+        return SailUiForm(self.interactor, form_json, form_uri, breadcrumb=breadcrumb)
