@@ -1,10 +1,11 @@
 import datetime
 import json
 import unittest
-from typing import List
+from typing import Any, List, Optional
 from unittest.mock import MagicMock, patch
 
 from appian_locust import AppianTaskSet, SailUiForm
+from appian_locust.uiform import PROCESS_TASK_LINK_TYPE
 from appian_locust.helper import (ENV, find_component_by_attribute_in_dict,
                                   find_component_by_index_in_dict,
                                   find_component_by_label_and_type_dict)
@@ -20,6 +21,7 @@ class TestSailUiForm(unittest.TestCase):
     record_instance_response = read_mock_file("record_summary_dashboard_response.json")
     related_action_response = read_mock_file("related_action_response.json")
     spl_response = read_mock_file("test_response.json")
+    sites_task_report_resp = read_mock_file("sites_task_report.json")
     date_response = read_mock_file("date_task.json")
     sail_ui_actions_response = read_mock_file("sail_ui_actions_cmf.json")
     design_uri = "/suite/rest/a/applications/latest/app/design"
@@ -350,13 +352,25 @@ class TestSailUiForm(unittest.TestCase):
         test_form = SailUiForm(self.task_set.appian.interactor,
                                json.loads(self.spl_response),
                                uri)
+
+        def get_call(name: str) -> Optional[Any]:
+            return {
+                'uuid': test_form.uuid,
+                'context': test_form.context
+            }.get(name)
+
+        mock_state = MagicMock()
+        mock_state.get.side_effect = get_call
+        mock_click_component.return_value = mock_state
         component = find_component_by_index_in_dict("DynamicLink", 3, test_form.state)
         test_form.click_card_layout_by_index(3, locust_request_label=self.locust_label)
 
         mock_click_component.assert_called_once()
         args, kwargs = mock_click_component.call_args_list[0]
-        self.assertTupleEqual(args, (self.report_link_uri, component, test_form.context,
-                                     test_form.uuid))
+        self.assertEqual(args[0], self.report_link_uri)
+        self.assertEqual(args[1], component)
+        self.assertEqual(args[2], test_form.context)
+        self.assertEqual(args[3], test_form.uuid)
         self.assertEqual(kwargs["label"], self.locust_label)
 
     def test_click_card_layout_by_index_no_link(self) -> None:
@@ -375,6 +389,21 @@ class TestSailUiForm(unittest.TestCase):
                                json.loads(self.date_response),
                                uri)
         return test_form
+
+    def test_reconcile_ui_changes_context(self) -> None:
+        # State one
+        test_form = self._setup_date_form()
+        original_uuid = test_form.uuid
+        original_context = test_form.context
+        # State two, different uuid
+        new_state = json.loads(self.spl_response)
+
+        test_form._reconcile_state(new_state)
+
+        self.assertNotEqual(test_form.uuid, original_uuid)
+        self.assertNotEqual(test_form.context, original_context)
+        self.assertEqual(test_form.uuid, new_state['uuid'])
+        self.assertEqual(test_form.context, new_state['context'])
 
     def _unwrap_value(self, json_str: str) -> str:
         return json.loads(json_str)['updates']['#v'][0]['value']['#v']
@@ -416,6 +445,52 @@ class TestSailUiForm(unittest.TestCase):
         self.assertEqual('post', last_request['method'])
         self.assertEqual(self.date_task_uri, last_request['path'])
         self.assertEqual('1990-01-02T01:30:00Z', self._unwrap_value(last_request['data']))
+
+    def test_dispatch_click_task_no_id(self) -> None:
+        uri = self.report_link_uri
+        sites_task_report = SailUiForm(self.task_set.appian.interactor,
+                                       json.loads(self.sites_task_report_resp),
+                                       uri)
+        component = {'#t': PROCESS_TASK_LINK_TYPE, 'label': "my task"}
+        with self.assertRaisesRegex(Exception, "No task id found for task with name 'my task'"):
+            sites_task_report._dispatch_click(component, 'no label')
+
+    def test_dispatch_click_task_with_id(self) -> None:
+        uri = self.report_link_uri
+        sites_task_report = SailUiForm(self.task_set.appian.interactor,
+                                       json.loads(self.sites_task_report_resp),
+                                       uri)
+        initial_uuid = sites_task_report.uuid
+        initial_context = sites_task_report.context
+        task_to_accept = read_mock_file('task_accept_resp.json')
+        self.custom_locust.set_response(
+            "/suite/rest/a/task/latest/Bs3k2OfS55jCOcMb5D/status",
+            200,
+            task_to_accept
+        )
+        self.custom_locust.set_response(
+            "/suite/rest/a/task/latest/Bs3k2OfS55jCOcMb5D/attributes",
+            200,
+            """{
+            "isOfflineTask": false,
+            "isSailTask": true,
+            "isQuickTask": false,
+            "taskId": "Bs3k2OfS55jCOcMb5D",
+            "isAutoAcceptable": "true"
+            }""")
+        sites_task_report.click('Issue recommendation')
+
+        task_to_accept_state = json.loads(task_to_accept)
+
+        self.assertNotEqual(initial_uuid, sites_task_report.uuid)
+        self.assertNotEqual(initial_context, sites_task_report.context)
+        self.assertEqual(task_to_accept_state['uuid'], sites_task_report.uuid)
+        self.assertEqual(task_to_accept_state['context'], sites_task_report.context)
+
+        # Assert ui state updated
+        self.assertEqual('Available Case Workers',
+                         find_component_by_attribute_in_dict('label', 'Available Case Workers', sites_task_report.state).get('label')
+                         )
 
 
 if __name__ == '__main__':

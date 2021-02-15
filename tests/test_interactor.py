@@ -32,7 +32,6 @@ class TestInteractor(unittest.TestCase):
         setattr(parent_task_set, "credentials", [["", ""]])
         setattr(parent_task_set, "auth", ["", ""])
         if base_path_override:
-            print("setting dat override")
             setattr(parent_task_set, "base_path_override", base_path_override)
 
         self.task_set = AppianTaskSet(parent_task_set)

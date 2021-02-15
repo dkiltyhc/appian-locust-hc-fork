@@ -14,6 +14,7 @@ from appian_locust.records_helper import _is_grid
 from . import logger
 from ._grid_interactor import GridInteractor
 from ._interactor import _Interactor
+from ._task_opener import _TaskOpener
 from ._ui_reconciler import UiReconciler
 from .helper import (extract_all_by_label, find_component_by_attribute_in_dict,
                      find_component_by_index_in_dict,
@@ -23,6 +24,8 @@ from .records_helper import (get_record_header_response,
 
 KEY_UUID = "uuid"
 KEY_CONTEXT = "context"
+START_PROCESS_LINK_TYPE = 'StartProcessLink'
+PROCESS_TASK_LINK_TYPE = 'ProcessTaskLink'
 COMPONENTS_THAT_CAN_BE_FILLED = ["ParagraphField", "TextField"]
 
 log = logger.getLogger(__name__)
@@ -60,6 +63,7 @@ class SailUiForm:
 
         """
         self.interactor: _Interactor = interactor
+        self.task_opener: _TaskOpener = _TaskOpener(self.interactor)
         self.state: Dict[str, Any] = state
         self.form_url = url
         if any(key not in self.state for key in (KEY_CONTEXT, KEY_UUID)):
@@ -304,6 +308,10 @@ class SailUiForm:
         Clicks on a component on the form, if there is one present with the following label (case sensitive)
         Otherwise throws a NotFoundException
 
+        Can also be called as 'click_link' or 'click_button' to convey intent
+
+        This can also click StartProcessLinks or ProcessTaskLinks
+
         Args:
             label(str): Label of the component to click
             is_test_label(bool): If you are clicking a button or link via a test label instead of a label, set this boolean to true
@@ -319,23 +327,77 @@ class SailUiForm:
             >>> form.click('SampleTestLabel', is_test_label = True)
 
         """
+        locust_label = locust_request_label or f"{self.breadcrumb}.Click.{label}"
+        return self._click(label, is_test_label=is_test_label, locust_request_label=locust_label)
+
+    @raises_locust_error("uiform.py/click_button()")
+    def click_button(self, label: str, is_test_label: bool = False, locust_request_label: str = "") -> 'SailUiForm':
+        """
+        Clicks on a component on the form, if there is one present with the following label (case sensitive)
+        Otherwise throws a NotFoundException
+
+        This can also click StartProcessLinks or ProcessTaskLinks
+
+        Args:
+            label(str): Label of the component to click
+            is_test_label(bool): If you are clicking a button via a test label instead of a label, set this boolean to true
+
+        Keyword Args:
+            locust_request_label(str): Label used to identify the request for locust statistics
+
+        Returns (SailUiForm): The latest state of the UiForm
+
+        Examples:
+
+            >>> form.click_button('Save')
+            >>> form.click_link('Update')
+
+        """
+        locust_label = locust_request_label or f"{self.breadcrumb}.ClickButton.{label}"
+        return self._click(label, is_test_label=is_test_label, locust_request_label=locust_label)
+
+    @raises_locust_error("uiform.py/click_link()")
+    def click_link(self, label: str, is_test_label: bool = False, locust_request_label: str = "") -> 'SailUiForm':
+        """
+        Clicks on a component on the form, if there is one present with the following label (case sensitive)
+        Otherwise throws a NotFoundException
+
+        This can also click StartProcessLinks or ProcessTaskLinks
+
+        Args:
+            label(str): Label of the component to click
+            is_test_label(bool): If you are clicking a link via a test label instead of a label, set this boolean to true
+
+        Keyword Args:
+            locust_request_label(str): Label used to identify the request for locust statistics
+
+        Returns (SailUiForm): The latest state of the UiForm
+
+        Examples:
+
+            >>> form.click_link('Update')
+
+        """
+        locust_label = locust_request_label or f"{self.breadcrumb}.ClickLink.{label}"
+        return self._click(label, is_test_label=is_test_label, locust_request_label=locust_label)
+
+    def _click(self, label: str, is_test_label: bool = False, locust_request_label: str = "") -> 'SailUiForm':
+        """
+        Internal function wrapped by various click methods
+        """
         attribute_to_find = 'testLabel' if is_test_label else 'label'
-        component = find_component_by_attribute_in_dict(
-            attribute_to_find, label, self.state)
+
+        component = find_component_by_attribute_in_dict(attribute_to_find, label, self.state)
+
         self._validate_component_found(component, label)
 
         locust_label = locust_request_label or f"{self.breadcrumb}.Click.{label}"
         reeval_url = self._get_update_url_for_reeval(self.state)
-        new_state = self.interactor.click_component(
-            reeval_url, component, self.context, self.uuid, label=locust_label)
+        new_state = self._dispatch_click(component=component, locust_label=locust_label)
 
         if not new_state:
             raise Exception(f"No response returned when trying to click button with label '{label}'")
         return self._reconcile_state(new_state, form_url=reeval_url)
-
-    # Aliases for click() function
-    click_button = click
-    click_link = click
 
     @raises_locust_error("uiform.py/click_card_layout_by_index()")
     def click_card_layout_by_index(self, index: int, locust_request_label: str = "") -> 'SailUiForm':
@@ -362,13 +424,11 @@ class SailUiForm:
         """
         component = find_component_by_index_in_dict("CardLayout", index, self.state)
 
-        if "link" in component and component["link"]:
-            link_component = component["link"]
-        else:
+        if not component.get("link"):
             raise Exception(f"CardLayout found at index: {index} does not have a link on it")
 
+        link_component = component.get('link')
         locust_label = locust_request_label or f"{self.breadcrumb}.ClickCardLayout.Index.{index}"
-
         if link_component["#t"] == "StartProcessLink":
             site_name = link_component["siteUrlStub"] or "D6JMim"
             page_name = link_component["sitePageUrlStub"]
@@ -428,7 +488,7 @@ class SailUiForm:
 
         """
 
-        component = find_component_by_label_and_type_dict('label', label, 'StartProcessLink', self.state)
+        component = find_component_by_label_and_type_dict('label', label, START_PROCESS_LINK_TYPE, self.state)
         self._validate_component_found(component, label)
 
         locust_label = locust_request_label or f"{self.breadcrumb}.ClickStartProcessLink.{label}"
@@ -478,6 +538,49 @@ class SailUiForm:
         return self.interactor.click_start_process_link(component=component, process_model_opaque_id=process_model_opaque_id,
                                                         cache_key=cache_key, site_name=site_name, page_name=page_name, is_mobile=is_mobile,
                                                         locust_request_label=locust_request_label)
+
+    def _dispatch_click(self, component: Dict[str, Any], locust_label: str) -> Dict[str, Any]:
+        """
+        Dispatches the appropriate link interaction based on the link type if appropriate
+
+        Args:
+            link_component (Dict[str, Any]): Link component to interact with
+            locust_label (str): Label used to identify the request for locust statistics
+
+        Returns:
+            Dict[str, Any]: State returned by the interaction
+        """
+        component_type = component.get('#t')
+        # Check if component is already a supported link
+        if component_type in [START_PROCESS_LINK_TYPE, PROCESS_TASK_LINK_TYPE]:
+            link_component = component
+            link_type = component_type
+        else:
+            link_component = component.get('link', {})
+            link_type = link_component.get('#t')
+
+        if link_type == START_PROCESS_LINK_TYPE:
+            site_name = link_component["siteUrlStub"] or "D6JMim"
+            page_name = link_component["sitePageUrlStub"]
+            new_state = self._click_start_process_link(site_name, page_name, False, link_component, locust_request_label=locust_label)
+        elif link_type == PROCESS_TASK_LINK_TYPE:
+            task_name = link_component.get('label') or 'Unnammed Task'
+            task_id = link_component.get('opaqueTaskId')
+            if not task_id:
+                raise Exception(f"No task id found for task with name '{task_name}'")
+            site_name = link_component.get("siteUrlStub") or "D6JMim"
+            page_name = link_component.get("sitePageUrlStub")
+            headers = {
+                'X-Site-UrlStub': site_name,
+                'X-Page-UrlStub': page_name,
+                'X-Client-Mode': 'SITES'
+            }
+            new_state = self.task_opener.visit_by_task_id(task_name, task_id, extra_headers=headers)
+        elif link_component:
+            new_state = self.interactor.click_component(self.form_url, link_component, self.context, self.uuid, label=locust_label)
+        else:
+            new_state = self.interactor.click_component(self.form_url, component, self.context, self.uuid, label=locust_label)
+        return new_state
 
     @raises_locust_error("uiform.py/click_related_action_link()")
     def click_related_action(self, label: str, locust_request_label: str = "") -> 'SailUiForm':
@@ -1170,6 +1273,8 @@ class SailUiForm:
         self.interactor.datatype_cache.cache(new_state)
         self.state = self.reconciler.reconcile_ui(self.state, new_state)
         self.form_url = form_url or self.form_url
+        self.uuid = self.state.get(KEY_UUID) or self.uuid
+        self.context = self.state.get(KEY_CONTEXT) or self.context
         return self
 
     def _validate_component_found(self, component: Optional[Dict[str, Any]], label: str, type: Optional[str] = None) -> None:

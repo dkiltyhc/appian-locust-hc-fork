@@ -80,7 +80,7 @@ class TestTask(unittest.TestCase):
             self.get_task_attributes(is_auto_acceptable=False))
         output = self.task_set.appian.tasks.visit_and_get_form("t-1", False)
 
-        self.assertEqual(output.form_url, "/suite/rest/a/task/latest/1/status")
+        self.assertEqual(output.form_url, "/suite/rest/a/task/latest/1/form")
 
 
 if __name__ == '__main__':
