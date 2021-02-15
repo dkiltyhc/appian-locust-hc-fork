@@ -1195,6 +1195,8 @@ class SailUiForm:
         self.interactor.datatype_cache.cache(new_state)
         self.state = self.reconciler.reconcile_ui(self.state, new_state)
         self.form_url = form_url or self.form_url
+        self.uuid = self.state.get(KEY_UUID) or self.uuid
+        self.context = self.state.get(KEY_CONTEXT) or self.context
         return self
 
     def _validate_component_found(self, component: Optional[Dict[str, Any]], label: str, type: Optional[str] = None) -> None:

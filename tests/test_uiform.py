@@ -376,6 +376,21 @@ class TestSailUiForm(unittest.TestCase):
                                uri)
         return test_form
 
+    def test_reconcile_ui_changes_context(self) -> None:
+        # State one
+        test_form = self._setup_date_form()
+        original_uuid = test_form.uuid
+        original_context = test_form.context
+        # State two, different uuid
+        new_state = json.loads(self.spl_response)
+
+        test_form._reconcile_state(new_state)
+
+        self.assertNotEqual(test_form.uuid, original_uuid)
+        self.assertNotEqual(test_form.context, original_context)
+        self.assertEqual(test_form.uuid, new_state['uuid'])
+        self.assertEqual(test_form.context, new_state['context'])
+
     def _unwrap_value(self, json_str: str) -> str:
         return json.loads(json_str)['updates']['#v'][0]['value']['#v']
 
