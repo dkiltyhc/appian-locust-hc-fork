@@ -487,6 +487,11 @@ class TestSailUiForm(unittest.TestCase):
         self.assertEqual(task_to_accept_state['uuid'], sites_task_report.uuid)
         self.assertEqual(task_to_accept_state['context'], sites_task_report.context)
 
+        # Assert ui state updated
+        self.assertEqual('Available Case Workers',
+                         find_component_by_attribute_in_dict('label', 'Available Case Workers', sites_task_report.state).get('label')
+                         )
+
 
 if __name__ == '__main__':
     unittest.main()

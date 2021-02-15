@@ -308,7 +308,7 @@ class SailUiForm:
         Clicks on a component on the form, if there is one present with the following label (case sensitive)
         Otherwise throws a NotFoundException
 
-        Can also be called with 'click_link' or 'click_button' to convey intent
+        Can also be called as 'click_link' or 'click_button' to convey intent
 
         This can also click StartProcessLinks or ProcessTaskLinks
 
@@ -325,9 +325,65 @@ class SailUiForm:
 
             >>> form.click('Submit')
             >>> form.click('SampleTestLabel', is_test_label = True)
+
+        """
+        locust_label = locust_request_label or f"{self.breadcrumb}.Click.{label}"
+        return self._click(label, is_test_label=is_test_label, locust_request_label=locust_label)
+
+    @raises_locust_error("uiform.py/click_button()")
+    def click_button(self, label: str, is_test_label: bool = False, locust_request_label: str = "") -> 'SailUiForm':
+        """
+        Clicks on a component on the form, if there is one present with the following label (case sensitive)
+        Otherwise throws a NotFoundException
+
+        This can also click StartProcessLinks or ProcessTaskLinks
+
+        Args:
+            label(str): Label of the component to click
+            is_test_label(bool): If you are clicking a button via a test label instead of a label, set this boolean to true
+
+        Keyword Args:
+            locust_request_label(str): Label used to identify the request for locust statistics
+
+        Returns (SailUiForm): The latest state of the UiForm
+
+        Examples:
+
             >>> form.click_button('Save')
             >>> form.click_link('Update')
 
+        """
+        locust_label = locust_request_label or f"{self.breadcrumb}.ClickButton.{label}"
+        return self._click(label, is_test_label=is_test_label, locust_request_label=locust_label)
+
+    @raises_locust_error("uiform.py/click_link()")
+    def click_link(self, label: str, is_test_label: bool = False, locust_request_label: str = "") -> 'SailUiForm':
+        """
+        Clicks on a component on the form, if there is one present with the following label (case sensitive)
+        Otherwise throws a NotFoundException
+
+        This can also click StartProcessLinks or ProcessTaskLinks
+
+        Args:
+            label(str): Label of the component to click
+            is_test_label(bool): If you are clicking a link via a test label instead of a label, set this boolean to true
+
+        Keyword Args:
+            locust_request_label(str): Label used to identify the request for locust statistics
+
+        Returns (SailUiForm): The latest state of the UiForm
+
+        Examples:
+
+            >>> form.click_link('Update')
+
+        """
+        locust_label = locust_request_label or f"{self.breadcrumb}.ClickLink.{label}"
+        return self._click(label, is_test_label=is_test_label, locust_request_label=locust_label)
+
+    def _click(self, label: str, is_test_label: bool = False, locust_request_label: str = "") -> 'SailUiForm':
+        """
+        Internal function wrapped by various click methods
         """
         attribute_to_find = 'testLabel' if is_test_label else 'label'
 
@@ -342,10 +398,6 @@ class SailUiForm:
         if not new_state:
             raise Exception(f"No response returned when trying to click button with label '{label}'")
         return self._reconcile_state(new_state, form_url=reeval_url)
-
-    # Aliases for click() function
-    click_button = click
-    click_link = click
 
     @raises_locust_error("uiform.py/click_card_layout_by_index()")
     def click_card_layout_by_index(self, index: int, locust_request_label: str = "") -> 'SailUiForm':
