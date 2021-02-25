@@ -84,7 +84,7 @@ class TestDesign(unittest.TestCase):
         error: locust.stats.StatsError = list(ENV.stats.errors.values())[1]
         self.assertEqual('DESC: No description', error.method)
         self.assertEqual('LOCATION: _design.py/visit()', error.name)
-        self.assertEqual('EXCEPTION: HTTP ERROR CODE: 400 MESSAGE:  USERNAME: fake_user', error.error)
+        self.assertEqual('EXCEPTION: 400 Client Error: None for uri: /suite/rest/a/applications/latest/app/design Username: fake_user', error.error)
         self.assertEqual(1, error.occurrences)
 
     def test_create_app_and_record_type(self) -> None:
