@@ -9,7 +9,7 @@ class Design:
     def __init__(self, interactor: _Interactor):
         self.interactor = interactor
 
-    @raises_locust_error("_design.py/visit()")
+    @raises_locust_error
     def visit(self) -> 'SailUiForm':
         """
         Navigates to /design
@@ -28,7 +28,7 @@ class Design:
         response.raise_for_status()
         return SailUiForm(self.interactor, response.json(), DESIGN_URI_PATH, breadcrumb=f'{label}.SailUi')
 
-    @raises_locust_error("_design.py/visit_object()")
+    @raises_locust_error
     def visit_object(self, opaque_id: str) -> 'SailUiForm':
         """
         Navigates to a specific object within the /design environment
@@ -48,7 +48,7 @@ class Design:
         response.raise_for_status()
         return SailUiForm(self.interactor, response.json(), uri, breadcrumb=f'{label}.SailUi')
 
-    @raises_locust_error("_design.py/visit_app()")
+    @raises_locust_error
     def visit_app(self, app_id: str) -> 'SailUiForm':
         """
         Navigates to a specific object within the /design environment

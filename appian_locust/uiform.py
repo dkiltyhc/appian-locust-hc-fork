@@ -101,7 +101,7 @@ class SailUiForm:
 
     # TODO: Handle components on a page with the same label
 
-    @raises_locust_error("uiform.py/fill_text_field()")
+    @raises_locust_error
     def fill_text_field(self, label: str, value: str, locust_request_label: str = "") -> 'SailUiForm':
         """
         Fills a field on the form, if there is one present with the following label (case sensitive)
@@ -134,7 +134,7 @@ class SailUiForm:
 
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/fill_field_by_index()")
+    @raises_locust_error
     def fill_field_by_index(self, type_of_component: str, index: int, text_to_fill: str, locust_request_label: str = "") -> 'SailUiForm':
         """
         Selects a Field by its index and fills it with a text value
@@ -169,7 +169,7 @@ class SailUiForm:
 
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/fill_field_by_any_attribute()")
+    @raises_locust_error
     def fill_field_by_any_attribute(self, attribute: str, value_for_attribute: str, text_to_fill: str, locust_request_label: str = "") -> 'SailUiForm':
         """
         Selects a Field by "attribute" and its value provided "value_for_attribute"
@@ -219,7 +219,7 @@ class SailUiForm:
     # Aliases for fill_text_field() function
     fill_paragraph_field = fill_text_field
 
-    @raises_locust_error("uiform.py/fill_picker_field()")
+    @raises_locust_error
     def fill_picker_field(self, label: str, value: str, fill_request_label: str = "", pick_request_label: str = "") -> 'SailUiForm':
         """
         Enters the value in the picker widget and selects one of the suggested items
@@ -289,7 +289,7 @@ class SailUiForm:
 
         return self._reconcile_state(new_state)
 
-    @raises_locust_error("uiform.py/click()")
+    @raises_locust_error
     def click(self, label: str, is_test_label: bool = False, locust_request_label: str = "") -> 'SailUiForm':
         """
         Clicks on a component on the form, if there is one present with the following label (case sensitive)
@@ -317,7 +317,7 @@ class SailUiForm:
         locust_label = locust_request_label or f"{self.breadcrumb}.Click.{label}"
         return self._click(label, is_test_label=is_test_label, locust_request_label=locust_label)
 
-    @raises_locust_error("uiform.py/click_button()")
+    @raises_locust_error
     def click_button(self, label: str, is_test_label: bool = False, locust_request_label: str = "") -> 'SailUiForm':
         """
         Clicks on a component on the form, if there is one present with the following label (case sensitive)
@@ -343,7 +343,7 @@ class SailUiForm:
         locust_label = locust_request_label or f"{self.breadcrumb}.ClickButton.{label}"
         return self._click(label, is_test_label=is_test_label, locust_request_label=locust_label)
 
-    @raises_locust_error("uiform.py/click_link()")
+    @raises_locust_error
     def click_link(self, label: str, is_test_label: bool = False, locust_request_label: str = "") -> 'SailUiForm':
         """
         Clicks on a component on the form, if there is one present with the following label (case sensitive)
@@ -386,7 +386,7 @@ class SailUiForm:
             raise Exception(f"No response returned when trying to click button with label '{label}'")
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/click_card_layout_by_index()")
+    @raises_locust_error
     def click_card_layout_by_index(self, index: int, locust_request_label: str = "") -> 'SailUiForm':
         """
         Clicks a card layout link by index.
@@ -429,7 +429,7 @@ class SailUiForm:
         reeval_url = self._get_update_url_for_reeval(new_state)
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/click_record_link()")
+    @raises_locust_error
     def click_record_link(self, label: str, locust_request_label: str = "") -> 'SailUiForm':
         """
         Click a record link on the form if there is one present with the following label (case sensitive)
@@ -453,7 +453,7 @@ class SailUiForm:
                                                       locust_label=locust_label)
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/click_start_process_link()")
+    @raises_locust_error
     def click_start_process_link(self, label: str, site_name: str, page_name: str, is_mobile: bool = False, locust_request_label: str = "") -> 'SailUiForm':
         """
         Clicks a start process link on the form by label
@@ -485,7 +485,7 @@ class SailUiForm:
         reeval_url = self._get_update_url_for_reeval(new_state)
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/click_start_process_link_on_mobile()")
+    @raises_locust_error
     def click_start_process_link_on_mobile(self, label: str, site_name: str, page_name: str, locust_request_label: str = "") -> 'SailUiForm':
         """
         Clicks a start process link on the form by label (for Mobile)
@@ -569,7 +569,7 @@ class SailUiForm:
             new_state = self.interactor.click_component(self.form_url, component, self.context, self.uuid, label=locust_label)
         return new_state
 
-    @raises_locust_error("uiform.py/click_related_action_link()")
+    @raises_locust_error
     def click_related_action(self, label: str, locust_request_label: str = "") -> 'SailUiForm':
         """
         Clicks a related action (either a related action button or link) on the form by label
@@ -617,7 +617,7 @@ class SailUiForm:
         reeval_url = self._get_update_url_for_reeval(new_state)
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/select_dropdown_item()")
+    @raises_locust_error
     def select_dropdown_item(self, label: str, choice_label: str, locust_request_label: str = "", is_test_label: bool = False) -> 'SailUiForm':
         """
         Selects a dropdown item on the form
@@ -694,7 +694,7 @@ class SailUiForm:
 
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/check_checkbox_by_test_label()")
+    @raises_locust_error
     def check_checkbox_by_test_label(self, test_label: str, indices: List[int], locust_request_label: str = "") -> 'SailUiForm':
         """
         Checks a checkbox by its testLabel attribute
@@ -721,7 +721,7 @@ class SailUiForm:
         locust_label = locust_request_label or f'{self.breadcrumb}.CheckCheckboxByTestLabel.{test_label}'
         return self._check_checkbox_by_attribute('testLabel', test_label, indices, locust_request_label=locust_label)
 
-    @raises_locust_error("uiform.py/check_checkbox_by_label()")
+    @raises_locust_error
     def check_checkbox_by_label(self, label: str, indices: List[int], locust_request_label: str = "") -> 'SailUiForm':
         """
         Checks a checkbox by its label
@@ -748,7 +748,7 @@ class SailUiForm:
         locust_label = locust_request_label or f'{self.breadcrumb}.CheckCheckboxByLabel.{label}'
         return self._check_checkbox_by_attribute('label', label, indices, locust_request_label=locust_label)
 
-    @raises_locust_error("uiform.py/click_tab_by_label()")
+    @raises_locust_error
     def click_tab_by_label(self, tab_label: str, tab_group_test_label: str, locust_request_label: str = "") -> 'SailUiForm':
         """
         Selects a Tab by its label and its tab group's testLabel
@@ -780,7 +780,7 @@ class SailUiForm:
 
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/upload_document_to_upload_field()")
+    @raises_locust_error
     def upload_document_to_upload_field(self, label: str, file_path: str, locust_request_label: str = "") -> 'SailUiForm':
         """
         Uploads a document to a named upload field
@@ -828,7 +828,7 @@ class SailUiForm:
                 f"No response returned when trying to upload file to field '{label}'")
         return self._reconcile_state(new_state)
 
-    @raises_locust_error("uiform.py/fill_date_field()")
+    @raises_locust_error
     def fill_date_field(self, label: str, date_input: datetime.date, locust_request_label: str = "") -> 'SailUiForm':
         """
         Fills a date field with the specified date
@@ -866,7 +866,7 @@ class SailUiForm:
 
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/fill_datetime_field()")
+    @raises_locust_error
     def fill_datetime_field(self, label: str, datetime_input: datetime.datetime, locust_request_label: str = "") -> 'SailUiForm':
         """
         Fills a datetime field with the specified datetime
@@ -908,7 +908,7 @@ class SailUiForm:
 
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/move_to_end_of_paging_grid()")
+    @raises_locust_error
     def move_to_end_of_paging_grid(self, label: str = None, index: int = None, locust_request_label: str = "") -> 'SailUiForm':
         """
         Moves to the end of a paging grid, if possible
@@ -938,7 +938,7 @@ class SailUiForm:
                                                                self.context, self.uuid, context_label=context_label)
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/move_to_beginning_of_paging_grid()")
+    @raises_locust_error
     def move_to_beginning_of_paging_grid(self, label: str = None, index: int = None, locust_request_label: str = "") -> 'SailUiForm':
         """
         Moves to the beginning of a paging grid, if possible
@@ -965,7 +965,7 @@ class SailUiForm:
                                                                self.context, self.uuid, context_label=context_label)
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/move_to_left_in_paging_grid()")
+    @raises_locust_error
     def move_to_left_in_paging_grid(self, label: str = None, index: int = None, locust_request_label: str = "") -> 'SailUiForm':
         """
         Moves to the left in a paging grid, if possible
@@ -996,7 +996,7 @@ class SailUiForm:
                                                                self.context, self.uuid, context_label=context_label)
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/move_to_right_in_paging_grid()")
+    @raises_locust_error
     def move_to_right_in_paging_grid(self, label: str = None, index: int = None, locust_request_label: str = "") -> 'SailUiForm':
         """
         Moves to the right in a paging grid, if possible
@@ -1027,7 +1027,7 @@ class SailUiForm:
                                                                self.context, self.uuid, context_label=context_label)
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/sort_paging_grid()")
+    @raises_locust_error
     def sort_paging_grid(self, label: str = None, index: int = None, field_name: str = "", ascending: bool = False, locust_request_label: str = "") -> 'SailUiForm':
         """
         Sorts a paging grid by the field name, which is not necessarily the same as the label of the column
@@ -1065,7 +1065,7 @@ class SailUiForm:
                                                                self.context, self.uuid, context_label=context_label)
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/select_radio_button_by_test_label()")
+    @raises_locust_error
     def select_radio_button_by_test_label(self, test_label: str, index: int, locust_request_label: str = "") -> 'SailUiForm':
         """
         Selects a radio button by its test label
@@ -1096,7 +1096,7 @@ class SailUiForm:
                 f"No response returned when trying to select radio button with testLabel '{test_label}'")
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/select_radio_button_by_label()")
+    @raises_locust_error
     def select_radio_button_by_label(self, label: str, index: int, locust_request_label: str = "") -> 'SailUiForm':
         """
         Selects a radio button by its label
@@ -1130,7 +1130,7 @@ class SailUiForm:
                 f"No response returned when trying to select radio button with label '{label}'")
         return self._reconcile_state(new_state, form_url=reeval_url)
 
-    @raises_locust_error("uiform.py/select_radio_button_by_index()")
+    @raises_locust_error
     def select_radio_button_by_index(self, field_index: int, index: int, locust_request_label: str = "") -> 'SailUiForm':
         """
         Selects a radio button by its field index

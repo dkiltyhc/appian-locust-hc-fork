@@ -1,3 +1,5 @@
+import inspect
+import os
 from functools import wraps
 from typing import Any, Callable, Optional
 
@@ -81,14 +83,14 @@ def log_locust_error(e: Exception, error_desc: str = 'No description', location:
         raise e
 
 
-def raises_locust_error(location: str) -> Callable:
-    def should_log_loc_error(func: Callable) -> Callable:
-        @wraps(func)
-        def func_wrapper(*args: Any, **kwargs: Any) -> Optional[Callable]:
-            try:
-                return func(*args, **kwargs)
-            except Exception as e:
-                log_locust_error(e, location=location, raise_error=True)
-                return None
-        return func_wrapper
-    return should_log_loc_error
+def raises_locust_error(func: Callable) -> Callable:
+    @wraps(func)
+    def func_wrapper(*args: Any, **kwargs: Any) -> Optional[Callable]:
+        try:
+            return func(*args, **kwargs)
+        except Exception as e:
+            file_without_path = os.path.basename(inspect.getfile(func))
+            location = f'{file_without_path}/{func.__name__}()'
+            log_locust_error(e, location=location, raise_error=True)
+            return None
+    return func_wrapper

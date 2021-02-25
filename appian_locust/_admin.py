@@ -9,7 +9,7 @@ class Admin:
     def __init__(self, interactor: _Interactor):
         self.interactor = interactor
 
-    @raises_locust_error("_admin.py/visit()")
+    @raises_locust_error
     def visit(self) -> 'SailUiForm':
         """
         Navigates to /admin

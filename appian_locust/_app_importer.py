@@ -16,7 +16,7 @@ class AppImporter:
     def __init__(self, interactor: _Interactor):
         self.interactor = interactor
 
-    @raises_locust_error("_app_importer.import_app")
+    @raises_locust_error
     def import_app(self, app_file_path: str, customization_file_path: str = None, inspect_and_import: bool = False) -> Optional[Dict[str, Any]]:
         """
         Imports an application via the design environment
