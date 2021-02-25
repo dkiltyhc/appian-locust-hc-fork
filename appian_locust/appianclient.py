@@ -275,7 +275,7 @@ class AppianClient:
                 get_client_feature_toggles(self.interactor, self.client)
             )
         except Exception as e:
-            log_locust_error(e, error_desc="Client Feature Toggles Error", location=self.host)
+            log_locust_error(e, error_desc="Client Feature Toggles Error")
             raise e
 
 
@@ -371,7 +371,7 @@ class AppianTaskSet(TaskSet):
         try:
             override_default_flags(self.appian.interactor, flags_to_override)
         except Exception as e:
-            log_locust_error(e, error_desc="Override Default Flags Error", location=self.host)
+            log_locust_error(e, error_desc="Override Default Flags Error")
             raise e
 
     def declare_device_as_mobile(self) -> None:
@@ -384,7 +384,7 @@ class AppianTaskSet(TaskSet):
             set_mobile_feature_flags(self.appian.interactor)
             self.appian.interactor.set_user_agent_to_mobile()
         except Exception as e:
-            log_locust_error(e, error_desc="Override Default Flags Error", location=self.host)
+            log_locust_error(e, error_desc="Override Default Flags Error")
             raise e
 
     def declare_device_as_desktop(self) -> None:
@@ -398,7 +398,7 @@ class AppianTaskSet(TaskSet):
         try:
             self.appian.interactor.set_user_agent_to_desktop()
         except Exception as e:
-            log_locust_error(e, error_desc="Error setting device as desktop", location=self.host)
+            log_locust_error(e, error_desc="Error setting device as desktop")
             raise e
 
 

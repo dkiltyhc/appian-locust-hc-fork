@@ -93,7 +93,7 @@ class _Tasks(_Base):
         _, current_task = super().get(self._tasks, task_name, exact_match)
         if not current_task:
             e = Exception(f'There is no task with name "{task_name}" in the system under test (Exact match = {exact_match})')
-            log_locust_error(e, location='_tasks.py/get_task()', raise_error=True)
+            log_locust_error(e, raise_error=True)
         return current_task
 
     def visit(self, task_name: str, exact_match: bool = True) -> Dict[str, Any]:

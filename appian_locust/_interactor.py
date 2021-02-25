@@ -136,9 +136,7 @@ class _Interactor:
         elif isinstance(payload, str):
             post_payload = payload.encode()
         else:
-            log_locust_error(
-                Exception("Cannot POST a payload that is not of type dict or string"),
-                location="_interactor.py/post_page")
+            log_locust_error(Exception("Cannot POST a payload that is not of type dict or string"))
             sys.exit(1)
         with self.client.post(uri, data=post_payload, headers=headers, name=label, files=files, catch_response=True) as resp:  # type: ResponseContextManager
             try:
@@ -350,11 +348,7 @@ class _Interactor:
         record_view_url_stub = f"/view/{dashboard}"
         if not record_ref:
             e = Exception("Cannot find _recordRef attribute in RecordLink component.")
-            log_locust_error(
-                e,
-                location="_interactor.py/click_record_link()",
-                raise_error=True
-            )
+            log_locust_error(e, raise_error=True)
         record_link_url_suffix = record_ref + record_view_url_stub
 
         # Logic to construct record link URL in tempo and sites
@@ -372,11 +366,7 @@ class _Interactor:
                 page_name = page_search.group()
             else:
                 e = Exception("Unexpected record link URL - couldn't find page name after /pages/")
-                log_locust_error(
-                    e,
-                    location="_interactor.py/click_record_link()",
-                    raise_error=True
-                )
+                log_locust_error(e, raise_error=True)
             parse_pattern = page_name + "/report"
             url_prefix_index = get_url.index(parse_pattern) + len(page_name)
             # record_link_url = get_url[:get_url.index(parse_pattern) + len(page_name)].replace("/pages/",
@@ -388,19 +378,11 @@ class _Interactor:
             record_link_url = f"/suite/rest/a/sites/latest/{site_name}/page/{page_name}/record/{record_link_url_suffix}"
         else:
             e = Exception("Unexpected record link URL")
-            log_locust_error(
-                e,
-                location="_interactor.py/click_record_link()",
-                raise_error=True
-            )
+            log_locust_error(e, raise_error=True)
 
         if not get_url or not record_link_url:
             e = Exception("Cannot make Record Link request.")
-            log_locust_error(
-                e,
-                location="_interactor.py/click_record_link()",
-                raise_error=True
-            )
+            log_locust_error(e, raise_error=True)
 
         # Clicking a record link returns a record instance feed - use setup_feed_headers to get the correct headers
         headers = self.setup_feed_headers()

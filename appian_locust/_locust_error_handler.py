@@ -56,14 +56,15 @@ def test_response_for_error(resp: ResponseContextManager, uri: str = 'No URI Spe
         )
 
 
-def log_locust_error(e: Exception, error_desc: str = 'No description', location: str = 'No location', raise_error: bool = True) -> None:
+def log_locust_error(e: Exception, error_desc: str = 'No description', location: Optional[str] = None, raise_error: bool = True) -> None:
     """
     This function allows scripts in appian_locust to manually report an error to locust.
 
     Args:
         e (Exception): whichever error occured should be propagated through this variable.
         error_desc (str): contains information about the error.
-        location (str): URI or current working directory that contains the location of the error.
+        location (str): Codepath or URL path for the error. If non specified, this will become the codepath
+        raise_error (bool): Whether or not to raise the exception
 
     Returns:
         None
@@ -77,6 +78,12 @@ def log_locust_error(e: Exception, error_desc: str = 'No description', location:
             desc = f'Error in get_news function'
             log_locust_error(e, error_desc=desc)
     """
+    if not location:
+        # Infer location from inspecting the frame
+        if len(inspect.stack()) > 1:
+            stack_item: inspect.FrameInfo = inspect.stack()[1]
+            file_without_path = os.path.basename(stack_item.filename)
+            location = f'{file_without_path}/{stack_item.function}()'
     ENV.stats.log_error(f'DESC: {error_desc}', f'LOCATION: {location}', f'EXCEPTION: {e}')
 
     if raise_error:
@@ -84,6 +91,14 @@ def log_locust_error(e: Exception, error_desc: str = 'No description', location:
 
 
 def raises_locust_error(func: Callable) -> Callable:
+    """Indicates that the below method should log a locust error
+
+    Args:
+        func (Callable): method that could throw an exception
+
+    Returns:
+        Callable: a wrapped form of that method
+    """
     @wraps(func)
     def func_wrapper(*args: Any, **kwargs: Any) -> Optional[Callable]:
         try:
