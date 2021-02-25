@@ -1,5 +1,7 @@
-from .helper import extract_values, find_component_by_attribute_in_dict, log_locust_error
-from typing import Dict, Any, Tuple
+from typing import Any, Dict, Tuple
+
+from ._locust_error_handler import log_locust_error
+from .helper import extract_values, find_component_by_attribute_in_dict
 
 
 def get_all_records_from_json(json_response: Dict[str, Any]) -> Tuple[Dict[str, Any], int]:

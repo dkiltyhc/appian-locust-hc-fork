@@ -1,10 +1,11 @@
+from typing import Any, Dict
+
+from . import logger
 from ._base import _Base
 from ._interactor import _Interactor
+from ._locust_error_handler import log_locust_error
 from ._task_opener import _TaskOpener
-from . import logger
-from typing import Dict, Any
 from .uiform import SailUiForm
-from .helper import find_component_by_attribute_in_dict, log_locust_error
 
 log = logger.getLogger(__name__)
 

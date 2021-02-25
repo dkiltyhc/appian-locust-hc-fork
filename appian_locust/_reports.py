@@ -2,7 +2,8 @@ from typing import Any, Dict
 
 from ._base import _Base
 from ._interactor import _Interactor
-from .helper import format_label, test_response_for_error, log_locust_error
+from ._locust_error_handler import log_locust_error, test_response_for_error
+from .helper import format_label
 from .uiform import SailUiForm
 
 

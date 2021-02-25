@@ -5,8 +5,7 @@ import json
 import os
 import random
 import warnings
-from functools import wraps
-from typing import Any, Callable, Dict, List, Optional
+from typing import Any, Dict, List, Optional
 from urllib.parse import quote, urlparse
 
 from appian_locust.records_helper import _is_grid
@@ -14,11 +13,12 @@ from appian_locust.records_helper import _is_grid
 from . import logger
 from ._grid_interactor import GridInteractor
 from ._interactor import _Interactor
+from ._locust_error_handler import raises_locust_error
 from ._task_opener import _TaskOpener
 from ._ui_reconciler import UiReconciler
 from .helper import (extract_all_by_label, find_component_by_attribute_in_dict,
                      find_component_by_index_in_dict,
-                     find_component_by_label_and_type_dict, log_locust_error)
+                     find_component_by_label_and_type_dict)
 from .records_helper import (get_record_header_response,
                              get_record_summary_view_response)
 
@@ -34,19 +34,6 @@ log = logger.getLogger(__name__)
 class ClientMode(enum.Enum):
     TEMPO = 'TEMPO'
     DESIGN = 'DESIGN'
-
-
-def raises_locust_error(location: str) -> Callable:
-    def should_log_loc_error(func: Callable) -> Callable:
-        @wraps(func)
-        def func_wrapper(*args: Any, **kwargs: Any) -> Optional[Callable]:
-            try:
-                return func(*args, **kwargs)
-            except Exception as e:
-                log_locust_error(e, location=location, raise_error=True)
-                return None
-        return func_wrapper
-    return should_log_loc_error
 
 
 class SailUiForm:

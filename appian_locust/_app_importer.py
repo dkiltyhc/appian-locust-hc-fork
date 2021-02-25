@@ -2,8 +2,9 @@ from typing import Any, Dict, Optional
 
 from . import logger
 from ._interactor import _Interactor
+from ._locust_error_handler import raises_locust_error
 from .helper import extract_all_by_label, find_component_by_attribute_in_dict
-from .uiform import SailUiForm, raises_locust_error
+from .uiform import SailUiForm
 
 log = logger.getLogger(__name__)
 

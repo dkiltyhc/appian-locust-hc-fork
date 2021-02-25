@@ -17,13 +17,13 @@ from ._feature_toggle_helper import (get_client_feature_toggles,
                                      override_default_flags,
                                      set_mobile_feature_flags)
 from ._interactor import _Interactor
+from ._locust_error_handler import log_locust_error
 from ._news import _News
 from ._records import _Records
 from ._reports import _Reports
 from ._sites import _Sites
 from ._tasks import _Tasks
 from .exceptions import MissingConfigurationException
-from .helper import log_locust_error
 
 log = logger.getLogger(__name__)
 

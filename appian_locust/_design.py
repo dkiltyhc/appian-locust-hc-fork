@@ -1,6 +1,6 @@
 from ._interactor import _Interactor
-from .uiform import SailUiForm, raises_locust_error
-
+from ._locust_error_handler import raises_locust_error
+from .uiform import SailUiForm
 
 DESIGN_URI_PATH: str = "/suite/rest/a/applications/latest/app/design"
 
