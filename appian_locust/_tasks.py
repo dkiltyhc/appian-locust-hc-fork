@@ -1,10 +1,11 @@
+from typing import Any, Dict
+
+from . import logger
 from ._base import _Base
 from ._interactor import _Interactor
+from ._locust_error_handler import log_locust_error
 from ._task_opener import _TaskOpener
-from . import logger
-from typing import Dict, Any
 from .uiform import SailUiForm
-from .helper import find_component_by_attribute_in_dict, log_locust_error
 
 log = logger.getLogger(__name__)
 
@@ -92,7 +93,7 @@ class _Tasks(_Base):
         _, current_task = super().get(self._tasks, task_name, exact_match)
         if not current_task:
             e = Exception(f'There is no task with name "{task_name}" in the system under test (Exact match = {exact_match})')
-            log_locust_error(e, location='_tasks.py/get_task()', raise_error=True)
+            log_locust_error(e, raise_error=True)
         return current_task
 
     def visit(self, task_name: str, exact_match: bool = True) -> Dict[str, Any]:

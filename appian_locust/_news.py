@@ -3,8 +3,7 @@ from typing import Any, Dict, Tuple
 from appian_locust import logger
 from appian_locust._base import _Base
 from appian_locust._interactor import _Interactor
-
-from .helper import log_locust_error
+from appian_locust._locust_error_handler import log_locust_error
 
 log = logger.getLogger(__name__)
 

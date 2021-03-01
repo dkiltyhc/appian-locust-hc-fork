@@ -1,13 +1,16 @@
-from locust import TaskSet, Locust
-from appian_locust.helper import ENV
-from .mock_client import CustomLocust
-from .mock_reader import read_mock_file
-from appian_locust import AppianTaskSet
-from appian_locust.uiform import (SailUiForm)
 import unittest
 
+import locust
+from appian_locust import AppianTaskSet
+from appian_locust.helper import ENV
+from appian_locust.uiform import SailUiForm
+from locust import Locust, TaskSet
+
+from .mock_client import CustomLocust
+from .mock_reader import read_mock_file
+
 integration_url = ""
-auth = ["", ""]
+auth = ["fake_user", ""]
 
 
 class TestDesign(unittest.TestCase):
@@ -68,7 +71,7 @@ class TestDesign(unittest.TestCase):
         self.assertEqual(type(sail_form), SailUiForm)
         self.assertEqual(0, len(ENV.stats.errors))
 
-    def test_visit_error(self) -> None:
+    def test_design_visit_error(self) -> None:
         ENV.stats.clear_all()
         self.custom_locust.set_response(
             "/suite/rest/a/applications/latest/app/design", 400, "")
@@ -76,6 +79,13 @@ class TestDesign(unittest.TestCase):
             sail_form = self.task_set.appian.design.visit()
         # Two errors will be logged, one at the get_page request level, and one at the visit
         self.assertEqual(2, len(ENV.stats.errors))
+
+        # Assert error structure
+        error: locust.stats.StatsError = list(ENV.stats.errors.values())[1]
+        self.assertEqual('DESC: No description', error.method)
+        self.assertEqual('LOCATION: _design.py/visit()', error.name)
+        self.assertEqual('EXCEPTION: 400 Client Error: None for uri: /suite/rest/a/applications/latest/app/design Username: fake_user', error.error)
+        self.assertEqual(1, error.occurrences)
 
     def test_create_app_and_record_type(self) -> None:
         if not self.is_integration_mode:

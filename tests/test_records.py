@@ -56,9 +56,9 @@ class TestRecords(unittest.TestCase):
     def test_records_get_all_http_error(self) -> None:
         self.custom_locust.set_response("/suite/rest/a/sites/latest/D6JMim/pages/records/recordType/commit", 500,
                                         self.records)
-        with(self.assertLogs(level="WARN")) as msg:
+        with self.assertLogs(level="WARN") as msg:
             self.task_set.appian.records.get_all()
-        self.assertIn("HTTP ERROR CODE: 500", msg.output[0])
+        self.assertIn("500 Server Error", msg.output[0])
 
     def test_records_get_all_bad_response(self) -> None:
 

@@ -1,9 +1,11 @@
 import re
-from ._interactor import _Interactor
-from .helper import test_response_for_error
+from typing import Any, Dict, List, Tuple
+
 from locust.clients import HttpSession
-from typing import Dict, Tuple, Any, List
+
 from ._feature_flag import FeatureFlag
+from ._interactor import _Interactor
+from ._locust_error_handler import test_response_for_error
 
 
 def get_client_feature_toggles(interactor: _Interactor, session: HttpSession) -> Tuple[str, str]:

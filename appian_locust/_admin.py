@@ -1,6 +1,6 @@
 from ._interactor import _Interactor
-from .uiform import SailUiForm, raises_locust_error
-
+from ._locust_error_handler import raises_locust_error
+from .uiform import SailUiForm
 
 ADMIN_URI_PATH: str = "/suite/rest/a/applications/latest/app/admin"
 
@@ -9,7 +9,7 @@ class Admin:
     def __init__(self, interactor: _Interactor):
         self.interactor = interactor
 
-    @raises_locust_error("_admin.py/visit()")
+    @raises_locust_error
     def visit(self) -> 'SailUiForm':
         """
         Navigates to /admin

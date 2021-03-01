@@ -1,5 +1,7 @@
-from .helper import extract_values, find_component_by_attribute_in_dict, log_locust_error
-from typing import Dict, Any, Tuple
+from typing import Any, Dict, Tuple
+
+from ._locust_error_handler import log_locust_error
+from .helper import extract_values, find_component_by_attribute_in_dict
 
 
 def get_all_records_from_json(json_response: Dict[str, Any]) -> Tuple[Dict[str, Any], int]:
@@ -48,7 +50,6 @@ def get_record_summary_view_response(form_json: Dict[str, Any]) -> str:
     record_summary_response = find_component_by_attribute_in_dict("name", "x-embedded-summary", form_json).get("children")
     if not record_summary_response or len(record_summary_response) < 1:
         log_locust_error(Exception("Parser was not able to find embedded SAIL code within JSON response for the requested Record Instance."),
-                         location="records_helper.py/get_record_summary_view_response()",
                          raise_error=True
                          )
     return record_summary_response[0]
@@ -63,7 +64,6 @@ def get_record_header_response(form_json: Dict[str, Any]) -> str:
     record_header_response = find_component_by_attribute_in_dict("name", "x-embedded-header", form_json).get("children")
     if not record_header_response or len(record_header_response) < 1:
         log_locust_error(Exception("Parser was not able to find embedded SAIL code within JSON response for the requested Record Instance."),
-                         location="records_helper.py/get_record_header_response()",
                          raise_error=True
                          )
     return record_header_response[0]

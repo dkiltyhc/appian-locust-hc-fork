@@ -6,7 +6,8 @@ from requests.models import Response
 from . import logger
 from ._base import _Base
 from ._interactor import _Interactor
-from .helper import format_label, log_locust_error
+from ._locust_error_handler import log_locust_error
+from .helper import format_label
 from .uiform import SailUiForm
 
 log = logger.getLogger(__name__)
@@ -67,10 +68,10 @@ class _Actions(_Base):
                 except Exception as e:
                     error_key_count += 1
                     self._actions[error_key_string + str(error_key_count)] = {}
-                    log_locust_error(e, error_desc="Corrupt Action Error", location=path, raise_error=False)
+                    log_locust_error(e, error_desc="Corrupt Action Error", raise_error=False)
             self._errors = error_key_count
         except Exception as e:
-            log_locust_error(e, error_desc="No Actions Returned", location=path, raise_error=False)
+            log_locust_error(e, error_desc="No Actions Returned", raise_error=False)
             return self._actions
         return self._actions
 

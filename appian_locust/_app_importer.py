@@ -2,8 +2,9 @@ from typing import Any, Dict, Optional
 
 from . import logger
 from ._interactor import _Interactor
+from ._locust_error_handler import raises_locust_error
 from .helper import extract_all_by_label, find_component_by_attribute_in_dict
-from .uiform import SailUiForm, raises_locust_error
+from .uiform import SailUiForm
 
 log = logger.getLogger(__name__)
 
@@ -15,7 +16,7 @@ class AppImporter:
     def __init__(self, interactor: _Interactor):
         self.interactor = interactor
 
-    @raises_locust_error("_app_importer.import_app")
+    @raises_locust_error
     def import_app(self, app_file_path: str, customization_file_path: str = None, inspect_and_import: bool = False) -> Optional[Dict[str, Any]]:
         """
         Imports an application via the design environment
