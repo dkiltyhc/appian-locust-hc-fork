@@ -62,7 +62,7 @@ class _Interactor:
 
         Examples:
 
-            >>> self.setup_request_headers()
+            >>> self.appian.interactor.setup_request_headers()
         """
 
         uri = uri if uri is not None else self.host
@@ -256,6 +256,16 @@ class _Interactor:
 
         Returns: Json response of GET operation
 
+        To set custom headers
+
+        >>> headers = self.appian.interactor.setup_request_headers()
+        ... headers['Is-Admin'] = 'true'
+        ... self.appian.interactor.get_webapi('/suite/webapi/headers', headers=headers)
+
+        To set custom query parameters
+
+        >>> params = {'age': 5, 'start-date': '10-05-2020'}
+        ... self.appian.interactor.get_webapi('/suite/webapi/query', queryparameters=params)
         """
         querystring = []
         for k, v in queryparameters.items():
@@ -263,8 +273,6 @@ class _Interactor:
 
         uri += "?" + "&".join(querystring)
         resp = self.get_page(uri, headers=headers, label=label)
-        if self.record_mode:
-            self.write_response_to_lib_folder(label, resp)
         return resp
 
     def upload_document_to_server(self, file_path: str, is_encrypted: bool = False) -> int:
