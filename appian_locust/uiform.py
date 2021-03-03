@@ -1256,6 +1256,47 @@ class SailUiForm:
             raise Exception(f"At least one validation was found in the form {self.breadcrumb}")
         return self
 
+    @raises_locust_error
+    def refresh_after_record_action(self, label: str, locust_request_label: str = "") -> 'SailUiForm':
+        """
+        Refreshes a form after the completion of a record action.
+
+        Args:
+            label(str): Label of the record action that has just been completed
+
+        Keyword Args:
+            locust_request_label(str): Label used to identify the request for locust statistics
+
+        Returns (SailUiForm): The latest state of the UiForm
+
+        Examples:
+
+            >>> initial_form = copy(form)
+            >>> form.click('Request upgrade')
+            >>> ...
+            >>> form.click('Submit')
+            >>> initial_form.refresh_after_record_action('Request upgrade')
+
+        """
+
+        record_action_component = find_component_by_attribute_in_dict(
+            'label', label, self.state)
+        self._validate_component_found(record_action_component, label)
+
+        record_action_trigger_component = find_component_by_attribute_in_dict(
+            '_actionName', 'sail:record-action-trigger', self.state)
+        self._validate_component_found(record_action_trigger_component, label)
+
+        reeval_url = self._get_update_url_for_reeval(self.state)
+        locust_label = locust_request_label or f"{self.breadcrumb}.RefreshAfterRecordAction.{label}"
+        new_state = self.interactor.refresh_after_record_action(
+            reeval_url, record_action_component, record_action_trigger_component, self.context, self.uuid, label=locust_label)
+
+        if not new_state:
+            raise Exception(f"No response returned when trying to refresh after record action '{label}'")
+
+        return self._reconcile_state(new_state, form_url=reeval_url)
+
     def _reconcile_state(self, new_state: dict, form_url: str = "") -> 'SailUiForm':
         self.interactor.datatype_cache.cache(new_state)
         self.state = self.reconciler.reconcile_ui(self.state, new_state)

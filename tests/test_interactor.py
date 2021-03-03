@@ -15,13 +15,14 @@ log = logger.getLogger(__name__)
 
 
 class TestInteractor(unittest.TestCase):
-
     dir_path = os.path.dirname(os.path.realpath(__file__))
     form_content = read_mock_file("form_content_response.json")
     form_content_2 = read_mock_file("sites_record_nav.json")
     form_content_3 = read_mock_file("sites_record_recordType_resp.json")
     nested_dynamic_link_json = read_mock_file("nested_dynamic_link_response.json")
     response_with_start_process_link = read_mock_file("start_process_link_response.json")
+    record_action_launch_form_before_refresh = read_mock_file("record_action_launch_form_before_refresh.json")
+    record_action_refresh_response = read_mock_file("record_action_refresh_response.json")
     default_user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
     mobile_user_agent = "AppianAndroid/20.2 (Google AOSP on IA Emulator, 9; Build 0-SNAPSHOT; AppianPhone)"
 
@@ -75,7 +76,8 @@ class TestInteractor(unittest.TestCase):
         expected_requests.append(("get", "/suite/500err"))
         expected_requests.append(("get", "/suite/"))
         self.custom_locust.set_response("/suite/500err", 500, '{}')
-        self.custom_locust.set_response("/suite/", 200, '', cookies={'fake': 'fakeVal'})  # No appiancsrf cookie returned
+        self.custom_locust.set_response("/suite/", 200, '',
+                                        cookies={'fake': 'fakeVal'})  # No appiancsrf cookie returned
         # When
         try:
             self.task_set.appian.interactor.get_page("/suite/500err")
@@ -107,7 +109,8 @@ class TestInteractor(unittest.TestCase):
 
         self.custom_locust.set_response("/suite/500err", 500, '{}')
         self.custom_locust.set_response("/suite/auth?appian_environment=tempo", 200, '')
-        self.custom_locust.set_response("/suite/?signin=native", 200, '', cookies={'__appianCsrfToken': 'abc'})  # Default cookies when not logged in
+        self.custom_locust.set_response("/suite/?signin=native", 200, '',
+                                        cookies={'__appianCsrfToken': 'abc'})  # Default cookies when not logged in
 
         # When
         try:
@@ -196,7 +199,8 @@ class TestInteractor(unittest.TestCase):
         page_name = "home"
 
         setattr(self.task_set.appian.interactor, 'post_page', mock)
-        self.task_set.appian.interactor.click_start_process_link(spl_component, process_model_opaque_id, cache_key, site_name, page_name, is_mobile)
+        self.task_set.appian.interactor.click_start_process_link(spl_component, process_model_opaque_id, cache_key,
+                                                                 site_name, page_name, is_mobile)
 
         mock.assert_called_once()
         if not is_mobile:
@@ -309,7 +313,8 @@ class TestInteractor(unittest.TestCase):
         record_instance_list_url = '/suite/rest/a/sites/latest/D6JMim/pages/records/recordType/1vM_9A'
 
         # Attempt to get url stub
-        record_instance_list_url_stub = self.task_set.appian.interactor._get_record_instance_list_url_stub(record_instance_list_url)
+        record_instance_list_url_stub = self.task_set.appian.interactor._get_record_instance_list_url_stub(
+            record_instance_list_url)
 
         # Then the record instance list url has its stub returned
         self.assertEqual(record_instance_list_url_stub, '1vM_9A')
@@ -319,7 +324,8 @@ class TestInteractor(unittest.TestCase):
         record_type_list_url = '/suite/rest/a/applications/latest/legacy/sites/D6JMim/page/records'
 
         # Attempt to get url stub
-        record_type_list_url_stub = self.task_set.appian.interactor._get_record_instance_list_url_stub(record_type_list_url)
+        record_type_list_url_stub = self.task_set.appian.interactor._get_record_instance_list_url_stub(
+            record_type_list_url)
 
         # Then None is returned
         self.assertIsNone(record_type_list_url_stub)
@@ -329,7 +335,8 @@ class TestInteractor(unittest.TestCase):
         record_instance_url = '/suite/rest/a/sites/latest/D6JMim/page/records/record/lQBU8YV4nEFVwMuczMM/view/summary'
 
         # Attempt to get url stub
-        record_instance_url_stub = self.task_set.appian.interactor._get_record_instance_list_url_stub(record_instance_url)
+        record_instance_url_stub = self.task_set.appian.interactor._get_record_instance_list_url_stub(
+            record_instance_url)
 
         # Then None is returned
         self.assertIsNone(record_instance_url_stub)
