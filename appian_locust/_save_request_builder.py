@@ -50,7 +50,10 @@ class _SaveRequestBuilder:
             self._value = self._component["value"]
 
         if 'saveInto' not in self._component:
-            if 'saveInto' not in self._component.get('contents', {}):
+            # Support onSubmitSaveInto
+            if 'onSubmitSaveInto' in self._component:
+                save_into = self._component['onSubmitSaveInto']
+            elif 'saveInto' not in self._component.get('contents', {}):
                 raise Exception("saveInto not set")
             else:
                 save_into = self._component['contents']['saveInto']

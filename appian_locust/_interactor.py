@@ -938,6 +938,48 @@ class _Interactor:
         resp.raise_for_status()
         return resp.json()
 
+    def refresh_after_record_action(self, post_url: str, record_action_component: Dict[str, Any], record_action_trigger_component: Dict[str, Any],
+                                    context: Dict[str, Any], uuid: str, label: str = None) -> Dict[str, Any]:
+        """
+            Calls the post operation to refresh a form after completion of a record action
+
+            Args:
+                post_url: the url (not including the host and domain) to post to
+                record_action_component: the JSON representing the relevant record action component
+                record_action_trigger_component: the JSON representing the form's record action trigger component
+                context: the Sail context parsed from the json response
+                uuid: the uuid parsed from the json response
+
+            Returns: the response of post operation as json
+        """
+        # Get the payload for the record action on submit
+        record_action_payload = save_builder() \
+            .component(record_action_component) \
+            .context(context) \
+            .uuid(uuid) \
+            .value(dict()) \
+            .build()
+
+        # Get the payload for the record action trigger
+        record_action_trigger_payload = save_builder() \
+            .component(record_action_trigger_component) \
+            .context(context) \
+            .uuid(uuid) \
+            .value(dict()) \
+            .build()
+
+        # Get both save requests
+        record_action_save_request = record_action_payload["updates"]["#v"][0]
+        record_action_trigger_save_request = record_action_trigger_payload["updates"]["#v"][0]
+
+        # Update the main payload with the both save requests
+        record_action_payload["updates"]["#v"] = [record_action_save_request, record_action_trigger_save_request]
+
+        resp = self.post_page(
+            self.host + post_url, payload=record_action_payload, label=label
+        )
+        return resp.json()
+
     def _get_record_instance_list_url_stub(self, post_url: str) -> Optional[str]:
         """
             Given post_url, returns the URL stub IF the url matches the url for a record instance list.

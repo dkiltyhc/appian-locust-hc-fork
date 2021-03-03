@@ -1,0 +1,107 @@
+{
+  "_cId": "ed5f5f6ccfc388ad3bcb275960bd1d5e",
+  "title": "Update Table 1 (PSF)",
+  "mobileEnabled": "true",
+  "empty": "false",
+  "formType": "START_FORM",
+  "links": [
+    {
+      "href": "https://djp-auto-test.appianci.net/suite/rest/a/record/latest/GjMakA/ikBFPRMPwJJcLTreO9-kqY0NTFn5whVSpbTYD_QnqEYxqLlNIr9IFMZNA/actions/ikBFPRMPwJJcLTreO9-kqY0NTFl5wgW2MfQelhB4LJ-7wU0U8xuCU2EBA",
+      "rel": "update",
+      "title": "Update",
+      "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
+      "method": "POST"
+    },
+    {
+      "href": "https://djp-auto-test.appianci.net/suite/rest/a/record/latest/GjMakA/ikBFPRMPwJJcLTreO9-kqY0NTFn5whVSpbTYD_QnqEYxqLlNIr9IFMZNA/actions/ikBFPRMPwJJcLTreO9-kqY0NTFl5wgW2MfQelhB4LJ-7wU0U8xuCU2EBA",
+      "rel": "self",
+      "title": "Update",
+      "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
+      "method": "GET"
+    },
+    {
+      "href": "https://djp-auto-test.appianci.net/suite/rest/a/record/latest/GjMakA/ikBFPRMPwJJcLTreO9-kqY0NTFn5whVSpbTYD_QnqEYxqLlNIr9IFMZNA/actions/ikBFPRMPwJJcLTreO9-kqY0NTFl5wgW2MfQelhB4LJ-7wU0U8xuCU2EBA",
+      "rel": "self",
+      "title": "Update",
+      "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
+      "method": "POST"
+    },
+    {
+      "href": "https://djp-auto-test.appianci.net/suite/api/tempo/file",
+      "rel": "upload",
+      "method": "POST"
+    },
+    {
+      "href": "https://djp-auto-test.appianci.net/suite/tempo/file-web/",
+      "rel": "upload-web",
+      "method": "POST"
+    }
+  ],
+  "actions": [
+    {
+      "_cId": "8333cdbab40a98c14806ddac91e84583",
+      "_actionName": "sail:record-action-trigger",
+      "label": "",
+      "saveInto": [
+        "<<jA0EAwMCQEUt6Rt/8kgB0n0B482I9i38DTGaWUPimS7SisAwenb68ghqYBf12ADfBb5Ac9aUzmm2\r\nTEm/URjyQgx3DrsxinJ2ta9vedl1KavxpDMoWFZjPsgdih/e08QahAPUbsAulpvPaBR6OjzGdL2a\r\nS6KGJzE3UIf7DWnE/IRlO51WT7IISjFauY9FYQ==\r\n>>"
+      ],
+      "tooltip": "",
+      "href": "",
+      "#t": "DynamicLink"
+    },
+    {
+      "_cId": "4713416ca9ec5e98a7be1d09b03bc84f",
+      "_actionName": "sail:update-form-factor",
+      "label": "",
+      "saveInto": [
+        "<<jA0EAwMCQEUt6Rt/8kgB0oEB482I9i38DTGaWUPimS7SisAwenb68ghqCxDl2ADfBa5Z3ubc7gfu\r\nbEmiVpSxeH7Vou+08pxvpmMvUUCs/pQ9Cvk6ptaaJifhvQEri1OsimN6l1jHn13Ak5YCHEA6vnY4\r\nyI0IqVO47ew87OMu27Yzxid/caEIcnYAFzSh28LgKDE=\r\n>>"
+      ],
+      "tooltip": "",
+      "href": "",
+      "#t": "DynamicLink"
+    }
+  ],
+  "triggers": [],
+  "ui": {
+    "#t": "UiComponentsDelta",
+    "modifiedComponents": [
+      {
+        "_cId": "d2852e21fb187d3d86eaa3512eec1ef0",
+        "label": "Col2",
+        "instructions": "",
+        "placeholder": "",
+        "value": "updated by inner ra - this should not get overwritten if outer form refreshes before submit",
+        "saveInto": [
+          "<<jA0EAwMCQEUt6Rt/8kgB0oEB482I9i38DTGaWUPimS7SisAwenb68ghqYBf72ADfBb4PkTM7U5zk\r\nTNHtCH/m1eVvmwQ4GbewZ7UL/+87l7EhEQWan2nMAZUM3p12Vmy80DnedJLv870x8wQvp34V9XHS\r\nugsOBAkDlqTWLKOVAW9L2Ls26NfxwCBJAxhs17tiZCI=\r\n>>"
+        ],
+        "refreshAfter": "UNFOCUS",
+        "keyboard": "STANDARD",
+        "labelPosition": "ABOVE",
+        "align": "DEFAULT",
+        "helpTooltip": "",
+        "accessibilityText": "",
+        "inputPurpose": "",
+        "#t": "TextField"
+      }
+    ]
+  },
+  "context": {
+    "type": "stateful",
+    "value": "jA0EAwMCQEUt6Rt/8kgB0qMBRCq3fCH6mQJNWHonjpKE075C0bv49KA5kQnfS0rgswuJUj/L59l7\r\nNzdUDoJ45ZW0C2q9uPBRx72/VO2+TWBTRA8CJSCuroKZXSRjOM3VkfAk8iPhWsb9ydpS91a/yRep\r\nSUnPoG5f8IXqEgVl9zYEejkHgnbPjF8GBiG5OPzqZxdFkwXYJwBkhUyqCvvUkK/AXIeH7CVRkbEy\r\nLpd5KX/XTxau\r\n",
+    "#t": "Map"
+  },
+  "uuid": "345f89d4-b2b4-4c8c-a2a3-2b578e6292df",
+  "i18nInfo": {
+    "locale": "en-US",
+    "timezoneId": "GMT",
+    "calendarId": "gregorian",
+    "decimalSeparator": ".",
+    "groupingSeparator": ","
+  },
+  "timers": {
+    "#t": "Dictionary"
+  },
+  "formFactors": [],
+  "uiExpression": "",
+  "#t": "UiConfig"
+}

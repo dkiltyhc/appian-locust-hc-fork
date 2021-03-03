@@ -24,6 +24,8 @@ class TestSailUiForm(unittest.TestCase):
     sites_task_report_resp = read_mock_file("sites_task_report.json")
     date_response = read_mock_file("date_task.json")
     sail_ui_actions_response = read_mock_file("sail_ui_actions_cmf.json")
+    record_action_launch_form_before_refresh = read_mock_file("record_action_launch_form_before_refresh.json")
+    record_action_refresh_response = read_mock_file("record_action_refresh_response.json")
     design_uri = "/suite/rest/a/applications/latest/app/design"
     report_link_uri = "/suite/rest/a/sites/latest/D6JMim/pages/reports/report/nXLBqg/reportlink"
     date_task_uri = '/suite/rest/a/task/latest/EMlJYSQyFKe2tvm5/form'
@@ -491,6 +493,16 @@ class TestSailUiForm(unittest.TestCase):
         self.assertEqual('Available Case Workers',
                          find_component_by_attribute_in_dict('label', 'Available Case Workers', sites_task_report.state).get('label')
                          )
+
+    def test_refresh_after_record_action_interaction(self) -> None:
+        # TODO - write this based on the picker test below...
+        sail_ui_record_action_before = json.loads(self.record_action_launch_form_before_refresh)
+
+        self.custom_locust.enqueue_response(200, self.record_action_refresh_response)
+
+        sail_form = SailUiForm(self.task_set.appian.interactor, sail_ui_record_action_before, "http://localhost.com")
+
+        sail_form.refresh_after_record_action("Update Table 1 (Dup) (PSF)")
 
 
 if __name__ == '__main__':
