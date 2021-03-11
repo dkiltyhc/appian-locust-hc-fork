@@ -9,6 +9,7 @@ from appian_locust.uiform import PROCESS_TASK_LINK_TYPE
 from appian_locust.helper import (ENV, find_component_by_attribute_in_dict,
                                   find_component_by_index_in_dict,
                                   find_component_by_label_and_type_dict)
+from appian_locust.uiform import (ComponentNotFoundException)
 from locust import TaskSet, User
 from requests.exceptions import HTTPError
 
@@ -23,12 +24,14 @@ class TestSailUiForm(unittest.TestCase):
     spl_response = read_mock_file("test_response.json")
     sites_task_report_resp = read_mock_file("sites_task_report.json")
     date_response = read_mock_file("date_task.json")
+    multi_dropdown_response = read_mock_file("dropdown_test_ui.json")
     sail_ui_actions_response = read_mock_file("sail_ui_actions_cmf.json")
     record_action_launch_form_before_refresh = read_mock_file("record_action_launch_form_before_refresh.json")
     record_action_refresh_response = read_mock_file("record_action_refresh_response.json")
     design_uri = "/suite/rest/a/applications/latest/app/design"
     report_link_uri = "/suite/rest/a/sites/latest/D6JMim/pages/reports/report/nXLBqg/reportlink"
     date_task_uri = '/suite/rest/a/task/latest/EMlJYSQyFKe2tvm5/form'
+    multi_dropdown_uri = "/suite/rest/a/sites/latest/io/page/onboarding-requests/action/34"
     report_name = "Batch Query Report"
     picker_label = '1. Select a Customer'
     picker_value = 'Antilles Transport'
@@ -392,6 +395,19 @@ class TestSailUiForm(unittest.TestCase):
                                uri)
         return test_form
 
+    def _setup_multi_dropdown_form(self) -> SailUiForm:
+        uri = self.multi_dropdown_uri
+        self.custom_locust.set_response(self.multi_dropdown_uri, 200, self.multi_dropdown_response)
+        test_form = SailUiForm(self.task_set.appian.interactor,
+                               json.loads(self.multi_dropdown_response),
+                               uri)
+        return test_form
+
+    def _setup_action_response_with_ui(self, file_name: str = "form_content_response.json") -> None:
+        action = self.task_set.appian.actions.get_action("Create a Case", False)
+        resp_json = read_mock_file(file_name)
+        self.custom_locust.set_response(action['formHref'], 200, resp_json)
+
     def test_reconcile_ui_changes_context(self) -> None:
         # State one
         test_form = self._setup_date_form()
@@ -428,6 +444,14 @@ class TestSailUiForm(unittest.TestCase):
         self.assertEqual('post', last_request['method'])
         self.assertEqual(self.date_task_uri, last_request['path'])
         self.assertEqual('1990-01-05Z', self._unwrap_value(last_request['data']))
+
+    def test_select_multi_dropdown_success(self) -> None:
+        test_form = self._setup_multi_dropdown_form()
+        test_form.select_multi_dropdown_item('Regions', ["Asia", "Africa and Middle East"])
+        last_request = self.custom_locust.get_request_list().pop()
+        self.assertEqual('post', last_request['method'])
+        self.assertEqual(self.multi_dropdown_uri, last_request['path'])
+        self.assertEqual([1, 2], self._unwrap_value(last_request["data"]))
 
     def test_fill_datetimefield_bad_input(self) -> None:
         test_form = self._setup_date_form()

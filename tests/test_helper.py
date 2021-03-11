@@ -51,7 +51,7 @@ class TestHelper(unittest.TestCase):
     def test_repeat_decorator_sleeping(self) -> None:
         # Given
         my_list: List[int] = []
-        wait_time = 0.1
+        wait_time = 0.5
         start = time.time()
 
         @repeat(wait_time=wait_time)
@@ -61,4 +61,4 @@ class TestHelper(unittest.TestCase):
         append_one(my_list)
         # Then
         self.assertLessEqual(2*wait_time, time.time() - start)
-        self.assertGreaterEqual(2*wait_time+0.01, time.time() - start)
+        self.assertGreaterEqual(2*wait_time+0.05, time.time() - start)
