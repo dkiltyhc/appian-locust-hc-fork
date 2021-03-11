@@ -656,6 +656,28 @@
                                                                                                 "skinName": "",
                                                                                                 "accessibilityText": "",
                                                                                                 "#t": "DropdownField"
+                                                                                            },
+                                                                                            {
+                                                                                                "_cId": "7b00436d1e4dfa8d177eb79990635496",
+                                                                                                "label": "Regions",
+                                                                                                "instructions": "",
+                                                                                                "required": true,
+                                                                                                "choices": [
+                                                                                                    "Asia",
+                                                                                                    "Africa and Middle East",
+                                                                                                    "Europe and Americas"
+                                                                                                ],
+                                                                                                "saveInto": [
+                                                                                                    "<<jA0EAwMCCXCiA6JTLiQB0q0BNEIhbhp/aifXBmJpcWkF4kc1kffjG8yKmwKmPjW1qgrFPuSZA2ru\r\nWSmuOsoVeqgBYv6n8P7YuUaWFawoVYsENo/yRBH+XulEefnKiSpyFeXKuKvTlcuwQY+nOko3XKC3\r\nJCWKY3ja5af/nOVAQrnE709Gu8ZlasOXFpH8zqhwunV+u4RdB9hjcyt0hXDr1Z5d2Nwhp8HEHYvM\r\nQ+LecdEfSuMnPk/gR04I7aAhTw==\r\n>>"
+                                                                                                ],
+                                                                                                "labelPosition": "ABOVE",
+                                                                                                "placeholder": "--- Select Values ---",
+                                                                                                "helpTooltip": "",
+                                                                                                "width": "",
+                                                                                                "accessibilityText": "",
+                                                                                                "isSearchable": false,
+                                                                                                "showClearAllIcon": true,
+                                                                                                "#t": "MultipleDropdownField"
                                                                                             }
                                                                                         ],
                                                                                         "align": "",

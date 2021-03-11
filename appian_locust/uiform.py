@@ -664,6 +664,51 @@ class SailUiForm:
 
         return self._reconcile_state(new_state, form_url=reeval_url)
 
+    @raises_locust_error
+    def select_multi_dropdown_item(self, label: str, choice_label: List[str], locust_request_label: str = "", is_test_label: bool = False) -> 'SailUiForm':
+        """
+        Selects a multiple dropdown item on the form
+        If no multiple dropdown found, throws a NotFoundException
+        If no element found, throws a ChoiceNotFoundException
+
+        Args:
+            label(str): Label of the dropdown
+            choice_label([str]): Label(s) of the multiple dropdown item to select
+            is_test_label(bool): If you are interacting with a multiple dropdown via a test label instead of a label, set this boolean to true.
+                                 User filters on a record instance list use test labels.
+
+        Keyword Args:
+            locust_request_label(str): Label used to identify the request for locust statistics
+
+        Returns (SailUiForm): The latest state of the UiForm
+
+        Examples:
+
+            >>> form.select_multi_dropdown_item('MyMultiDropdown', ['My First Choice','My Second Choice'])
+
+        """
+        attribute_to_find = 'testLabel' if is_test_label else 'label'
+        component = find_component_by_attribute_in_dict(
+            attribute_to_find, label, self.state)
+
+        self._validate_component_found(component, label)
+
+        choices: list = component.get('choices')
+        if not choices:
+            raise InvalidComponentException(f"No choices found for component {label}, is the component a Dropdown?")
+        if not isinstance(choice_label, list) and choice_label not in choices:
+            raise ChoiceNotFoundException(f"Choice {choice_label} not found for component {label}, valid choices were {choices}")
+        index_multi = [choices.index(current_label) + 1 for current_label in choice_label]  # Appian is _sigh_ one indexed
+        locust_label = locust_request_label or f'{self.breadcrumb}.SelectMultupleDropdownWithLabel.{choice_label}'
+        reeval_url = self._get_update_url_for_reeval(self.state)
+        new_state = self.interactor.send_multiple_dropdown_update(
+            reeval_url, component, self.context, self.uuid, index=index_multi, label=locust_label)
+        if not new_state:
+            raise Exception(
+                f"No response returned when trying to click button with label '{label}'")
+
+        return self._reconcile_state(new_state, form_url=reeval_url)
+
     def _check_checkbox_by_attribute(self, attribute: str, value_for_attribute: str, indices: List[int], locust_request_label: str = "") -> 'SailUiForm':
         """
         Function that checks checkboxes.

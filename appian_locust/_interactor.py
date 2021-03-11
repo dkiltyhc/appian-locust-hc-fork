@@ -4,7 +4,7 @@ import sys
 import urllib.parse
 from datetime import date, datetime, timedelta
 from re import match, search
-from typing import Any, Dict, Optional, Set, Tuple
+from typing import Any, Dict, List, Optional, Set, Tuple
 
 from locust.clients import HttpSession, ResponseContextManager
 from requests import Response
@@ -524,6 +524,41 @@ class _Interactor:
             .build()
 
         locust_label = label or f'Select \'{dropdown["label"]}\' Dropdown'
+
+        resp = self.post_page(
+            self.host + post_url, payload=payload, label=locust_label
+        )
+        return resp.json()
+
+    def send_multiple_dropdown_update(self, post_url: str, multi_dropdown: Dict[str, Any], context: Dict[str, Any],
+                                      uuid: str, index: List[int], label: str = None) -> Dict[str, Any]:
+        '''
+            Calls the post operation to send an update to a multiple dropdown
+
+            Args:
+                post_url: the url (not including the host and domain) to post to
+                dropdown: the JSON code for the desired dropdown
+                context: the Sail context parsed from the json response
+                uuid: the uuid parsed from the json response
+                index: locations of the multiple dropdown value
+                label: the label to be displayed by locust for this action
+                headers: header for the REST API call
+
+            Returns: the response of post operation as json
+        '''
+        new_value = {
+            "#t": "Integer?list",
+            "#v": index
+        }
+        payload = save_builder() \
+            .component(multi_dropdown) \
+            .context(context) \
+            .uuid(uuid) \
+            .value(new_value) \
+            .record_url_stub(self._get_record_instance_list_url_stub(post_url)) \
+            .build()
+
+        locust_label = label or f'Select \'{multi_dropdown["label"]}\' Dropdown'
 
         resp = self.post_page(
             self.host + post_url, payload=payload, label=locust_label

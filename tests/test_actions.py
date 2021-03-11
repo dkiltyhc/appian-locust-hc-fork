@@ -208,6 +208,23 @@ class TestActions(unittest.TestCase):
         self.assertEqual(args[0], "/mocked/re-eval/url")
         self.assertNotEqual(sail_form.state, initial_state)
 
+    @patch('appian_locust.uiform._Interactor.send_multiple_dropdown_update')
+    def test_multiple_dropdown_not_found(self, mock_send_multiple_dropdown_update: MagicMock) -> None:
+        self.setup_action_response_with_ui('dropdown_test_ui.json')
+        sail_form: SailUiForm = self.task_set.appian.actions.visit_and_get_form(
+            "Create a Case", False)
+
+        dropdown_label = "Regions wrong label"
+        with self.assertRaises(ComponentNotFoundException) as context:
+            sail_form.select_multi_dropdown_item(dropdown_label, ["Asia"])
+        self.assertEqual(
+            context.exception.args[0], f"Could not find the component with label '{dropdown_label}' in the provided form")
+
+        dropdown_label = "Regions"
+        sail_form.select_multi_dropdown_item(dropdown_label, ["Asia"])
+        mock_send_multiple_dropdown_update.assert_called_once()
+        args, kwargs = mock_send_multiple_dropdown_update.call_args
+
     @patch('appian_locust.uiform.find_component_by_attribute_in_dict')
     @patch('appian_locust.uiform._Interactor.select_radio_button')
     def test_actions_form_radio_button_by_label_success(self, mock_select_radio_button: MagicMock,
