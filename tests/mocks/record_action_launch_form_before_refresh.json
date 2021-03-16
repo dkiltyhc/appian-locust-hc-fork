@@ -5,29 +5,29 @@
   "empty": "false",
   "formType": "START_FORM",
   "links": [{
-    "href": "https://djp-auto-test.appianci.net/suite/rest/a/record/latest/GjMakA/ikBFPRMPwJJcLTreO9-kqY0NTFn5whVSpbTYD_QnqEYxqLlNIr9IFMZNA/actions/ikBFPRMPwJJcLTreO9-kqY0NTFl5wgW2MfQelhB4LJ-7wU0U8xuCU2EBA",
+    "href": "https://mysite.myinternalcloud.com/suite/rest/a/record/latest/GjMakA/ikBFPRMPwJJcLTreO9-kqY0NTFn5whVSpbTYD_QnqEYxqLlNIr9IFMZNA/actions/ikBFPRMPwJJcLTreO9-kqY0NTFl5wgW2MfQelhB4LJ-7wU0U8xuCU2EBA",
     "rel": "update",
     "title": "Update",
     "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
     "method": "POST"
   }, {
-    "href": "https://djp-auto-test.appianci.net/suite/rest/a/record/latest/GjMakA/ikBFPRMPwJJcLTreO9-kqY0NTFn5whVSpbTYD_QnqEYxqLlNIr9IFMZNA/actions/ikBFPRMPwJJcLTreO9-kqY0NTFl5wgW2MfQelhB4LJ-7wU0U8xuCU2EBA",
+    "href": "https://mysite.myinternalcloud.com/suite/rest/a/record/latest/GjMakA/ikBFPRMPwJJcLTreO9-kqY0NTFn5whVSpbTYD_QnqEYxqLlNIr9IFMZNA/actions/ikBFPRMPwJJcLTreO9-kqY0NTFl5wgW2MfQelhB4LJ-7wU0U8xuCU2EBA",
     "rel": "self",
     "title": "Update",
     "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
     "method": "GET"
   }, {
-    "href": "https://djp-auto-test.appianci.net/suite/rest/a/record/latest/GjMakA/ikBFPRMPwJJcLTreO9-kqY0NTFn5whVSpbTYD_QnqEYxqLlNIr9IFMZNA/actions/ikBFPRMPwJJcLTreO9-kqY0NTFl5wgW2MfQelhB4LJ-7wU0U8xuCU2EBA",
+    "href": "https://mysite.myinternalcloud.com/suite/rest/a/record/latest/GjMakA/ikBFPRMPwJJcLTreO9-kqY0NTFn5whVSpbTYD_QnqEYxqLlNIr9IFMZNA/actions/ikBFPRMPwJJcLTreO9-kqY0NTFl5wgW2MfQelhB4LJ-7wU0U8xuCU2EBA",
     "rel": "self",
     "title": "Update",
     "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
     "method": "POST"
   }, {
-    "href": "https://djp-auto-test.appianci.net/suite/api/tempo/file",
+    "href": "https://mysite.myinternalcloud.com/suite/api/tempo/file",
     "rel": "upload",
     "method": "POST"
   }, {
-    "href": "https://djp-auto-test.appianci.net/suite/tempo/file-web/",
+    "href": "https://mysite.myinternalcloud.com/suite/tempo/file-web/",
     "rel": "upload-web",
     "method": "POST"
   }],

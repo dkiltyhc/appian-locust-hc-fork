@@ -16,6 +16,7 @@ from ._interactor import _Interactor
 from ._locust_error_handler import raises_locust_error
 from ._task_opener import _TaskOpener
 from ._ui_reconciler import UiReconciler
+from .exceptions import ComponentNotFoundException, InvalidComponentException, ChoiceNotFoundException
 from .helper import (extract_all_by_label, find_component_by_attribute_in_dict,
                      find_component_by_index_in_dict,
                      find_component_by_label_and_type_dict)
@@ -102,7 +103,7 @@ class SailUiForm:
     # TODO: Handle components on a page with the same label
 
     @raises_locust_error
-    def fill_text_field(self, label: str, value: str, locust_request_label: str = "") -> 'SailUiForm':
+    def fill_text_field(self, label: str, value: str, is_test_label: bool = False, locust_request_label: str = "") -> 'SailUiForm':
         """
         Fills a field on the form, if there is one present with the following label (case sensitive)
         Otherwise throws a NotFoundException
@@ -110,6 +111,7 @@ class SailUiForm:
         Args:
             label(str): Label of the field to fill out
             value(str): Value to update the label to
+            is_test_label(bool): If you are filling a text field via a test label instead of a label, set this boolean to true
 
         Keyword Args:
             locust_request_label(str): Label used to identify the request for locust statistics
@@ -121,8 +123,9 @@ class SailUiForm:
             >>> form.fill_text_field('Title','My New Novel')
 
         """
+        attribute_to_find = 'testLabel' if is_test_label else 'label'
         component = find_component_by_attribute_in_dict(
-            'label', label, self.state)
+            attribute_to_find, label, self.state)
         self._validate_component_found(component, label)
 
         reeval_url = self._get_update_url_for_reeval(self.state)
@@ -430,13 +433,14 @@ class SailUiForm:
         return self._reconcile_state(new_state, form_url=reeval_url)
 
     @raises_locust_error
-    def click_record_link(self, label: str, locust_request_label: str = "") -> 'SailUiForm':
+    def click_record_link(self, label: str, is_test_label: bool = False, locust_request_label: str = "") -> 'SailUiForm':
         """
         Click a record link on the form if there is one present with the following label (case sensitive)
         Otherwise throws a ComponentNotFoundException
 
         Args:
             label(str): Label of the record link to click
+            is_test_label(bool): If you are clicking a record link via a test label instead of a label, set this boolean to true
 
         Keyword Args:
             locust_request_label(str): Label used to identify the request for locust statistics
@@ -444,7 +448,8 @@ class SailUiForm:
         Returns (SailUiForm): The record form (feed) for the linked record.
 
         """
-        component = find_component_by_attribute_in_dict('label', label, self.state)
+        attribute_to_find = 'testLabel' if is_test_label else 'label'
+        component = find_component_by_attribute_in_dict(attribute_to_find, label, self.state)
         self._validate_component_found(component, label)
 
         reeval_url = self._get_update_url_for_reeval(self.state)
@@ -1342,6 +1347,37 @@ class SailUiForm:
 
         return self._reconcile_state(new_state, form_url=reeval_url)
 
+    @raises_locust_error
+    def click_record_search_button_by_index(self, index: int = 1, locust_request_label: str = "") -> 'SailUiForm':
+        """
+        Clicks the Search button of a record grid.
+
+        Args:
+            index(int): Index of the record search button on the form
+
+        Keyword Args:
+            locust_request_label(str): Label used to identify the request for locust statistics
+
+        Returns (SailUiForm): The latest state of the UiForm
+
+        Examples:
+
+            >>> form.click_record_search_button_by_index(1)
+
+        """
+        component = find_component_by_index_in_dict("SearchBoxWidget", index, self.state)
+        self._validate_component_found_by_attribute(component, "searchButtonLabel", "Search")
+
+        reeval_url = self._get_update_url_for_reeval(self.state)
+        locust_label = locust_request_label or f"{self.breadcrumb}.ClickRecordSearchButtonByIndex.{index}"
+        new_state = self.interactor.click_record_search_button(
+            reeval_url, component, self.context, self.uuid, label=locust_label)
+
+        if not new_state:
+            raise Exception(f"No response returned when trying to click record search button at index '{index}'")
+
+        return self._reconcile_state(new_state, form_url=reeval_url)
+
     def _reconcile_state(self, new_state: dict, form_url: str = "") -> 'SailUiForm':
         self.interactor.datatype_cache.cache(new_state)
         self.state = self.reconciler.reconcile_ui(self.state, new_state)
@@ -1378,15 +1414,3 @@ class SailUiForm:
                 reeval_url = urlparse(link_object.get("href", "")).path
                 break
         return reeval_url
-
-
-class ComponentNotFoundException(Exception):
-    pass
-
-
-class InvalidComponentException(Exception):
-    pass
-
-
-class ChoiceNotFoundException(Exception):
-    pass

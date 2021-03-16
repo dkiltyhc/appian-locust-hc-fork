@@ -28,6 +28,8 @@ class TestSailUiForm(unittest.TestCase):
     sail_ui_actions_response = read_mock_file("sail_ui_actions_cmf.json")
     record_action_launch_form_before_refresh = read_mock_file("record_action_launch_form_before_refresh.json")
     record_action_refresh_response = read_mock_file("record_action_refresh_response.json")
+    site_with_record_search_button = read_mock_file("site_with_record_search_button.json")
+    uiform_click_record_search_button_response = read_mock_file("uiform_click_record_search_button_response.json")
     design_uri = "/suite/rest/a/applications/latest/app/design"
     report_link_uri = "/suite/rest/a/sites/latest/D6JMim/pages/reports/report/nXLBqg/reportlink"
     date_task_uri = '/suite/rest/a/task/latest/EMlJYSQyFKe2tvm5/form'
@@ -519,7 +521,6 @@ class TestSailUiForm(unittest.TestCase):
                          )
 
     def test_refresh_after_record_action_interaction(self) -> None:
-        # TODO - write this based on the picker test below...
         sail_ui_record_action_before = json.loads(self.record_action_launch_form_before_refresh)
 
         self.custom_locust.enqueue_response(200, self.record_action_refresh_response)
@@ -527,6 +528,15 @@ class TestSailUiForm(unittest.TestCase):
         sail_form = SailUiForm(self.task_set.appian.interactor, sail_ui_record_action_before, "http://localhost.com")
 
         sail_form.refresh_after_record_action("Update Table 1 (Dup) (PSF)")
+
+    def test_click_record_search_button_by_index(self) -> None:
+        sail_ui_site_with_record_search_button = json.loads(self.site_with_record_search_button)
+
+        self.custom_locust.enqueue_response(200, self.uiform_click_record_search_button_response)
+
+        sail_form = SailUiForm(self.task_set.appian.interactor, sail_ui_site_with_record_search_button, "http://localhost.com")
+
+        sail_form.click_record_search_button_by_index()
 
 
 if __name__ == '__main__':
