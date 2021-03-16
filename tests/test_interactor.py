@@ -4,7 +4,7 @@ import unittest
 from unittest.mock import Mock
 
 from appian_locust import AppianClient, AppianTaskSet
-from appian_locust.helper import find_component_by_attribute_in_dict
+from appian_locust.helper import find_component_by_attribute_in_dict, find_component_by_index_in_dict
 from appian_locust import logger
 from locust import Locust, TaskSet
 
@@ -23,6 +23,7 @@ class TestInteractor(unittest.TestCase):
     response_with_start_process_link = read_mock_file("start_process_link_response.json")
     record_action_launch_form_before_refresh = read_mock_file("record_action_launch_form_before_refresh.json")
     record_action_refresh_response = read_mock_file("record_action_refresh_response.json")
+    site_with_record_search_button = read_mock_file("site_with_record_search_button.json")
     default_user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
     mobile_user_agent = "AppianAndroid/20.2 (Google AOSP on IA Emulator, 9; Build 0-SNAPSHOT; AppianPhone)"
 
@@ -340,3 +341,10 @@ class TestInteractor(unittest.TestCase):
 
         # Then None is returned
         self.assertIsNone(record_instance_url_stub)
+
+    def test_click_record_search_button(self) -> None:
+        component = find_component_by_index_in_dict("SearchBoxWidget", 1, json.loads(self.site_with_record_search_button))
+
+        self.custom_locust.set_response("", 200, "{}")
+        output = self.task_set.appian.interactor.click_record_search_button("", component, {}, "my_uuid", "")
+        self.assertEqual(output, dict())

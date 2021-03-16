@@ -12,7 +12,7 @@ from requests import Response
 from . import logger
 from ._locust_error_handler import log_locust_error, test_response_for_error
 from ._save_request_builder import save_builder
-from .exceptions import BadCredentialsException, MissingCsrfTokenException
+from .exceptions import BadCredentialsException, MissingCsrfTokenException, ComponentNotFoundException
 from .helper import find_component_by_attribute_in_dict, get_username
 
 log = logger.getLogger(__name__)
@@ -110,7 +110,8 @@ class _Interactor:
             return uri.replace('/suite', self.client.base_path_override, 1)
         return uri
 
-    def post_page(self, uri: str, payload: Any = {}, headers: Dict[str, Any] = None, label: str = None, files: dict = None, check_login: bool = True) -> Response:
+    def post_page(self, uri: str, payload: Any = {}, headers: Dict[str, Any] = None, label: str = None,
+                  files: dict = None, check_login: bool = True) -> Response:
         """
         Given a uri, executes POST request and returns response
 
@@ -138,7 +139,8 @@ class _Interactor:
         else:
             log_locust_error(Exception("Cannot POST a payload that is not of type dict or string"))
             sys.exit(1)
-        with self.client.post(uri, data=post_payload, headers=headers, name=label, files=files, catch_response=True) as resp:  # type: ResponseContextManager
+        with self.client.post(uri, data=post_payload, headers=headers, name=label, files=files,
+                              catch_response=True) as resp:  # type: ResponseContextManager
             try:
                 test_response_for_error(resp, uri, raise_error=check_login, username=username)
             except Exception as e:
@@ -216,7 +218,8 @@ class _Interactor:
             if login_page_resp.ok and '__appianCsrfToken' in login_page_resp.cookies:
                 self.login()
 
-    def get_page(self, uri: str, headers: Optional[Dict[str, Any]] = None, label: str = None, check_login: bool = True) -> Response:
+    def get_page(self, uri: str, headers: Optional[Dict[str, Any]] = None, label: str = None,
+                 check_login: bool = True) -> Response:
         """
         Given a uri, executes GET request and returns response
 
@@ -245,7 +248,8 @@ class _Interactor:
                 self.write_response_to_lib_folder(label, resp)
             return resp
 
-    def get_webapi(self, uri: str, headers: Dict[str, Any] = None, label: str = None, queryparameters: Dict[str, Any] = {}) -> Response:
+    def get_webapi(self, uri: str, headers: Dict[str, Any] = None, label: str = None,
+                   queryparameters: Dict[str, Any] = {}) -> Response:
         """
         Same as ``get_page``. Additionally it accepts the query parameter to add query parameter while running "GET" operation
         Args:
@@ -364,7 +368,7 @@ class _Interactor:
             record_link_url = "/suite/tempo/records/item/" + record_link_url_suffix
         elif "sites" in get_url and "/record/" in get_url:
             parse_pattern = "/record/"
-            record_link_url = get_url[:get_url.index(parse_pattern)+len(parse_pattern)] + record_link_url_suffix
+            record_link_url = get_url[:get_url.index(parse_pattern) + len(parse_pattern)] + record_link_url_suffix
         elif match(r'.*\/page\/\w+$', get_url):
             record_link_url = get_url + "/record/" + record_link_url_suffix
         # Support record links on site pages
@@ -378,7 +382,8 @@ class _Interactor:
             parse_pattern = page_name + "/report"
             url_prefix_index = get_url.index(parse_pattern) + len(page_name)
             # record_link_url = get_url[:get_url.index(parse_pattern) + len(page_name)].replace("/pages/",
-            record_link_url = get_url[:url_prefix_index].replace("/pages/", "/page/") + "/record/" + record_link_url_suffix
+            record_link_url = get_url[:url_prefix_index].replace("/pages/",
+                                                                 "/page/") + "/record/" + record_link_url_suffix
         # Support record view links from a record within a site
         elif "record" in get_url:
             site_name = component.get('siteUrlStub', "")
@@ -459,7 +464,8 @@ class _Interactor:
     # COMPONENT RELATED METHODS
 
     def click_component(self, post_url: str, component: Dict[str, Any], context: Dict[str, Any],
-                        uuid: str, label: str = None, headers: Dict[str, Any] = None, client_mode: str = None) -> Dict[str, Any]:
+                        uuid: str, label: str = None, headers: Dict[str, Any] = None,
+                        client_mode: str = None) -> Dict[str, Any]:
         '''
             Calls the post operation to click certain SAIL components such as Buttons and Dynamic Links
 
@@ -478,10 +484,10 @@ class _Interactor:
             component = component["link"]
             component["label"] = wrapper_label
 
-        payload = save_builder()\
-            .component(component)\
-            .context(context)\
-            .uuid(uuid)\
+        payload = save_builder() \
+            .component(component) \
+            .context(context) \
+            .uuid(uuid) \
             .build()
 
         locust_label = label or f'Click \'{component["label"]}\' Component'
@@ -515,12 +521,12 @@ class _Interactor:
             "#t": "Integer",
             "#v": index
         }
-        payload = save_builder()\
-            .component(dropdown)\
-            .context(context)\
-            .uuid(uuid)\
-            .value(new_value)\
-            .record_url_stub(self._get_record_instance_list_url_stub(post_url))\
+        payload = save_builder() \
+            .component(dropdown) \
+            .context(context) \
+            .uuid(uuid) \
+            .value(new_value) \
+            .record_url_stub(self._get_record_instance_list_url_stub(post_url)) \
             .build()
 
         locust_label = label or f'Select \'{dropdown["label"]}\' Dropdown'
@@ -579,10 +585,10 @@ class _Interactor:
         primary_button["#t"] = "ButtonWidget"
         context = page_content_in_json["context"]
         uuid = page_content_in_json["uuid"]
-        payload = save_builder()\
-            .component(primary_button)\
-            .context(context)\
-            .uuid(uuid)\
+        payload = save_builder() \
+            .component(primary_button) \
+            .context(context) \
+            .uuid(uuid) \
             .build()
 
         return payload
@@ -603,11 +609,11 @@ class _Interactor:
 
         """
         new_value = {"#t": "Text", "#v": text}
-        payload = save_builder()\
-            .component(text_field)\
-            .context(context)\
-            .uuid(uuid)\
-            .value(new_value)\
+        payload = save_builder() \
+            .component(text_field) \
+            .context(context) \
+            .uuid(uuid) \
+            .value(new_value) \
             .build()
 
         locust_label = label or f'Fill \'{text_field["label"]}\' TextField'
@@ -637,11 +643,11 @@ class _Interactor:
             "typedText": text
         }
 
-        payload = save_builder()\
-            .component(picker_field)\
-            .context(context)\
-            .uuid(uuid)\
-            .value(new_value)\
+        payload = save_builder() \
+            .component(picker_field) \
+            .context(context) \
+            .uuid(uuid) \
+            .value(new_value) \
             .build()
 
         locust_label = label or f'Fill \'{picker_field["label"]}\' PickerField'
@@ -674,11 +680,11 @@ class _Interactor:
             "identifiers": identifiers_list
         }
 
-        payload = save_builder()\
-            .component(picker_field)\
-            .context(context)\
-            .uuid(uuid)\
-            .value(new_value)\
+        payload = save_builder() \
+            .component(picker_field) \
+            .context(context) \
+            .uuid(uuid) \
+            .value(new_value) \
             .build()
 
         locust_label = label or f'Fill \'{picker_field["label"]}\' PickerField'
@@ -689,7 +695,8 @@ class _Interactor:
         return resp.json()
 
     def select_checkbox_item(self, post_url: str, checkbox: Dict[str, Any],
-                             context: Dict[str, Any], uuid: str, indices: list, context_label: str = None) -> Dict[str, Any]:
+                             context: Dict[str, Any], uuid: str, indices: list,
+                             context_label: str = None) -> Dict[str, Any]:
         '''
             Calls the post operation to send an update to a checkbox to check all appropriate boxes
 
@@ -708,14 +715,15 @@ class _Interactor:
             "#t": "Integer?list",
             "#v": indices if indices else None
         }
-        payload = save_builder()\
-            .component(checkbox)\
-            .context(context)\
-            .uuid(uuid)\
-            .value(new_value)\
+        payload = save_builder() \
+            .component(checkbox) \
+            .context(context) \
+            .uuid(uuid) \
+            .value(new_value) \
             .build()
 
-        locust_label = context_label or "Checking boxes for " + checkbox.get("testLabel", checkbox.get("label", "label-not-found"))
+        locust_label = context_label or "Checking boxes for " + checkbox.get("testLabel",
+                                                                             checkbox.get("label", "label-not-found"))
 
         resp = self.post_page(
             self.host + post_url, payload=payload, label=locust_label
@@ -752,11 +760,11 @@ class _Interactor:
         else:
             raise Exception(f"Cannot click a tab with label: '{tab_label}' inside the TabButtonGroup component")
 
-        payload = save_builder()\
-            .component(tab_group_component)\
-            .context(context)\
-            .uuid(uuid)\
-            .value(new_value)\
+        payload = save_builder() \
+            .component(tab_group_component) \
+            .context(context) \
+            .uuid(uuid) \
+            .value(new_value) \
             .build()
 
         locust_label = f"Selecting tab with label: '{tab_label}' inside TabButtonGroup component"
@@ -786,11 +794,11 @@ class _Interactor:
             "#t": "Integer",
             "#v": index
         }
-        payload = save_builder()\
-            .component(buttons)\
-            .context(context)\
-            .uuid(uuid)\
-            .value(new_value)\
+        payload = save_builder() \
+            .component(buttons) \
+            .context(context) \
+            .uuid(uuid) \
+            .value(new_value) \
             .build()
 
         resp = self.post_page(
@@ -820,11 +828,11 @@ class _Interactor:
             "#t": "CollaborationDocument",
             "id": doc_id
         }
-        payload = save_builder()\
-            .component(upload_field)\
-            .context(context)\
-            .uuid(uuid)\
-            .value(new_value)\
+        payload = save_builder() \
+            .component(upload_field) \
+            .context(context) \
+            .uuid(uuid) \
+            .value(new_value) \
             .build()
 
         locust_label = locust_label or "Uploading Document to " + \
@@ -857,11 +865,11 @@ class _Interactor:
             "#v": f"{date_input.isoformat()}Z" if date_input else None
         }
 
-        payload = save_builder()\
-            .component(date_field_component)\
-            .context(context)\
-            .uuid(uuid)\
-            .value(new_value)\
+        payload = save_builder() \
+            .component(date_field_component) \
+            .context(context) \
+            .uuid(uuid) \
+            .value(new_value) \
             .build()
 
         locust_label = locust_label or "Filling Date Field for " + \
@@ -895,11 +903,11 @@ class _Interactor:
             "#v": f"{datetime_input.replace(second=0, microsecond=0).isoformat()}Z" if datetime_input else None
         }
 
-        payload = save_builder()\
-            .component(datetime_field)\
-            .context(context)\
-            .uuid(uuid)\
-            .value(new_value)\
+        payload = save_builder() \
+            .component(datetime_field) \
+            .context(context) \
+            .uuid(uuid) \
+            .value(new_value) \
             .build()
 
         locust_label = locust_label or "Filling Date Time Field for " + \
@@ -929,11 +937,11 @@ class _Interactor:
 
             Returns: the response of post operation as jso
         """
-        payload = save_builder()\
-            .component(grid_component)\
-            .context(context)\
-            .uuid(uuid)\
-            .value(new_grid_save_value)\
+        payload = save_builder() \
+            .component(grid_component) \
+            .context(context) \
+            .uuid(uuid) \
+            .value(new_grid_save_value) \
             .build()
 
         locust_label = context_label or "Updating Grid " + grid_component.get("label", "")
@@ -959,11 +967,11 @@ class _Interactor:
             Returns: the response of post operation as json
         """
         url_stub = post_url.split('/')[-1]
-        payload = save_builder()\
-            .component(grid_component)\
-            .context(context)\
-            .uuid(uuid)\
-            .record_url_stub(url_stub)\
+        payload = save_builder() \
+            .component(grid_component) \
+            .context(context) \
+            .uuid(uuid) \
+            .record_url_stub(url_stub) \
             .build()
 
         locust_label = context_label or "Updating Record Grid " + grid_component.get("label", "")
@@ -973,7 +981,8 @@ class _Interactor:
         resp.raise_for_status()
         return resp.json()
 
-    def refresh_after_record_action(self, post_url: str, record_action_component: Dict[str, Any], record_action_trigger_component: Dict[str, Any],
+    def refresh_after_record_action(self, post_url: str, record_action_component: Dict[str, Any],
+                                    record_action_trigger_component: Dict[str, Any],
                                     context: Dict[str, Any], uuid: str, label: str = None) -> Dict[str, Any]:
         """
             Calls the post operation to refresh a form after completion of a record action
@@ -1012,6 +1021,51 @@ class _Interactor:
 
         resp = self.post_page(
             self.host + post_url, payload=record_action_payload, label=label
+        )
+        return resp.json()
+
+    def click_record_search_button(self, post_url: str, component: Dict[str, Any], context: Dict[str, Any],
+                                   uuid: str, label: str = None) -> Dict[str, Any]:
+        """
+            Calls the post operation to click a record search button
+
+            Args:
+                post_url: the url (not including the host and domain) to post to
+                component: the JSON code for the desired SearchBoxWidget component
+                context: the Sail context parsed from the json response
+                uuid: the uuid parsed from the json response
+                label: the label to be displayed by locust for this action
+
+            Returns: the response of post operation as json
+        """
+
+        # Create a new ButtonWidget component from the SearchBoxWidget
+        c_id = component["_cId"]
+        action = find_component_by_attribute_in_dict("testLabel", "Applications-searchLink", component)
+        if not action:
+            raise ComponentNotFoundException(
+                f'''Could not find the Applications-searchLink component in the provided component
+                ''')
+        save_into = action["saveInto"]
+
+        search_box_button_component = {
+            "_cId": f"{c_id}_buttonWidget",
+            "value": None,
+            "saveInto": save_into,
+            "saveType": "PRIMARY",
+            "#t": "ButtonWidget"
+        }
+
+        payload = save_builder() \
+            .component(search_box_button_component) \
+            .context(context) \
+            .uuid(uuid) \
+            .build()
+
+        locust_label = label or f'Click \'{component["searchButtonLabel"]}\' Component'
+
+        resp = self.post_page(
+            self.host + post_url, payload=payload, label=locust_label
         )
         return resp.json()
 

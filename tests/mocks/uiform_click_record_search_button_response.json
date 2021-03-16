@@ -1,0 +1,68 @@
+{
+	"_cId": "384d97ba3325923a82189a71c6003a4e",
+	"links": [
+		{
+			"href": "https://myclient.mycloud.com/suite/rest/a/sites/latest/client-bap-portal/pages/home/report",
+			"rel": "update",
+			"title": "Update"
+		},
+		{
+			"href": "https://myclient.mycloud.com/suite/rest/a/sites/latest/client-bap-portal/pages/home/report",
+			"rel": "self",
+			"method": "POST"
+		}
+	],
+	"actions": [
+		{
+			"_cId": "8333cdbab40a98c14806ddac91e84583",
+			"_actionName": "sail:record-action-trigger",
+			"label": "",
+			"saveInto": [
+				"<<jA0EAwMCRnc081QuVmsB0n0BS5TRM6FRmuRQOkWw6KVRKw0ZWLwvfKM+APQgTKI1cHV3x9L/UNSQ\r\nhWL8tgVjBo7C0PEB3XyD+fHuf8BNO2UgtcnxapBaBgxQUWpFksSjYW5RjmjJ1XREB97LvPoZWBRN\r\n6yAmLijR0PqbLHI7dNF7GanQu+kOZFHTBFzLYA==\r\n>>"
+			],
+			"tooltip": "",
+			"href": "",
+			"#t": "DynamicLink"
+		},
+		{
+			"_cId": "4713416ca9ec5e98a7be1d09b03bc84f",
+			"_actionName": "sail:update-form-factor",
+			"label": "",
+			"saveInto": [
+				"<<jA0EAwMCRnc081QuVmsB0n0BS5TRM6FRmuRQOkWw6KVRKw0ZWLwvfKM+a/MwTKI1cHVRe5Yox6ax\r\nG3IchddDH+bcCkHzbB+N7F5L4J8jw3gQSG3ZjlF/Qbi9AP1PPGcpOcF+P7G4aspCDTqHexFXwlD2\r\nMRK1065g65Guy+NTI9cllOS+gMzZSIqzEYiyDw==\r\n>>"
+			],
+			"tooltip": "",
+			"href": "",
+			"#t": "DynamicLink"
+		}
+	],
+	"triggers": [],
+	"ui": {
+		"#t": "UiComponentsDelta",
+		"modifiedComponents": []
+	},
+	"context": {
+		"type": "stateful",
+		"value": "jA0EAwMCRnc081QuVmsB0rYBSx6jGWGhvZqXckU3HByYMzlKk8D1uH2xmKxyPENiJtVPMVoSF03N\r\nGpkkCnzP8KP+Mr82kag1P8poZp/P11qRbYMnmejxir3dyE/UFYnwJrgE1DJCkvEVg8S30QlanVkL\r\nreWcGZ0N6aBwDIoo1Z4c8PH51T43yAez74oXTXAovnd5rbxv/EiDxaK7vGYxdjSQLTTtVnMGsdgT\r\n0ofR90bKm5P81mQzmAUADQfDqwpEaaBIkf4Haw==\r\n",
+		"#t": "Map"
+	},
+	"uuid": "3a69956d-4e38-4913-b200-dd109ba6a2ec",
+	"i18nInfo": {
+		"locale": "en-GB",
+		"timezoneId": "GMT",
+		"calendarId": "gregorian",
+		"decimalSeparator": ".",
+		"groupingSeparator": ","
+	},
+	"timers": {
+		"#t": "Dictionary"
+	},
+	"formFactors": [
+		"TABLET_LANDSCAPE",
+		"TABLET_PORTRAIT"
+	],
+	"uiExpression": "",
+	"#t": "UiConfig",
+	"shortcuts": [],
+	"#u": "<https://myclient.mycloud.com/suite/rest/a/record/latest/{recordType}/{recordId}/actionsExternal/{relatedActionId}>; rel=\"x-related-action\"; dt=\"InternalRelatedActionLink\",<https://myclient.mycloud.com/suite/sites/{siteUrlStub}/page/{pageUrlStub}/record/{opaqueRecordRef}/view/actions/{opaqueRelatedActionId}>; rel=\"x-web-bookmark-sites\"; dt=\"InternalRelatedActionLink\",<https://myclient.mycloud.com/suite/rest/a/content/latest/{opaqueContentId}/thumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-icon\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://myclient.mycloud.com/suite/tempo/start-process/{processModelOpaqueId}?parameters={cacheKey}>; rel=\"x-web-bookmark\"; dt=\"StartProcessLink\",<https://myclient.mycloud.com/suite/rest/a/sites/latest/{siteUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-nopage\"; dt=\"RelatedActionLink\",<https://myclient.mycloud.com/suite/rest/a/applications/latest/legacy/usercard/{%40attributes.%40anyAttribute.recordIdentifier}>; rel=\"x-data-request-usercard\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/content/latest/{opaqueContentId}/custom/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-custom\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://myclient.mycloud.com/suite/sites{/siteUrlStub}/page/{pageUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-web-bookmark-sites\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/navigation/latest/intent{?uri*}>; rel=\"x-intent\"; dt=\"SafeLink\",<https://myclient.mycloud.com/suite/rest/a/sites/latest/{siteUrlStub}/page/{sitePageUrlStub}/action/{processModelId}>; rel=\"x-sites-data-request-form\"; dt=\"StartProcessLink\",<https://myclient.mycloud.com/suite/rest/a/sites/latest/{siteUrlStub}/page/{pageUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/record/latest/{recordTypeUrlStub}/{recordId}/dashboards/{dashboardUrlStub}/transparentid>; rel=\"x-record-ui\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/sites/latest/{siteUrlStub}/page/{pageUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record\"; dt=\"RelatedActionLink\",<https://myclient.mycloud.com/suite/internal/webapi/releaselock/{objectUuid}/{uiSourceUuid}>; rel=\"x-data-release-object-lock\"; dt=\"UiConfig\",<https://myclient.mycloud.com/suite/tempo/records/type/{recordTypeName}/item/{opaqueId}/actions>; rel=\"x-web-bookmark-actions\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/applications/latest/legacy/>; rel=\"x-sasa-app\"; dt=\"UiConfig\",<https://myclient.mycloud.com/suite/sites{/siteUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-web-bookmark-sites-nopage\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/record/latest{/recordTypeUrlStub}{/recordId}/dashboards{/dashboardUrlStub}>; rel=\"x-record-dashboard-feed\"; type=\"application/atom+json\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/user/latest/{%40attributes.%40anyAttribute.user}/about>; rel=\"x-user-cover-photo\"; dt=\"DocumentImage\",<https://myclient.mycloud.com/suite/rest/a/sites/latest/{siteUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-nopage\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/tempo/records/item/{_recordRef}/view/{dashboard}>; rel=\"x-web-bookmark-records\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/navigation/latest/default>; rel=\"x-default-landing-page\"; dt=\"SafeLink\",<https://myclient.mycloud.com/suite/rest/a/content/latest/{opaqueContentId}/o>; rel=\"x-attachment-temp\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://myclient.mycloud.com/suite/rest/a/sites/latest/{siteUrlStub}/recordType/{recordTypeUrlStub}/record/{opaqueRecordId}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-by-id-nopage\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/rpacomponent/latest/editor>; rel=\"x-rpa-expression-editor\"; dt=\"UiConfig\",<https://myclient.mycloud.com/suite/rest/a/content/latest/{opaqueContentId}/thumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-thumbnail\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://myclient.mycloud.com/suite/rest/a/record/latest{/_recordRef}/dashboards{/dashboard}>; rel=\"x-record-dashboard\"; type=\"application/atom+xml\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/cors>; rel=\"x-cors\"; dt=\"UiConfig\",<https://myclient.mycloud.com/suite/rest/a/interfacedesigner/latest/evaluateComponentTemplate{/templateId}>; rel=\"x-ifcdesigner-evaluatecomponenttemplate\"; dt=\"UiConfig\",<https://myclient.mycloud.com/suite/rest/a/sites/latest/{siteUrlStub}/pages/{pageUrlStub}/report>; rel=\"x-sites-report\"; dt=\"UiConfig\",<https://myclient.mycloud.com/suite/rest/a/content/latest/{opaqueContentId}/thumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-thumbnail\"; dt=\"DocumentImage\",<https://myclient.mycloud.com/suite/sites/{siteUrlStub}/start-process/{processModelOpaqueId}?parameters={cacheKey}>; rel=\"x-web-bookmark-sites-nopage\"; dt=\"StartProcessLink\",<https://myclient.mycloud.com/suite/sites>; rel=\"x-site-main\"; dt=\"UiConfig\",<https://myclient.mycloud.com/suite/tempo/records/type/{recordTypeName}/item/{opaqueId}/view/{dashboard}>; rel=\"x-web-bookmark\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/components/ping.do>; rel=\"x-resume-session\"; dt=\"UiConfig\",<https://myclient.mycloud.com/suite/rest/a/sites/latest/{siteUrlStub}/action/{processModelId}>; rel=\"x-sites-data-request-form-nopage\"; dt=\"StartProcessLink\",<https://myclient.mycloud.com/suite/tempo/records/item/{_recordRef}/view/{dashboard}>; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/sites/latest/all>; rel=\"x-sites-all\"; dt=\"UiConfig\",<https://myclient.mycloud.com/suite/sites{/urlStub}/tasks/task/{id}>; rel=\"x-site-task\"; dt=\"UiConfig\",<https://myclient.mycloud.com/suite/rest/a/record/latest/{opaqueRecordRef}/actionDialog/{opaqueRelatedActionId}>; rel=\"x-related-action-dialog\"; dt=\"InternalRelatedActionLink\",<https://myclient.mycloud.com/suite/sites{/urlStub}/page/{pageUrlStub}/task/{id}>; rel=\"x-site-task-page\"; dt=\"UiConfig\",<https://myclient.mycloud.com/suite/sites/{siteUrlStub}/record/{opaqueRecordRef}/view/actions/{opaqueRelatedActionId}>; rel=\"x-web-bookmark-sites-nopage\"; dt=\"InternalRelatedActionLink\",<https://myclient.mycloud.com/suite/rest/a/applications/latest/legacy/sites{/urlStub}/page{/pageUrlStub}/nav>; rel=\"x-site-page-navattributes\"; dt=\"UiConfig\",<https://myclient.mycloud.com/suite/rest/a/content/latest/{opaqueContentId}/o>; rel=\"x-attachment-temp\"; type=\"application/vnd.appian.tv+json\"; dt=\"CollaborationDocument\",<https://myclient.mycloud.com/suite/rest/a/user/latest/user/{%40attributes.%40anyAttribute.user}/about>; rel=\"x-data-request-userinfo\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/sites/latest/record/{opaqueRecordReference}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-leftnav\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/record/latest{/recordTypeStub,opaqueRecordId}/actions{/opaqueRelatedActionId}>; rel=\"x-data-request\"; dt=\"InternalRelatedActionLink\",<https://myclient.mycloud.com/suite/rest/a/record/latest{/recordTypeUrlStub}{/recordId}/dashboards{/dashboardUrlStub}/headerFeed>; rel=\"x-record-dashboard-feed-header\"; type=\"application/atom+json\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/task/latest/{taskId}/attributes>; rel=\"x-task-attributes\"; dt=\"UiConfig\",<https://myclient.mycloud.com/suite/rest/a/sites/latest/{siteUrlStub}/record/{opaqueRecordReference}/view/{viewUrlStub}/views>; rel=\"x-data-request-site-mobile-record-views\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/sites/latest/{siteUrlStub}/startProcess/{processModelOpaqueId}?cacheKey={cacheKey}>; rel=\"x-sites-data-request-nopage\"; dt=\"StartProcessLink\",<https://myclient.mycloud.com/suite/api/feed/tempo?t=e,x,b,f&m=menu-records&s=mt{&_recordRef,dashboard,c}>; rel=\"x-record-news\"; type=\"application/atom+xml\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/applications/latest/app{/appName}{/path*}{?params*}>; rel=\"x-sail-application\"; dt=\"UiConfig\",<https://myclient.mycloud.com/suite/rest/a/model/latest/startProcess/{processModelOpaqueId}?cacheKey={cacheKey}>; rel=\"x-data-request\"; dt=\"StartProcessLink\",<https://myclient.mycloud.com/suite/rest/a/sites/latest/{siteUrlStub}/page/{sitePageUrlStub}/startProcess/{processModelOpaqueId}?cacheKey={cacheKey}>; rel=\"x-sites-data-request\"; dt=\"StartProcessLink\",<https://myclient.mycloud.com/suite/rest/a/record/latest/{recordTypeUrlStub}/{recordId}/feed/dashboards/{dashboardUrlStub}/transparentid>; rel=\"x-record-feed\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/content/latest/{opaqueContentId}/o>; rel=\"x-document-image\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://myclient.mycloud.com/suite/api/feed/tempo?t=e,x,b,f&m=menu-records&s=mt{&_recordRef,dashboard,c}>; rel=\"x-data-request-record-news\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/tempo/records/item/{opaqueRecordRef}/view/actions/{opaqueRelatedActionId}>; rel=\"x-web-bookmark\"; dt=\"InternalRelatedActionLink\",<https://myclient.mycloud.com/suite/rest/a/content/latest/{opaqueContentId}/viewportThumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-viewport\"; type=\"application/vnd.appian.tv+json\"; dt=\"DocumentImage\",<https://myclient.mycloud.com/suite/rest/a/record/latest{/_recordRef}/dashboards{/dashboard}/headerFeed>; rel=\"x-record-dashboard-header\"; type=\"application/atom+xml\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/content/latest/{opaqueContentId}/thumbnail/o;maxWidth={maxWidth};maxHeight={maxHeight}>; rel=\"x-thumbnail\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/rest/a/record/latest/{opaqueRecordRef}/action{/opaqueRelatedActionId}>; rel=\"x-data-request-ref\"; dt=\"InternalRelatedActionLink\",<https://myclient.mycloud.com/suite/rest/a/record/latest/{%40attributes.%40anyAttribute.opaqueId}/followers>; rel=\"x-record-follow\"; dt=\"SafeLink\",<https://myclient.mycloud.com/suite/rest/a/applications/latest/legacy/sites{/urlStub}/nav>; rel=\"x-site-navattributes\"; dt=\"UiConfig\",<https://myclient.mycloud.com/suite/rest/a/sites/latest/{siteUrlStub}/page/{pageUrlStub}/recordType/{recordTypeUrlStub}/record/{opaqueRecordId}/view/{viewUrlStub}>; rel=\"x-data-request-site-record-by-id\"; dt=\"RecordLink\",<https://myclient.mycloud.com/suite/sites/{siteUrlStub}/page/{sitePageUrlStub}/start-process/{processModelOpaqueId}?parameters={cacheKey}>; rel=\"x-web-bookmark-sites\"; dt=\"StartProcessLink\""
+}
