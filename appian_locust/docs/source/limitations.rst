@@ -10,7 +10,6 @@ Currently *unsupported* Appian Interactions
 ********************************************
 
 * Multiple links with the same name on the same page, use labels to differentiate
-* Activity-Chained forms
 * Legacy forms
 
 Limitations when running Locust
