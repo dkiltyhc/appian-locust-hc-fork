@@ -170,6 +170,20 @@ class TestSailUiForm(unittest.TestCase):
         value = 'Admin User'
         sail_form.fill_picker_field(label, value)
 
+    def test_fill_picker_field_suggestions_identifier_is_code(self) -> None:
+        sail_ui_actions_cmf = json.loads(self.sail_ui_actions_response)
+        picker_widget_suggestions = read_mock_file("picker_widget_suggestions_code.json")
+        picker_widget_selected = read_mock_file("picker_widget_selected.json")
+
+        self.custom_locust.enqueue_response(200, picker_widget_suggestions)
+        self.custom_locust.enqueue_response(200, picker_widget_selected)
+        sail_form = SailUiForm(self.task_set.appian.interactor, sail_ui_actions_cmf, self.process_model_form_uri)
+
+        label = self.picker_label
+        value = 'GAC Guyana'
+
+        sail_form.fill_picker_field(label, value, identifier='code')
+
     def test_fill_picker_field_no_suggestions(self) -> None:
         sail_ui_actions_cmf = json.loads(self.sail_ui_actions_response)
         picker_widget_suggestions = read_mock_file("picker_widget_no_suggestions.json")

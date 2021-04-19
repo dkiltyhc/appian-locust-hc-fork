@@ -223,7 +223,8 @@ class SailUiForm:
     fill_paragraph_field = fill_text_field
 
     @raises_locust_error
-    def fill_picker_field(self, label: str, value: str, fill_request_label: str = "", pick_request_label: str = "") -> 'SailUiForm':
+    def fill_picker_field(self, label: str, value: str, identifier: str = 'id',
+                          fill_request_label: str = "", pick_request_label: str = "") -> 'SailUiForm':
         """
         Enters the value in the picker widget and selects one of the suggested items
         if the widget is present with the following label (case sensitive)
@@ -239,6 +240,7 @@ class SailUiForm:
             value(str): Value to update the label to
 
         Keyword Args:
+            identifier(str): Key to select the field to filter on, defaults to 'id'
             fill_request_label(str): Label to associate in locust statistics with filling the picker field
             pick_request_label(str): Label to associate in locust statistics with selecting the picker suggestion
 
@@ -248,6 +250,7 @@ class SailUiForm:
 
             >>> form.fill_picker_field('Title','My New Novel')
             >>> form.fill_picker_field('People','Jeff George')
+            >>> form.fill_picker_field('Customer', 'GAC Guyana', identifier='code')
 
         """
         # pickerFieldCustom will add a test-Label at the level where the suggestions/saveInto exist
@@ -274,14 +277,17 @@ class SailUiForm:
             raise Exception(f"No identifiers found when '{value}' was entered in the picker field.")
 
         # Introspect to see if there's an ID
-        index_by_id = identifiers[0].get('id') is not None
-        id_index = 'id' if index_by_id else '#v'
+        index_by_id = identifiers[0].get(identifier) is not None
+        id_index = identifier if index_by_id else '#v'
+
         v_or_id = [identifier.get(id_index) for identifier in identifiers if identifier.get(id_index)]
-        t = [identifier.get('#t') for identifier in identifiers]
+
         if not v_or_id:
             raise Exception(f"Could not extract picker values '{id_index}' from suggestions_list {suggestions_list}")
+
         v_choice = random.choice(range(len(v_or_id)))
-        dict_value = {id_index: v_or_id[v_choice], "#t": t[v_choice]}
+
+        dict_value = identifiers[v_choice]
 
         locust_label = pick_request_label or f"{self.breadcrumb}.SelectPickerSuggestion.{label}"
         newer_state = self.interactor.select_pickerfield_suggestion(
