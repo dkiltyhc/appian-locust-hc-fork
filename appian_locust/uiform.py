@@ -21,7 +21,8 @@ from .helper import (extract_all_by_label, find_component_by_attribute_in_dict,
                      find_component_by_index_in_dict,
                      find_component_by_label_and_type_dict)
 from .records_helper import (get_record_header_response,
-                             get_record_summary_view_response)
+                             get_record_summary_view_response,
+                             get_url_stub_from_record_list_url_path)
 
 KEY_UUID = "uuid"
 KEY_CONTEXT = "context"
@@ -667,8 +668,14 @@ class SailUiForm:
 
         locust_label = locust_request_label or f'{self.breadcrumb}.SelectDropdownWithLabel.{choice_label}'
         reeval_url = self._get_update_url_for_reeval(self.state)
+
+        # Opting to use this field, rather than self.form_url, because 'sail-application-url' is the same between web and mobile
+        url = self.state.get('sail-application-url')
+        # url_stub should only be populated if the page is a record list
+        url_stub = get_url_stub_from_record_list_url_path(url)
+
         new_state = self.interactor.send_dropdown_update(
-            reeval_url, component, self.context, self.uuid, index=index, label=locust_label)
+            reeval_url, component, self.context, self.uuid, index=index, label=locust_label, url_stub=url_stub)
         if not new_state:
             raise Exception(
                 f"No response returned when trying to click button with label '{label}'")
@@ -712,8 +719,14 @@ class SailUiForm:
         index_multi = [choices.index(current_label) + 1 for current_label in choice_label]  # Appian is _sigh_ one indexed
         locust_label = locust_request_label or f'{self.breadcrumb}.SelectMultupleDropdownWithLabel.{choice_label}'
         reeval_url = self._get_update_url_for_reeval(self.state)
+
+        # Opting to use this field, rather than self.form_url, because 'sail-application-url' is the same between web and mobile
+        url = self.state.get('sail-application-url')
+        # url_stub should only be populated if the page is a record list
+        url_stub = get_url_stub_from_record_list_url_path(url)
+
         new_state = self.interactor.send_multiple_dropdown_update(
-            reeval_url, component, self.context, self.uuid, index=index_multi, label=locust_label)
+            reeval_url, component, self.context, self.uuid, index=index_multi, label=locust_label, url_stub=url_stub)
         if not new_state:
             raise Exception(
                 f"No response returned when trying to click button with label '{label}'")

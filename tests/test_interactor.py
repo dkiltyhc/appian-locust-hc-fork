@@ -309,39 +309,6 @@ class TestInteractor(unittest.TestCase):
         # Then
         self.assertEqual(new_header, default_header)
 
-    def test_get_record_instance_list_url_stub_from_record_instance_list_url(self) -> None:
-        # Given a record instance list url
-        record_instance_list_url = '/suite/rest/a/sites/latest/D6JMim/pages/records/recordType/1vM_9A'
-
-        # Attempt to get url stub
-        record_instance_list_url_stub = self.task_set.appian.interactor._get_record_instance_list_url_stub(
-            record_instance_list_url)
-
-        # Then the record instance list url has its stub returned
-        self.assertEqual(record_instance_list_url_stub, '1vM_9A')
-
-    def test_get_record_instance_list_url_stub_from_record_type_list_url(self) -> None:
-        # Given a record type list url
-        record_type_list_url = '/suite/rest/a/applications/latest/legacy/sites/D6JMim/page/records'
-
-        # Attempt to get url stub
-        record_type_list_url_stub = self.task_set.appian.interactor._get_record_instance_list_url_stub(
-            record_type_list_url)
-
-        # Then None is returned
-        self.assertIsNone(record_type_list_url_stub)
-
-    def test_get_record_instance_list_url_stub_from_record_instance_url(self) -> None:
-        # Given a record instance url
-        record_instance_url = '/suite/rest/a/sites/latest/D6JMim/page/records/record/lQBU8YV4nEFVwMuczMM/view/summary'
-
-        # Attempt to get url stub
-        record_instance_url_stub = self.task_set.appian.interactor._get_record_instance_list_url_stub(
-            record_instance_url)
-
-        # Then None is returned
-        self.assertIsNone(record_instance_url_stub)
-
     def test_click_record_search_button(self) -> None:
         component = find_component_by_index_in_dict("SearchBoxWidget", 1, json.loads(self.site_with_record_search_button))
 
