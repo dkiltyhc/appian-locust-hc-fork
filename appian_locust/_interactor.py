@@ -14,6 +14,7 @@ from ._locust_error_handler import log_locust_error, test_response_for_error
 from ._save_request_builder import save_builder
 from .exceptions import BadCredentialsException, MissingCsrfTokenException, ComponentNotFoundException
 from .helper import find_component_by_attribute_in_dict, get_username
+from .records_helper import get_url_stub_from_record_list_post_request_url
 
 log = logger.getLogger(__name__)
 
@@ -501,8 +502,8 @@ class _Interactor:
     click_button = click_component
     click_link = click_component
 
-    def send_dropdown_update(self, post_url: str, dropdown: Dict[str, Any],
-                             context: Dict[str, Any], uuid: str, index: int, label: str = None) -> Dict[str, Any]:
+    def send_dropdown_update(self, post_url: str, dropdown: Dict[str, Any], context: Dict[str, Any],
+                             uuid: str, index: int, label: str = None, url_stub: str = None) -> Dict[str, Any]:
         '''
             Calls the post operation to send an update to a dropdown
 
@@ -514,6 +515,7 @@ class _Interactor:
                 index: location of the dropdown value
                 label: the label to be displayed by locust for this action
                 headers: header for the REST API call
+                url_stub: the URL stub for the page; only required to interact with user filter dropdowns on a record list
 
             Returns: the response of post operation as json
         '''
@@ -521,12 +523,14 @@ class _Interactor:
             "#t": "Integer",
             "#v": index
         }
+        # url_stub should only be populated if the page is a record list
+        url_stub = url_stub or get_url_stub_from_record_list_post_request_url(post_url)
         payload = save_builder() \
             .component(dropdown) \
             .context(context) \
             .uuid(uuid) \
             .value(new_value) \
-            .record_url_stub(self._get_record_instance_list_url_stub(post_url)) \
+            .record_url_stub(url_stub) \
             .build()
 
         locust_label = label or f'Select \'{dropdown["label"]}\' Dropdown'
@@ -537,7 +541,7 @@ class _Interactor:
         return resp.json()
 
     def send_multiple_dropdown_update(self, post_url: str, multi_dropdown: Dict[str, Any], context: Dict[str, Any],
-                                      uuid: str, index: List[int], label: str = None) -> Dict[str, Any]:
+                                      uuid: str, index: List[int], label: str = None, url_stub: str = None) -> Dict[str, Any]:
         '''
             Calls the post operation to send an update to a multiple dropdown
 
@@ -549,6 +553,7 @@ class _Interactor:
                 index: locations of the multiple dropdown value
                 label: the label to be displayed by locust for this action
                 headers: header for the REST API call
+                url_stub: the URL stub for the page; only required to interact with user filter dropdowns on a record list
 
             Returns: the response of post operation as json
         '''
@@ -556,12 +561,14 @@ class _Interactor:
             "#t": "Integer?list",
             "#v": index
         }
+        # url_stub should only be populated if the page is a record list
+        url_stub = url_stub or get_url_stub_from_record_list_post_request_url(post_url)
         payload = save_builder() \
             .component(multi_dropdown) \
             .context(context) \
             .uuid(uuid) \
             .value(new_value) \
-            .record_url_stub(self._get_record_instance_list_url_stub(post_url)) \
+            .record_url_stub(url_stub) \
             .build()
 
         locust_label = label or f'Select \'{multi_dropdown["label"]}\' Dropdown'
@@ -1068,19 +1075,6 @@ class _Interactor:
             self.host + post_url, payload=payload, label=locust_label
         )
         return resp.json()
-
-    def _get_record_instance_list_url_stub(self, post_url: str) -> Optional[str]:
-        """
-            Given post_url, returns the URL stub IF the url matches the url for a record instance list.
-            If, not returns None.
-
-            Args:
-                post_url: the url (not including the host and domain) to post to
-
-            Returns: The url stub if post_url matches a record instance list url, otherwise None
-        """
-        record_url_match = match(r'[\S]+\/pages\/records\/recordType\/([\w]+)', post_url)
-        return record_url_match.groups()[0] if record_url_match else None
 
 
 class DataTypeCache(object):

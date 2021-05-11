@@ -1,0 +1,3404 @@
+{
+    "_cId": "ba067757f63b32cfc917970f950b5c26",
+    "mobileEnabled": "true",
+    "empty": "false",
+    "formType": "START_FORM",
+    "sail-application-url": "tempo/records/type/url_stub123/view/all",
+    "links": [
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/sites/latest/io/page/onboarding-requests/action/34",
+            "rel": "update",
+            "title": "Update",
+            "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/sites/latest/io/page/onboarding-requests/action/34",
+            "rel": "self",
+            "title": "Update",
+            "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
+            "method": "GET"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/rest/a/sites/latest/io/page/onboarding-requests/action/34",
+            "rel": "self",
+            "title": "Update",
+            "type": "application/vnd.appian.tv.ui+json; c=2; t=START_FORM",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/api/tempo/file",
+            "rel": "upload",
+            "title": "",
+            "method": "POST"
+        },
+        {
+            "href": "https://an-appian-instance.host.net/suite/tempo/file-web/",
+            "rel": "upload-web",
+            "title": "",
+            "method": "POST"
+        }
+    ],
+    "triggers": [],
+    "ui": {
+        "_cId": "0093796aa84ca8e213a0b310e3204801",
+        "_isAppianInjected": "true",
+        "_dirty": "false",
+        "contents": [
+            {
+                "_cId": "acd8ef054776b8571da9b578b51c84d0",
+                "focusFieldId": "0d3b186cfe70c2a3af1b44bf11084d4c",
+                "label": "Create New Onboarding",
+                "instructions": "",
+                "buttons": {
+                    "_cId": "eee435728e87285b1eee16d7a51cd725",
+                    "primaryButtons": [
+                        {
+                            "_cId": "623b953c7f4fd735e8547c13c8e9e86a",
+                            "isFlat": "false",
+                            "label": "Next",
+                            "style": "",
+                            "confirmHeader": "",
+                            "confirmMessage": "",
+                            "confirmButtonLabel": "",
+                            "confirmButtonStyle": "PRIMARY",
+                            "cancelButtonLabel": "",
+                            "value": {
+                                "#v": "",
+                                "#t": "string"
+                            },
+                            "saveInto": [
+                                "<<jA0EAwMCkRqYtxMwiXcB0nUBLCjy94kbCvrGxM52s1u5l672xIvAXXbKzdvvl6J5zyeup0gkR5Hc\r\nKEjaV1xFeAStT/c4Q6lUQyBmC1imASYJoi0ZhMO9aBO/rM7mOPjgL7QMN3nYFO7EOrEkqeNBaMe2\r\n7rJvpnI1CshfRf86GRGqiUz5L+U=\r\n>>"
+                            ],
+                            "size": "",
+                            "icon": "",
+                            "buttonStyle": "PRIMARY",
+                            "ariaLabel": "",
+                            "skinName": "",
+                            "tooltipStyle": "",
+                            "tooltipVerticalPosition": "",
+                            "tooltipWidth": ""
+                        }
+                    ],
+                    "secondaryButtons": [
+                        {
+                            "_cId": "9ca54fc4e0e4fd33d211e391a63a8c64",
+                            "isFlat": "false",
+                            "action": "SUBMIT",
+                            "validate": "false",
+                            "label": "Cancel",
+                            "style": "",
+                            "confirmHeader": "",
+                            "confirmMessage": "",
+                            "confirmButtonLabel": "",
+                            "confirmButtonStyle": "PRIMARY",
+                            "cancelButtonLabel": "",
+                            "value": {
+                                "#v": "",
+                                "#t": "string"
+                            },
+                            "saveInto": [
+                                "<<jA0EAwMCkRqYtxMwiXcB0nUBLCjy94kbCvrGxM52s1u5l672xIvAXXbKzdvvl6J5zyeup0gkR5Hc\r\nKEjaV1xFeAStT/c4Q6lUdSo+cQTTbtcVA5aCnZbOJ+yn6DeNmDcmGaCyNUSzz9Yea80EVx5eU+tw\r\nMS1ynR8ydiBSprGl9N2hJmzaPtU=\r\n>>"
+                            ],
+                            "size": "",
+                            "icon": "",
+                            "buttonStyle": "",
+                            "ariaLabel": "",
+                            "skinName": "",
+                            "tooltipStyle": "",
+                            "tooltipVerticalPosition": "",
+                            "tooltipWidth": ""
+                        }
+                    ],
+                    "marginBelow": "",
+                    "align": "",
+                    "accessibilityText": ""
+                },
+                "validations": [],
+                "contents": [
+                    {
+                        "_cId": "978c084893f0d85c0f84ea10da740941",
+                        "columns": [
+                            {
+                                "_cId": "bca4b8745adab40ff5c7f2f6a11f7bb8",
+                                "contents": [
+                                    {
+                                        "_cId": "c539ffc28b4e09d2cfaa9bad4b23ed0c",
+                                        "columns": [
+                                            {
+                                                "_cId": "85f2c7a10a413f0fcd6978512036f3bf",
+                                                "contents": [
+                                                    {
+                                                        "_cId": "e8273cb638d0ce590f2b95f1b49bcd52",
+                                                        "label": "",
+                                                        "instructions": "",
+                                                        "steps": [
+                                                            "Select Customer",
+                                                            "Enter Onboarding Details",
+                                                            "Add Accounts/Products",
+                                                            "Specify Required Documents",
+                                                            "Answer AML/KYC Questions",
+                                                            "Review Onboarding"
+                                                        ],
+                                                        "active": 1,
+                                                        "labelPosition": "ABOVE",
+                                                        "links": [
+                                                            {
+                                                                "_cId": "51758260fa9c6e46b8001f6528661d41",
+                                                                "label": "",
+                                                                "value": {
+                                                                    "#v": "",
+                                                                    "#t": "string"
+                                                                },
+                                                                "saveInto": [
+                                                                    "<<jA0EAwMCkRqYtxMwiXcB0o0BLCjy94kbCvrGxM52s1u5l672xIvAXXbHu/+9gAFdvkjtHKrw/Mk4\r\nmnjt216dzov5+Pe5fJFRypAqsXW87lYHjcAp7UbAT5XiFYb8bpwQ7kf9d+f7o8HQQ23VZ4uw/122\r\n9viVHpl1Wwf37xa7hQXoDnMbY8RDULW/F1+MBMyUSjWhBT6uvnyO613zYts=\r\n>>"
+                                                                ],
+                                                                "tooltip": "",
+                                                                "href": "",
+                                                                "#t": "DynamicLink"
+                                                            },
+                                                            {
+                                                                "_cId": "91349f4348bc5e3100b56ca4f9a9f75c",
+                                                                "label": "",
+                                                                "value": {
+                                                                    "#v": "",
+                                                                    "#t": "string"
+                                                                },
+                                                                "saveInto": [
+                                                                    "<<jA0EAwMCkRqYtxMwiXcB0o0BLCjy94kbCvrGxM52s1u5l672xIvAXXbHu/+9gAFdvkjtHKrw/MkI\r\nmhFl1sgXz4S//B/bQx3khje9XFu7uMQu1n4iAauuBtCEGyf8n3lwxzcz6F7U8ZLaeY558rYdAcNc\r\nJCtfg3DZj6p4VKsWCSn69s0v7x4uhx1EuJCB/eV8eN00etNH7ij0tBETsnU=\r\n>>"
+                                                                ],
+                                                                "tooltip": "",
+                                                                "href": "",
+                                                                "#t": "DynamicLink"
+                                                            },
+                                                            {
+                                                                "_cId": "73d0b2b1ca096d7006deeef04b218560",
+                                                                "label": "",
+                                                                "value": {
+                                                                    "#v": "",
+                                                                    "#t": "string"
+                                                                },
+                                                                "saveInto": [
+                                                                    "<<jA0EAwMCkRqYtxMwiXcB0o0BLCjy94kbCvrGxM52s1u5l672xIvAXXbHu/+9gAFdvkjtHKrw/Mk4\r\nmnjt23Sdzov5p6EUZGUBYcmabeoLkfDdCD3EwhTM0TGbomlh9Dw2+G0FLRk99Hqd/eBTc0TpyFY6\r\nvSX6KzqRR1sLVtXyN2WdZF9h5ZA5t8iV+xUi1jHN/pLYcXoEKKsM2CqJCvc=\r\n>>"
+                                                                ],
+                                                                "tooltip": "",
+                                                                "href": "",
+                                                                "#t": "DynamicLink"
+                                                            },
+                                                            {
+                                                                "_cId": "3b7398dd9ac038cdaa55188f7aa7a46c",
+                                                                "label": "",
+                                                                "value": {
+                                                                    "#v": "",
+                                                                    "#t": "string"
+                                                                },
+                                                                "saveInto": [
+                                                                    "<<jA0EAwMCkRqYtxMwiXcB0o0BLCjy94kbCvrGxM52s1u5l672xIvAXXbHu/+9gAFdvkjtHKrw/Mky\r\nmv+lcjayhK7YaxIshvq/MsD9bWCqroBq6EcYx+kAK/H1fKIJeGYgvLENsEQk4GBoD9CzyC9Gy6f1\r\ntsIhwnJlPFSeGTI7Fu6siKXJJmsaXS+kBPZ10BqOmmrXN/BNX/LcLsDozeo=\r\n>>"
+                                                                ],
+                                                                "tooltip": "",
+                                                                "href": "",
+                                                                "#t": "DynamicLink"
+                                                            },
+                                                            {
+                                                                "_cId": "c3b48c05e4009e0e282b7fa60847526f",
+                                                                "label": "",
+                                                                "value": {
+                                                                    "#v": "",
+                                                                    "#t": "string"
+                                                                },
+                                                                "saveInto": [
+                                                                    "<<jA0EAwMCkRqYtxMwiXcB0o0BLCjy94kbCvrGxM52s1u5l672xIvAXXbHu/+9gFxdukhOar/+gC6i\r\nhaAnrzIrIZNKbxJuj+jzpNaDaQGzJxC7e/n1m3AcU4HdZU2kOYcYSQNSK1kTxzoKUZ8GMB10jBFz\r\n5geklFnxBh2pfUbl/fmuZAqQaixbi41WS5vWEAuUfP1QURl/CLiANObDZlQ=\r\n>>"
+                                                                ],
+                                                                "tooltip": "",
+                                                                "href": "",
+                                                                "#t": "DynamicLink"
+                                                            },
+                                                            {
+                                                                "_cId": "6107c0e11dbc454f0435bacd43dba89d",
+                                                                "label": "",
+                                                                "value": {
+                                                                    "#v": "",
+                                                                    "#t": "string"
+                                                                },
+                                                                "saveInto": [
+                                                                    "<<jA0EAwMCkRqYtxMwiXcB0o0BLCjy94kbCvrGxM52s1u5l672xIvAXXbHu/+9gAFdvkjtHKrw/Mk4\r\nmnjt23Sdzov5p6EUZGUBYcmabeoLkfDdCD3EwhTM0TGbomlh9Dw2+G0FLRk99Hqd/eBTc3bpyFY6\r\nU1w4a16xCe3AEHAv5oGPtWwDMMHMhsPN1kvpHopt70Co6w1I6nEbPT0zbY8=\r\n>>"
+                                                                ],
+                                                                "tooltip": "",
+                                                                "href": "",
+                                                                "#t": "DynamicLink"
+                                                            }
+                                                        ],
+                                                        "helpTooltip": "",
+                                                        "currentStepLabel": "Current Step",
+                                                        "completedStepLabel": "Completed Step",
+                                                        "futureStepLabel": "Future Step",
+                                                        "instructionsPosition": "ABOVE",
+                                                        "style": "",
+                                                        "orientation": "VERTICAL",
+                                                        "accessibilityText": "",
+                                                        "#t": "MilestoneField"
+                                                    }
+                                                ],
+                                                "align": "",
+                                                "width": "NARROW"
+                                            },
+                                            {
+                                                "_cId": "812642053b989cf606ee887d6efea5dd",
+                                                "contents": [
+                                                    {
+                                                        "isCollapsible": "false",
+                                                        "isInitiallyCollapsed": "false",
+                                                        "_cId": "6b7951939feaf0376e849ead54d2088a",
+                                                        "collapseLabel": "Hide section contents",
+                                                        "contents": [
+                                                            {
+                                                                "_cId": "e1cd1964c32f854384848e703f68bd45",
+                                                                "columns": [
+                                                                    {
+                                                                        "_cId": "241bce79ed9fca0fd5d76f190f7a8766",
+                                                                        "contents": [
+                                                                            {
+                                                                                "_cId": "4950cad37269a7bae8982d754d8d4fdb",
+                                                                                "contents": {
+                                                                                    "_cId": "2e4a598538653f786c9feb42a00f1877",
+                                                                                    "label": "",
+                                                                                    "labelPosition": "",
+                                                                                    "instructions": "",
+                                                                                    "helpTooltip": "",
+                                                                                    "validations": [],
+                                                                                    "items": [
+                                                                                        {
+                                                                                            "_cId": "8e8e2f0aac99feba7316abfdfc5a0ed3",
+                                                                                            "item": {
+                                                                                                "_cId": "0d3b186cfe70c2a3af1b44bf11084d4c",
+                                                                                                "label": "",
+                                                                                                "testLabel": "test-radio-button",
+                                                                                                "instructions": "",
+                                                                                                "choices": [
+                                                                                                    "New Customer",
+                                                                                                    "Existing Customer"
+                                                                                                ],
+                                                                                                "value": 1,
+                                                                                                "saveInto": [
+                                                                                                    "<<jA0EAwMCkRqYtxMwiXcB0okBLCjy94kbCvrGxM52s1u5l672xIvAXXbB0CEu/5yZ6Zv/8YO00Zwx\r\nYy7MR9MQ3q82mah6UOOuSRfX13aEMC9nu0+C/FxSnXCwazaTEJ1ahW4+DjXnoOD1YpG2vxm1yHbo\r\nsT5GHPNwuQgA/Cc8CByFAccmLaZyiIIh1p/KPXiEvsR9KxefdyY9GQ==\r\n>>"
+                                                                                                ],
+                                                                                                "labelPosition": "ABOVE",
+                                                                                                "choiceLayout": "COMPACT",
+                                                                                                "helpTooltip": "",
+                                                                                                "accessibilityText": "",
+                                                                                                "#t": "RadioButtonField"
+                                                                                            },
+                                                                                            "width": ""
+                                                                                        },
+                                                                                        {
+                                                                                            "_cId": "ff43071f64db022c5cb4d1da89d0aa28",
+                                                                                            "item": {
+                                                                                                "_cId": "9b9fba3bda2a1fd2fed3194eb90c4210",
+                                                                                                "contents": {
+                                                                                                    "_cId": "339065277a0759bf742e86c2095233b9",
+                                                                                                    "maxSelections": 1,
+                                                                                                    "saveInto": [
+                                                                                                        "<<jA0EAwMCkRqYtxMwiXcB0okBLCjy94kbCvrGxM52s1u5l672xIvAXXbH0f2bgABdulgoA8NnZ/Up\r\ntMJ0841ayCkHw1qNxL6ZHWk2S9Q6XIxQwrEkTBkFlIcO7q6FjqNcCxsajBbBNUptkwwBGPKzkn2G\r\n5fl7WbjCTCZ5kLo5GK/t9281BDs9SqL7LBR+oKS99KZxUyf3QqYF+g==\r\n>>"
+                                                                                                    ],
+                                                                                                    "buttonSize": "SMALL",
+                                                                                                    "buttonStyle": "SECONDARY",
+                                                                                                    "target": {
+                                                                                                        "#t": "CollaborationDocumentOrFolder",
+                                                                                                        "value": {
+                                                                                                            "id": 5925,
+                                                                                                            "#t": "CollaborationFolder"
+                                                                                                        }
+                                                                                                    },
+                                                                                                    "uploadLabel": "Upload",
+                                                                                                    "virusScanningText": "Scanning for viruses…",
+                                                                                                    "addFileLabel": "Add file",
+                                                                                                    "buttonIcon": "",
+                                                                                                    "validateExtension": true,
+                                                                                                    "#t": "MultipleFileUploadWidget"
+                                                                                                },
+                                                                                                "label": " Logo",
+                                                                                                "labelPosition": "ABOVE",
+                                                                                                "instructions": "",
+                                                                                                "instructionsPosition": "",
+                                                                                                "helpTooltip": "",
+                                                                                                "requiredStyle": "",
+                                                                                                "skinName": "",
+                                                                                                "marginBelow": "",
+                                                                                                "accessibilityText": "",
+                                                                                                "#t": "FieldLayout"
+                                                                                            },
+                                                                                            "width": ""
+                                                                                        },
+                                                                                        {
+                                                                                            "_cId": "517614f5bf562874369b12a3ec4db22b",
+                                                                                            "item": {
+                                                                                                "_cId": "f83ba7178b766df4acb71fd39056256c",
+                                                                                                "contents": {
+                                                                                                    "_cId": "fbb9eb2b35db098f2a01bbc0122eab2f",
+                                                                                                    "hasNoValue": "true",
+                                                                                                    "testLabel": "test-Domicile",
+                                                                                                    "maxSelections": 1,
+                                                                                                    "value": [],
+                                                                                                    "saveInto": [
+                                                                                                        "<<jA0EAwMCkRqYtxMwiXcB0pUBLCjy94kbCvrGxM52s1u5l672xIvAXXbH0fqzgAFdokioEKwvOsCz\r\ntNE9dSyB3BXugmdjeISvN+RyvxHcunKwS+pkBnD2WYSTBxzyBSDYwodaiotGwl6a5TqdqxUvSCbG\r\nNT+QsB7jp4nU/+y3ObWVQKwYo1xvGBYaEk7sx1RyWrMQU1V9xDGkpBMImXqmkOTPFJUVWg==\r\n>>"
+                                                                                                    ],
+                                                                                                    "width": "",
+                                                                                                    "placeholder": "-- Country --",
+                                                                                                    "suggestions": [],
+                                                                                                    "imageSize": "TINY",
+                                                                                                    "imageStyle": "STANDARD",
+                                                                                                    "noResultsLabel": "No results found",
+                                                                                                    "searchingLabel": "Searching…",
+                                                                                                    "selectedTokensHint": "No values selected. Start typing to search.",
+                                                                                                    "numSuggestionsHint": "No results found",
+                                                                                                    "accessibilityText": "",
+                                                                                                    "#t": "PickerWidget"
+                                                                                                },
+                                                                                                "label": "Domicile",
+                                                                                                "labelPosition": "ABOVE",
+                                                                                                "instructions": "",
+                                                                                                "instructionsPosition": "",
+                                                                                                "helpTooltip": "Changes to domicile will change onboarding currency",
+                                                                                                "requiredStyle": "",
+                                                                                                "skinName": "",
+                                                                                                "marginBelow": "",
+                                                                                                "accessibilityText": "",
+                                                                                                "#t": "FieldLayout"
+                                                                                            },
+                                                                                            "width": ""
+                                                                                        }
+                                                                                    ],
+                                                                                    "spacing": "",
+                                                                                    "alignVertical": "",
+                                                                                    "#t": "SideBySideGroup"
+                                                                                },
+                                                                                "label": "",
+                                                                                "labelPosition": "COLLAPSED",
+                                                                                "instructions": "",
+                                                                                "instructionsPosition": "",
+                                                                                "helpTooltip": "",
+                                                                                "requiredStyle": "",
+                                                                                "skinName": "",
+                                                                                "marginBelow": "",
+                                                                                "accessibilityText": "",
+                                                                                "#t": "FieldLayout"
+                                                                            },
+                                                                            {
+                                                                                "_cId": "18dd7132c67300af92046f9ff7803a94",
+                                                                                "columns": [
+                                                                                    {
+                                                                                        "_cId": "2c193ca174168e7ffd3479dfcbd5e08b",
+                                                                                        "contents": [
+                                                                                            {
+                                                                                                "_cId": "4862b473e2134ad386eeac94a0e4a573",
+                                                                                                "label": "Name",
+                                                                                                "instructions": "",
+                                                                                                "required": true,
+                                                                                                "readOnly": false,
+                                                                                                "placeholder": "",
+                                                                                                "value": "",
+                                                                                                "saveInto": [
+                                                                                                    "<<jA0EAwMCkRqYtxMwiXcB0oEBLCjy94kbCvrGxM52s1u5l672xIvAXXbHu/ybgFhdvkgkRXZuFUIP\r\nL7Roez2YUw+tAWyaz+Fb+cE45D0tbCFuO+QsaT0jBaYTZEQYJZ1dEI5wu0r4W0hRr+vxQ/Ws6A0P\r\nNVjszG8prNsW3KmWFE/I7venNp1RKHFixICjm3iXwio=\r\n>>"
+                                                                                                ],
+                                                                                                "refreshAfter": "UNFOCUS",
+                                                                                                "keyboard": "STANDARD",
+                                                                                                "labelPosition": "ABOVE",
+                                                                                                "align": "DEFAULT",
+                                                                                                "helpTooltip": "",
+                                                                                                "accessibilityText": "",
+                                                                                                "#t": "TextField"
+                                                                                            },
+                                                                                            {
+                                                                                                "_cId": "db6c0c94e1ebf8c83d6e8bc235c0bc7a",
+                                                                                                "label": "GMEI",
+                                                                                                "instructions": "",
+                                                                                                "readOnly": false,
+                                                                                                "placeholder": "xxx-xx-xxxx",
+                                                                                                "value": "",
+                                                                                                "saveInto": [
+                                                                                                    "<<jA0EAwMCkRqYtxMwiXcB0oEBLCjy94kbCvrGxM52s1u5l672xIvAXXbHu/y9gFxdukvodvJaoKgg\r\nw0uciAmgNkJc7nFMQh7RWE517M7cuZuINd7ZpiG8VVGC1E701xI6aH4Yyb2pULwXNrlu1yQ5keg/\r\n56EGj0+/PkIjUCtDgZ7IAYKP0LuhiJF+Q7tN62lzhc8=\r\n>>"
+                                                                                                ],
+                                                                                                "refreshAfter": "UNFOCUS",
+                                                                                                "keyboard": "STANDARD",
+                                                                                                "labelPosition": "ABOVE",
+                                                                                                "align": "DEFAULT",
+                                                                                                "helpTooltip": "Global Market Entity Identifier",
+                                                                                                "accessibilityText": "",
+                                                                                                "#t": "TextField"
+                                                                                            },
+                                                                                            {
+                                                                                                "_cId": "71fc22b36404544037a0bf1b9581555d",
+                                                                                                "label": "Qualified Institutional Buyer",
+                                                                                                "instructions": "",
+                                                                                                "choices": [
+                                                                                                    "Yes",
+                                                                                                    "No"
+                                                                                                ],
+                                                                                                "saveInto": [
+                                                                                                    "<<jA0EAwMCkRqYtxMwiXcB0o0BLCjy94kbCvrGxM52s1u5l672xIvAXXbB0CEq/5yZ6YsTxy26Crmk\r\nSnzywIE3IYa0lBU3xGq5iJ5U3BCeFuDcL8849ndPhYJOrbBuSPDDsjZW4DFBiS8QrhF0cu+2240B\r\n9X315Z3f/m0p+HSxAIODCHU8laFJ+GY8TY1oVi8oDZYGNnXZPS13qM49QSE=\r\n>>"
+                                                                                                ],
+                                                                                                "labelPosition": "ABOVE",
+                                                                                                "choiceLayout": "COMPACT",
+                                                                                                "helpTooltip": "",
+                                                                                                "accessibilityText": "",
+                                                                                                "#t": "RadioButtonField"
+                                                                                            }
+                                                                                        ],
+                                                                                        "align": "",
+                                                                                        "width": ""
+                                                                                    },
+                                                                                    {
+                                                                                        "_cId": "5809de8db606472b0438c1b416cbfad7",
+                                                                                        "contents": [
+                                                                                            {
+                                                                                                "_cId": "5ec13d71bc1b507bc7ebdb52b7927b43",
+                                                                                                "hasNoValue": "true",
+                                                                                                "hasPlaceholderLabel": "true",
+                                                                                                "label": "Customer Type",
+                                                                                                "instructions": "",
+                                                                                                "choices": [
+                                                                                                    "-- Please select a value --",
+                                                                                                    "Buy Side Asset Manager",
+                                                                                                    "Corporate Banking",
+                                                                                                    "Institutional Investor",
+                                                                                                    "Sell Side ",
+                                                                                                    "SME Banking"
+                                                                                                ],
+                                                                                                "value": 1,
+                                                                                                "saveInto": [
+                                                                                                    "<<jA0EAwMCkRqYtxMwiXcB0pEBLCjy94kbCvrGxM52s1u5l672xIvAXXbBtSAq/8eZ6YsUZJ/Z0A5I\r\nCJbtuuVJodBF0sQGEm7S7Z7HlyJt1Ns6bGG5QFGaqKS3bn+yLbW8ZEW7IikfOJDVyFgMJF2//oxu\r\nIBpCd23dsxz6sxwC3gx0Wd46anLshOAvhuterr6Wh+SsdTCWleaQIrWpWMl4kgxy\r\n>>"
+                                                                                                ],
+                                                                                                "labelPosition": "ABOVE",
+                                                                                                "align": "DEFAULT",
+                                                                                                "helpTooltip": "",
+                                                                                                "width": "",
+                                                                                                "clearIconLabel": "Clear value for Customer Type",
+                                                                                                "skinName": "",
+                                                                                                "accessibilityText": "",
+                                                                                                "#t": "DropdownField"
+                                                                                            },
+                                                                                            {
+                                                                                                "_cId": "06feab5d8c70d920a19d459eb3af6a40",
+                                                                                                "hasNoValue": "true",
+                                                                                                "hasPlaceholderLabel": "true",
+                                                                                                "label": "Industry Classification Code",
+                                                                                                "instructions": "",
+                                                                                                "choices": [
+                                                                                                    "-- Select Industry Classification Code --",
+                                                                                                    "Advertising",
+                                                                                                    "Aerospace & Defense",
+                                                                                                    "Agricultural & Farm Machinery",
+                                                                                                    "Agricultural Products",
+                                                                                                    "Air Freight & Logistics",
+                                                                                                    "Airlines",
+                                                                                                    "Airport Services",
+                                                                                                    "Alternative Carriers",
+                                                                                                    "Aluminum",
+                                                                                                    "Apparel Retail",
+                                                                                                    "Apparel, Accessories & Luxury Goods",
+                                                                                                    "Application Software",
+                                                                                                    "Asset Management & Custody Banks",
+                                                                                                    "Auto Parts & Equipment",
+                                                                                                    "Automobile Manufacturers",
+                                                                                                    "Automotive Retail",
+                                                                                                    "Biotechnology",
+                                                                                                    "Brewers",
+                                                                                                    "Broadcasting",
+                                                                                                    "Building Products",
+                                                                                                    "Cable & Satellite",
+                                                                                                    "Casinos & Gaming",
+                                                                                                    "Coal & Consumable Fuels",
+                                                                                                    "Commercial Printing",
+                                                                                                    "Commodity Chemicals",
+                                                                                                    "Communications Equipment",
+                                                                                                    "Computer & Electronics Retail",
+                                                                                                    "Construction & Engineering",
+                                                                                                    "Construction Machinery & Heavy Trucks",
+                                                                                                    "Construction Materials",
+                                                                                                    "Consumer Electronics",
+                                                                                                    "Consumer Finance",
+                                                                                                    "Copper",
+                                                                                                    "Data Processing & Outsourced Services",
+                                                                                                    "Department Stores",
+                                                                                                    "Distillers & Vintners",
+                                                                                                    "Distributors",
+                                                                                                    "Diversified Banks",
+                                                                                                    "Diversified Capital Markets",
+                                                                                                    "Diversified Chemicals",
+                                                                                                    "Diversified Metals & Mining",
+                                                                                                    "Diversified Real Estate Activities",
+                                                                                                    "Diversified REITs",
+                                                                                                    "Diversified Support Services",
+                                                                                                    "Drug Retail",
+                                                                                                    "Education Services",
+                                                                                                    "Electric Utilities",
+                                                                                                    "Electrical Components & Equipment",
+                                                                                                    "Electronic Components",
+                                                                                                    "Electronic Equipment & Instruments",
+                                                                                                    "Electronic Manufacturing Services",
+                                                                                                    "Environmental & Facilities Services",
+                                                                                                    "Fertilizers & Agricultural Chemicals",
+                                                                                                    "Financial Exchanges & Data",
+                                                                                                    "Food Distributors",
+                                                                                                    "Food Retail",
+                                                                                                    "Footwear",
+                                                                                                    "Forest Products",
+                                                                                                    "Gas Utilities",
+                                                                                                    "General Merchandise Stores",
+                                                                                                    "Gold",
+                                                                                                    "Health Care Distributors",
+                                                                                                    "Health Care Equipment",
+                                                                                                    "Health Care Facilities",
+                                                                                                    "Health Care REITs",
+                                                                                                    "Health Care Services",
+                                                                                                    "Health Care Supplies",
+                                                                                                    "Health Care Technology",
+                                                                                                    "Heavy Electrical Equipment",
+                                                                                                    "Hedge Fund",
+                                                                                                    "Highways & Railtracks",
+                                                                                                    "Home Furnishings",
+                                                                                                    "Home Improvement Retail",
+                                                                                                    "Homebuilding",
+                                                                                                    "Homefurnishing Retail",
+                                                                                                    "Hotel & Resort REITs",
+                                                                                                    "Hotels, Resorts & Cruise Lines",
+                                                                                                    "Household Appliances",
+                                                                                                    "Household Products",
+                                                                                                    "Housewares & Specialties",
+                                                                                                    "Human Resource & Employment Services",
+                                                                                                    "Hypermarkets & Super Centers",
+                                                                                                    "Independent Power Producers & Energy Traders",
+                                                                                                    "Industrial Conglomerates",
+                                                                                                    "Industrial Gases",
+                                                                                                    "Industrial Machinery",
+                                                                                                    "Industrial REITs",
+                                                                                                    "Insurance Brokers",
+                                                                                                    "Integrated Oil & Gas",
+                                                                                                    "Integrated Telecommunication Services",
+                                                                                                    "Interactive Home Entertainment",
+                                                                                                    "Interactive Media & Services",
+                                                                                                    "Internet & Direct Marketing Retail",
+                                                                                                    "Internet Services & Infrastructure",
+                                                                                                    "Investment Banking & Brokerage",
+                                                                                                    "IT Consulting & Other Services",
+                                                                                                    "Leisure Facilities",
+                                                                                                    "Leisure Products",
+                                                                                                    "Life & Health Insurance",
+                                                                                                    "Life Sciences Tools & Services",
+                                                                                                    "Managed Health Care",
+                                                                                                    "Marine",
+                                                                                                    "Marine Ports & Services",
+                                                                                                    "Metal & Glass Containers",
+                                                                                                    "Mortgage REITs",
+                                                                                                    "Motorcycle Manufacturers",
+                                                                                                    "Movies & Entertainment",
+                                                                                                    "Multi-line Insurance",
+                                                                                                    "Multi-Sector Holdings",
+                                                                                                    "Multi-Utilities",
+                                                                                                    "Office REITs",
+                                                                                                    "Office Services & Supplies",
+                                                                                                    "Oil & Gas Drilling",
+                                                                                                    "Oil & Gas Equipment & Services",
+                                                                                                    "Oil & Gas Exploration & Production",
+                                                                                                    "Oil & Gas Refining & Marketing",
+                                                                                                    "Oil & Gas Storage & Transportation",
+                                                                                                    "Other Diversified Financial Services",
+                                                                                                    "Packaged Foods & Meats",
+                                                                                                    "Paper Packaging",
+                                                                                                    "Paper Products",
+                                                                                                    "Personal Products",
+                                                                                                    "Pharmaceuticals",
+                                                                                                    "Precious Metals & Minerals",
+                                                                                                    "Property & Casualty Insurance",
+                                                                                                    "Publishing",
+                                                                                                    "Railroads",
+                                                                                                    "Real Estate Development",
+                                                                                                    "Real Estate Operating Companies",
+                                                                                                    "Real Estate Services",
+                                                                                                    "Regional Banks",
+                                                                                                    "Reinsurance",
+                                                                                                    "Renewable Electricity",
+                                                                                                    "Research & Consulting Services",
+                                                                                                    "Residential REITs",
+                                                                                                    "Restaurants",
+                                                                                                    "Retail REITs",
+                                                                                                    "Security & Alarm Services",
+                                                                                                    "Semiconductor Equipment",
+                                                                                                    "Semiconductors",
+                                                                                                    "Silver",
+                                                                                                    "Soft Drinks",
+                                                                                                    "Specialized Consumer Services",
+                                                                                                    "Specialized Finance",
+                                                                                                    "Specialized REITs",
+                                                                                                    "Specialty Chemicals",
+                                                                                                    "Specialty Stores",
+                                                                                                    "Steel",
+                                                                                                    "Systems Software",
+                                                                                                    "Technology Distributors",
+                                                                                                    "Technology Hardware, Storage & Peripherals",
+                                                                                                    "Textiles",
+                                                                                                    "Thrifts & Mortgage Finance",
+                                                                                                    "Tires & Rubber",
+                                                                                                    "Tobacco",
+                                                                                                    "Trading Companies & Distributors",
+                                                                                                    "Trucking",
+                                                                                                    "Water Utilities",
+                                                                                                    "Wireless Telecommunication Services"
+                                                                                                ],
+                                                                                                "value": 1,
+                                                                                                "saveInto": [
+                                                                                                    "<<jA0EAwMCkRqYtxMwiXcB0pEBLCjy94kbCvrGxM52s1u5l672xIvAXXbBtSAo2ZyZ6YuV63Bnh4/6\r\nWM2OmWsCXoW17clj7R9PZr7IkrRQ4LyPp5UXC4bveBsyowamDESytEgHQ8iGg05DWCnCh+ZG3vuT\r\n8JUm2oRYD2rfddQOVAHojCSDPmjBxuLwyj9pRWhJVNkwVBXElAYIS60Gcfn8V+bh\r\n>>"
+                                                                                                ],
+                                                                                                "labelPosition": "ABOVE",
+                                                                                                "align": "DEFAULT",
+                                                                                                "helpTooltip": "",
+                                                                                                "width": "",
+                                                                                                "clearIconLabel": "Clear value for Industry Classification Code",
+                                                                                                "skinName": "",
+                                                                                                "accessibilityText": "",
+                                                                                                "#t": "DropdownField"
+                                                                                            },
+                                                                                            {
+                                                                                                "_cId": "7b00436d1e4dfa8d177eb79990635496",
+                                                                                                "label": "Regions",
+                                                                                                "instructions": "",
+                                                                                                "required": true,
+                                                                                                "choices": [
+                                                                                                    "Asia",
+                                                                                                    "Africa and Middle East",
+                                                                                                    "Europe and Americas"
+                                                                                                ],
+                                                                                                "saveInto": [
+                                                                                                    "<<jA0EAwMCCXCiA6JTLiQB0q0BNEIhbhp/aifXBmJpcWkF4kc1kffjG8yKmwKmPjW1qgrFPuSZA2ru\r\nWSmuOsoVeqgBYv6n8P7YuUaWFawoVYsENo/yRBH+XulEefnKiSpyFeXKuKvTlcuwQY+nOko3XKC3\r\nJCWKY3ja5af/nOVAQrnE709Gu8ZlasOXFpH8zqhwunV+u4RdB9hjcyt0hXDr1Z5d2Nwhp8HEHYvM\r\nQ+LecdEfSuMnPk/gR04I7aAhTw==\r\n>>"
+                                                                                                ],
+                                                                                                "labelPosition": "ABOVE",
+                                                                                                "placeholder": "--- Select Values ---",
+                                                                                                "helpTooltip": "",
+                                                                                                "width": "",
+                                                                                                "accessibilityText": "",
+                                                                                                "isSearchable": false,
+                                                                                                "showClearAllIcon": true,
+                                                                                                "#t": "MultipleDropdownField"
+                                                                                            }
+                                                                                        ],
+                                                                                        "align": "",
+                                                                                        "width": ""
+                                                                                    },
+                                                                                    {
+                                                                                        "_cId": "2aaa777e7ae3e87f92e0751bb54bfcf7",
+                                                                                        "contents": [
+                                                                                            {
+                                                                                                "_cId": "638e1793044e873f3c86960e43c489e9",
+                                                                                                "columns": [
+                                                                                                    {
+                                                                                                        "_cId": "b088f2aeda585737d0ca11a948ddf4f0",
+                                                                                                        "contents": [],
+                                                                                                        "align": "",
+                                                                                                        "width": ""
+                                                                                                    }
+                                                                                                ],
+                                                                                                "alignVertical": "TOP",
+                                                                                                "marginBelow": "",
+                                                                                                "#t": "MultiColumnLayout"
+                                                                                            },
+                                                                                            {
+                                                                                                "_cId": "52ebda6acb97e3fef6d9d750650a790a",
+                                                                                                "label": "International Entity",
+                                                                                                "instructions": "",
+                                                                                                "choices": [
+                                                                                                    "Yes",
+                                                                                                    "No"
+                                                                                                ],
+                                                                                                "saveInto": [
+                                                                                                    "<<jA0EAwMCkRqYtxMwiXcB0o0BLCjy94kbCvrGxM52s1u5l672xIvAXXbB0CAq/5yZ6Yt0cgWQ2R4k\r\n4l81S6c25Nam5vZoCTPb0oUzfWr6ad8VPymYa8oo2iFwtIYdhO7J1J3Hr84LUdGoolg/EL3czJVU\r\nXZcjTanZuTHL3sygqpF6rVYJ7gKs8SUn+5d2OwhiPRnD7kOjl07sXENpFt4=\r\n>>"
+                                                                                                ],
+                                                                                                "labelPosition": "ABOVE",
+                                                                                                "choiceLayout": "COMPACT",
+                                                                                                "helpTooltip": "",
+                                                                                                "accessibilityText": "",
+                                                                                                "#t": "RadioButtonField"
+                                                                                            }
+                                                                                        ],
+                                                                                        "align": "",
+                                                                                        "width": ""
+                                                                                    }
+                                                                                ],
+                                                                                "alignVertical": "TOP",
+                                                                                "marginBelow": "",
+                                                                                "#t": "MultiColumnLayout"
+                                                                            }
+                                                                        ],
+                                                                        "align": "",
+                                                                        "width": ""
+                                                                    }
+                                                                ],
+                                                                "alignVertical": "",
+                                                                "layout": "",
+                                                                "minHeight": "",
+                                                                "#t": "ColumnArrayLayout"
+                                                            }
+                                                        ],
+                                                        "divider": "",
+                                                        "errorLabel": "This section contains errors",
+                                                        "expandLabel": "Show section contents",
+                                                        "label": "Select Customer",
+                                                        "validations": [],
+                                                        "labelStyle": "STANDARD",
+                                                        "skinName": "",
+                                                        "marginBelow": "STANDARD",
+                                                        "accessibilityText": "",
+                                                        "#t": "SectionLayout2"
+                                                    },
+                                                    {
+                                                        "isCollapsible": "false",
+                                                        "isInitiallyCollapsed": "false",
+                                                        "_cId": "80f07dd95ab97d8b23f6e104c5b55a14",
+                                                        "collapseLabel": "Hide section contents",
+                                                        "contents": [
+                                                            {
+                                                                "_cId": "346904effb4403c6e33322b63be10c6b",
+                                                                "columns": [
+                                                                    {
+                                                                        "_cId": "818039796a092d1bdb6c9c28261de216",
+                                                                        "contents": [
+                                                                            {
+                                                                                "_cId": "c119704d69ab78ebb34f2df2fd203248",
+                                                                                "label": "",
+                                                                                "labelPosition": "COLLAPSED",
+                                                                                "instructions": "",
+                                                                                "value": {
+                                                                                    "_cId": "e80265d73993079f7d468fd708d8d5eb",
+                                                                                    "values": [
+                                                                                        {
+                                                                                            "_cId": "db161bf204a4222df1cb6db4bc97e55a",
+                                                                                            "values": {
+                                                                                                "_cId": "fd0a931a570de35317a16dfaaaa1ff96",
+                                                                                                "values": [
+                                                                                                    {
+                                                                                                        "_cId": "f62507e8debcb3d19a87b6c619e0d366",
+                                                                                                        "values": [
+                                                                                                            {
+                                                                                                                "_cId": "f1161638472a61c185802b38a8a2f87e",
+                                                                                                                "icon": "plus-circle",
+                                                                                                                "iconId": "f055",
+                                                                                                                "altText": "",
+                                                                                                                "caption": "",
+                                                                                                                "size": "",
+                                                                                                                "color": "ACCENT",
+                                                                                                                "#t": "IconWidget"
+                                                                                                            }
+                                                                                                        ],
+                                                                                                        "#t": "FormattedText"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "_cId": "bcdf5c0e53ccea12138d944d8c16b49f",
+                                                                                                        "values": [
+                                                                                                            {
+                                                                                                                "#v": " Add Relationship",
+                                                                                                                "#t": "string"
+                                                                                                            }
+                                                                                                        ],
+                                                                                                        "#t": "FormattedText"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "#t": "FormattedText"
+                                                                                            },
+                                                                                            "link": {
+                                                                                                "_cId": "a01120e358b8968f1722d8ba192cccb0",
+                                                                                                "label": "",
+                                                                                                "value": {
+                                                                                                    "#v": "",
+                                                                                                    "#t": "string"
+                                                                                                },
+                                                                                                "saveInto": [
+                                                                                                    "<<jA0EAwMCkRqYtxMwiXcB0oUBLCjy94kbCvrGxM52s1u5l672xIvAXXbH0fz4pgRdukiK6j0ZNcxr\r\n5iTwS8KpNBbEsIESMiajIJXfgWyVy1wV0QZcxK1G5D4lHTIVsEiMFveXWIPGUY7NY0RSrDlwO7jU\r\ngNe0Agk5TGNzzYcCptXWx7wmd/fZ/Q6dWiNStAOeO03sWf1q\r\n>>"
+                                                                                                ],
+                                                                                                "tooltip": "",
+                                                                                                "href": "",
+                                                                                                "#t": "DynamicLink"
+                                                                                            },
+                                                                                            "linkStyle": "STANDALONE",
+                                                                                            "#t": "LinkedItem"
+                                                                                        }
+                                                                                    ],
+                                                                                    "#t": "FormattedText"
+                                                                                },
+                                                                                "valueAlignment": "LEFT",
+                                                                                "helpTooltip": "",
+                                                                                "accessibilityText": "",
+                                                                                "#t": "RichTextDisplayField"
+                                                                            }
+                                                                        ],
+                                                                        "align": "",
+                                                                        "width": ""
+                                                                    }
+                                                                ],
+                                                                "alignVertical": "",
+                                                                "layout": "",
+                                                                "minHeight": "",
+                                                                "#t": "ColumnArrayLayout"
+                                                            }
+                                                        ],
+                                                        "divider": "",
+                                                        "errorLabel": "This section contains errors",
+                                                        "expandLabel": "Show section contents",
+                                                        "label": "Structure",
+                                                        "validations": [],
+                                                        "labelStyle": "STANDARD",
+                                                        "skinName": "",
+                                                        "marginBelow": "",
+                                                        "accessibilityText": "",
+                                                        "#t": "SectionLayout2"
+                                                    }
+                                                ],
+                                                "align": "",
+                                                "width": ""
+                                            }
+                                        ],
+                                        "alignVertical": "TOP",
+                                        "marginBelow": "",
+                                        "#t": "MultiColumnLayout"
+                                    }
+                                ],
+                                "align": "",
+                                "width": ""
+                            }
+                        ],
+                        "alignVertical": "",
+                        "layout": "",
+                        "minHeight": "",
+                        "isTopLevelComponent": true,
+                        "#t": "ColumnArrayLayout"
+                    }
+                ],
+                "layout": "",
+                "width": "",
+                "#t": "FormLayout"
+            }
+        ],
+        "padding": "STANDARD",
+        "#t": "ContentLayout"
+    },
+    "context": {
+        "#v": "jA0EAwMCkRqYtxMwiXcB0sAxAQkum2bNgupfyhlmUEQnJaZS57rbRCuLdbeOpcJIFRFHGgFlSng2\r\ne2JHT9348XRDPNL2fLcnErvNFsMcyy8TI+VjY2N3cT4pft+jh0NacSiM6iUpbLdvApGY3NrFHfwh\r\ncEnEkbcnKQps3ko50BwbOsUe1yFAiEdyzSDX09iuW+Thk/5CGHZwgP6V0vfEZGVkxKpMlSS8W6WK\r\nfLMlLBzvtWsBBnNojozC8efmguzWBIy/yRG1k7Kr/C9OtT5ko+egTcq81mTdryqG0Sf0vGjcxzRM\r\nEhhjRxhVtEsOabL5tEIYQmhj5mEn1r7oPN9nKc2q6A==\r\n",
+        "#t": "string"
+    },
+    "uuid": "b53b268a-a5c0-4716-a04d-cde3c5803c54",
+    "i18nInfo": {
+        "locale": "en-US",
+        "timezoneId": "GMT",
+        "calendarId": "gregorian",
+        "decimalSeparator": ".",
+        "groupingSeparator": ","
+    },
+    "timers": {
+        "#t": "Dictionary"
+    },
+    "#t": "UiConfig",
+    "#s": {
+        "#v": [
+            {
+                "id": 1858,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MilestoneField",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MilestoneField",
+                "description": "",
+                "base": 636,
+                "foundation": 95,
+                "typeof": 1858,
+                "list": 1859,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 1864
+                        }
+                    },
+                    {
+                        "name": "label",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "instructions",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "steps",
+                        "value": {
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "active",
+                        "value": {
+                            "#t": "int"
+                        }
+                    },
+                    {
+                        "name": "labelPosition",
+                        "value": {
+                            "#t": "LabelPosition"
+                        }
+                    },
+                    {
+                        "name": "links",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "helpTooltip",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "currentStepLabel",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "completedStepLabel",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "futureStepLabel",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "instructionsPosition",
+                        "value": {
+                            "#t": "FieldLayoutInstructionsPosition"
+                        }
+                    },
+                    {
+                        "name": "style",
+                        "value": {
+                            "#t": "MilestoneStyle"
+                        }
+                    },
+                    {
+                        "name": "orientation",
+                        "value": {
+                            "#t": "MilestoneOrientation"
+                        }
+                    },
+                    {
+                        "name": "accessibilityText",
+                        "value": {
+                            "#t": "string"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                true,
+                                false,
+                                false,
+                                true,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1864,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 1858 (MilestoneField)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1864,
+                "list": 1865,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1860,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MilestoneStyle",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MilestoneStyle",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 1861,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1862,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MilestoneOrientation",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MilestoneOrientation",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 1863,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1859,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MilestoneField?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MilestoneField?list",
+                "description": "List of MilestoneField",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1858,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1865,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1864,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1861,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MilestoneStyle?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MilestoneStyle?list",
+                "description": "List of MilestoneStyle",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1860,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1863,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MilestoneOrientation?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MilestoneOrientation?list",
+                "description": "List of MilestoneOrientation",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1862,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2106,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RadioButtonField",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "RadioButtonField",
+                "description": "",
+                "base": 636,
+                "foundation": 95,
+                "typeof": 2106,
+                "list": 2107,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 2108
+                        }
+                    },
+                    {
+                        "name": "label",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "instructions",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "required",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "disabled",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "choices",
+                        "value": {
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "value": {
+                            "#t": "int"
+                        }
+                    },
+                    {
+                        "name": "validations",
+                        "value": {
+                            "#t": "ValidationMessage?list"
+                        }
+                    },
+                    {
+                        "name": "saveInto",
+                        "value": {
+                            "#t": "Save?list"
+                        }
+                    },
+                    {
+                        "name": "labelPosition",
+                        "value": {
+                            "#t": "LabelPosition"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "choiceLayout",
+                        "value": {
+                            "#t": "RadioButtonChoiceLayout"
+                        }
+                    },
+                    {
+                        "name": "helpTooltip",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "accessibilityText",
+                        "value": {
+                            "#t": "string"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                true,
+                                true,
+                                false,
+                                false,
+                                true,
+                                true,
+                                false,
+                                true,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2108,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 2106 (RadioButtonField)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 2108,
+                "list": 2109,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2104,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RadioButtonChoiceLayout",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "RadioButtonChoiceLayout",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 2105,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2107,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RadioButtonField?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "RadioButtonField?list",
+                "description": "List of RadioButtonField",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2106,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2109,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2108,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2105,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}RadioButtonChoiceLayout?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "RadioButtonChoiceLayout?list",
+                "description": "List of RadioButtonChoiceLayout",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2104,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 12,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}CollaborationFolder",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "CollaborationFolder",
+                "description": "A folder is an object used to store documents that are on the system.  Typically this value will be provided from a Process Variable.",
+                "base": 52,
+                "foundation": 52,
+                "typeof": 52,
+                "list": 112,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 112,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}CollaborationFolder?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "CollaborationFolder?list",
+                "description": "List of Folder",
+                "base": 152,
+                "foundation": 93,
+                "typeof": 12,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 52,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}IntegerKey",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "IntegerKey",
+                "description": "Key (Integer)",
+                "base": 52,
+                "foundation": 52,
+                "typeof": 52,
+                "list": 152,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 152,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}IntegerKey?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "IntegerKey?list",
+                "description": "List of Key (Integer)",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 52,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 28,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}CollaborationDocumentOrFolder",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "CollaborationDocumentOrFolder",
+                "description": "Document or Folder.",
+                "base": 96,
+                "foundation": 96,
+                "typeof": 97,
+                "list": 128,
+                "flags": 8,
+                "instanceProperties": [
+                    {
+                        "name": "data",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "value": {
+                            "#t": "int"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "types",
+                        "value": {
+                            "#v": [
+                                13,
+                                12
+                            ],
+                            "#t": "Integer?list"
+                        }
+                    },
+                    {
+                        "name": "keys",
+                        "value": {
+                            "#v": [
+                                "document",
+                                "folder"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 13,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}CollaborationDocument",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "CollaborationDocument",
+                "description": "A document is any file that a user has stored on the system.  Typically this value will be provided from a Process Variable.",
+                "base": 52,
+                "foundation": 52,
+                "typeof": 52,
+                "list": 113,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 128,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}CollaborationDocumentOrFolder?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "CollaborationDocumentOrFolder?list",
+                "description": "List of Document or Folder",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 28,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 96,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Union",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Union",
+                "description": "Union is a particular value from a list of valid types.",
+                "base": 96,
+                "foundation": 96,
+                "typeof": 0,
+                "list": 196,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "data",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "value": {
+                            "#t": "int"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "types",
+                        "value": {
+                            "#t": "int"
+                        }
+                    },
+                    {
+                        "name": "keys",
+                        "value": {
+                            "#t": "string"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 113,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}CollaborationDocument?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "CollaborationDocument?list",
+                "description": "List of Document",
+                "base": 152,
+                "foundation": 93,
+                "typeof": 13,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 196,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}Union?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "Union?list",
+                "description": "###TYPE_LIST_OF_UNION_DSCR",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 96,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1900,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MultipleFileUploadWidget",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MultipleFileUploadWidget",
+                "description": "",
+                "base": 636,
+                "foundation": 95,
+                "typeof": 1900,
+                "list": 1901,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 1902
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "disabled",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "value": {
+                            "#t": "FileMetadata?list"
+                        }
+                    },
+                    {
+                        "name": "maxSelections",
+                        "value": {
+                            "#t": "int"
+                        }
+                    },
+                    {
+                        "name": "required",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "saveInto",
+                        "value": {
+                            "#t": "Save?list"
+                        }
+                    },
+                    {
+                        "name": "buttonSize",
+                        "value": {
+                            "#t": "MultipleFileUploadButtonSize"
+                        }
+                    },
+                    {
+                        "name": "buttonStyle",
+                        "value": {
+                            "#t": "MultipleFileUploadButtonStyle"
+                        }
+                    },
+                    {
+                        "name": "target",
+                        "value": {
+                            "#t": "CollaborationDocumentOrFolder"
+                        }
+                    },
+                    {
+                        "name": "uploadLabel",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "validations",
+                        "value": {
+                            "#t": "ValidationMessage?list"
+                        }
+                    },
+                    {
+                        "name": "virusScanningText",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "addFileLabel",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "buttonIcon",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "validateExtension",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                true,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1902,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 1900 (MultipleFileUploadWidget)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1902,
+                "list": 1903,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1411,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}FileMetadata?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "FileMetadata?list",
+                "description": "List of FileMetadata",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1410,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1890,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MultipleFileUploadButtonSize",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MultipleFileUploadButtonSize",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 1891,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1892,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MultipleFileUploadButtonStyle",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MultipleFileUploadButtonStyle",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 1893,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1901,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MultipleFileUploadWidget?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MultipleFileUploadWidget?list",
+                "description": "List of MultipleFileUploadWidget",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1900,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1903,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1902,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1410,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}FileMetadata",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "FileMetadata",
+                "description": "",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1410,
+                "list": 1411,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "fileName",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "fileDescription",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "extension",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "loadedBytes",
+                        "value": {
+                            "#t": "int"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "fileSizeDisplay",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "fileSizeBytes",
+                        "value": {
+                            "#t": "int"
+                        }
+                    },
+                    {
+                        "name": "clearFileLabel",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "documentId",
+                        "value": {
+                            "#t": "CollaborationDocument"
+                        }
+                    },
+                    {
+                        "name": "clientUuid",
+                        "value": {
+                            "#t": "string"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1891,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MultipleFileUploadButtonSize?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MultipleFileUploadButtonSize?list",
+                "description": "List of MultipleFileUploadButtonSize",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1890,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1893,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}MultipleFileUploadButtonStyle?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "MultipleFileUploadButtonStyle?list",
+                "description": "List of MultipleFileUploadButtonStyle",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1892,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2044,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}PickerWidget",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "PickerWidget",
+                "description": "",
+                "base": 636,
+                "foundation": 95,
+                "typeof": 2044,
+                "list": 2045,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 2046
+                        }
+                    },
+                    {
+                        "name": "required",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "readOnly",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "disabled",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "maxSelections",
+                        "value": {
+                            "#t": "int"
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "value": {
+                            "#t": "PickerTokenWidget?list"
+                        }
+                    },
+                    {
+                        "name": "saveInto",
+                        "value": {
+                            "#t": "Save?list"
+                        }
+                    },
+                    {
+                        "name": "validations",
+                        "value": {
+                            "#t": "ValidationMessage?list"
+                        }
+                    },
+                    {
+                        "name": "width",
+                        "value": {
+                            "#t": "ComponentWidth"
+                        }
+                    },
+                    {
+                        "name": "placeholder",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "suggestions",
+                        "value": {
+                            "#t": "PickerSuggestion?list"
+                        }
+                    },
+                    {
+                        "name": "imageSize",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "imageStyle",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "noResultsLabel",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "searchingLabel",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "selectedTokensHint",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "numSuggestionsHint",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "inlineChoices",
+                        "value": {
+                            "#t": "NestedChoice?list"
+                        }
+                    },
+                    {
+                        "name": "accessibilityText",
+                        "value": {
+                            "#t": "string"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2046,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 2044 (PickerWidget)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 2046,
+                "list": 2047,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2041,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}PickerTokenWidget?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "PickerTokenWidget?list",
+                "description": "List of PickerTokenWidget",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2040,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2037,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}PickerSuggestion?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "PickerSuggestion?list",
+                "description": "List of PickerSuggestion",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2036,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1913,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}NestedChoice?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "NestedChoice?list",
+                "description": "List of NestedChoice",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1912,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2045,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}PickerWidget?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "PickerWidget?list",
+                "description": "List of PickerWidget",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2044,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2047,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2046,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2040,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}PickerTokenWidget",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "PickerTokenWidget",
+                "description": "",
+                "base": 636,
+                "foundation": 95,
+                "typeof": 2040,
+                "list": 2041,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 2042
+                        }
+                    },
+                    {
+                        "name": "label",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "identifier",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "image",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "link",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "tooltip",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2036,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}PickerSuggestion",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "PickerSuggestion",
+                "description": "",
+                "base": 636,
+                "foundation": 95,
+                "typeof": 2036,
+                "list": 2037,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 2038
+                        }
+                    },
+                    {
+                        "name": "label",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "description",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "image",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "identifier",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1912,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}NestedChoice",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "NestedChoice",
+                "description": "",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1912,
+                "list": 1913,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "label",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "selectionLabel",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "value": {
+                            "#t": "Variant"
+                        }
+                    },
+                    {
+                        "name": "nestedChoices",
+                        "value": {
+                            "#t": "NestedChoice?list"
+                        }
+                    },
+                    {
+                        "name": "selectable",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "typeId",
+                        "value": {
+                            "#t": "int"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2042,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 2040 (PickerTokenWidget)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 2042,
+                "list": 2043,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2038,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 2036 (PickerSuggestion)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 2038,
+                "list": 2039,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2043,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2042,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 2039,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 2038,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 874,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ColumnArrayLayout",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ColumnArrayLayout",
+                "description": "",
+                "base": 636,
+                "foundation": 95,
+                "typeof": 874,
+                "list": 875,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 886
+                        }
+                    },
+                    {
+                        "name": "columns",
+                        "value": {
+                            "#t": "ColumnLayout?list"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "alignVertical",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "layout",
+                        "value": {
+                            "#t": "ColumnArrayLayoutStyle"
+                        }
+                    },
+                    {
+                        "name": "minHeight",
+                        "value": {
+                            "#t": "ColumnArrayLayoutMinHeight"
+                        }
+                    },
+                    {
+                        "name": "isTopLevelComponent",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    },
+                    {
+                        "name": "isMultipleColumnLayout",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 886,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 874 (ColumnArrayLayout)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 886,
+                "list": 887,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 882,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ColumnArrayLayoutStyle",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ColumnArrayLayoutStyle",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 883,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 884,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ColumnArrayLayoutMinHeight",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ColumnArrayLayoutMinHeight",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 885,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 875,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ColumnArrayLayout?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ColumnArrayLayout?list",
+                "description": "List of ColumnArrayLayout",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 874,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 887,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 886,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 883,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ColumnArrayLayoutStyle?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ColumnArrayLayoutStyle?list",
+                "description": "List of ColumnArrayLayoutStyle",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 882,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 885,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}ColumnArrayLayoutMinHeight?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "ColumnArrayLayoutMinHeight?list",
+                "description": "List of ColumnArrayLayoutMinHeight",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 884,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1464,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}FormLayout",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "FormLayout",
+                "description": "",
+                "base": 636,
+                "foundation": 95,
+                "typeof": 1464,
+                "list": 1465,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@attributes",
+                        "value": {
+                            "#t": 1468
+                        }
+                    },
+                    {
+                        "name": "label",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "instructions",
+                        "value": {
+                            "#t": "string"
+                        }
+                    },
+                    {
+                        "name": "content",
+                        "value": {
+                            "#t": "ColumnArrayLayout"
+                        }
+                    },
+                    {
+                        "name": "buttons",
+                        "value": {
+                            "#t": "ButtonLayout"
+                        }
+                    },
+                    {
+                        "name": "actions",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "validations",
+                        "value": {
+                            "#t": "ValidationMessage?list"
+                        }
+                    },
+                    {
+                        "name": "contents",
+                        "value": {
+                            "#t": "Variant?list"
+                        }
+                    },
+                    {
+                        "name": "layout",
+                        "value": {
+                            "#t": "ContentLayoutPadding"
+                        }
+                    },
+                    {
+                        "name": "width",
+                        "value": {
+                            "#t": "PageLayoutWidth"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009",
+                                "http://an-appian-instance.host.net/ae/types/2009"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "isNillable",
+                        "value": {
+                            "#v": [
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false,
+                                false
+                            ],
+                            "#t": "Boolean?list"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1468,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "Attributes record for type 1464 (FormLayout)",
+                "base": 95,
+                "foundation": 95,
+                "typeof": 1468,
+                "list": 1469,
+                "flags": 12,
+                "instanceProperties": [
+                    {
+                        "name": "@anyAttribute",
+                        "value": {
+                            "#t": "Dictionary"
+                        }
+                    },
+                    {
+                        "name": "@nil",
+                        "value": {
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "typeProperties": [
+                    {
+                        "name": "namespaces",
+                        "value": {
+                            "#v": [
+                                "http://an-appian-instance.host.net/ae/types/internal",
+                                "http://an-appian-instance.host.net/ae/types/internal"
+                            ],
+                            "#t": "Text?list"
+                        }
+                    },
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1466,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}PageLayoutWidth",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "PageLayoutWidth",
+                "description": "",
+                "base": 3,
+                "foundation": 3,
+                "typeof": 3,
+                "list": 1467,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1465,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}FormLayout?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "FormLayout?list",
+                "description": "List of FormLayout",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1464,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1469,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "",
+                "description": "List of ",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1468,
+                "flags": 12,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            },
+            {
+                "id": 1467,
+                "uuid": "{http://an-appian-instance.host.net/ae/types/2009}PageLayoutWidth?list",
+                "namespace": "http://an-appian-instance.host.net/ae/types/2009",
+                "localPart": "PageLayoutWidth?list",
+                "description": "List of PageLayoutWidth",
+                "base": 93,
+                "foundation": 93,
+                "typeof": 1466,
+                "flags": 8,
+                "instanceProperties": [],
+                "typeProperties": [
+                    {
+                        "name": "autoGenerated",
+                        "value": {
+                            "#v": true,
+                            "#t": "boolean"
+                        }
+                    }
+                ],
+                "listViewMapping": ""
+            }
+        ],
+        "#t": "DataType?list"
+    },
+    "shortcuts": [],
+    "#u": "<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/>; rel=\"x-sasa-app\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/components/ping.do>; rel=\"x-resume-session\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/app{/appName}{/path*}{?params*}>; rel=\"x-sail-application\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/all>; rel=\"x-sites-all\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/tasks/task/{id}>; rel=\"x-site-task\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites{/urlStub}/page/{pageUrlStub}/task/{id}>; rel=\"x-site-task-page\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/page{/pageUrlStub}/nav>; rel=\"x-site-page-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/cors>; rel=\"x-cors\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/interfacedesigner/latest/evaluateComponentTemplate{/templateId}>; rel=\"x-ifcdesigner-evaluatecomponenttemplate\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/content/latest/{opaqueContentId}/o>; rel=\"x-attachment-temp\"; type=\"application/vnd.appian.tv+json\"; dt=\"CollaborationDocument\",<https://an-appian-instance.host.net/suite/rest/a/sites/latest/{siteUrlStub}/pages/{pageUrlStub}/report>; rel=\"x-sites-report\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/applications/latest/legacy/sites{/urlStub}/nav>; rel=\"x-site-navattributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/sites>; rel=\"x-site-main\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/rest/a/task/latest/{taskId}/attributes>; rel=\"x-task-attributes\"; dt=\"UiConfig\",<https://an-appian-instance.host.net/suite/internal/webapi/releaselock/{objectUuid}/{uiSourceUuid}>; rel=\"x-data-release-object-lock\"; dt=\"UiConfig\""
+}

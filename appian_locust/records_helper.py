@@ -1,7 +1,8 @@
-from typing import Any, Dict, Tuple
+from typing import Any, Dict, Tuple, Optional
 
 from ._locust_error_handler import log_locust_error
 from .helper import extract_values, find_component_by_attribute_in_dict
+from re import match
 
 
 def get_all_records_from_json(json_response: Dict[str, Any]) -> Tuple[Dict[str, Any], int]:
@@ -72,3 +73,36 @@ def get_record_header_response(form_json: Dict[str, Any]) -> str:
 def _is_grid(res_dict_var: Dict[str, Any]) -> bool:
     return any([len(extract_values(res_dict_var, "testLabel", "recordGrid")) != 0,
                 len(extract_values(res_dict_var, "testLabel", "recordGridInstances")) != 0])
+
+
+def get_url_stub_from_record_list_url_path(url: Optional[str]) -> Optional[str]:
+    """
+        Attempts to parse the url stub the url of a record list.
+        It should only be able to parse the url stub if the page is a record list.
+        If the url stub cannot be parsed, returns None.
+
+        Args:
+            url: url path to attempt to parse the record list URL stub from
+
+        Returns: The url stub if post_url matches a record list url, otherwise None
+    """
+    record_url_match = None
+    if url:
+        record_url_match = match(r'tempo/records/type/([\w]+)/view/all', url)
+    return record_url_match.groups()[0] if record_url_match else None
+
+
+def get_url_stub_from_record_list_post_request_url(post_url: Optional[str]) -> Optional[str]:
+    """
+        Given post_url, returns the URL stub IF the url matches the url for a record list.
+        If not, returns None.
+
+        Args:
+            post_url: the post request url (not including the host and domain) to post to
+
+        Returns: The url stub if post_url matches a record instance list url, otherwise None
+    """
+    record_url_match = None
+    if post_url:
+        record_url_match = match(r'[\S]+\/pages\/records\/recordType\/([\w]+)', post_url)
+    return record_url_match.groups()[0] if record_url_match else None

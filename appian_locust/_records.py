@@ -248,7 +248,7 @@ class _Records(_Base):
     # Alias for the above function to allow backwards compatability
     visit = visit_record_instance
 
-    def visit_record_type(self, record_type: str = "", exact_match: bool = True) -> Tuple[Dict[str, Any], str]:
+    def visit_record_type(self, record_type: str = "", exact_match: bool = True, is_mobile: bool = False) -> Tuple[Dict[str, Any], str]:
         """
         Navigate into desired record type and retrieve all metadata for associated list of record views.
 
@@ -267,7 +267,7 @@ class _Records(_Base):
         if not record_type:
             record_type = self._get_random_record_type()
 
-        return self._record_type_list_request(record_type)
+        return self._record_type_list_request(record_type, is_mobile=is_mobile)
 
     def visit_record_instance_and_get_feed_form(self, record_type: str = "", record_name: str = "", exact_match: bool = True) -> SailUiForm:
         """
@@ -329,7 +329,7 @@ class _Records(_Base):
 
     visit_and_get_form = visit_record_instance_and_get_form
 
-    def visit_record_type_and_get_form(self, record_type: str = "", exact_match: bool = False) -> SailUiForm:
+    def visit_record_type_and_get_form(self, record_type: str = "", exact_match: bool = False, is_mobile: bool = False) -> SailUiForm:
         """
         This function calls the API for the specific record typew and returns a SAIL form object that Locust users can interact with.
 
@@ -357,7 +357,7 @@ class _Records(_Base):
         """
         if not self._records or not self._record_types:
             self.get_all()
-        form_json, form_uri = self.visit_record_type(record_type, exact_match=exact_match)
+        form_json, form_uri = self.visit_record_type(record_type, exact_match=exact_match, is_mobile=is_mobile)
         breadcrumb = f'Records.{record_type}.SailUi'
         return SailUiForm(self.interactor, form_json, form_uri, breadcrumb=breadcrumb)
 
