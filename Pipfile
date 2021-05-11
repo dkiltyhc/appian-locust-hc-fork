@@ -4,7 +4,7 @@ verify_ssl = true
 name = 'pypi'
 
 [packages]
-locust = "==1.4.3"
+locust = "==1.5.1"
 pycodestyle = "==2.5.0"
 mypy = "==0.720"
 
